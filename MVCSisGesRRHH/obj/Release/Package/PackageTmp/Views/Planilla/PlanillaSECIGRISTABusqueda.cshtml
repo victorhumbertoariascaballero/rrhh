@@ -1,0 +1,349 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "PLANILLAS  ->  PLANILLA SECIGRISTA O PRACTICANTES";
+}
+@section SubTitulo { <h3>@ViewBag.Title</h3> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <div class="panel-group" id="accordion">
+        <!--BUSQUEDA-->
+        <div class="panel panel-default">
+            @*<form id="frmBandejaSECIGRISTA" name="frmBandejaSECIGRISTA" novalidate="" >*@
+                <div class="panel-heading">
+                    <a data-toggle="collapse" href="#collapseBusqueda">
+                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INGRESE CRITERIOS DE B&Uacute;SQUEDA
+                    </a>
+                </div>
+                <div id="collapseBusqueda" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="row form-horizontal text-center">
+                            <form id="frmBandejaSECIGRISTA" name="frmBandejaSECIGRISTA" novalidate="">
+                                @*<div class="row">
+                                    <div class="col-md-10">
+                                        <label for="ddlFuenteFinanciamiento_busqueda" class="col-md-2 control-label">Fuente Financimiento </label>
+                                        <div class="col-md-10">
+                                            <select id="ddlFuenteFinanciamiento_busqueda" name="ddlFuenteFinanciamiento_busqueda" class="form-control" style="width: 100%;">
+                                                <option value="">-- Todos --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>*@
+                                <br />
+                                @*<div class="row">
+                                    <div class="col-md-12">
+
+                                        <div class="demo-section k-content wide">
+                                            <div>
+                                                
+                                                <label for="optional" class="col-md-5 control-label text-right" id="lstMetas">Metas </label>
+                                                <div class="col-md-6" style="text-align: left;">
+                                                    <select id="optional">
+                                                        
+                                                        <script language="javascript" type="text/javascript">
+
+                                                            var values = @Html.Raw(Json.Encode(ViewBag.metas));
+                                                            for (v in values) {
+                                                                var option = $('<option></option>');
+                                                                option.attr('value', values[v].iCodMeta);
+                                                                option.text(values[v].sSec_Func);
+                                                                $('#optional').append(option);
+                                                            }
+                                                        </script>
+                                                    </select>
+                                                    <select id="selected"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>*@
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="ddlMesSECIGRISTA_BusqPlan" class="col-md-1 control-label">Mes </label>
+                                        <div class="col-md-2">
+                                            <select id="ddlMesSECIGRISTA_BusqPlan" name="ddlMesSECIGRISTA_BusqPlan" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                                <option value="" selected>-- Todos --</option>
+                                               
+                                            </select>
+                                        </div>
+                                        <label for="ddlAnioSECIGRISTA_BusqPlan" class="col-md-1 control-label" >Año </label>
+                                        <div class="col-md-2">
+                                            <select id="ddlAnioSECIGRISTA_BusqPlan" name="ddlAnioSECIGRISTA_BusqPlan" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                                @*<option value="">-- Todos --</option>
+            <option value="2020">2020</option>*@
+                                            </select>
+                                        </div>
+                                        <label for="ddlPlanilla_BusqPlan" class="col-md-1 control-label">Planilla </label>
+                                        <div class="col-md-3">
+                                            <select id="ddlPlanilla_BusqPlan" name="ddlPlanilla_BusqPlan" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                                @*<option value="">-- Todos --</option>
+            <option value="2020">2020</option>*@
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-11">
+                                    <div class="col-md-12" style="text-align: center; padding-top: 10px;">
+
+                                        <button type="reset" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                                        </button>
+                                        <button type="submit" class="btn btn-primary btn-sm" onclick="controlador.CargarBandejaPrincipalPlanillaSECIGRISTAValidar(event)">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                        </button>
+                                        <input id="hdiMesBusqPlan4ta" name="hdiMesBusqPlan4ta" type="hidden" value="" />
+                                        <input id="hdiAnioBusqPlan4ta" name="hdiAnioBusqPlan4ta" type="hidden" value="" />
+                                        <input id="hdvMetasTemp" name="hdvMetasTemp" type="hidden" value="" />
+                                        <input id="hdidCodFuenteFinanciamiento" name="hdidCodFuenteFinanciamiento" type="hidden" value="0" />
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel-body" id="divListarAplicacionBandejaAsistPerm">
+                        @*<div class="row">
+                        <div id="divTotal" class="col-md-2">
+                            <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
+                        </div>
+                        <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                            <button id="btnNuevo" type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
+                            </button>
+                        </div>
+                    </div>*@
+                        <div class="row">
+                            <div class="col-md-12" style="text-align: center;">
+                                <label for="txtNombreReportePlanillaSECIGRISTA" class="col-md-1 control-label text-right">Nombre Reporte</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="txtNombreReportePlanillaSECIGRISTA" name="txtNombreReportePlanillaSECIGRISTA" class="form-control input-sm " validationmessage="requerido" />
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-sm text-left" onclick="controlador.GenerarExcelPlanillaSECIGRISTA(event)">
+                                    <span class="glyphicon glyphicon-export" aria-hidden="true"></span> Exportar
+                                </button>
+
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="row">
+                            <div id="divTotal" class="col-md-2">
+                                <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
+                            </div>
+                            <div class="row text-right">
+                                <label for="filter" class="text-right">BUSCAR  </label>
+                                <input id="filter" class="k-textbox" style="width:200px" />
+                            </div>
+                            <br />
+                            <div id="divGridBandejaPlanillaSECIGRISTAVacio" style="display: none;">
+                            </div>
+                            <div id="divGridBandejaPlanillaSECIGRISTA" style="display: none;">
+                            </div>
+                            <script type="text/x-kendo-template" id="template">
+                                <div class="tabstrip">
+                                    <ul>
+                                        <li class="k-state-active">
+                                            @*<a data-toggle="tabE" href="#tab1E">INGRESOS</a>*@
+                                            INGRESOS
+                                        </li> 
+                                        <li>
+                                            @*<a data-toggle="tabE" href="#tab2E">DESCUENTOS</a>*@
+                                            DESCUENTOS
+                                        </li>                                       
+                                    </ul>
+                                    <div>
+                                        <div class="divGridIngresosSECIGRISTA"></div>
+                                    </div>
+                                    <div>
+                                        <div class="divGridDescuentosSECIGRISTA"></div>
+                                    </div>                           
+                                </div>
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            @*</form>*@
+        </div>
+    </div>
+
+
+
+    @*<input id="hdIdCodTrabajador" name="hdIdCodTrabajadorBand" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />
+        <input id="hdIdBasePerfilPuesto" name="hdIdBasePerfilPuesto" type="hidden" value="" />*@
+
+</section>
+<!-- /.content -->
+<div id="ModalConceptosPagosTrabajador" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmConceptosPagosTrabajador" name="frmConceptosPagosTrabajador" novalidate="">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-8">
+                        <label for="lblTrabajador" class="control-label text-right">Trabajador:  </label>                        
+                        <input type="text" id="lblTrabajador" name="lblTrabajador" class="form-control input-sm" readonly/>                        
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    @*<hr style="border: 1px dashed #e2e2e2;">*@
+                    @*<label class="col-md-12 control-label text-left">CONCEPTOS </label>
+                    <br />*@
+                    <div class="form-group col-md-12">
+                        <label class="col-md-12 control-label" style="float:none">CONCEPTOS </label>
+                        <div class="row" id="divConceptosPagosTrabajador"></div>
+                    </div>
+                    @*<div class="form-group col-md-6">
+                            <label class="col-md-12 control-label" style="float:none">Descuentos : </label>
+                            <div class="row" id="divGridDescuentosActualizacion"></div>
+                        </div>*@
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/kendo/2018.1.221/jszip.min.js"></script>    
+    <script src="~/Scripts/App/Intranet/Planillas.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+        function getBoolean(str) {
+            if ("true".startsWith(str)) {
+                return true;
+            } else if ("false".startsWith(str)) {
+                return false;
+            } else {
+                return null;
+            }
+        }
+
+        $(document).ready(function () {
+            controlador = new PlanillasJS();
+            
+            //$("#txtFechaInicio").kendoDatePicker({ format: "dd/MM/yyyy" });
+            
+            //alert(controlador);
+            controlador.inicializarVerBandejaPlanillaSECIGRISTA();
+            
+        });
+
+        
+
+        
+
+    </script>
+}

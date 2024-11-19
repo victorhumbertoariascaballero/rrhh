@@ -1,0 +1,322 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "PLANILLAS  ->  PENSIONES";
+}
+@section SubTitulo { <h3>@ViewBag.Title</h3> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <div class="panel-group" id="accordion">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="#collapseDatos">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INGRESE CRITERIOS DE B&Uacute;SQUEDA
+                </a>
+            </div>
+            <div id="collapseDatos" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="row form-horizontal">
+                        @*<form id="frmBandeja" name="frmBandeja" novalidate="" >*@
+                        <form id="frmBandeja" name="frmBandeja" novalidate="" onsubmit="controlador.CargarBandejaPrincipal(event)">
+                                <div class="col-md-12">
+                                    <label for="ddlMes_busqueda" class="col-md-3 control-label">Mes </label>
+                                    <div class="col-md-2">
+                                        <select id="ddlMes_busqueda" name="ddlMes_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Seleccione --</option>
+                                        </select>
+
+                                    </div>
+                                    <label for="ddlAnio_busqueda" class="col-md-1 control-label">Año </label>
+                                    <div class="col-md-2">
+                                        <select id="ddlAnio_busqueda" name="ddlAnio_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Seleccione --</option>
+                                            @*<option value="2020">2020</option>*@
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4" style="text-align: center;">
+                                        <button id="btnBuscarRegimen" onclick="controlador.CargarBandejaPrincipal(event)" class="btn btn-primary btn-sm">
+                                           <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                        </button>
+                                          @*<button type="submit" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                        </button>*@
+                                        @*<button type="submit" class="btn btn-primary btn-sm" title="Copiar Regimen Mes Anterior">
+                                            <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Copiar Regimen
+                                        </button>*@
+                                        <button id="btnCopiarRegimen" title="Copiar Regimen Mes Anterior" onclick="controlador.abrirModalCopiarRegimen(event)" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-copy" aria-hidden="true"></span> Copiar Regimen
+                                        </button>
+                                    </div>
+                                </div>
+
+                        </form>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!--FORMULARIO DE BÚSQUEDA-->
+    </div>
+    <div id="pResultado" class="panel panel-default">
+        <div class="panel-heading">
+            <a data-toggle="collapse" href="#collapseReclamo">
+                <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  RESULTADO DE LA B&Uacute;SQUEDA
+            </a>
+        </div>
+        <div id="collapseReclamo" class="panel-collapse collapse in">
+            <div class="panel-body" id="divListarAplicacion">
+                <div class="row">
+                    <div id="divTotal" class="col-md-2">
+                        @*<h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>*@
+                        <h5><label>Total de Registros: &nbsp;</label></h5>
+                    </div>
+                    <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                        <button id="btnNuevo" type="button" class="btn btn-primary btn-sm" onclick="controlador.abrirModalRegistroRegimenPensionario(0)">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
+                        </button>
+                        @*<button id="btnNuevo" type="button" class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
+                        </button>*@
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="divGridPensiones"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="divModalRegistroRegimenPensionario" style="display: none; font-size: 11px">
+        
+        <div class="panel panel-default">
+            <form id="frmRegistroRegimenPensionario" name="frmRegistroRegimenPensionario" novalidate="" onsubmit="controlador.agregarRegistroRegimenPensionario(event)">
+            @*<form id="frmRegistroRegimenPensionario" name="frmRegistroRegimenPensionario" novalidate="" >*@
+
+                 <input id="hdIdRegistroRegimenPen" name="hdIdRegistroRegimenPen" type="hidden" value="0" />
+
+                 <div class="panel-body">
+                     <div class="col-md-10">
+                         <div class="row">
+                             <div class="form-group col-md-4">
+                                 <label for="ddlAnio_Regimen" class="control-label">Año</label>
+                                 <select id="ddlAnio_Regimen" name="ddlAnio_Regimen" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                     <option value="">-- Seleccione --</option>
+                                 </select>
+                             </div>
+                             <div class="form-group col-md-4">
+                                 <label for="ddlMes_Regimen" class="control-label">Mes</label>
+                                 <select id="ddlMes_Regimen" name="ddlMes_Regimen" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                     <option value="">-- Seleccione --</option>
+                                 </select>
+                             </div>
+                             <div class="form-group col-md-4">
+                                 <label for="ddlRegimenPensionario" class="control-label">Regimen Pensionario*</label>
+                                 <select id="ddlRegimenPensionario" name="ddlRegimenPensionario" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                     <option value="">-- Seleccione --</option>
+                                 </select>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="form-group col-md-4">
+                                 <label for="ddlAfps" class="control-label">Nombre de la AFP*</label>
+                                 <select id="ddlAfps" name="ddlAfps" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                     <option value="">-- Seleccione --</option>
+                                 </select>
+                             </div>
+                             <div class="form-group col-md-4">
+                                 <label for="ddlTipoRegimenPen" class="control-label">Tipo Regimen*</label>
+                                 <select id="ddlTipoRegimenPen" name="ddlTipoRegimenPen" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                     <option value="">-- Seleccione --</option>
+                                 </select>
+                             </div>
+
+                         </div>
+                         <div class="row">
+                             <div class="form-group col-md-4">
+                                 <label for="txtRegimenAporte" class="control-label">Aporte*</label>
+                                 @*<input id="txtRegimenAporte" name="txtRegimenAporte" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" maxlength="100" validationmessage=" " />*@
+                                 <input id="txtRegimenAporte" name="txtRegimenAporte" type="number" class="form-control input-sm text-right" readonly="readonly" required="required" maxlength="8" validationmessage="requerido" />
+                             </div>
+                             
+                             <div class="form-group col-md-4">
+                                 <label for="txtRegimenComision" class="control-label">Comisión Flujo / Mixto*</label>
+                                 @*<input id="txtRegimenComision" name="txtRegimenComision" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" maxlength="100" validationmessage=" " />*@
+                                 <input id="txtRegimenComision" name="txtRegimenComision" type="number" class="form-control input-sm text-right" readonly="readonly" required="required" maxlength="8" validationmessage="requerido" />
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="form-group col-md-4">
+                                 <label for="txtRegimenPrimaSeguro" class="control-label">Prima Seguro*</label>
+                                 @*<input id="txtRegimenPrimaSeguro" name="txtRegimenPrimaSeguro" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" maxlength="100" validationmessage=" " />*@
+                                 <input id="txtRegimenPrimaSeguro" name="txtRegimenPrimaSeguro" type="number" class="form-control input-sm text-right" readonly="readonly" required="required" maxlength="8" validationmessage="requerido" />
+
+                             </div>
+                             <div class="form-group col-md-4">
+                                 <label for="txtRegimenTope" class="control-label">Remuneración Máxima Asegurable (Tope)*</label>
+                                 @*<input id="txtRegimenTope" name="txtRegimenTope" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" maxlength="100" validationmessage=" " />*@
+                                 <input id="txtRegimenTope" name="txtRegimenTope" type="number" class="form-control input-sm text-right" readonly="readonly" required="required" maxlength="20" validationmessage="requerido" />
+                             </div>
+                             
+                         </div>
+                     </div>
+                 </div>
+
+                   
+
+                 <div class="panel-footer" style="text-align:right;">
+                        <button id="btnGuardarAdmin" type="submit" class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Guardar
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalRegistroRegimenPensionario()">
+                            <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                        </button>
+                 </div>
+
+              </form>
+
+        </div>
+    </div>
+   
+    <div id="divModalCopiaRegimen" style="display:none;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4 id="hCopiar">¿Está seguro de COPIAR Regimen Pensionario seleccionado?</h4>
+                <p id="pCopiar"></p>
+            </div>
+            <div class="panel-footer" style="text-align:right;">
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalCopiarRegimen()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                </button>
+                <button id="btnCopiar" type="button" class="btn btn-primary btn-sm" onclick="controlador.copiaRegimen()">
+                    <span class=" glyphicon glyphicon-save" aria-hidden="true">
+                    </span> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <input id="hdIdRegistroRegimenPen" name="hdIdRegistroRegimenPen" type="hidden" value="1" />
+    <input id="hdnUid" name="hdnUid" type="hidden" />
+    @*<input id="hdIdCodRegistroRegimenPensionario" name="hdIdCodReigstroRegimenPensionario" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />*@
+    
+
+</section>
+<!-- /.content -->
+
+@section Scripts {
+    <script src="~/Scripts/kendo/2018.1.221/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/RegimenPensionario.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new RegimenPensionarioJS();            
+            controlador.inicializarVerBandejaRegimenPensionario();
+        });
+               
+
+    </script>
+}

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8135BB38-C5F4-4231-8926-5A5A2C7BF60A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIDIS.SEG.LogicaNegocio</RootNamespace>
+    <AssemblyName>MIDIS.SEG.LogicaNegocio</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\MIDIS.Utiles\Binarios\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\BL_Encryption.cs" />
+    <Compile Include="Auth\BL_TAB_Usuario.cs" />
+    <Compile Include="Base\BaseLN.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T_genm_bases_perfil_puesto_LN.cs" />
+    <Compile Include="T_genm_conceptofijovariable_LN.cs" />
+    <Compile Include="T_genm_concepto_LN.cs" />
+    <Compile Include="T_genm_condicion_LN.cs" />
+    <Compile Include="T_genm_convocatoria_LN.cs" />
+    <Compile Include="T_genm_contrato_LN.cs" />
+    <Compile Include="T_genm_cualidad_LN.cs" />
+    <Compile Include="T_genm_descuentojudicial_LN.cs" />
+    <Compile Include="T_genm_Turnos_LN.cs" />
+    <Compile Include="T_genm_metas_LN.cs" />
+    <Compile Include="T_genm_perfil_puesto_LN.cs" />
+    <Compile Include="T_genm_planillas_LN.cs" />
+    <Compile Include="T_genm_legajo_LN.cs" />
+    <Compile Include="T_genm_postulante_LN.cs" />
+    <Compile Include="T_genm_persona_LN.cs" />
+    <Compile Include="T_genm_regimenpensionario_LN.cs" />
+    <Compile Include="T_genm_sede_LN.cs" />
+    <Compile Include="T_genm_dependencia_LN.cs" />
+    <Compile Include="T_genm_empleado_LN.cs" />
+    <Compile Include="T_genm_ubigeo_LN.cs" />
+    <Compile Include="T_genm_uuoo_LN.cs" />
+    <Compile Include="T_genm_Marcaciones_LN.cs" />
+    <Compile Include="T_genm_verbo_LN.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MIDIS.Autenticacion\MIDIS.Autenticacion.csproj">
+      <Project>{03046cd0-5aeb-458c-af51-e357aa23d42c}</Project>
+      <Name>MIDIS.Autenticacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MIDIS.SEG.AccesoDatosSQL\MIDIS.SEG.AccesoDatosSQL.csproj">
+      <Project>{0f98f82f-e74a-499a-b32c-684cc1bb0226}</Project>
+      <Name>MIDIS.SEG.AccesoDatosSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MIDIS.SEG.Entidades\MIDIS.ORI.Entidades.csproj">
+      <Project>{cf3844df-e723-4fb4-a8c9-bfdf0a466a19}</Project>
+      <Name>MIDIS.ORI.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MIDIS.Utiles\MIDIS.Utiles.csproj">
+      <Project>{7f73a9aa-fb70-4631-ba93-b6fb6df7f8dc}</Project>
+      <Name>MIDIS.Utiles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

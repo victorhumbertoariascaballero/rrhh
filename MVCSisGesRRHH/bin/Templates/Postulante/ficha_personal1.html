@@ -1,0 +1,532 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body style="font-family: 'PT Sans Narrow',sans-serif;">
+    <div style="border: 2px solid #000; width: 1000px; padding: 0px 10px 30px;">
+        <img src="//logo" alt="logo" width="800px" style="padding-top: 10px" />
+        <hr style="border: 1px solid #000;" />
+        <table style="font-family:'PT Sans Narrow',sans-serif;font-size: 9px;width: 1000px;height: 300px;border-style: none;">
+            <tbody>
+                <tr style="height: 30px;">
+                    <td style="text-align: center; width: 684px; height: 30px;" colspan="4"><span style="font-size: 12px;font-weight: bold;/* background-color: #d1d1d1; */padding: 5px 20px;border: 1pt solid #000;border-radius: 3px;">FICHA PERSONAL / RESERVADA</span></td>
+                </tr>
+                <tr style="height: 30px;">
+                    <td style="width: 489px; height: 30px;" colspan="3"><span style="font-size: 10px; font-weight: bold; background-color: #d1d1d1; padding: 4px; border: 1pt solid #000;">PARA SER LLENADO POR EL EMPLEADOR</span></td>
+                    <td style="width: 189px; height: 30px;">&nbsp;</td>
+                </tr>
+                <!--<tr style="height: 30px;">
+                <td style="font-size: 9px; width: 164px; height: 16px;" bgcolor="#d1d1d1"><strong>CÓDIGO DE PLANILLA</strong></td>
+                <td style="font-size: 9px; width: 10px; height: 16px; text-align: center;"><strong>:</strong></td>
+                <td style="font-size: 9px; width: 303px; height: 16px;">//planilla</td>
+                <td style="width: 189px; text-align: center; height: 96px;" rowspan="7"><span style="border: 1pt solid #d1d1d1; padding: 50px 30px; color: #d1d1d1;">FOTO</span></td>
+            </tr>
+            <tr style="height: 30px;">
+                <td style="font-size: 9px; width: 164px; height: 16px;" bgcolor="#d1d1d1"><strong>NÚMERO DE CONTRATO</strong></td>
+                <td style="font-size: 9px; width: 10px; height: 16px; text-align: center;"><strong>:</strong></td>
+                <td style="font-size: 9px; width: 303px; height: 16px;">//contrato</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td style="font-size: 9px; width: 164px; height: 16px;" bgcolor="#d1d1d1"><strong>FECHA DE INGRESO</strong></td>
+                <td style="font-size: 9px; width: 10px; height: 16px; text-align: center;"><strong>:</strong></td>
+                <td style="font-size: 9px; width: 303px; height: 16px;">//ingreso</td>
+            </tr>-->
+                <tr style="height: 30px;">
+                    <td style="font-size: 9px; width: 164px; height: 16px;" bgcolor="#d1d1d1"><strong>UNIDAD ORGÁNICA</strong></td>
+                    <td style="font-size: 9px; width: 10px; height: 16px; text-align: center;"><strong>:</strong></td>
+                    <td style="font-size: 9px; width: 303px; height: 16px;">//unidad_organica</td>
+                    <td style="width: 189px; text-align: center; height: 96px;" rowspan="4"><span style="border: 1pt solid #d1d1d1; padding: 50px 30px; color: #d1d1d1;">FOTO</span></td>
+                </tr>
+                <tr style="height: 30px;">
+                    <td style="font-size: 9px; width: 164px; height: 16px;" bgcolor="#d1d1d1"><strong>CARGO</strong></td>
+                    <td style="font-size: 9px; width: 10px; height: 16px; text-align: center;"><strong>:</strong></td>
+                    <td style="font-size: 9px; width: 303px; height: 16px;">//cargo</td>
+                </tr>
+                <tr style="height: 30px;">
+                    <td style="font-size: 9px; width: 164px; height: 16px;" bgcolor="#d1d1d1"><strong>REMUNERACIÓN</strong></td>
+                    <td style="font-size: 9px; width: 10px; height: 16px; text-align: center;"><strong>:</strong></td>
+                    <td style="font-size: 9px; width: 303px; height: 16px;">//remuneracion</td>
+                </tr>
+                <tr style="height: 30px;">
+                    <td style="font-size: 9px; width: 164px; height: 16px;" bgcolor="#d1d1d1"><strong>SECUENCIA FUNCIONAL (Meta Presupuestal)</strong></td>
+                    <td style="font-size: 9px; width: 10px; height: 16px; text-align: center;"><strong>:</strong></td>
+                    <td style="font-size: 9px; width: 303px; height: 16px;">//meta</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr style="border: 1px solid #000;" />
+        <table style="font-family: 'PT Sans Narrow',sans-serif; font-size: 9px; width: 1000px; height: 297px; border-style: none;">
+            <tbody>
+                <tr>
+                    <td style="width: 357px;" colspan="5"><span style="font-size: 10px; font-weight: bold; background-color: #d1d1d1; padding: 4px; border: 1pt solid #000;">PARA SER LLENADO POR EL TRABAJADOR</span></td>
+                    <td style="width: 260px;" colspan="5">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 617px; text-align: center;" colspan="10"><span style="text-decoration: underline; font-weight: bold;">DATOS PERSONALES</span></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 151px;" colspan="2">APELLIDO PATERNO:</td>
+                    <td style="font-size: 7px; width: 138px;" colspan="2">APELLIDO MATERNO:</td>
+                    <td style="font-size: 7px; width: 275px;" colspan="4">NOMBRES:</td>
+                    <td style="font-size: 7px; width: 26px;">SEXO:</td>
+                    <td style="font-size: 7px; width: 27px;">EDAD:</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 151px; border: 1px solid #d1d1d1" colspan="2">//paterno</td>
+                    <td style="font-size: 9px; width: 138px; border: 1px solid #d1d1d1" colspan="2">//materno</td>
+                    <td style="font-size: 9px; width: 275px; border: 1px solid #d1d1d1" colspan="4">//nombres</td>
+                    <td style="font-size: 9px; width: 26px; border: 1px solid #d1d1d1">//sexo</td>
+                    <td style="font-size: 9px; width: 27px; border: 1px solid #d1d1d1">//edad</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 151px;" colspan="2">NACIONALIDAD:&nbsp;</td>
+                    <td style="font-size: 7px; width: 82px;">FECHA NACIMIENTO:</td>
+                    <td style="font-size: 7px; width: 197px;" colspan="3">LUGAR DE NACIMIENTO:</td>
+                    <td style="font-size: 7px; width: 86px;">N&deg; DNI:</td>
+                    <td style="font-size: 7px; width: 101px;" colspan="3">N&deg; CARNET EXTRANJER&Iacute;A:</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 151px; border: 1px solid #d1d1d1" colspan="2">//nacionalidad</td>
+                    <td style="font-size: 9px; width: 82px; border: 1px solid #d1d1d1">//nacimiento</td>
+                    <td style="font-size: 9px; width: 197px; border: 1px solid #d1d1d1" colspan="3">//lugar_nacimiento</td>
+                    <td style="font-size: 9px; width: 86px; border: 1px solid #d1d1d1">//dni</td>
+                    <td style="font-size: 9px; width: 101px; border: 1px solid #d1d1d1" colspan="3">//extranjeria</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 357px" colspan="5">DIRECCI&Oacute;N DOMICILIO:</td>
+                    <td style="font-size: 7px; width: 260px" colspan="5">UBIGEO:</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 357px; border: 1px solid #d1d1d1" colspan="5">//direccion</td>
+                    <td style="font-size: 9px; width: 260px; border: 1px solid #d1d1d1" colspan="5">//ubigeo</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 103px;">ESTADO CIVIL:</td>
+                    <td style="font-size: 7px; width: 130px;" colspan="2">TIPO DE VIVIENDA:&nbsp;&nbsp;</td>
+                    <td style="font-size: 7px; width: 124px;" colspan="2">BREVETE:</td>
+                    <td style="font-size: 7px; width: 73px;">N&deg; LICENCIA:</td>
+                    <td style="font-size: 7px; width: 86px;">N&deg; RUC:</td>
+                    <td style="font-size: 7px; width: 101px;" colspan="3">CORREO ELECTR&Oacute;NICO:&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 103px; border: 1px solid #d1d1d1">//estado_civil</td>
+                    <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//tipo_vivienda</td>
+                    <td style="font-size: 9px; width: 124px; border: 1px solid #d1d1d1" colspan="2">//brevete</td>
+                    <td style="font-size: 9px; width: 73px; border: 1px solid #d1d1d1">//licencia</td>
+                    <td style="font-size: 9px; width: 86px; border: 1px solid #d1d1d1">//ruc</td>
+                    <td style="font-size: 9px; width: 101px; border: 1px solid #d1d1d1" colspan="3">//email</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 103px;">TEL&Eacute;FONO FIJO:</td>
+                    <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//fijo&nbsp;</td>
+                    <td style="font-size: 7px; width: 56px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 68px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 73px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 86px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 48px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 26px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 27px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 103px;">TEL&Eacute;FONO CELULAR:</td>
+                    <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//celular&nbsp;</td>
+                    <td style="font-size: 7px; width: 56px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 68px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 73px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 86px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 48px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 26px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 27px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 103px;">TEL&Eacute;FONO DE EMERGENCIA 1:</td>
+                    <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//emergencia1&nbsp;</td>
+                    <td style="font-size: 7px; width: 124px;" colspan="2">APELLIDOS Y NOMBRES DEL CONTACTO:</td>
+                    <td style="font-size: 9px; width: 160px; border: 1px solid #d1d1d1" colspan="5">//contacto1&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 103px;">TEL&Eacute;FONO DE EMERGENCIA 2:</td>
+                    <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//emergencia2&nbsp;</td>
+                    <td style="font-size: 7px; width: 124px;" colspan="2">APELLIDOS Y NOMBRES DEL CONTACTO:</td>
+                    <td style="font-size: 9px; width: 160px; border: 1px solid #d1d1d1" colspan="5">//contacto2&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 103px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 151px;" colspan="2"><strong>PENSIONES</strong></td>
+                    <td style="font-size: 9px; width: 82px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 197px;" colspan="3"><strong>ENTIDAD BANCARIA</strong></td>
+                    <td style="font-size: 9px; width: 187px;" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 233px;" colspan="3">(Indicar el sistema de pensiones al que se encuentra afiliado)&nbsp;&nbsp;&nbsp;</td>
+                    <td style="font-size: 9px; width: 384px;" colspan="7">(Indique la entidad bancaria donde realizaremos sus pagos)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 103px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AFP&nbsp; <span style="border: 1px solid #d1d1d1; padding: 2px;">//afp</span></td>
+                    <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">&nbsp;//nombre_afp</td>
+                    <td style="font-size: 7px; width: 124px;" colspan="2">NOMBRE DE ENTIDAD BANCARIA:</td>
+                    <td style="font-size: 7px; width: 159px;" colspan="2">N&deg; DE CUENTA BANCARIA:</td>
+                    <td style="font-size: 7px; width: 101px;" colspan="3">C&Oacute;DIGO DE CUENTA INTERBANCARIO:</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 103px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ONP&nbsp; <span style="border: 1px solid #d1d1d1; padding: 2px;">//onp</span></td>
+                    <td style="font-size: 9px; width: 48px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 82px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 124px; border: 1px solid #d1d1d1" colspan="2">//nombre_banco</td>
+                    <td style="font-size: 9px; width: 159px; border: 1px solid #d1d1d1" colspan="2">//cuenta_banco</td>
+                    <td style="font-size: 9px; width: 101px; border: 1px solid #d1d1d1" colspan="3">//cci_banco</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 103px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SIN RÉGIMEN&nbsp; <span style="border: 1px solid #d1d1d1; padding: 2px;">//sinreg</span></td>
+                    <td style="font-size: 9px; width: 48px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 82px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 124px;" colspan="2">&nbsp;</td>
+                    <td style="font-size: 9px; width: 159px;" colspan="2">&nbsp;</td>
+                    <td style="font-size: 9px; width: 101px;" colspan="3">&nbsp;</td>
+                </tr>
+                <!--<tr>
+                <td style="font-size: 9px; width: 233px;" colspan="3">No estoy afiliado y deseo afiliarme voluntariamente a:</td>
+                <td style="font-size: 9px; width: 384px;" colspan="7">No me encuentro afiliado y solicito que se aperture una cuenta de ahorro en:</td>
+            </tr>-->
+                <!--<tr>
+                <td style="font-size: 9px; width: 103px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AFP&nbsp; <span style="border: 1px solid #d1d1d1; padding: 2px;">//_afp</span></td>
+                <td style="font-size: 9px; width: 48px;">&nbsp; ONP&nbsp; <span style="border: 1px solid #d1d1d1; padding: 2px;">//_onp</span></td>
+                <td style="font-size: 9px; width: 82px;">&nbsp;</td>
+                <td style="font-size: 9px; width: 56px;">BBVA&nbsp; <span style="border: 1px solid #d1d1d1; padding: 2px;">//_bbva</span></td>
+                <td style="font-size: 9px; width: 68px;">BCP&nbsp; <span style="border: 1px solid #d1d1d1; padding: 2px;">//_bcp</span></td>
+                <td style="font-size: 9px; width: 73px;">&nbsp;</td>
+                <td style="font-size: 9px; width: 86px;">&nbsp;</td>
+                <td style="font-size: 9px; width: 48px;">&nbsp;</td>
+                <td style="font-size: 9px; width: 26px;">&nbsp;</td>
+                <td style="font-size: 9px; width: 27px;">&nbsp;</td>
+            </tr>-->
+                <tr>
+                    <td style="font-size: 9px; width: 233px;" colspan="3"></td>
+                    <td style="font-size: 9px; width: 384px;" colspan="7"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!--<hr style="border: 1px solid #000;" />
+    <table style="font-family: 'PT Sans Narrow',sans-serif; font-size: 9px; width: 1000px; height: 297px; border-style: none;">
+        <tbody>
+            <tr>
+                <td style="width: 617px; text-align: center;" colspan="10"><span style="text-decoration: underline; font-weight: bold;">FORMACIÓN ACADÉMICA</span></td>
+            </tr>
+            <tr>
+                <td style="font-size: 9px; width: 151px;" colspan="2"><strong>SITUACIÓN ACADÉMICA</strong></td>
+                <td style="font-size: 9px; width: 82px;">&nbsp;</td>
+                <td style="font-size: 9px; width: 197px;" colspan="3"><strong>ENTIDAD BANCARIA</strong></td>
+                <td style="font-size: 9px; width: 187px;" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-size: 7px; width: 151px;" colspan="2">NACIONALIDAD:&nbsp;</td>
+                <td style="font-size: 7px; width: 82px;">FECHA NACIMIENTO:</td>
+                <td style="font-size: 7px; width: 197px;" colspan="3">LUGAR DE NACIMIENTO:</td>
+                <td style="font-size: 7px; width: 86px;">N&deg; DNI:</td>
+                <td style="font-size: 7px; width: 101px;" colspan="3">N&deg; CARNET EXTRANJER&Iacute;A:</td>
+            </tr>
+            <tr>
+                <td style="font-size: 9px; width: 151px; border: 1px solid #d1d1d1" colspan="2">//nacionalidad</td>
+                <td style="font-size: 9px; width: 82px; border: 1px solid #d1d1d1">//nacimiento</td>
+                <td style="font-size: 9px; width: 197px; border: 1px solid #d1d1d1" colspan="3">//lugar_nacimiento</td>
+                <td style="font-size: 9px; width: 86px; border: 1px solid #d1d1d1">//dni</td>
+                <td style="font-size: 9px; width: 101px; border: 1px solid #d1d1d1" colspan="3">//extranjeria</td>
+            </tr>
+            <tr>
+                <td style="font-size: 7px; width: 357px" colspan="5">DIRECCI&Oacute;N DOMICILIO:</td>
+                <td style="font-size: 7px; width: 260px" colspan="5">UBIGEO:</td>
+            </tr>
+            <tr>
+                <td style="font-size: 9px; width: 357px; border: 1px solid #d1d1d1" colspan="5">//direccion</td>
+                <td style="font-size: 9px; width: 260px; border: 1px solid #d1d1d1" colspan="5">//ubigeo</td>
+            </tr>
+            <tr>
+                <td style="font-size: 7px; width: 103px;">ESTADO CIVIL:</td>
+                <td style="font-size: 7px; width: 130px;" colspan="2">TIPO DE VIVIENDA:&nbsp;&nbsp;</td>
+                <td style="font-size: 7px; width: 124px;" colspan="2">BREVETE:</td>
+                <td style="font-size: 7px; width: 73px;">N&deg; LICENCIA:</td>
+                <td style="font-size: 7px; width: 86px;">N&deg; RUC:</td>
+                <td style="font-size: 7px; width: 101px;" colspan="3">CORREO ELECTR&Oacute;NICO:&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-size: 9px; width: 103px; border: 1px solid #d1d1d1">//estado_civil</td>
+                <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//tipo_vivienda</td>
+                <td style="font-size: 9px; width: 124px; border: 1px solid #d1d1d1" colspan="2">//brevete</td>
+                <td style="font-size: 9px; width: 73px; border: 1px solid #d1d1d1">//licencia</td>
+                <td style="font-size: 9px; width: 86px; border: 1px solid #d1d1d1">//ruc</td>
+                <td style="font-size: 9px; width: 101px; border: 1px solid #d1d1d1" colspan="3">//email</td>
+            </tr>
+            <tr>
+                <td style="font-size: 7px; width: 103px;">TEL&Eacute;FONO FIJO:</td>
+                <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//fijo&nbsp;</td>
+                <td style="font-size: 7px; width: 56px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 68px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 73px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 86px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 48px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 26px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 27px;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-size: 7px; width: 103px;">TEL&Eacute;FONO CELULAR:</td>
+                <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//celular&nbsp;</td>
+                <td style="font-size: 7px; width: 56px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 68px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 73px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 86px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 48px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 26px;">&nbsp;</td>
+                <td style="font-size: 7px; width: 27px;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-size: 7px; width: 103px;">TEL&Eacute;FONO DE EMERGENCIA 1:</td>
+                <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//emergencia1&nbsp;</td>
+                <td style="font-size: 7px; width: 124px;" colspan="2">APELLIDOS Y NOMBRES DEL CONTACTO:</td>
+                <td style="font-size: 9px; width: 160px; border: 1px solid #d1d1d1" colspan="5">//contacto1&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-size: 7px; width: 103px;">TEL&Eacute;FONO DE EMERGENCIA 2:</td>
+                <td style="font-size: 9px; width: 130px; border: 1px solid #d1d1d1" colspan="2">//emergencia2&nbsp;</td>
+                <td style="font-size: 7px; width: 124px;" colspan="2">APELLIDOS Y NOMBRES DEL CONTACTO:</td>
+                <td style="font-size: 9px; width: 160px; border: 1px solid #d1d1d1" colspan="5">//contacto2&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 103px;">&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>-->
+        <hr style="border: 1px solid #000;" />
+        <table style="font-family: 'PT Sans Narrow', sans-serif; font-size: 9px; width: 1000px; height: 303px; border-style: none;">
+            <tbody>
+                <tr>
+                    <td style="text-align: center; width: 449.952px;" colspan="12"><span style="text-decoration: underline; font-weight: bold;">FORMACI&Oacute;N ACAD&Eacute;MICA</span></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 449.952px;" colspan="12"><strong>SITUACI&Oacute;N ACAD&Eacute;MICA:</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 105.952px;">SECUNDARIA COMPLETA</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//sa_s</td>
+                    <td style="font-size: 7px; width: 10px">&nbsp;</td>
+                    <td style="font-size: 7px; width: 78px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 251px;" colspan="8">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 105.952px;">T&Eacute;CNICA</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//sa_t</td>
+                    <td style="font-size: 7px; width: 5px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 78px;">CARRERA y/o ESPECIALIDAD&nbsp;</td>
+                    <td style="font-size: 9px; width: 251px; border: 1px solid #d1d1d1;" colspan="8">//sa_ct&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 105.952px;">UNIVERSITARIA</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//sa_u</td>
+                    <td style="font-size: 7px; width: 5px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 78px;">CARRERA y/o ESPECIALIDAD&nbsp;</td>
+                    <td style="font-size: 9px; width: 251px; border: 1px solid #d1d1d1;" colspan="8">//sa_cu&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 105.952px;">OTROS</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//sa_o</td>
+                    <td style="font-size: 7px; width: 5px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 78px;">ESPECIFICAR</td>
+                    <td style="font-size: 9px; width: 251px; border: 1px solid #d1d1d1;" colspan="8">//sa_co&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 105.952px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 449.952px;" colspan="12"><strong>CENTRO DE ESTUDIOS:</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 105.952px;">INSTITUCI&Oacute;N P&Uacute;BLICA</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//ce_pu</td>
+                    <td style="font-size: 7px; width: 5px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 78px;">NOMBRE DE LA INSTITUCI&Oacute;N</td>
+                    <td style="font-size: 9px; width: 251px; border: 1px solid #d1d1d1;" colspan="8">//ce_nopu</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 105.952px;">INSTITUCI&Oacute;N PRIVADA</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//ce_pr</td>
+                    <td style="font-size: 7px; width: 5px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 78px;">NOMBRE DE LA INSTITUCI&Oacute;N</td>
+                    <td style="font-size: 9px; width: 251px; border: 1px solid #d1d1d1;" colspan="8">//ce_nopr</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 105.952px;">EXTRANJERO</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//ce_ex</td>
+                    <td style="font-size: 7px; width: 5px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 78px;">ESPECIFICAR</td>
+                    <td style="font-size: 9px; width: 251px; border: 1px solid #d1d1d1;" colspan="8">//ce_noex</td>
+                </tr>
+                <tr>
+                    <td style="width: 105.952px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 449.952px;" colspan="12"><strong>GRADO ACAD&Eacute;MICO:</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 105.952px;">ESTUDIANTE</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//ga_es</td>
+                    <td style="font-size: 7px; width: 5px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 78px;">EGRESADO</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//ga_eg</td>
+                    <td style="font-size: 7px; width: 35px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 44px;">BACHILLER</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//ga_ba</td>
+                    <td style="font-size: 7px; width: 85px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 40px;">TITULADO</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//ga_ti</td>
+                    <td style="font-size: 7px; width: 10px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 105.952px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 449.952px;" colspan="12"><strong>ESTUDIOS DE POST GRADO:</strong></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 105.952px;">MAESTR&Iacute;A</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//pg_m</td>
+                    <td style="font-size: 7px; width: 5px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 78px;">DOCTORADO</td>
+                    <td style="font-size: 9px; width: 7px; border: 1px solid #d1d1d1;">//pg_d</td>
+                    <td style="font-size: 7px; width: 35px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 44px;">OTROS</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//pg_o</td>
+                    <td style="font-size: 9px; width: 146px; border: 1px solid #d1d1d1;" colspan="4">//pg_no</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 120.952px;" colspan="1">CENTRO DE ESTUDIOS</td>
+                    <td style="font-size: 9px; width: 120px; border: 1px solid #d1d1d1;" colspan="5">//pg_ce&nbsp;</td>
+                    <td style="font-size: 7px; width: 44px;">GRADO</td>
+                    <td style="font-size: 9px; width: 165px; border: 1px solid #d1d1d1" colspan="5">//pg_gr&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr style="border: 1px solid #000;" />
+        <table style="font-family: 'PT Sans Narrow', sans-serif; font-size: 9px; width: 1000px; height: 303px; border-style: none;">
+            <tbody>
+                <tr>
+                    <td style="text-align: center; width: 715px;" colspan="14"><span style="text-decoration: underline; font-weight: bold;">DATOS DE SALUD</span></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 138px;" colspan="3"><strong>ALERGIAS:</strong></td>
+                    <td style="font-size: 9px; width: 36px; border: 1px solid #d1d1d1;">//aler&nbsp;</td>
+                    <td style="width: 541px;" colspan="10">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 138px;" colspan="3">
+                        <p>BETALACT&Aacute;MICOS</p>
+                        <p>(Penicilina - Cefalosporinicos)</p>
+                    </td>
+                    <td style="font-size: 9px; width: 36px; border: 1px solid #d1d1d1;">//beta</td>
+                    <td style="font-size: 7px; width: 53px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 112px;" colspan="5">
+                        <p>&nbsp;ANALG&Eacute;SICOS - ANTI INFLAMATORIOS</p>
+                        <p>(Ketorolaco - Diclofenaco - Ibuprofeno)</p>
+                    </td>
+                    <td style="font-size: 9px; width: 21px; border: 1px solid #d1d1d1;">//analge&nbsp;</td>
+                    <td style="font-size: 7px; width: 66px;">&nbsp;OTRAS ALERGIAS:</td>
+                    <td style="font-size: 9px; width: 289px; border: 1px solid #d1d1d1;" colspan="2">//otral&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 138px;" colspan="3"><strong>ENFERMEDADES:</strong></td>
+                    <td style="font-size: 9px; width: 36px;border: 1px solid #d1d1d1;">//enfe</td>
+                    <td style="width: 541px;" colspan="10">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 74px;">DIABETES</td>
+                    <td style="font-size: 9px; width: 23px; border: 1px solid #d1d1d1;">//diab</td>
+                    <td style="font-size: 7px; width: 41px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 89px;" colspan="2">HIPETENSI&Oacute;N ARTERIAL</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//hipe</td>
+                    <td style="font-size: 7px; width: 22px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 31px;">ASMA</td>
+                    <td style="font-size: 9px; width: 32px; border: 1px solid #d1d1d1;">//asma</td>
+                    <td style="font-size: 7px; width: 17px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 21px;">EPILEPSIA</td>
+                    <td style="font-size: 9px; width: 66px; border: 1px solid #d1d1d1;">//epil</td>
+                    <td style="font-size: 7px; width: 27.6051px;">&nbsp;OTRAS:</td>
+                    <td style="font-size: 9px; width: 261.395px; border: 1px solid #d1d1d1;">//otrae&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 138px;" colspan="3"><strong>MEDICAMENTOS:</strong></td>
+                    <td style="font-size: 9px; width: 36px; border: 1px solid #d1d1d1;">//medi&nbsp;</td>
+                    <td style="width: 53px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 508px; border: 1px solid #d1d1d1;" colspan="11">//otrom&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 138px;" colspan="3"><strong>GRUPO SANGUINEO:</strong></td>
+                    <td style="font-size: 9px; width: 36px; border: 1px solid #d1d1d1;">//grs&nbsp;</td>
+                    <td style="width: 53px;">&nbsp;</td>
+                    <td style="width: 508px;" colspan="11">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 138px;" colspan="3"><strong>INFORMACI&Oacute;N ADICIONAL:</strong></td>
+                    <td style="width: 36px;">&nbsp;</td>
+                    <td style="width: 53px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 508px; border: 1px solid #d1d1d1;" colspan="11">//adic&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr style="border: 1px solid #000;" />
+        <table style="font-family: 'PT Sans Narrow', sans-serif; font-size: 9px; width: 1000px; height: 303px; border-style: none;">
+            <tbody>
+                <tr>
+                    <td style="text-align: center; width: 1347.82px;" colspan="13"><span style="text-decoration: underline; font-weight: bold;">CONDICI&Oacute;N DE DISCAPACIDAD</span></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 204px;" colspan="3">&iquest;Cuenta con alg&uacute;n tipo de discapacidad?</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//disc&nbsp;</td>
+                    <td style="width: 1133.82px;" colspan="9">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 204px;" colspan="3">&iquest;Qu&eacute; tipo de discapacidad presenta?</td>
+                    <td style="font-size: 9px; width: 10px;">&nbsp;</td>
+                    <td style="width: 1133.82px;" colspan="9">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 62px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 98px;">AUDITIVA</td>
+                    <td style="font-size: 9px; width: 44px; border: 1px solid #d1d1d1;">//diau</td>
+                    <td style="font-size: 7px; width: 10px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 53px;">VISUAL</td>
+                    <td style="font-size: 9px; width: 28.1165px; border: 1px solid #d1d1d1;">//visu</td>
+                    <td style="font-size: 7px; width: 52.8835px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 531.818px;" colspan="3">&nbsp;EN EL HABLA</td>
+                    <td style="font-size: 9px; width: 38px; border: 1px solid #d1d1d1;">&nbsp;//habl</td>
+                    <td style="font-size: 7px; width: 169px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 261px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 62px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 98px;">CONDUCTA</td>
+                    <td style="font-size: 9px; width: 44px; border: 1px solid #d1d1d1;">//dico</td>
+                    <td style="font-size: 7px; width: 10px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 1133.82px; border: 1px solid #d1d1d1;" colspan="9">//cond</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 7px; width: 62px;">&nbsp;</td>
+                    <td style="font-size: 7px; width: 98px;">F&Iacute;SICA</td>
+                    <td style="font-size: 9px; width: 44px; border: 1px solid #d1d1d1;">//difi</td>
+                    <td style="font-size: 7px; width: 10px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 1133.82px; border: 1px solid #d1d1d1;" colspan="9">//fisi</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 9px; width: 204px;" colspan="3">&nbsp;&iquest;Cuenta con Certificado de Discapacidad ?</td>
+                    <td style="font-size: 9px; width: 10px; border: 1px solid #d1d1d1;">//cert&nbsp;</td>
+                    <td style="width: 53px;">&nbsp;</td>
+                    <td style="font-size: 9px; width: 1100.82px;" colspan="10"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!--<hr style="border: 1px solid #000;" />-->
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<table style="width: 100%;text-align: center; font-size: 11px; border: 1px solid black; border-collapse: collapse; margin-top: 10px;">
+        <tr>
+            <th style="border: 1px solid black; width: 40%;">NOMBRE DE ENTIDAD/EMPRESA/INSTITUCIÓN</th>
+            <th style="border: 1px solid black;">SECTOR (PÚBLICO/PRIVADO)</th>
+            <th style="border: 1px solid black; width: 15%;">
+                Régimen (N° 276, N° 728, N° 1057, N° 1024, PAC, FAG, Ley
+                N° 30057, N°
+                1401, Otro)
+            </th>
+            <th style="border: 1px solid black; width: 25%;">PUESTO / CARGO</th>
+            <th style="border: 1px solid black;">DESDE (DD/MM/AAAA)</th>
+            <th style="border: 1px solid black;">HASTA (DD/MM/AAAA)</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 10px 5px;">//nombre_empresa</td>
+            <td style="border: 1px solid black; padding: 10px 5px;">//sector</td>
+            <td style="border: 1px solid black; padding: 10px 5px;">//regimen</td>
+            <td style="border: 1px solid black; padding: 10px 5px;">//trabajo_puesto</td>
+            <td style="border: 1px solid black; padding: 10px 5px;">//FinDesde</td>
+            <td style="border: 1px solid black; padding: 10px 5px;">//FinHasta</td>
+        </tr>
+        <tr>
+            <th style="border: 1px solid black; width: 40%;">NOMBRE DEL JEFE DIRECTO</th>
+            <th colspan="2" style="border: 1px solid black;">PUESTO /CARGO DEL JEFE DIRECTO</th>
+            <th colspan="2" style="border: 1px solid black;">MOTIVO DE CAMBIO</th>
+            <th colspan="2" style="border: 1px solid black;">REMUNERACIÓN FIJA MENSUAL S./ (BRUTA)</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 10px 5px;">//JefeDirecto</td>
+            <td colspan="2" style="border: 1px solid black; padding: 10px 5px;">//JefeCargo</td>
+            <td colspan="2" style="border: 1px solid black; padding: 10px 5px;">//MotivoCambio</td>
+            <td colspan="2" style="border: 1px solid black; padding: 10px 5px;">//remuneracion</td>
+        </tr>
+    </table>
+    <table style="width: 100%;text-align: center; font-size: 11px; border-collapse: collapse;">
+        <tr>
+            <th style="border-width: 1px; border-color: black; border-style: none solid; padding: 5px;">
+                FUNCIONES PRINCIPALES
+            </th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 5px; text-align:left;">//funciones</td>
+        </tr>
+    </table>
+    <table style="width: 100%;text-align: center; font-size: 11px; border-collapse: collapse;">
+        <tr>
+            <th colspan="6"
+                style="border-width: 1px; border-color: black; border-style: none solid; text-align: left;">
+                REFERENCIA LABORAL
+            </th>
+        </tr>
+        <tr>
+            <th style="border: 1px solid black; padding: 2px; width: 5%;">NOMBRE</th>
+            <td style="border: 1px solid black; padding: 2px;">//ReferenciaNombre</td>
+            <th style="border: 1px solid black; padding: 2px; width: 5%;">PUESTO</th>
+            <td style="border: 1px solid black; padding: 2px;">//ReferenciaPuesto</td>
+            <th style="border: 1px solid black; padding: 2px; width: 7%;">TELÉFONO / CORREO</th>
+            <td style="border: 1px solid black; padding: 2px;">//ReferenciaTelCorreo</td>
+        </tr>
+    </table>

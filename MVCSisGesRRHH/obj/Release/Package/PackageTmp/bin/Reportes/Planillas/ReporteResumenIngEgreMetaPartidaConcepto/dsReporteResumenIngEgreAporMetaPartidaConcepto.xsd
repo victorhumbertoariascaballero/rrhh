@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReporteResumenIngEgreAporMetaPartidaConcepto" targetNamespace="http://tempuri.org/dsReporteResumenIngEgreAporMetaPartidaConcepto.xsd" xmlns:mstns="http://tempuri.org/dsReporteResumenIngEgreAporMetaPartidaConcepto.xsd" xmlns="http://tempuri.org/dsReporteResumenIngEgreAporMetaPartidaConcepto.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReporteResumenIngEgreAporMetaPartidaConcepto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReporteResumenIngEgreAporMetaPartidaConcepto" msprop:Generator_UserDSName="dsReporteResumenIngEgreAporMetaPartidaConcepto">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsReporteResumenIngEgreAporMetaPartidaConcepto" msprop:Generator_TableClassName="dsReporteResumenIngEgreAporMetaPartidaConceptoDataTable" msprop:Generator_TableVarName="tabledsReporteResumenIngEgreAporMetaPartidaConcepto" msprop:Generator_TablePropName="_dsReporteResumenIngEgreAporMetaPartidaConcepto" msprop:Generator_RowDeletingName="dsReporteResumenIngEgreAporMetaPartidaConceptoRowDeleting" msprop:Generator_RowChangingName="dsReporteResumenIngEgreAporMetaPartidaConceptoRowChanging" msprop:Generator_RowEvHandlerName="dsReporteResumenIngEgreAporMetaPartidaConceptoRowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteResumenIngEgreAporMetaPartidaConceptoRowDeleted" msprop:Generator_UserTableName="dsReporteResumenIngEgreAporMetaPartidaConcepto" msprop:Generator_RowChangedName="dsReporteResumenIngEgreAporMetaPartidaConceptoRowChanged" msprop:Generator_RowEvArgName="dsReporteResumenIngEgreAporMetaPartidaConceptoRowChangeEvent" msprop:Generator_RowClassName="dsReporteResumenIngEgreAporMetaPartidaConceptoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sFuenteFinanciamiento" msprop:Generator_ColumnVarNameInTable="columnsFuenteFinanciamiento" msprop:Generator_ColumnPropNameInRow="sFuenteFinanciamiento" msprop:Generator_ColumnPropNameInTable="sFuenteFinanciamientoColumn" msprop:Generator_UserColumnName="sFuenteFinanciamiento" type="xs:string" minOccurs="0" />
+              <xs:element name="sSec_Func" msprop:Generator_ColumnVarNameInTable="columnsSec_Func" msprop:Generator_ColumnPropNameInRow="sSec_Func" msprop:Generator_ColumnPropNameInTable="sSec_FuncColumn" msprop:Generator_UserColumnName="sSec_Func" type="xs:string" minOccurs="0" />
+              <xs:element name="sConcepto" msprop:Generator_ColumnVarNameInTable="columnsConcepto" msprop:Generator_ColumnPropNameInRow="sConcepto" msprop:Generator_ColumnPropNameInTable="sConceptoColumn" msprop:Generator_UserColumnName="sConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="sNumeroDocumento" msprop:Generator_ColumnVarNameInTable="columnsNumeroDocumento" msprop:Generator_ColumnPropNameInRow="sNumeroDocumento" msprop:Generator_ColumnPropNameInTable="sNumeroDocumentoColumn" msprop:Generator_UserColumnName="sNumeroDocumento" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreCompleto" msprop:Generator_ColumnVarNameInTable="columnsNombreCompleto" msprop:Generator_ColumnPropNameInRow="sNombreCompleto" msprop:Generator_ColumnPropNameInTable="sNombreCompletoColumn" msprop:Generator_UserColumnName="sNombreCompleto" type="xs:string" minOccurs="0" />
+              <xs:element name="sClasificadorGasto" msprop:Generator_ColumnVarNameInTable="columnsClasificadorGasto" msprop:Generator_ColumnPropNameInRow="sClasificadorGasto" msprop:Generator_ColumnPropNameInTable="sClasificadorGastoColumn" msprop:Generator_UserColumnName="sClasificadorGasto" type="xs:string" minOccurs="0" />
+              <xs:element name="sDependencia" msprop:Generator_ColumnVarNameInTable="columnsDependencia" msprop:Generator_ColumnPropNameInRow="sDependencia" msprop:Generator_ColumnPropNameInTable="sDependenciaColumn" msprop:Generator_UserColumnName="sDependencia" type="xs:string" minOccurs="0" />
+              <xs:element name="dcMontoIng" msprop:Generator_ColumnVarNameInTable="columndcMontoIng" msprop:Generator_ColumnPropNameInRow="dcMontoIng" msprop:Generator_ColumnPropNameInTable="dcMontoIngColumn" msprop:Generator_UserColumnName="dcMontoIng" type="xs:string" minOccurs="0" />
+              <xs:element name="sMes" msprop:Generator_ColumnVarNameInTable="columnsMes" msprop:Generator_ColumnPropNameInRow="sMes" msprop:Generator_ColumnPropNameInTable="sMesColumn" msprop:Generator_UserColumnName="sMes" type="xs:string" minOccurs="0" />
+              <xs:element name="sPlanilla" msprop:Generator_ColumnVarNameInTable="columnsPlanilla" msprop:Generator_ColumnPropNameInRow="sPlanilla" msprop:Generator_ColumnPropNameInTable="sPlanillaColumn" msprop:Generator_UserColumnName="sPlanilla" type="xs:string" minOccurs="0" />
+              <xs:element name="iAnio" msprop:Generator_ColumnVarNameInTable="columniAnio" msprop:Generator_ColumnPropNameInRow="iAnio" msprop:Generator_ColumnPropNameInTable="iAnioColumn" msprop:Generator_UserColumnName="iAnio" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreReporte" msprop:Generator_ColumnVarNameInTable="columnsNombreReporte" msprop:Generator_ColumnPropNameInRow="sNombreReporte" msprop:Generator_ColumnPropNameInTable="sNombreReporteColumn" msprop:Generator_UserColumnName="sNombreReporte" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

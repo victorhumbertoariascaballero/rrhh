@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/APP.GSWEE.Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/APP.GSWEE.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ReniecPersona_Request">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDeDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReniecPersona_Request" nillable="true" type="tns:ReniecPersona_Request" />
+  <xs:complexType name="ReniecPersona_Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonaDato" nillable="true" type="tns:ReniecPersona_Registro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReniecPersona_Response" nillable="true" type="tns:ReniecPersona_Response" />
+  <xs:complexType name="ReniecPersona_Registro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApellidoCasada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DireccionDomicilio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistDomicilio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DptoDomicilio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaNacimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProvDomicilio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UbigeoDistDomicilio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UbigeoDptoDomicilio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UbigeoProvDomicilio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReniecPersona_Registro" nillable="true" type="tns:ReniecPersona_Registro" />
+</xs:schema>

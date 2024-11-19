@@ -1,0 +1,84 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\log4net.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\MIDIS.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\SENACE.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\SITRADOC.Servicios.Tramite.Datacontract.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\log4net.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\MIDIS.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\SENACE.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\SITRADOC.Servicios.Tramite.Datacontract.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Debug\Newtonsoft.Json.xml
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesMVC.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesMVC.pdb
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\log4net.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\MIDIS.Entidades.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\MIDIS.ORI.Entidades.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\MIDIS.Utiles.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesWeb.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\SENACE.Entidades.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\SITRADOC.Servicios.Tramite.Datacontract.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\DataAnnotationsExtensions.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\Newtonsoft.Json.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\MIDIS.ORI.Entidades.pdb
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesWeb.pdb
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\MIDIS.Utiles.pdb
+D:\victor arias\MIDIS.UtilesMVC\bin\Debug\Newtonsoft.Json.xml
+D:\victor arias\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.AssemblyReference.cache
+D:\victor arias\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.CoreCompileInputs.cache
+D:\victor arias\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.CopyComplete
+D:\victor arias\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.dll
+D:\victor arias\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.pdb
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesMVC.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesMVC.pdb
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\log4net.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\MIDIS.Entidades.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\MIDIS.ORI.Entidades.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\MIDIS.Utiles.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesWeb.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\SENACE.Entidades.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\SITRADOC.Servicios.Tramite.Datacontract.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\DataAnnotationsExtensions.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\Newtonsoft.Json.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\MIDIS.ORI.Entidades.pdb
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\MIDIS.UtilesWeb.pdb
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\MIDIS.Utiles.pdb
+D:\robocop\MIDIS.UtilesMVC\bin\Debug\Newtonsoft.Json.xml
+D:\robocop\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.AssemblyReference.cache
+D:\robocop\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.CoreCompileInputs.cache
+D:\robocop\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.csproj.CopyComplete
+D:\robocop\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.dll
+D:\robocop\MIDIS.UtilesMVC\obj\Debug\MIDIS.UtilesMVC.pdb

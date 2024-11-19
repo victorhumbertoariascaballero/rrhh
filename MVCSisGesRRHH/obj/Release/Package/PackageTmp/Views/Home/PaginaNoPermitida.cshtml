@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "PaginaNoPermitida";
+}
+
+@if (User.Identity.Name != null && User.Identity.IsAuthenticated)
+{
+
+    @section SubTitulo{
+        <h3>Página No Permitida</h3>
+    }
+}
+<div class="container-fluid">
+    <div class="row">
+        <h1>No tiene permisos para esta pagina </h1>
+        <br />
+        <p>Consulte con el administrador de la aplicación para verificar su acceso</p>
+        <br />
+        <a href="@Url.Action("Index", "Home")" class="btn btn-large btn-primary"><i class="icon-home icon-white"></i>Ir al inicio</a>
+    </div>
+</div>
+
+

@@ -1,0 +1,148 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIDIS.ORI.Entidades", "MIDIS.SEG.Entidades\MIDIS.ORI.Entidades.csproj", "{CF3844DF-E723-4FB4-A8C9-BFDF0A466A19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIDIS.SEG.LogicaNegocio", "MIDIS.SEG.LogicaNegocio\MIDIS.SEG.LogicaNegocio.csproj", "{8135BB38-C5F4-4231-8926-5A5A2C7BF60A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 BackEnd", "01 BackEnd", "{20D5BCF8-22F0-4DF2-81CA-426DE31CE9B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Dominio", "01 Dominio", "{3315311D-2159-4187-BE79-CE073827455C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Infraestructura", "02 Infraestructura", "{AFB809EE-C9DC-481D-A3E3-17497A530E66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 FrontEnd", "02 FrontEnd", "{69B031BB-E3F9-4DD7-B95F-DC4A1DF739D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCSisGesRRHH", "MVCSisGesRRHH\MVCSisGesRRHH.csproj", "{0CEEE811-C86D-41AD-B0C7-5F01F31A0EE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Transversal", "04 Transversal", "{C438C69A-B7E3-405F-B0CD-5BECC0686822}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIDIS.Utiles", "MIDIS.Utiles\MIDIS.Utiles.csproj", "{7F73A9AA-FB70-4631-BA93-B6FB6DF7F8DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIDIS.UtilesWeb", "MIDIS.UtilesWeb\MIDIS.UtilesWeb.csproj", "{09ED7836-4556-43DE-BE34-F31401981D36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIDIS.UtilesMVC", "MIDIS.UtilesMVC\MIDIS.UtilesMVC.csproj", "{DA354C4B-8709-4974-8DDA-93E91A9EA7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIDIS.Autenticacion", "MIDIS.Autenticacion\MIDIS.Autenticacion.csproj", "{03046CD0-5AEB-458C-AF51-E357AA23D42C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIDIS.SEG.ServiciosExternos", "MIDIS.SEG.ServiciosExternos\MIDIS.SEG.ServiciosExternos.csproj", "{1D9365AA-F23F-43A2-B453-4158AAF7103B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIDIS.SEG.AccesoDatosSQL", "MIDIS.SEG.AccesoDatosSQL\MIDIS.SEG.AccesoDatosSQL.csproj", "{0F98F82F-E74A-499A-B32C-684CC1BB0226}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 API", "05 API", "{1D0606C4-B4A2-4E9D-9723-D1C79E3EDDE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCSisRRHH", "MVCSisRRHH\MVCSisRRHH.csproj", "{312D3517-3BFE-4843-ADF3-395BE9C26258}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://desarrollomidis.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MIDIS.Autenticacion\\MIDIS.Autenticacion.csproj
+		SccProjectTopLevelParentUniqueName1 = MIDIS.RRHH.sln
+		SccProjectName1 = MIDIS.Autenticacion
+		SccLocalPath1 = MIDIS.Autenticacion
+		SccProjectUniqueName2 = MIDIS.SEG.AccesoDatosSQL\\MIDIS.SEG.AccesoDatosSQL.csproj
+		SccProjectTopLevelParentUniqueName2 = MIDIS.RRHH.sln
+		SccProjectName2 = MIDIS.SEG.AccesoDatosSQL
+		SccLocalPath2 = MIDIS.SEG.AccesoDatosSQL
+		SccProjectUniqueName3 = MIDIS.SEG.Entidades\\MIDIS.ORI.Entidades.csproj
+		SccProjectTopLevelParentUniqueName3 = MIDIS.RRHH.sln
+		SccProjectName3 = MIDIS.SEG.Entidades
+		SccLocalPath3 = MIDIS.SEG.Entidades
+		SccProjectUniqueName4 = MIDIS.SEG.LogicaNegocio\\MIDIS.SEG.LogicaNegocio.csproj
+		SccProjectTopLevelParentUniqueName4 = MIDIS.RRHH.sln
+		SccProjectName4 = MIDIS.SEG.LogicaNegocio
+		SccLocalPath4 = MIDIS.SEG.LogicaNegocio
+		SccProjectUniqueName5 = MIDIS.SEG.ServiciosExternos\\MIDIS.SEG.ServiciosExternos.csproj
+		SccProjectTopLevelParentUniqueName5 = MIDIS.RRHH.sln
+		SccProjectName5 = MIDIS.SEG.ServiciosExternos
+		SccLocalPath5 = MIDIS.SEG.ServiciosExternos
+		SccProjectUniqueName6 = MIDIS.Utiles\\MIDIS.Utiles.csproj
+		SccProjectTopLevelParentUniqueName6 = MIDIS.RRHH.sln
+		SccProjectName6 = MIDIS.Utiles
+		SccLocalPath6 = MIDIS.Utiles
+		SccProjectUniqueName7 = MIDIS.UtilesMVC\\MIDIS.UtilesMVC.csproj
+		SccProjectTopLevelParentUniqueName7 = MIDIS.RRHH.sln
+		SccProjectName7 = MIDIS.UtilesMVC
+		SccLocalPath7 = MIDIS.UtilesMVC
+		SccProjectUniqueName8 = MIDIS.UtilesWeb\\MIDIS.UtilesWeb.csproj
+		SccProjectTopLevelParentUniqueName8 = MIDIS.RRHH.sln
+		SccProjectName8 = MIDIS.UtilesWeb
+		SccLocalPath8 = MIDIS.UtilesWeb
+		SccProjectUniqueName9 = MVCSisGesRRHH\\MVCSisGesRRHH.csproj
+		SccProjectTopLevelParentUniqueName9 = MIDIS.RRHH.sln
+		SccProjectName9 = MVCSisGesRRHH
+		SccLocalPath9 = MVCSisGesRRHH
+		SccProjectUniqueName10 = MVCSisRRHH\\MVCSisRRHH.csproj
+		SccProjectTopLevelParentUniqueName10 = MIDIS.RRHH.sln
+		SccProjectName10 = MVCSisRRHH
+		SccLocalPath10 = MVCSisRRHH
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF3844DF-E723-4FB4-A8C9-BFDF0A466A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3844DF-E723-4FB4-A8C9-BFDF0A466A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3844DF-E723-4FB4-A8C9-BFDF0A466A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3844DF-E723-4FB4-A8C9-BFDF0A466A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8135BB38-C5F4-4231-8926-5A5A2C7BF60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8135BB38-C5F4-4231-8926-5A5A2C7BF60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8135BB38-C5F4-4231-8926-5A5A2C7BF60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8135BB38-C5F4-4231-8926-5A5A2C7BF60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CEEE811-C86D-41AD-B0C7-5F01F31A0EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CEEE811-C86D-41AD-B0C7-5F01F31A0EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CEEE811-C86D-41AD-B0C7-5F01F31A0EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CEEE811-C86D-41AD-B0C7-5F01F31A0EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F73A9AA-FB70-4631-BA93-B6FB6DF7F8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F73A9AA-FB70-4631-BA93-B6FB6DF7F8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F73A9AA-FB70-4631-BA93-B6FB6DF7F8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F73A9AA-FB70-4631-BA93-B6FB6DF7F8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09ED7836-4556-43DE-BE34-F31401981D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09ED7836-4556-43DE-BE34-F31401981D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09ED7836-4556-43DE-BE34-F31401981D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09ED7836-4556-43DE-BE34-F31401981D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA354C4B-8709-4974-8DDA-93E91A9EA7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA354C4B-8709-4974-8DDA-93E91A9EA7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA354C4B-8709-4974-8DDA-93E91A9EA7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA354C4B-8709-4974-8DDA-93E91A9EA7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03046CD0-5AEB-458C-AF51-E357AA23D42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03046CD0-5AEB-458C-AF51-E357AA23D42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03046CD0-5AEB-458C-AF51-E357AA23D42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03046CD0-5AEB-458C-AF51-E357AA23D42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D9365AA-F23F-43A2-B453-4158AAF7103B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D9365AA-F23F-43A2-B453-4158AAF7103B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D9365AA-F23F-43A2-B453-4158AAF7103B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D9365AA-F23F-43A2-B453-4158AAF7103B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F98F82F-E74A-499A-B32C-684CC1BB0226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F98F82F-E74A-499A-B32C-684CC1BB0226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F98F82F-E74A-499A-B32C-684CC1BB0226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F98F82F-E74A-499A-B32C-684CC1BB0226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{312D3517-3BFE-4843-ADF3-395BE9C26258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312D3517-3BFE-4843-ADF3-395BE9C26258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312D3517-3BFE-4843-ADF3-395BE9C26258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312D3517-3BFE-4843-ADF3-395BE9C26258}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3315311D-2159-4187-BE79-CE073827455C} = {20D5BCF8-22F0-4DF2-81CA-426DE31CE9B2}
+		{AFB809EE-C9DC-481D-A3E3-17497A530E66} = {20D5BCF8-22F0-4DF2-81CA-426DE31CE9B2}
+		{CF3844DF-E723-4FB4-A8C9-BFDF0A466A19} = {3315311D-2159-4187-BE79-CE073827455C}
+		{8135BB38-C5F4-4231-8926-5A5A2C7BF60A} = {3315311D-2159-4187-BE79-CE073827455C}
+		{1D9365AA-F23F-43A2-B453-4158AAF7103B} = {AFB809EE-C9DC-481D-A3E3-17497A530E66}
+		{0F98F82F-E74A-499A-B32C-684CC1BB0226} = {AFB809EE-C9DC-481D-A3E3-17497A530E66}
+		{0CEEE811-C86D-41AD-B0C7-5F01F31A0EE6} = {69B031BB-E3F9-4DD7-B95F-DC4A1DF739D8}
+		{312D3517-3BFE-4843-ADF3-395BE9C26258} = {69B031BB-E3F9-4DD7-B95F-DC4A1DF739D8}
+		{7F73A9AA-FB70-4631-BA93-B6FB6DF7F8DC} = {C438C69A-B7E3-405F-B0CD-5BECC0686822}
+		{09ED7836-4556-43DE-BE34-F31401981D36} = {C438C69A-B7E3-405F-B0CD-5BECC0686822}
+		{DA354C4B-8709-4974-8DDA-93E91A9EA7C1} = {C438C69A-B7E3-405F-B0CD-5BECC0686822}
+		{03046CD0-5AEB-458C-AF51-E357AA23D42C} = {C438C69A-B7E3-405F-B0CD-5BECC0686822}
+	EndGlobalSection
+EndGlobal

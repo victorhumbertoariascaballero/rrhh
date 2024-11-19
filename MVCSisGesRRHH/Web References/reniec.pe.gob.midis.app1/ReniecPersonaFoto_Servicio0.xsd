@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://app1.midis.gob.pe/Sis_WS/App/ReniecPersonaFoto_Servicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/APP.GSWEE.Entidades" />
+  <xs:element name="ConsultarPorNumeroDeDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/APP.GSWEE.Entidades" minOccurs="0" name="peticion" nillable="true" type="q1:ReniecPersonaFoto_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPorNumeroDeDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/APP.GSWEE.Entidades" minOccurs="0" name="ConsultarPorNumeroDeDocumentoResult" nillable="true" type="q2:ReniecPersonaFoto_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

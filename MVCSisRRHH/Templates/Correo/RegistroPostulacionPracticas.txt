@@ -1,0 +1,6 @@
+<div class="WordSection1" style="width: 650px; padding: 30px; border-radius: 5px; border: 2px solid #6773b9;"><img style="width: 300px; height: 55px;" src="https://sdv.midis.gob.pe/Sis_Convocatoria/Content/img/logo_midis.png" data-placeholder="no" /> <br /><br />
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Hola <span style="color: red;"> _POSTULANTE_ !</span></span><br /><br /></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">El Ministerio de Desarrollo e Inclusi&oacute;n Social, le agradece su participaci&oacute;n al proceso de Pr&aacute;cticas<span style="color: red;">&nbsp;_PROCESOCAS_ </span>,le informamos que su postulaci&oacute;n se realiz&oacute; correctamente a trav&eacute;s del Sistema de Convocatorias en l&iacute;nea.&nbsp;<br /><br /></span><span lang="ES">Atentamente,</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">&nbsp;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">Oficina General de Recursos Humanos</span></p>
+</div>

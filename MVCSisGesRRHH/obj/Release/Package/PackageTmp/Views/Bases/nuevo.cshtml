@@ -1,0 +1,558 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+@{
+    ViewBag.Title = "BASES DE PERFILES DE PUESTO  ->  NUEVO REGISTRO";
+}
+@section SubTitulo { 
+    <div id="toolbar" class="form-group row k-toolbar k-widget k-toolbar-resizable" style="border-color: #b1acac; color: #32364c; margin: 5px ">
+        &nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <h6>@ViewBag.Title</h6> 
+    </div> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 0px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .input-sm {
+        height: 26px;
+        padding: 5px 10px;
+        font-size: 11px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+    .form-group {
+        margin-bottom: 3px;
+    }
+
+    input, label, .k-input {
+        font-size: 11px;
+    }
+
+    .panel-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: inherit;
+    }
+
+    .panel-heading {
+        color: #fff !important;
+        background-color: #F05454;
+        border-color: #FA76B1;
+    }
+
+    .k-radio:checked + .k-radio-label:after {
+        background-color: #f05454;
+        border-radius: 50%;
+    }*/
+
+    .k-primary {
+        color: #fff;
+        border-color: #46b8da;
+        background-color: #5bc0de;
+        background-image: none;
+        background-image: none,-webkit-gradient(linear,left top,left bottom,from(false));
+        background-image: none,-webkit-linear-gradient(top,false);
+        background-image: none,linear-gradient(to bottom,false);
+    }
+
+    .btn-group-xs > .btn, .btn-xs {
+        padding: .25rem .4rem;
+        font-size: .875rem;
+        line-height: .5;
+        border-radius: .2rem;
+    }
+
+    .demo-section ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .demo-section ul li {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 10px 10px 20px;
+            min-height: 28px;
+            line-height: 28px;
+            vertical-align: middle;
+            border-top: 1px solid rgba(128,128,128,.5);
+        }
+
+    .demo-section {
+        min-width: 220px;
+        margin-top: 15px;
+        padding: 0;
+    }
+
+        .demo-section ul li .k-switch {
+            float: right;
+        }
+
+    .wrapper {
+        height: auto;
+        min-height: 600px;
+        /*margin: 20px auto;
+        padding: 20px 0 0;*/
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <form id="frmRegistroABasesPerfil" name="frmRegistroBasesPerfil" novalidate="" onsubmit="controlador.RegBasesPerfil(event)">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a data-toggle="collapse" href="#collapse1">
+                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> I. CABECERA DE LAS BASES DEL PROCESO DE CONVOCATORIA
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label for="txtPerfilPuesto" class="col-md-1 control-label text-right">Perfil de Puesto:  </label>
+                        <div class="col-md-9">
+                            <input type="text" id="txtPerfilPuesto" name="txtPerfilPuesto" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" readonly />
+                        </div>
+                        <div class="col-md-2">
+                            @*<div class="col-md-12">*@
+                            <button type="button" id="btnBuscarPerfil" class="btn btn-info btn-sm" name="btnBuscarPerfil" onclick="controlador.abrirModalBuscarPerfilPuesto(event)">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                            </button>
+                            @*<input type="button" id="btnBuscarPerfil" name="btnBuscarPerfil" value="Buscar" onclick="controlador.abrirModalBuscarPerfilPuesto(event)" />*@
+                            @*</div>*@
+                        </div>
+                    </div>
+                    <hr style="border: 1px dashed #e2e2e2;" />
+                    <div class="form-group row">
+                        <div class="form-group col-md-3">
+                            <label class="col-md-12 control-label text-left">PERSONAL REQUERIDO * </label>
+                            <div class="row">
+                                <label for="txtCantPersonalRequerido" class="col-md-4 control-label text-right">Cantidad:  </label>
+                                <div class="col-md-8">
+                                    <input type="number" id="txtCantPersonalRequerido" name="txtCantPersonalRequerido" class="form-control input-sm" required="required" validationmessage="requerido" min="1" max="10" step="1" oninput="this.value = Math.round(this.value);" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="col-md-12 control-label text-left">DURACIÓN DEL CONTRATO * </label>
+                            <div class="form-group row ">
+                                <label for="txtCantDuracionContrato" class="col-md-4 control-label text-right">Cantidad (en meses): </label>
+                                <div class="col-md-4">
+                                    <input type="number" id="txtCantDuracionContrato" name="txtCantDuracionContrato" class="form-control input-sm" required="required" validationmessage="requerido" min="1" max="12" step="1" oninput="this.value = Math.round(this.value);" />
+                                    @*<label for="txtCantDuracionContrato">&nbsp;Mes(es)</label>*@
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-check-input" type="checkbox" id="chkCantDuracionContrato" value="Hasta el 31 de Diciembre">
+                                    <label class="form-check-label" for="chkCantDuracionContrato">Hasta el 31 de Diciembre</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label class="col-md-12 control-label text-left">REMUNERACIÓN * </label>
+                            <div class="row">
+                                <label for="txtRemuneracion" class="col-md-4 control-label text-right">Monto: </label>
+                                <div class="col-md-8">
+                                    <input type="number" id="txtRemuneracion" name="txtRemuneracion" class="form-control input-sm" required="required" validationmessage="requerido" min="0" max="30000" step="100" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label class="col-md-12 control-label text-left">EVALUACIONES OPCIONALES </label>
+                            <div class="row">
+                                <label for="ddlEvalConocimientos" class="col-md-4 control-label text-right">Conocimientos: </label>
+                                <div class="col-md-8">
+                                    <select id="ddlEvalConocimientos" name="ddlEvalConocimientos" class="form-control input-sm" style="width: 100%;" validationmessage="requerido">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="col-md-12 control-label text-left">&nbsp;</label>
+                            <div class="row">
+                                <label for="ddlEvalPsicologico" class="col-md-4 control-label text-right">Psicol&oacute;gico: </label>
+                                <div class="col-md-4">
+                                    <select id="ddlEvalPsicologico" name="ddlEvalPsicologico" class="form-control input-sm" style="width: 100%;" validationmessage="requerido">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a data-toggle="collapse" href="#collapseDatosF">
+                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> II. CRONOGRAMA Y ETAPAS DEL PROCESO
+                    </a>
+                </div>
+                <div class="card-body" @*id="divListarAplicacion"*@>
+
+                    <!--<div class="row">-->
+                    @*<hr style="border: 1px dashed #e2e2e2;">*@
+                    <!--<div class="col-md-12">
+        <label class="col-md-12 control-label text-left">CONVOCATORIA </label>
+        <div class="row">-->
+                    @*<div class="col-md-12">*@
+                    @*<label for="txtPubConvMIDIS" class="col-md-1 control-label text-right" style="width: 1%;">1. </label>*@
+                    <!--<label for="txtPubConvMIDIS" class="col-md-6 control-label text-left">1. Publicación del proceso en la Plataforma Talento Perú de la Autoridad Nacional del Servicio Civil - SERVIR y en el Portal Institucional del Ministerio de Desarrollo e Inclusión Social: </label>
+    <label for="txtPubConvMIDIS_Desde" class="col-md-1 control-label text-right">Desde: </label>
+    <div class="col-md-1">
+        <input id="txtPubConvMIDIS_Desde" name="txtPubConvMIDIS_Desde" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+    </div>
+    <label for="txtPubConvMIDIS_Hasta" class="col-md-1 control-label text-right">Hasta: </label>
+    <div class="col-md-1">
+        <input id="txtPubConvMIDIS_Hasta" name="txtPubConvMIDIS_Hasta" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+    </div>-->
+                    @*</div>*@
+                    <!--</div>
+        <div class="row">
+            <label for="txtFechaInscripcionCV" class="col-md-6 control-label text-left">2. Registro y/o inscripción de la hoja de vida (CV) del postulante: </label>
+            <label for="txtFechaInscripcionCV" class="col-md-1 control-label text-right">Fecha: </label>
+            <div class="col-md-1">
+                <input id="txtFechaInscripcionCV" name="txtFechaInscripcionCV" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+            </div>
+        </div>
+    </div>
+    <hr style="border: 1px dashed #e2e2e2;">
+    <div class="col-md-12">
+        <label class="col-md-12 control-label text-left">SELECCIÓN </label>
+        <div class="row">
+            <label for="txtFechaEvaluacionCV" class="col-md-6 control-label text-left">3. Evaluación de la hoja de vida: </label>
+            <label for="txtFechaEvaluacionCV_Desde" class="col-md-1 control-label text-right">Desde: </label>
+            <div class="col-md-1">
+                <input id="txtFechaEvaluacionCV_Desde" name="txtFechaEvaluacionCV_Desde" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+            </div>
+            <label for="txtFechaEvaluacionCV_Hasta" class="col-md-1 control-label text-right">Hasta: </label>
+            <div class="col-md-1">
+                <input id="txtFechaEvaluacionCV_Hasta" name="txtFechaEvaluacionCV_Hasta" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+            </div>
+        </div>
+        <div class="row">
+            <label for="txtFechaPubResultadosCV" class="col-md-6 control-label text-left">4. Publicación de resultados de la hoja de vida en el portal institucional del Ministerio de Desarrollo e Inclusión Social: </label>
+            <label for="txtFechaPubResultadosCV" class="col-md-1 control-label text-right">Fecha: </label>
+            <div class="col-md-1">
+                <input id="txtFechaPubResultadosCV" name="txtFechaPubResultadosCV" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+            </div>
+        </div>
+        <div class="row">
+            <label for="txtFechaConocimiento" class="col-md-6 control-label text-left">5. Examen de conocimiento: </label>
+            <label for="txtFechaConocimiento" class="col-md-1 control-label text-right">Fecha: </label>
+            <div class="col-md-1">
+                <input id="txtFechaConocimiento" name="txtFechaConocimiento" type="text" class="form-control input-sm" style="width: 100%;" />-->
+                    @*required="required" validationmessage="requerido"*@
+                    <!--</div>
+    </div>
+    <div class="row">
+        <label for="txtFechaPubConocimiento" class="col-md-6 control-label text-left">6. Publicación de resultados de evaluación de conocimiento: </label>
+        <label for="txtFechaPubConocimiento" class="col-md-1 control-label text-right">Fecha: </label>
+        <div class="col-md-1">
+            <input id="txtFechaPubConocimiento" name="txtFechaPubConocimiento" type="text" class="form-control input-sm" style="width: 100%;" />-->
+                    @*required="required" validationmessage="requerido"*@
+                    <!--</div>
+            </div>
+            <div class="row">
+                <label for="txtFechaEntrevista" class="col-md-6 control-label text-left">7. Entrevista  (virtual): </label>
+                <label for="txtFechaEntrevista_Desde" class="col-md-1 control-label text-right">Desde: </label>
+                <div class="col-md-1">
+                    <input id="txtFechaEntrevista_Desde" name="txtFechaEntrevista_Desde" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                </div>
+                <label for="txtFechaEntrevista_Hasta" class="col-md-1 control-label text-right">Hasta: </label>
+                <div class="col-md-1">
+                    <input id="txtFechaEntrevista_Hasta" name="txtFechaEntrevista_Hasta" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                </div>
+            </div>
+            <div class="row">
+                <label for="txtFechaPubResultadoFinal" class="col-md-6 control-label text-left">8. Publicación de resultado final en el portal institucional del Ministerio de Desarrollo e Inclusión Social: </label>
+                <label for="txtFechaPubResultadoFinal" class="col-md-1 control-label text-right">Fecha: </label>
+                <div class="col-md-1">
+                    <input id="txtFechaPubResultadoFinal" name="txtFechaPubResultadoFinal" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                </div>
+            </div>
+        </div>
+        <hr style="border: 1px dashed #e2e2e2;">
+        <div class="col-md-12">
+            <label class="col-md-12 control-label text-left">SUSCRIPCIÓN Y REGISTRO DEL CONTRATO </label>
+            <div class="row">
+                <label for="txtFechaSuscripcionContrato" class="col-md-6 control-label text-left">9. Suscripción del Contrato : </label>
+                <label for="txtFechaSuscripcionContrato_Desde" class="col-md-1 control-label text-right">Desde: </label>
+                <div class="col-md-1">
+                    <input id="txtFechaSuscripcionContrato_Desde" name="txtFechaSuscripcionContrato_Desde" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                </div>
+                <label for="txtFechaSuscripcionContrato_Hasta" class="col-md-1 control-label text-right">Hasta: </label>
+                <div class="col-md-1">
+                    <input id="txtFechaSuscripcionContrato_Hasta" name="txtFechaSuscripcionContrato_Hasta" type="text" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                </div>
+            </div>
+        </div>
+    </div>-->
+                    <div class="row">
+                        @*<hr style="border: 1px dashed #e2e2e2;">*@
+                        <div class="col-md-12">
+                            <label class="col-md-12 control-label text-left">CONVOCATORIA </label>
+                            <div class="row col-md-12">
+                                @*<label for="txtPubConvMIDIS" class="col-md-1 control-label text-right" style="width: 1%;">1. </label>*@
+                                <div class="row col-md-6">
+                                    <label for="txtPubConvMIDIS" class="col-md-12 control-label text-left">1. Publicación de la convocatoria en el portal institucional del Ministerio de Desarrollo e Inclusión Social: </label>
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtPubConvMIDIS_Desde" class="col-md-4 control-label text-right">Desde: </label>
+                                    <input id="txtPubConvMIDIS_Desde" name="txtPubConvMIDIS_Desde" type="text" class="col-md-8 form-control" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtPubConvMIDIS_Hasta" class="col-md-4 control-label text-right">Hasta: </label>
+                                    <input id="txtPubConvMIDIS_Hasta" name="txtPubConvMIDIS_Hasta" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                            </div>
+                            <div class="row col-md-12">
+                                <div class="row col-md-6">
+                                    <label for="txtFechaInscripcionCV" class="col-md-6 control-label text-left">2. Registro y/o inscripción de la hoja de vida (CV) del postulante: </label>
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaInscripcionCV" class="col-md-4 control-label text-right">Fecha: </label>
+                                    <input id="txtFechaInscripcionCV" name="txtFechaInscripcionCV" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="border: 1px dashed #e2e2e2;">
+                        <div class="col-md-12">
+                            <label class="col-md-12 control-label text-left">SELECCIÓN </label>
+                            <div class="row col-md-12">
+                                <div class="row col-md-6">
+                                    <label for="txtFechaEvaluacionCV" class="col-md-12 control-label text-left">3. Evaluación de la hoja de vida: </label>
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaEvaluacionCV_Desde" class="col-md-4 control-label text-right">Desde: </label>
+                                    <input id="txtFechaEvaluacionCV_Desde" name="txtFechaEvaluacionCV_Desde" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaEvaluacionCV_Hasta" class="col-md-4 control-label text-right">Hasta: </label>
+                                    <input id="txtFechaEvaluacionCV_Hasta" name="txtFechaEvaluacionCV_Hasta" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                            </div>
+                            <div class="row col-md-12">
+                                <div class="row col-md-6">
+                                    <label for="txtFechaPubResultadosCV" class="col-md-12 control-label text-left">4. Publicación de resultados de la hoja de vida en el portal institucional del Ministerio de Desarrollo e Inclusión Social: </label>
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaPubResultadosCV" class="col-md-4 control-label text-right">Fecha: </label>
+                                    <input id="txtFechaPubResultadosCV" name="txtFechaPubResultadosCV" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                            </div>
+                            <div class="row col-md-12">
+                                <div class="row col-md-6">
+                                    <label for="txtFechaConocimiento" class="col-md-12 control-label text-left">5. Examen de conocimiento: </label>
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaConocimiento" class="col-md-4 control-label text-right">Fecha: </label>
+                                    <input id="txtFechaConocimiento" name="txtFechaConocimiento" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" /> @*required="required" validationmessage="requerido"*@
+                                </div>
+                            </div>
+                            <div class="row col-md-12">
+                                <div class="row col-md-6">
+                                    <label for="txtFechaPubConocimiento" class="col-md-12 control-label text-left">6. Publicación de resultados de evaluación de conocimiento: </label>
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaPubConocimiento" class="col-md-4 control-label text-right">Fecha: </label>
+                                    <input id="txtFechaPubConocimiento" name="txtFechaPubConocimiento" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" /> @*required="required" validationmessage="requerido"*@
+                                </div>
+                            </div>
+                            <div class="row col-md-12">
+                                <div class="row col-md-6">
+                                    <label for="txtFechaEntrevista" class="col-md-12 control-label text-left">7. Entrevista  (virtual): </label>
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaEntrevista_Desde" class="col-md-4 control-label text-right">Desde: </label>
+                                    <input id="txtFechaEntrevista_Desde" name="txtFechaEntrevista_Desde" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaEntrevista_Hasta" class="col-md-4 control-label text-right">Hasta: </label>
+                                    <input id="txtFechaEntrevista_Hasta" name="txtFechaEntrevista_Hasta" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                            </div>
+                            <div class="row col-md-12">
+                                <div class="row col-md-6">
+                                    <label for="txtFechaPubResultadoFinal" class="col-md-12 control-label text-left">8. Publicación de resultado final en el portal institucional del Ministerio de Desarrollo e Inclusión Social: </label>
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaPubResultadoFinal" class="col-md-4 control-label text-right">Fecha: </label>
+                                    <input id="txtFechaPubResultadoFinal" name="txtFechaPubResultadoFinal" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="border: 1px dashed #e2e2e2;">
+                        <div class="col-md-12">
+                            <label class="col-md-12 control-label text-left">SUSCRIPCIÓN Y REGISTRO DEL CONTRATO </label>
+                            <div class="row col-md-12">
+                                <div class="row col-md-6">
+                                    <label for="txtFechaSuscripcionContrato" class="col-md-12 control-label text-left">9. Suscripción del Contrato : </label>
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaSuscripcionContrato_Desde" class="col-md-4 control-label text-right">Desde: </label>
+                                    <input id="txtFechaSuscripcionContrato_Desde" name="txtFechaSuscripcionContrato_Desde" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                                <div class="row col-md-2">
+                                    <label for="txtFechaSuscripcionContrato_Hasta" class="col-md-4 control-label text-right">Hasta: </label>
+                                    <input id="txtFechaSuscripcionContrato_Hasta" name="txtFechaSuscripcionContrato_Hasta" type="text" class="col-md-8 form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-sm" id="btnGrabar">
+                                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar
+                                </button>
+                                <button type="button" class="btn btn-primary btn-sm" id="btnCancelar">
+                                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <input id="hdIdPerfilPuesto" name="hdIdPerfilPuesto" type="hidden" value="" />
+    <input id="hdIdCodTrabajador" name="hdIdCodTrabajador" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />
+    <input id="hdIdCodBasePerfil" name="hdIdCodBasePerfil" type="hidden" value="@ViewBag.idBasePerfil" />
+
+</section>
+<!-- The Modal -->
+<div id="ModalBuscarPerfilPuesto" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmBuscarPerfiles" name="frmBuscarPerfiles" novalidate="">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row col-md-12">
+                            <label for="txtPerfilPuestoBuscar" class="col-md-2 control-label text-right">Perfil de Puesto </label>
+                            <div class="col-md-6">
+                                <input id="txtPerfilPuestoBuscar" name="txtPerfilPuestoBuscar" type="text" class="form-control" style="width: 100%;" />
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" id="btnBuscarPerfil" class="btn btn-info btn-sm" name="btnBuscarPerfil" onclick="controlador.CargarPerfilesPuesto(event)">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                </button>
+                                @*<input id="btnBuscarPerfil" name="btnBuscarPerfil" type="submit" class="form-control" value="Buscar" onclick="controlador.CargarPerfilesPuesto(event)"/>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12" id="divPerfilesPuesto"></div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    @*<script src="~/Scripts/App/Intranet/PerfilesPuesto.js"></script>*@
+    <script src="~/Scripts/App/Intranet/BasesPerfilPuesto.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    @*<link rel="stylesheet" href="../Content/Plugin/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../Content/Plugin/datatables.net-bs/css/responsive.bootstrap.min.css">*@
+
+
+    @*<script src="~/Content/Plugin/datatables.net/js/jquery.dataTables.min.js"></script>*@
+    @*<script src="~/Content/Plugin/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="~/Content/Plugin/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+        <script src="~/Content/Plugin/datatables.net-bs/js/responsive.bootstrap.min.js"></script>*@
+    @*<script src="~/Content/Javascript/jquery-1.7.2.min.js"></script>*@
+
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new BasesPerfilPuestoJS();
+            controlador.inicializarNuevo();
+            //$('ddlUUOO').prop('readonly', true);
+        });
+        debugger;
+        //document.getElementById("ddlUUOO").readOnly = false;
+        $("#btnCancelar").click(function () {
+            window.location.href = "index";
+        });
+        $("#chkCantDuracionContrato").change(function () {
+            if (this.checked) {
+                $("#txtCantDuracionContrato").val("");
+                $("#txtCantDuracionContrato").prop("readonly", true);
+                $("#txtCantDuracionContrato").removeAttr("required");
+            }
+            else {
+                $("#txtCantDuracionContrato").prop("readonly", false);
+                $("#txtCantDuracionContrato").attr("required", true);
+            }
+        });
+            //$("#btnGrabar").click(function () {
+            //    if ($("#txtCantDuracionContrato").val()=="") {
+            //        alert("HOLA");
+            //        return false;
+            //    }
+            //});
+
+    </script>
+}

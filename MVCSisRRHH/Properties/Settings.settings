@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MVCSisRRHH.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MVCSisRRHH_reniec_pe_gob_pide_ws5_ReniecConsultaDni" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws5.pide.gob.pe/services/ReniecConsultaDni.ReniecConsultaDniHttpsSoap11Endpoint</Value>
+    </Setting>
+    <Setting Name="MVCSisRRHH_pe_gob_midis_app_pruebas_ReniecPersona_Servicio" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sdv.midis.gob.pe/Sis_WS/App/ReniecPersona_Servicio.svc</Value>
+    </Setting>
+    <Setting Name="MVCSisRRHH_reniec_pe_gob_midis_app1_ReniecPersonaFoto_Servicio" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://app1/Sis_WS/App/ReniecPersonaFoto_Servicio.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

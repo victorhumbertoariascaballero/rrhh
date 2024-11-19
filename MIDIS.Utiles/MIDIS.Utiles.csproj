@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F73A9AA-FB70-4631-BA93-B6FB6DF7F8DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIDIS.Utiles</RootNamespace>
+    <AssemblyName>MIDIS.Utiles</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataAnnotationsExtensions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=358a5681c50fd84c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binarios\DataAnnotationsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binarios\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crypto.cs" />
+    <Compile Include="EncriptacionHelper.cs" />
+    <Compile Include="Entidades\DTOPideSunat.cs" />
+    <Compile Include="Entidades\DTORespuesta.cs" />
+    <Compile Include="Enumerados.cs" />
+    <Compile Include="FechaHelper.cs" />
+    <Compile Include="LdapAuthentication.cs" />
+    <Compile Include="Log\ILogger.cs" />
+    <Compile Include="Log\Log4NetWrapper.cs" />
+    <Compile Include="Log\LogHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REST\RESTClienteHelper.cs" />
+    <Compile Include="Variables.cs" />
+    <Compile Include="WCF\BaseAgent.cs" />
+    <Compile Include="WCF\ClientMessageInspector.cs" />
+    <Compile Include="WCF\ConexionHelperWCF.cs" />
+    <Compile Include="WCF\ConfigHelperWCF.cs" />
+    <Compile Include="WCF\EnumeradosWCF.cs" />
+    <Compile Include="WCF\InspectorBehavior.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Binarios\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="Binarios\DataAnnotationsExtensions.dll" />
+    <Content Include="Binarios\log4net.dll" />
+    <Content Include="Binarios\MIDIS.Entidades.dll" />
+    <Content Include="Binarios\MVC.Helper.dll" />
+    <Content Include="Binarios\Oracle.DataAccess.dll" />
+    <Content Include="Binarios\PIDE.Servicios.SMS.DataContracts.dll" />
+    <Content Include="Binarios\PIDE.Servicios.Sunat.DataContracts.dll" />
+    <Content Include="Binarios\SENACE.Entidades.dll" />
+    <Content Include="Binarios\SENACE.SEG.Entidades.dll" />
+    <Content Include="Binarios\SENACE.Utiles.dll" />
+    <Content Include="Binarios\SENACE.UtilesMVC.dll" />
+    <Content Include="Binarios\SENACE.UtilesWeb.dll" />
+    <Content Include="Binarios\SITRADOC.Servicios.Tramite.Datacontract.dll" />
+    <Content Include="Binarios\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll" />
+    <Content Include="Binarios\System.Web.Extensions.dll" />
+    <Content Include="Binarios\System.Web.Mvc.dll" />
+    <Content Include="Binarios\System.Web.WebPages.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

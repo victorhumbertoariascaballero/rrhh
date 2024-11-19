@@ -1,0 +1,223 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "PLANILLAS  ->  PLANILLA FED";
+}
+@section SubTitulo { <h3>@ViewBag.Title</h3> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <div class="panel-group" id="accordion">
+        <!--GENERAR-->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="#collapseGenerar">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> GENERAR PLANILLA
+                </a>
+            </div>
+            <div id="collapseGenerar" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="row form-horizontal">
+                        <form id="frmGenerarPlanillaFED" name="frmGenerarPlanillaFED" novalidate="">
+                            <div class="col-md-12">
+                                <label for="ddlMesFED_GenPlan" class="col-md-3 control-label">Mes </label>
+                                <div class="col-md-2">
+                                    <select id="ddlMesFED_GenPlan" name="ddlMesFED_GenPlan" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                                <label for="ddlAnioFED_GenPlan" class="col-md-1 control-label">Año </label>
+                                <div class="col-md-2">
+                                    <select id="ddlAnioFED_GenPlan" name="ddlAnioFED_GenPlan" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                                <div class="col-md-4" style="text-align: center;">
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="controlador.GenerarPlanillaFED(event)">
+                                        <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Generar
+                                    </button>
+                                    @*<button type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-import" aria-hidden="true"></span> Importar
+                    </button>*@
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    @*<input id="hdIdCodTrabajador" name="hdIdCodTrabajadorBand" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />
+        <input id="hdIdBasePerfilPuesto" name="hdIdBasePerfilPuesto" type="hidden" value="" />*@
+
+</section>
+<!-- /.content -->
+<div id="ModalConceptosPagosTrabajador" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmConceptosPagosTrabajador" name="frmConceptosPagosTrabajador" novalidate="">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-8">
+                        <label for="lblTrabajador" class="control-label text-right">Trabajador:  </label>
+                        <input type="text" id="lblTrabajador" name="lblTrabajador" class="form-control input-sm" readonly />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    @*<hr style="border: 1px dashed #e2e2e2;">*@
+                    @*<label class="col-md-12 control-label text-left">CONCEPTOS </label>
+                        <br />*@
+                    <div class="form-group col-md-12">
+                        <label class="col-md-12 control-label" style="float:none">CONCEPTOS </label>
+                        <div class="row" id="divConceptosPagosTrabajador"></div>
+                    </div>
+                    @*<div class="form-group col-md-6">
+                            <label class="col-md-12 control-label" style="float:none">Descuentos : </label>
+                            <div class="row" id="divGridDescuentosActualizacion"></div>
+                        </div>*@
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/kendo/2018.1.221/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Planillas.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+        function getBoolean(str) {
+            if ("true".startsWith(str)) {
+                return true;
+            } else if ("false".startsWith(str)) {
+                return false;
+            } else {
+                return null;
+            }
+        }
+
+        $(document).ready(function () {
+            controlador = new PlanillasJS();
+
+            //$("#txtFechaInicio").kendoDatePicker({ format: "dd/MM/yyyy" });
+
+            //alert(controlador);
+            controlador.inicializarVerBandejaPlanillaFED();
+
+        });
+
+
+
+
+
+    </script>
+}

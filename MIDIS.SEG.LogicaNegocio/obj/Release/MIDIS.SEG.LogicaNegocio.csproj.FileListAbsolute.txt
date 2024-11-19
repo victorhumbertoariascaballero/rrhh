@@ -1,0 +1,38 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.SEG.LogicaNegocio.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.SEG.LogicaNegocio.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\log4net.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.Autenticacion.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\Newtonsoft.Json.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.Autenticacion.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\bin\Release\Newtonsoft.Json.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.SEG.LogicaNegocio.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.SEG.LogicaNegocio.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\log4net.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.Autenticacion.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\Newtonsoft.Json.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.Autenticacion.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\obj\Release\MIDIS.SEG.LogicaNegocio.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.LogicaNegocio\bin\Release\Newtonsoft.Json.xml

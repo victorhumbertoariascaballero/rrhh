@@ -1,0 +1,12 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Autenticacion\bin\Release\MIDIS.Autenticacion.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Autenticacion\bin\Release\MIDIS.Autenticacion.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Autenticacion\obj\Release\MIDIS.Autenticacion.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Autenticacion\obj\Release\MIDIS.Autenticacion.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Autenticacion\obj\Release\MIDIS.Autenticacion.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Autenticacion\obj\Release\MIDIS.Autenticacion.csprojAssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Autenticacion\bin\Release\MIDIS.Autenticacion.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Autenticacion\bin\Release\MIDIS.Autenticacion.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Autenticacion\obj\Release\MIDIS.Autenticacion.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Autenticacion\obj\Release\MIDIS.Autenticacion.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Autenticacion\obj\Release\MIDIS.Autenticacion.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Autenticacion\obj\Release\MIDIS.Autenticacion.pdb

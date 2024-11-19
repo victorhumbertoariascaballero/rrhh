@@ -1,0 +1,637 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "RECLUTAMIENTO Y SELECCIÓN  ->  BANDEJA DE PERFILES DE PUESTOS";
+}
+@section SubTitulo {
+    <div id="toolbar" class="form-group row k-toolbar k-widget k-toolbar-resizable" style="border-color: #b1acac; color: #32364c; margin: 5px ">
+        &nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+        <h6>@ViewBag.Title</h6>
+    </div> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px !important;
+    }
+
+    .btn-group-xs > .btn, .btn-xs {
+        padding: .25rem .4rem;
+        font-size: .875rem;
+        line-height: .5;
+        border-radius: .2rem;
+    }
+
+    .demo-section ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .demo-section ul li {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 10px 10px 20px;
+            min-height: 28px;
+            line-height: 28px;
+            vertical-align: middle;
+            border-top: 1px solid rgba(128,128,128,.5);
+        }
+
+    .demo-section {
+        min-width: 220px;
+        margin-top: 15px;
+        padding: 0;
+    }
+
+        .demo-section ul li .k-switch {
+            float: right;
+        }
+
+    .wrapper {
+        height: auto;
+        min-height: 600px;
+        /*margin: 20px auto;
+        padding: 20px 0 0;*/
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#collapseDatos">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INGRESE CRITERIOS DE B&Uacute;SQUEDA
+                </a>
+            </div>
+            <div id="collapseDatos" class="collapse show">
+                <div class="card-body">
+                    <div class="row form-horizontal">
+                        <div class="col-12">
+                            <form id="frmBandeja" name="frmBandeja" novalidate="" onsubmit="controlador.buscar(event)">
+                                @*<div class="row">
+        <div class="col-md-12">
+            <label for="ddlOrgano_busqueda" class="col-md-2 control-label">Órgano </label>
+            <div class="col-md-10">
+                <select id="ddlOrgano_busqueda" name="ddlOrgano_busqueda" class="form-control" style="width: 75%;">
+                    <option value="">-- Todos --</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label for="ddlUUOO_busqueda" class="col-md-2 control-label">Unidad Orgánica </label>
+            <div class="col-md-10">
+                <select id="ddlUUOO_busqueda" name="ddlUUOO_busqueda" class="form-control" style="width: 75%;">
+                    <option value="">-- Todos --</option>
+                </select>
+            </div>
+        </div>*@
+                                @*<div class="col-md-12">
+                <label for="ddlPuestoEstructural_busqueda" class="col-md-2 control-label">Puesto Estructural </label>
+                <div class="col-md-10">
+                    @*<select id="ddlDependencia_busqueda" name="ddlDependencia_busqueda" class="form-control" style="width: 75%;">
+                        <option value="">-- Seleccione --</option>
+                    </select>
+                    <input type="text" id="txtNombrePuesto_busqueda" name="txtNombrePuesto_busqueda" style="width: 75%;" value="    No Aplica" readonly/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="ddlEmpleado_busqueda" class="col-md-2 control-label">Empleado </label>
+                <div class="col-md-10">
+                    <select id="ddlEmpleado_busqueda" name="ddlEmpleado_busqueda" class="form-control" style="width: 100%;">
+                        <option value="">-- Seleccione --</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="txtNombrePuesto_busqueda" class="col-md-2 control-label">Nombre del Puesto </label>
+                <div class="col-md-10">
+                    @*<input id="txtNombrePuesto_busqueda" name="txtNombrePuesto_busqueda" type="text" class="form-control input-sm text-uppercase" maxlength="8" onkeypress="SoloNumeros(event);" />
+                    <textarea id="txtNombrePuesto_busqueda" name="txtNombrePuesto_busqueda" rows="2" cols="129"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="ddlDependenciaJerarquicaLineal_busqueda" class="col-md-2 control-label">Dependencia Jerárquica Lineal </label>
+                <div class="col-md-10">
+                    <select id="ddlDependenciaJerarquicaLineal_busqueda" name="ddlDependenciaJerarquicaLineal_busqueda" class="form-control" style="width: 75%;">
+                        <option value="">-- Todos --</option>
+                    </select>
+                    <input type="text" id="txtDependenciaJerarquicaLineal_busqueda" name="txtNombrePuesto_busqueda" style="width: 75%;" value="    No Aplica" readonly />
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label for="ddlDependenciaFuncional_busqueda" class="col-md-2 control-label">Dependencia Funcional </label>
+                <div class="col-md-10">
+                    <select id="ddlDependenciaFuncional_busqueda" name="ddlDependenciaFuncional_busqueda" class="form-control" style="width: 75%;">
+                        <option value="">-- Todos --</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label for="ddlPuestosAsuCargo_busqueda" class="col-md-2 control-label">Puesto a su Cargo </label>
+                <div class="col-md-10">
+                    <select id="ddlPuestosAsuCargo_busqueda" name="ddlPuestosAsuCargo_busqueda" class="form-control" style="width: 75%;">
+                        <option value="">-- Todos --</option>
+                    </select>
+                </div>
+            </div>*@
+                                <div class="form-group row">
+                                    <label for="ddlOrgano_busqueda" class="col-md-1 control-label">Órgano </label>
+                                    <div class="col-md-5">
+                                        <select id="ddlOrgano_busqueda" name="ddlOrgano_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Todos --</option>
+                                        </select>
+                                    </div>
+                                    <label for="txtNombrePuesto_busqueda" class="col-md-1 control-label">Nombre del puesto</label>
+                                    <div class="col-md-3">
+                                        <input id="txtNombrePuesto_busqueda" name="txtNombrePuesto_busqueda" type="text" class="form-control input-sm text-uppercase" maxlength="30" @*onkeypress="SoloNumeros(event);"*@ />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="ddlUUOO_busqueda" class="col-md-1 control-label">Unidad Orgánica </label>
+                                    <div class="col-md-5">
+                                        <select id="ddlUUOO_busqueda" name="ddlUUOO_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Todos --</option>
+                                        </select>
+                                    </div>
+                                    <label for="ddlEstado_busqueda" class="col-md-1 control-label">Estado </label>
+                                    <div class="col-md-3">
+                                        <select id="ddlEstado_busqueda" name="ddlEstado_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Todos --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2" style="text-align: right; padding-top: 10px;">
+                                        <button type="reset" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                                        </button>
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                        </button>
+                                    </div>
+                                </div>
+                                    
+                                    @*<label for="txtFechaInicio" class="col-md-1 control-label">Fecha Inicio </label>
+        <div class="col-md-1">
+            <input id="txtFechaInicio" name="txtFechaInicio" type="text" class="form-control input-sm" placeholder="Fecha inicio" style="width: 100%;" />
+        </div>
+        <label for="txtFechaFin" class="col-md-1 control-label">Fecha Fin </label>
+        <div class="col-md-1">
+            <input id="txtFechaFin" name="txtFechaFin" type="text" class="form-control input-sm" placeholder="Fecha Fin" style="width: 100%;" />
+        </div>*@
+                                    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FORMULARIO DE BÚSQUEDA-->
+        <div class="card">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#collapseReclamo">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  RESULTADO DE LA B&Uacute;SQUEDA
+                </a>
+            </div>
+            <div class="card-body" id="divListarAplicacion">
+                <div class="row">
+                    <div id="divTotal" class="col-md-2">
+                        <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
+                    </div>
+                    <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                        @*<button id="btnNuevo" type="button" class="btn btn-primary btn-sm" style="display:none">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo perfil de puesto
+        </button>*@
+                        <button id="btnNuevaSolicitud" type="button" class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-file" aria-hidden="true"></span> Nueva solicitud de perfil de puesto CAS
+                        </button>&nbsp;&nbsp;
+                        <button id="btnNuevoSERVIR" type="button" class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo perfil de puesto SERVIR
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" id="divGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input id="hdIdCodTrabajadorBand" name="hdIdCodTrabajadorBand" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />
+    <input id="hdIdCodOrganoBand" name="hdIdCodTrabajadorBand" type="hidden" value="" />
+    <input id="hdIdCodDependenciaBand" name="hdIdCodTrabajadorBand" type="hidden" value="" />
+    <input id="hdIdPerfilPuesto" name="hdIdPerfilPuesto" type="hidden" value="" />
+</section>
+<!-- /.content -->
+<!-- The Modal -->
+<div id="ModalAprobarPerfilAdm" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmAprobarPerfil" name="frmAprobarPerfil" novalidate="">
+            <!-- Modal body -->
+            @*<div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlNivelAlcanzado" class="col-md-2 control-label text-right">Nivel Alcanzado </label>
+                        <div class="col-md-7">
+                            <select id="ddlNivelAlcanzado" name="ddlNivelAlcanzado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>*@
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="txtObservacion" class="col-md-2 control-label text-right">Observacion </label>
+                    <div class="col-md-7">
+                        <textarea id="txtObservacion" name="txtObservacion" rows="4" cols="100"></textarea>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-sm" id="btnAprobarPerfil" onclick="controlador.AprobarPerfilAdm(event)">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Aprobar
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm" id="btnDesaprobarPerfil" onclick="controlador.DesaprobarPerfilAdm(event)">
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Desaprobar
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm" onclick="controlador.cerrarModalAprobarPerfilAdm()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>Close
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div id="ModalHistoricoPerfil" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmHistoricoPerfil" name="frmHistoricoPerfil" novalidate="">
+            <!-- Modal body -->
+            @*<div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlNivelAlcanzado" class="col-md-2 control-label text-right">Nivel Alcanzado </label>
+                        <div class="col-md-7">
+                            <select id="ddlNivelAlcanzado" name="ddlNivelAlcanzado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>*@
+            <div id="pHistorico" class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" href="#collapseReclamo">
+                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  HIST&Oacute;RICO
+                    </a>
+                </div>
+                <div id="collapseReclamo" class="panel-collapse collapse in">
+                    <div class="panel-body" id="divListarAplicacion">
+                        <div class="row">
+                            <div id="divGridHistorico"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-sm" onclick="controlador.cerrarModalHistoricoPerfil()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>Close
+                </button>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div id="divModalFormato" style="display:none;">
+    <div class="panel panel-default">
+        <form id="frmNuevoFormato" name="frmNuevoFormato" novalidate="" enctype="multipart/form-data" onsubmit="controlador.agregarPerfilArchivo(event)">
+            <div class="panel-body">
+                <div class="row">
+                    @*<div class="col-md-6">
+                            <label for="ddlTipoFormato" class="col-md-4 control-label">Tipo de Bases </label>
+                            <div class="col-md-8">
+                                <select id="ddlTipoFormato" name="ddlTipoFormato" class="form-control" style="width: 100%;">
+                                    <option value="">SIN EXAMEN DE CONOCIMIENTOS</option>
+                                </select>
+                            </div>
+                        </div>*@
+                    <div class="col-md-3">
+                        <button id="btnGenerarFicha" type="button" class="btn btn-info btn-sm" onclick="controlador.GenerarFormatoPerfil()">
+                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Descargar formato de perfil de puesto
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    &nbsp;
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="fileFormato" class="control-label">Anexo 02: Perfil de puesto firmado (Formato PDF)*</label>
+                        <input name="fileFormato" id="fileFormato" type="file" aria-label="files" accept=".pdf" />
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer" style="text-align:right;">
+                <button type="submit" class="btn btn-primary btn-sm">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Actualizar
+                </button>
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalFormato()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="divModalNuevaSolicitud" style="display: none; font-size: 11px">
+    <div class="card">
+        <form id="frmNuevaSolicitud" name="frmNuevaSolicitud" novalidate="" onsubmit="controlador.registrarNuevaSolicitud(event)">
+            @*<input id="hdIdEmpleado" name="hdIdEmpleado" type="hidden" value="0" />*@
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            @*<div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+            <strong>SELECCIONE EL TRABAJADOR QUE REGISTRARÁ UN NUEVO PERFIL DE PUESTO:</strong>
+        </div>*@
+                            <label class="col-md-12 control-label text-left">SELECCIONE EL TRABAJADOR QUE REGISTRARÁ UN NUEVO PERFIL DE PUESTO </label>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="ddlComiteDependencia1" class="control-label">Dependencia :</label>
+                                <select id="ddlComiteDependencia1" name="ddlComiteDependencia1" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="ddlComiteMiembro1T" class="control-label">Trabajador :</label>
+                                <select id="ddlComiteMiembro1T" name="ddlComiteMiembro1T" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            &nbsp;
+                        </div>
+                        <div class="row">
+                            <label class="col-md-12 control-label text-left">INGRESE LA CABECERA DEL PERFIL DE PUESTO </label>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="txtOrgano" class="control-label">Órgano :</label>
+                                @*<input type="text" id="txtOrgano" name="txtOrgano" class="form-control input-sm text-uppercase" readonly />*@
+                                <select id="ddlOrgano" name="ddlOrgano" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="">-- Todos --</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtUUOO" class="control-label text-right">Unidad Orgánica :</label>
+                                @*<input type="text" id="txtUUOO" name="txtUUOO" class="form-control input-sm text-uppercase" readonly />*@
+                                <select id="ddlUUOO" name="ddlOrgano" class="form-control input-sm" style="width: 100%;">
+                                    <option value="">-- Todos --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="txtDependenciaJerarquicaLineal" class="control-label">Dependencia Jerárquica Lineal :</label>
+                                <input type="text" id="txtDependenciaJerarquicaLineal" name="txtDependenciaJerarquicaLineal" class="form-control input-sm" maxlength="100" onkeypress="return SoloLetras(event)" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtNombrePuesto" class="control-label">Nombre del Puesto :</label>
+                                <input type="text" id="txtNombrePuesto" name="txtNombrePuesto" class="form-control input-sm" required="required" validationmessage="requerido" maxlength="200" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer" style="text-align:right;">
+                <button id="btnAsignarAcceso" type="submit" class="btn btn-primary btn-sm">
+                    <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> Asignar
+                </button>
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalNuevaSolicitud()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    @*<script src="~/Scripts/App/Intranet/PerfilesPuesto.js"></script>*@
+    <script src="~/Scripts/App/Intranet/PerfilPuesto.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+
+        $(document).ready(function () {
+            //$("#txtFechaInicio").kendoDatePicker({ format: "dd/MM/yyyy" });
+            controlador = new PerfilPuestoJS();
+            //alert(controlador);
+            controlador.inicializarBandeja();
+            //getUUOO(@VariablesWeb.oT_Genm_Usuario.iCodTrabajador);
+
+
+        //$("#txtSolicitanteNumeroDeDocumento").on('keypress').keypress(function (e) {
+        //    if ($("#btnBuscar") && e.which == 13) {
+        //        LoadPersona();
+        //        return false;
+        //    }
+        //});
+    });
+
+    $("#btnNuevo").click(function () {
+        window.location.href = controladorApp.obtenerRutaBase() + "Perfiles/Nuevo";
+    });
+        $("#btnNuevoSERVIR").click(function () {
+            window.location.href = controladorApp.obtenerRutaBase() + "Perfiles/NuevoSERVIR";
+        });
+    $("#btnNuevaSolicitud").click(function () {
+        controlador.abrirModalNuevaSolicitud();
+    });
+
+    function getUUOO(_id)
+    {
+        var params = { id: _id };
+        $.ajax({
+            type: "GET",
+            url: controladorApp.obtenerRutaBase() + "Perfiles/ConsultarUUOO",
+            data: params,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                if (response != null) {
+                    paramUUOO = response;
+                    getOrganos(paramUUOO.iCodOrgano);
+                    getUnidadesOrganicas(paramUUOO.iCodOrgano, paramUUOO.iCodDependencia);
+                    $("#ddlOrgano_busqueda").attr('disabled',true);;
+                    $("#ddlUUOO_busqueda").attr('disabled',true);;
+
+                }
+            }
+
+        });
+
+    }
+    function getOrganos(id) {
+        $.ajax({
+            type: "GET",
+            url: controladorApp.obtenerRutaBase() + "Perfiles/ListarOrganos",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                if (response != null) {
+                    paramUUOO = response;
+                    //alert(paramUUOO.strOrgano);
+                    if (paramUUOO.length > 0) {
+                        for (var i = 0; i <= paramUUOO.length - 1; i++) {
+                            if (paramUUOO[i].iCodigoDependencia==id) {
+                                $("<option value='" + paramUUOO[i].iCodigoDependencia + "' selected>" + paramUUOO[i].strUnidad_Organica + "</option>").appendTo("#ddlOrgano_busqueda");
+                            }
+                            else {
+                                $("<option value='" + paramUUOO[i].iCodigoDependencia + "'>" + paramUUOO[i].strUnidad_Organica + "</option>").appendTo("#ddlOrgano_busqueda");
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+        });
+    }
+    function getUnidadesOrganicas(_id, cod_dep) {
+        var params = { id: _id };
+        $.ajax({
+            type: "GET",
+            url: controladorApp.obtenerRutaBase() + "Perfiles/ListarUnidadesOrganicas",
+            data: params,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                if (response != null) {
+                    paramUUOO = response;
+                    if (paramUUOO.length > 0) {
+                        for (var i = 0; i <= paramUUOO.length - 1; i++) {
+                            if (paramUUOO[i].iCodigoDependencia == cod_dep) {
+                                $("<option value='" + paramUUOO[i].iCodigoDependencia + "' selected>" + paramUUOO[i].strUnidad_Organica + "</option>").appendTo("#ddlUUOO_busqueda");
+                            }
+                            else {
+                                $("<option value='" + paramUUOO[i].iCodigoDependencia + "'>" + paramUUOO[i].strUnidad_Organica + "</option>").appendTo("#ddlUUOO_busqueda");
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+        });
+    }
+
+    </script>
+}

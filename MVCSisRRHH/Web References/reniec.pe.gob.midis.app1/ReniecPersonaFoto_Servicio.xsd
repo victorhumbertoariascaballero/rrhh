@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/APP.GSWEE.Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/APP.GSWEE.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ReniecPersonaFoto_Request">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDeDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReniecPersonaFoto_Request" nillable="true" type="tns:ReniecPersonaFoto_Request" />
+  <xs:complexType name="ReniecPersonaFoto_Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonaFotoDato" nillable="true" type="tns:ReniecPersonaFoto_Registro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReniecPersonaFoto_Response" nillable="true" type="tns:ReniecPersonaFoto_Response" />
+  <xs:complexType name="ReniecPersonaFoto_Registro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoCivil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Foto" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PreNombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimerApellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Restriccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SegundoApellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ubigeo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReniecPersonaFoto_Registro" nillable="true" type="tns:ReniecPersonaFoto_Registro" />
+</xs:schema>

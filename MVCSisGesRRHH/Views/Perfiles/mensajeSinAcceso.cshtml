@@ -1,0 +1,182 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+@{
+    ViewBag.Title = "PERFILES DE PUESTO  ->  SESION TERMINADA";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutRegistro.cshtml"; ;
+}
+@section SubTitulo { <div class="k-toolbar k-widget k-toolbar-resizable">&nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <h6>@ViewBag.Title</h6></div> }
+
+@*@section SubTitulo {
+    <div id="toolbar" class="form-group row k-toolbar k-widget k-toolbar-resizable" style="border-color: #b1acac; color: #32364c; margin: 5px ">
+        &nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <h6>@ViewBag.Title</h6>
+    </div> }*@
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 0px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .input-sm {
+        height: 26px;
+        padding: 5px 10px;
+        font-size: 11px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+    .form-group {
+        margin-bottom: 3px;
+    }
+
+    input, label, .k-input {
+        font-size: 11px !important;
+    }
+
+    .panel-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: inherit;
+    }
+
+    .panel-heading {
+        color: #fff !important;
+        background-color: #F05454;
+        border-color: #FA76B1;
+    }
+
+    .k-radio:checked + .k-radio-label:after {
+        background-color: #f05454;
+        border-radius: 50%;
+    }
+
+    .k-primary {
+        color: #fff;
+        border-color: #46b8da;
+        background-color: #5bc0de;
+        background-image: none;
+        background-image: none,-webkit-gradient(linear,left top,left bottom,from(false));
+        background-image: none,-webkit-linear-gradient(top,false);
+        background-image: none,linear-gradient(to bottom,false);
+    }
+
+    .btn-group-xs > .btn, .btn-xs {
+        padding: .25rem .4rem;
+        font-size: .875rem;
+        line-height: .5;
+        border-radius: .2rem;
+    }
+
+    .demo-section ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .demo-section ul li {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 10px 10px 20px;
+            min-height: 28px;
+            line-height: 28px;
+            vertical-align: middle;
+            border-top: 1px solid rgba(128,128,128,.5);
+        }
+
+    .demo-section {
+        min-width: 220px;
+        margin-top: 15px;
+        padding: 0;
+    }
+
+        .demo-section ul li .k-switch {
+            float: right;
+        }
+
+    .wrapper {
+        height: auto;
+        min-height: 600px;
+        /*margin: 20px auto;
+        padding: 20px 0 0;*/
+    }
+</style>
+<!-- Main content -->
+
+<section class="content">
+    <div class="row">
+        <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; width: 100%">
+            <strong>SU SESIÓN HA TERMINADO, FAVOR INGRESE NUEVAMENTE DESDE EL ENLACE ENVIADO A SU CORREO ELECTRÓNICO PARA CONTINUAR CON EL REGISTRO DE LOS ANEXOS 1 Y ANEXO 2 REQUERIDOS PARA EL PERFIL DE PUESTO</strong>
+        </div>
+    </div>
+    <div class="row" style="height: 600px">
+        <div class="col-md-6" ></div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    @*<script src="~/Scripts/App/Intranet/PerfilesPuesto.js"></script>*@
+    <script src="~/Scripts/App/Intranet/PerfilPuesto.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            //controlador = new PerfilPuestoJS();
+            //controlador.inicializarNuevoRegistro();
+            //$('ddlUUOO').prop('readonly', true);
+        });
+        
+    </script>
+}

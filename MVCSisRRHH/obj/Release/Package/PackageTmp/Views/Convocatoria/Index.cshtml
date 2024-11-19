@@ -1,0 +1,293 @@
+﻿@using System.Configuration
+@using MVCSisRRHH.Models;
+
+@{
+    ViewBag.Title = "CONVOCATORIAS VIGENTES  ->  LISTADO DE CONVOCATORIAS LABORALES PUBLICADAS POR EL MINISTERIO DE DESARROLLO E INCLUSION SOCIAL";
+}
+@section SubTitulo { <h5>@ViewBag.Title</h5> }
+
+<style>
+    .row {
+        margin-right: 0px; 
+        margin-left: 0px;
+    }
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+        
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    input, label, .k-input {
+        font-size: 11px;
+    }
+    .panel-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: inherit;
+    }
+
+    .panel-heading {
+        color: #fff !important;
+        background-color: #F05454;
+        border-color: #FA76B1;
+    }
+
+    .k-radio:checked + .k-radio-label:after {
+        background-color: #f05454;
+        border-radius: 50%;
+    }
+    /* Only resize the element if PDF is embedded */
+    .pdfobject-container {
+        width: 100%;
+        height: 550px;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a data-toggle="tab" href="#tab1_">CONVOCATORIAS CAS</a></li>
+        <li><a data-toggle="tab" href="#tab2_">CONVOCATORIAS DEL SERVICIO CIVIL</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab1_" class="tab-pane active fade in active">
+            <div class="row">
+                @*<br />*@
+                <div class="panel-group" id="accordion">
+                    <div id="pResultado" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" href="#collapseReclamo" style="color:#fff">
+                                <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  LISTADO DE CONVOCATORIAS CAS
+                            </a>
+                        </div>
+                        <div id="collapseReclamo" class="panel-collapse collapse in">
+                            <div class="panel-body" id="divListarAplicacion">
+                                <div class="row">
+                                    <div id="divGrid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab2_" class="tab-pane">
+            <div class="row">
+                @*<br />*@
+                <div class="panel-group" id="accordion">
+                    <div id="pResultado2" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" href="#collapseReclamo2" style="color:#fff">
+                                <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  LISTADO DE CONVOCATORIAS DEL SERVICIO CIVIL
+                            </a>
+                        </div>
+                        <div id="collapseReclamo2" class="panel-collapse collapse in">
+                            <div class="panel-body" id="divListarAplicacion2">
+                                <div class="row">
+                                    <div id="divGridServir"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="divModalPostulacion" style="display:none;">
+        <div class="panel panel-default">
+            <form id="frmPostulacion" name="frmPostulacion" novalidate="" enctype="multipart/form-data" onsubmit="controlador.iniciarPostulacion(event)">
+                <div class="panel-body">
+                    <h3>
+                        INSTRUCCIONES:
+                        <a href="~/Content/img/instructivo_cas.pdf" target="_blank" class="pull-right btn btn-info">VER INSTRUCTIVO</a>
+                    </h3>
+                    <hr style="border: 1px dashed #e2e2e2;">
+                    <p>
+                        Para participar en las Convocatorias de Contratación Administrativa de Servicios - CAS del MIDIS, a fin de acceder a una vacante de los puestos convocados, el/la postulante deberá llenar los campos de acuerdo a la información solicitada y tener en cuenta que en algunos casos existen listas desplegables para que seleccione o escoja una de las alternativas. Utilice el tabulador o el mouse para desplazarse por las celdas.
+                    </p>
+                    <p>
+                        Todos los datos consignados deberán ser <b>ACREDITADOS</b>, previamente a la etapa de entrevista personal, el/la postulante  deberá subir el archivo digital de los certificados de estudios y/o constancias de trabajo respectivamente
+                    </p>
+                    <p>
+                        Si el postulante omite información y/o consigna información falsa será <b>DESCALIFICADO</b> del proceso de selección de personal.
+                    </p>
+                    <p>
+                        Asimismo, es necesario que el/la postulante tenga en cuenta las consideraciones que se precisan en las Bases de cada Concurso de Contratación CAS, así como también considerar lo establecido en el <b>Instructivo de Uso del Sistema de Convocatorias CAS</b>.
+                    </p>
+                    <p>Esperamos contar con su colaboración.</p>
+                    <hr style="border: 1px dashed #e2e2e2;">
+                    <div class="col-md-8">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label style="font-size: medium;">
+                                        <input id="chkAcepto" type="checkbox" name="check" onclick="document.getElementById('btnAceptarConvocatoria').disabled=!document.getElementById('chkAcepto').checked;"> <strong>Acepto y declaro bajo juramento haber leído el instructivo del postulante antes de postular a la presente convocatoria CAS</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        @*<div class="col-md-12">
+                                <div class="form-group">
+                                    <a href="/postulacion/Postulacion/Procesa_Postulacion?idRequerimiento=1483&amp;r=False" class="btn btn-primary disabled" id="btnAceptar">ACEPTAR</a>
+                                    <a href="#" class="btn btn-default">CANCELAR</a>
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button id="btnAceptarConvocatoria" type="submit" class="btn btn-primary" disabled="disabled">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Aceptar
+                    </button>
+                    <button type="button" class="btn btn-default" onclick="controlador.cerrarModalPostulacion()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="divModalPostulacionServir" style="display:none;">
+        <div class="panel panel-default">
+            <form id="frmPostulacionServir" name="frmPostulacionServir" novalidate="" enctype="multipart/form-data" onsubmit="controlador.iniciarPostulacionServir(event)">
+                <div class="panel-body">
+                    <h3>
+                        INSTRUCCIONES:
+                        <a href="~/Content/img/instructivo_cas.pdf" target="_blank" class="pull-right btn btn-info">VER INSTRUCTIVO</a>
+                    </h3>
+                    <hr style="border: 1px dashed #e2e2e2;">
+                    <p>
+                        Para participar en las Convocatorias de Servicio Civil del MIDIS, a fin de acceder a una vacante de los puestos convocados, el/la postulante deberá llenar los campos de acuerdo a la información solicitada y tener en cuenta que en algunos casos existen listas desplegables para que seleccione o escoja una de las alternativas. Utilice el tabulador o el mouse para desplazarse por las celdas.
+                    </p>
+                    <p>
+                        Todos los datos consignados deberán ser <b>ACREDITADOS</b>, previamente a la etapa de entrevista personal, el/la postulante  deberá subir el archivo digital de los certificados de estudios y/o constancias de trabajo respectivamente
+                    </p>
+                    <p>
+                        Si el postulante omite información y/o consigna información falsa será <b>DESCALIFICADO</b> del proceso de selección de personal.
+                    </p>
+                    <p>
+                        Asimismo, es necesario que el/la postulante tenga en cuenta las consideraciones que se precisan en las Bases de cada Concurso de Contratación, así como también considerar lo establecido en el <b>Instructivo de Uso del Sistema de Convocatorias SERVIR</b>.
+                    </p>
+                    <p>Esperamos contar con su colaboración.</p>
+                    <hr style="border: 1px dashed #e2e2e2;">
+                    <div class="col-md-8">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label style="font-size: medium;">
+                                        <input id="chkAceptoServir" type="checkbox" name="check" onclick="document.getElementById('btnAceptarConvocatoriaServir').disabled=!document.getElementById('chkAceptoServir').checked;"> <strong>Acepto y declaro bajo juramento haber leído el instructivo del postulante antes de postular a la presente convocatoria de Servicio Civil</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        @*<div class="col-md-12">
+                                <div class="form-group">
+                                    <a href="/postulacion/Postulacion/Procesa_Postulacion?idRequerimiento=1483&amp;r=False" class="btn btn-primary disabled" id="btnAceptar">ACEPTAR</a>
+                                    <a href="#" class="btn btn-default">CANCELAR</a>
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button id="btnAceptarConvocatoriaServir" type="submit" class="btn btn-primary" disabled="disabled">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Aceptar
+                    </button>
+                    <button type="button" class="btn btn-default" onclick="controlador.cerrarModalPostulacionServir()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    @*<div class="demo-section k-content wide">
+            <div id="timeline"></div>
+        </div>*@
+    <input id="hdnUid" name="hdnUid" type="hidden" />
+    <input id="hdnNroRuc" name="hdnNroRuc" type="hidden" value="" />
+    @*<input id="hdIdContrato" name="hdIdContrato" type="hidden" value="" />
+        <input id="hdIdPostulante" name="hdIdPostulante" type="hidden" value="" />
+        <input id="hdIdPostulacion" name="hdIdPostulacion" type="hidden" value="" />*@
+    <input id="hdIdConvocatoria" name="hdIdConvocatoria" type="hidden" value="" />
+    <input id="hdIdPerfil" name="hdIdPerfil" type="hidden" value="" />
+    <input id="hdIdNombre" name="hdIdNombre" type="hidden" value="" />
+
+</section>
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2018.1.221/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Convocatoria.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+<script src="~/Scripts/util/PDFObject/pdfobject.min.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new ConvocatoriaJS();
+            controlador.inicializar();
+
+            //$("#timeline").kendoTimeline({
+            //    dataSource: {
+            //        transport: {
+            //            read: {
+            //                url: "../content/web/timeline/events.json",
+            //                dataType: "json"
+            //            }
+            //        },
+            //        schema: {
+            //            model: {
+            //                fields: {
+            //                    date: {
+            //                        type: "date"
+            //                    },
+            //                }
+            //            }
+            //        }
+            //    },
+            //    orientation: "horizontal"
+            //});
+        });
+
+        
+    </script>
+}

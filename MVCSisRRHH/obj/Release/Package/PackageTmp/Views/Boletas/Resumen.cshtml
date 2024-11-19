@@ -1,0 +1,261 @@
+﻿@using System.Configuration
+
+@{
+    ViewBag.Title = "BOLETAS  ->  RESUMEN DE BOLETAS DE PAGO";
+    //String coordinadores = ConfigurationManager.AppSettings["coordinadores"].ToUpper();
+    
+}
+@section SubTitulo { <h3>@ViewBag.Title</h3> }
+
+<style>
+    .row {
+        margin-right: 0px; 
+        margin-left: 0px;
+    }
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+    .console div {
+        background-position: 6px -95px;
+        border-bottom: 1px solid #DDD;
+        padding: 5px 10px;
+        height: 2em;
+        line-height: 2em;
+        vertical-align: middle;
+    }
+    /*input, label, .k-input {
+        font-size: 11px;
+    }*/
+    #progressBar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <!--FORMULARIO DE BÚSQUEDA-->
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="#collapseDatos">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INGRESE CRITERIOS DE B&Uacute;SQUEDA
+                </a>
+            </div>
+            <div id="collapseDatos" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="row form-horizontal">
+                        <form id="frmBusqueda" onsubmit="controlador.buscar(event)">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <label for="ddlAnio_busqueda" class="col-md-4 control-label">A&ntilde;o </label>
+                                    <div class="col-md-8">
+                                        <select id="ddlAnio_busqueda" name="ddlAnio_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Todos --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="ddlMes_busqueda" class="col-md-4 control-label">Mes </label>
+                                    <div class="col-md-8">
+                                        <select id="ddlMes_busqueda" name="ddlMes_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Todos --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-bottom: 10px">
+                                <div id="divTotalSisper" class="col-md-3" style="display:none">
+                                    <h5><label>Total de Registros: &nbsp;</label><label id="lblTotalSisper" class="label label-info"></label></h5>
+                                </div>
+                                <div class="col-md-12" style="text-align: right; padding-top: 10px;">
+                                    <button type="reset" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                                    </button>
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!--FORMULARIO DE BÚSQUEDA-->
+        </div>
+        <div id="pResultado" class="panel panel-default">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="#collapseReclamo">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  RESULTADO DE LA B&Uacute;SQUEDA
+                </a>
+            </div>
+            <div id="collapseReclamo" class="panel-collapse collapse in">
+                <div class="panel-body" id="divListarAplicacion">
+                    <div class="row">
+                        <div id="divGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+         
+    <div id="divModalNuevo" style="display:none;">
+        <div class="panel panel-default">
+            <form id="frmNuevo" name="frmNuevo" novalidate="" enctype="multipart/form-data" onsubmit="controlador.registrar(event)">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-6" style="padding-right:0px; padding-left: 0px ">
+                            <label for="ddlAnio" class="control-label">A&ntilde;o*</label>
+                            <select id="ddlAnio" name="ddlAnio_nuevo" class="form-control" style="width: 98%;" required="required" validationmessage="El campo es requerido">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6" style="padding-right:0px; padding-left: 0px ">
+                            <label for="ddlMes" class="control-label">Mes*</label>
+                            <select id="ddlMes" name="ddlMes" class="form-control" style="width: 98%;" required="required" validationmessage="El campo es requerido">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12" style="padding-right:0px; padding-left: 0px ">
+                            <label for="ddlIdCad" class="control-label">Seleccionar Boletas Digitales*</label>
+                            <input name="fileFirma" id="fileFirma" type="file" aria-label="files" accept=".pdf" />
+                        </div>
+                    </div>
+                    <div id="divConsole" class="row" style="display:none">
+                        <div class="form-group col-md-12 box" style="padding-right:0px; padding-left: 0px ">
+                            <label class="control-label">VALIDACIÓN DE LAS BOLETAS SELECCIONADAS</label>
+                            <div id="console" class="console"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Registrar
+                    </button>
+                    <button type="button" class="btn btn-default" onclick="controlador.cerrarModalNuevo()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="divModalEliminacion" style="display:none;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4 id="hEliminacion">¿Está seguro de eliminar la propuesta seleccionada?</h4>
+                <p id="pEliminacion"></p>
+            </div>
+            <div class="panel-footer" style="text-align:right;">
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalEliminacion()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                </button>
+                <button id="btnEliminar" type="button" class="btn btn-primary btn-sm" onclick="controlador.eliminar()">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+    <input id="hdnUid" name="hdnUid" type="hidden" />
+    <input id="hdnNroRuc" name="hdnNroRuc" type="hidden" value="" />
+    <input id="argumentos" type="hidden" value="" />
+    <input id="hdBoletas" type="hidden" value="" />
+    <input id="hdBoletasValidas" type="hidden" value="" />
+    <input type="hidden" id="hdArchivoFirmado" value="" />
+
+</section>
+
+<div id="addComponent"></div>
+
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2018.1.221/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Resumen.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new ResumenJS();
+            controlador.inicializar();
+
+        });
+
+    </script>
+}

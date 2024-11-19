@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReporteTrabajadoresAfiliadosONPE" targetNamespace="http://tempuri.org/dsReporteTrabajadoresAfiliadosONPE.xsd" xmlns:mstns="http://tempuri.org/dsReporteTrabajadoresAfiliadosONPE.xsd" xmlns="http://tempuri.org/dsReporteTrabajadoresAfiliadosONPE.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReporteTrabajadoresAfiliadosONPE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReporteTrabajadoresAfiliadosONPE" msprop:Generator_UserDSName="dsReporteTrabajadoresAfiliadosONPE">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsReporteTrabajadoresAfiliadosONPE" msprop:Generator_TableClassName="dsReporteTrabajadoresAfiliadosONPEDataTable" msprop:Generator_TableVarName="tabledsReporteTrabajadoresAfiliadosONPE" msprop:Generator_TablePropName="_dsReporteTrabajadoresAfiliadosONPE" msprop:Generator_RowDeletingName="dsReporteTrabajadoresAfiliadosONPERowDeleting" msprop:Generator_RowChangingName="dsReporteTrabajadoresAfiliadosONPERowChanging" msprop:Generator_RowEvHandlerName="dsReporteTrabajadoresAfiliadosONPERowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteTrabajadoresAfiliadosONPERowDeleted" msprop:Generator_UserTableName="dsReporteTrabajadoresAfiliadosONPE" msprop:Generator_RowChangedName="dsReporteTrabajadoresAfiliadosONPERowChanged" msprop:Generator_RowEvArgName="dsReporteTrabajadoresAfiliadosONPERowChangeEvent" msprop:Generator_RowClassName="dsReporteTrabajadoresAfiliadosONPERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sNumeroDocumento" msprop:Generator_ColumnVarNameInTable="columnsNumeroDocumento" msprop:Generator_ColumnPropNameInRow="sNumeroDocumento" msprop:Generator_ColumnPropNameInTable="sNumeroDocumentoColumn" msprop:Generator_UserColumnName="sNumeroDocumento" type="xs:string" minOccurs="0" />
+              <xs:element name="sApePaterno" msprop:Generator_ColumnVarNameInTable="columnsApePaterno" msprop:Generator_ColumnPropNameInRow="sApePaterno" msprop:Generator_ColumnPropNameInTable="sApePaternoColumn" msprop:Generator_UserColumnName="sApePaterno" type="xs:string" minOccurs="0" />
+              <xs:element name="sApeMaterno" msprop:Generator_ColumnVarNameInTable="columnsApeMaterno" msprop:Generator_ColumnPropNameInRow="sApeMaterno" msprop:Generator_ColumnPropNameInTable="sApeMaternoColumn" msprop:Generator_UserColumnName="sApeMaterno" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombre" msprop:Generator_ColumnVarNameInTable="columnsNombre" msprop:Generator_ColumnPropNameInRow="sNombre" msprop:Generator_ColumnPropNameInTable="sNombreColumn" msprop:Generator_UserColumnName="sNombre" type="xs:string" minOccurs="0" />
+              <xs:element name="iMes" msprop:Generator_ColumnVarNameInTable="columniMes" msprop:Generator_ColumnPropNameInRow="iMes" msprop:Generator_ColumnPropNameInTable="iMesColumn" msprop:Generator_UserColumnName="iMes" type="xs:string" minOccurs="0" />
+              <xs:element name="iAnio" msprop:Generator_ColumnVarNameInTable="columniAnio" msprop:Generator_ColumnPropNameInRow="iAnio" msprop:Generator_ColumnPropNameInTable="iAnioColumn" msprop:Generator_UserColumnName="iAnio" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreReporte" msprop:Generator_ColumnVarNameInTable="columnsNombreReporte" msprop:Generator_ColumnPropNameInRow="sNombreReporte" msprop:Generator_ColumnPropNameInTable="sNombreReporteColumn" msprop:Generator_UserColumnName="sNombreReporte" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

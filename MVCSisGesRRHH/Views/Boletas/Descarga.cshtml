@@ -1,0 +1,437 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "BOLETAS DE PAGO  ->  BANDEJA DE CONSULTA Y DESCARGA";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutBoleta.cshtml";
+}
+@section SubTitulo 
+    { 
+        <h6>@ViewBag.Title</h6> 
+    }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px !important;
+    }
+
+    .k-radio:checked + .k-radio-label:after {
+        background-color: #f05454;
+        border-radius: 50%;
+    }
+
+    .k-primary {
+        color: #fff;
+        border-color: #46b8da;
+        background-color: #5bc0de;
+        background-image: none;
+        background-image: none,-webkit-gradient(linear,left top,left bottom,from(false));
+        background-image: none,-webkit-linear-gradient(top,false);
+        background-image: none,linear-gradient(to bottom,false);
+    }
+
+    .stepwizard-step p {
+        margin-top: 0px;
+        color: #666;
+    }
+
+    .stepwizard-row {
+        display: table-row;
+    }
+
+    .stepwizard {
+        display: table;
+        width: 100%;
+        position: relative;
+    }
+
+    .stepwizard-step button[disabled] {
+        /*opacity: 1 !important;
+    filter: alpha(opacity=100) !important;*/
+    }
+
+    .stepwizard .btn.disabled, .stepwizard .btn[disabled], .stepwizard fieldset[disabled] .btn {
+        opacity: 1 !important;
+        color: #bbb;
+    }
+
+    .stepwizard-row:before {
+        top: 14px;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        z-index: 0;
+    }
+
+    .stepwizard-step {
+        display: table-cell;
+        text-align: center;
+        position: relative;
+    }
+
+    .btn-circle {
+        width: 30px;
+        /*height: 30px;*/
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+    }
+
+    .btn-group-xs > .btn, .btn-xs {
+        padding: .25rem .4rem;
+        font-size: .875rem;
+        line-height: .5;
+        border-radius: .2rem;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container" style="margin-top: 20px; margin-bottom: -20px;">
+        <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-3">
+                    <a id="step1" href="#step-1" type="button" class="btn btn-default btn-circle" disabled="disabled">1</a>
+                    <p><small>SOLICITUD</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a id="step2" href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                    <p><small>VALIDACIÓN</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a id="step3" href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                    <p><small>DESCARGA</small></p>
+                </div>
+                @*<div class="stepwizard-step col-xs-3">
+                    <a id="step4" href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                    <p><small>CONTRATO APROBADO</small></p>
+                </div>*@
+            </div>
+        </div>
+    </div>
+    <div id="tabstrip" class="panel-body">
+        <ul class=" nav nav-tabs">
+            <li id="liTab1" class="nav-item">
+                <button class="nav-link active" id="sisper-tab" data-toggle="tab" data-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">REGISTRO DE SOLICITUD</button>
+                @*<a data-toggle="tab" href="#tab1">REGISTRO DE SOLICITUD</a>*@
+            </li>
+            <li id="liTab2">
+                <button class="nav-link" id="notifica-tab" data-toggle="tab" data-target="#tab2" type="button" role="tab" aria-controls="notifica" aria-selected="true">AUTENTICACION DE TRABAJADOR</button>
+            </li>
+            <li id="liTab3">
+                <button class="nav-link" id="notifica2-tab" data-toggle="tab" data-target="#tab3" type="button" role="tab" aria-controls="notifica" aria-selected="true">CONSULTA DE BOLETAS DE PAGO</button>    
+            </li>
+            @*<li id="liTab4"><a data-toggle="tab" href="#tab4">APROBACION DEL CONTRATO LABORAL</a></li>*@
+        </ul>
+        <div class="tab-content" style="padding:10px 0px 10px 0px">
+            <div id="tab1" class="tab-pane fade show active" role="tabpanel">
+                <div class="row form-horizontal">
+                    <div class="col-md-12">
+                        <form id="frmRegistro" name="frmRegistro" novalidate="" onsubmit="controlador.registrarSolicitud()">
+                            @*<div id="accordion1">*@
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#">
+                                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INFORMACIÓN DEL TRABAJADOR
+                                    </a>
+                                </div>
+                                <div id="collapseDocumentos" class="card-body">
+                                    @*<div class="col-md-12">*@
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                                    <strong>RECUERDE!</strong>
+                                                    <p>POR FAVOR INGRESE EL NUMERO DE DOCUMENTO DE IDENTIDAD DEL TRABAJADOR A CONSULTAR</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="form-group col-md-2">
+                                                        <label for="ddlPersonaTipoDeDocumento" class="control-label">Tipo de documento*</label>
+                                                        <select id="ddlPersonaTipoDeDocumento" name="ddlPersonaTipoDeDocumento" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                            <option value="">-- Seleccione --</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-2">
+                                                        <label for="txtPersonaNumeroDeDocumento" class="control-label">Número de documento*</label>
+                                                        <input id="txtPersonaNumeroDeDocumento" name="txtPersonaNumeroDeDocumento" type="text" class="form-control input-sm" required="required" maxlength="8" pattern="[0-9]{8}" validationmessage="inválido" onkeypress="SoloNumeros(event);" />
+                                                    </div>
+                                                    <div class="form-group col-md-2">
+                                                        <br>
+                                                        <button id="btnRegistrar" type="button" class="btn btn-primary btn-sm" onclick="controlador.registrarSolicitud()">
+                                                            <span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Solicitud
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @*</div>*@
+                                </div>
+                            </div>
+                                @*
+            </div>*@
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tab-pane fade" role="tabpanel">
+                <div class="row form-horizontal">
+                    <div class="col-md-12">
+                        <form id="frmValidar" name="frmValidar" novalidate="" onsubmit="controlador.validarSolicitud()">
+                            @*<div class="panel-group" id="accordion2">*@
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a data-toggle="collapse" href="#">
+                                            <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INGRESO DE CONTRASEÑA
+                                        </a>
+                                    </div>
+                                    <div id="collapseContrasena" class="card-body">
+                                        @*<div class="panel-body">*@
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                                        <strong>IMPORTANTE!</strong>
+                                                        <p>POR FAVOR INGRESE LA CONTRASEÑA DE SEGURIDAD ENVIADA A SU CORREO ELECTRÓNICO</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="form-group col-md-4">
+                                                            <label for="txtPersonaClave" class="control-label">Contraseña*</label>
+                                                            <input id="txtPersonaClave" name="txtPersonaClave" type="text" class="form-control input-sm" required="required" maxlength="100" validationmessage="requerido" />
+                                                        </div>
+                                                        <div class="form-group col-md-2">
+                                                            <br>
+                                                            <button id="btnValidar" type="button" class="btn btn-primary btn-sm" onclick="controlador.validarSolicitud()">
+                                                                <span class="glyphicon glyphicon-file" aria-hidden="true"></span> Validar Solicitud
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @*</div>*@
+                                    </div>
+                                </div>
+                            @*</div>*@
+                        </form>
+                    </div>
+                </div>
+            </div>
+                <div id="tab3" class="tab-pane fade" role="tabpanel">
+                    <div class="row form-horizontal">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#">
+                                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> CONSULTA DE BOLETAS DE PAGO
+                                    </a>
+                                </div>
+                                <div id="collapseDescarga" class="card-body">
+                                    @*<div class="panel-body">*@
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                                <strong>IMPORTANTE!</strong>
+                                                <p>POR FAVOR DESCARGUE SUS BOLETAS DE PAGO Y GUARDELAS EN UN MEDIO DIGITAL SEGURO</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <div id="divGridDescarga"></div>
+                                        </div>
+                                    </div>
+                                    @*</div>*@
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="panel-footer" style="text-align:center;">
+                    <button id="btnEnviar" type="button" class="btn btn-primary btn-sm" onclick="controlador.confirmarEnvio(event)">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Enviar
+                    </button>
+                </div>*@
+                    </div>
+                    </div>
+                <div id="tab4" class="tab-pane fade">
+                    <div class="panel-group" id="accordion4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" href="#collapseDocumentos" style="color:#fff">
+                                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> I. APROBAR EL CONTRATO LABORAL
+                                </a>
+                            </div>
+                            <div id="collapseDocumentos" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0;">
+                                                    <strong>IMPORTANTE!</strong>
+                                                    <p>POR FAVOR REVISE EL CONTRATO LABORAL GENERADO, NECESITAMOS SU APROBACIÓN PARA FINALIZAR EL PROCESO DE SELECCIÓN</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="70%">DOCUMENTO</th>
+                                                                <th width="30%">DESCARGAR</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1. Contrato laboral generado respetando las bases establecidas en el proceso de convocatoria CAS</td>
+                                                                <td>
+                                                                    <a id="btnActualContrato" href="#" target="_blank" class="btn btn-success" style="display:none"><span class="glyphicon glyphicon-file"></span></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label @*for="txtPersonaNacionalidad"*@ class="control-label"></label>
+                                                </div>
+                                                <div class="form-group col-md-6">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer" style="text-align:center;">
+                            <button id="btnAprobar" type="button" class="btn btn-primary btn-sm" onclick="controlador.confirmarAprobacion(event)">
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Aprobar Contrato
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <input id="hdnUid" name="hdnUid" type="hidden" />
+    <input id="hdnNroRuc" name="hdnNroRuc" type="hidden" value="" />
+    <input id="hdIdSolicitud" name="hdIdConvocatoria" type="hidden" value="@ViewBag.IdSolicitud" />
+    <input id="hdIdTrabajador" name="hdIdTrabajador" type="hidden" value="@ViewBag.IdTrabajador" />
+    <input id="hdIdEstado" name="hdTrabajador" type="hidden" value="@ViewBag.IdEstado" />
+    <input id="hdIdNombre" name="hdIdNombre" type="hidden" value="" />
+    <input id="hdIdEvaluacion" name="hdIdEvaluacion" type="hidden" value="" />
+    <input id="hdIdPregunta" name="hdIdPregunta" type="hidden" value="" />
+    <input id="hdIdExamen" name="hdIdExamen" type="hidden" value="" />
+    <input id="hdIdPresento" name="hdIdPresento" type="hidden" value="" />
+
+</section>
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Boletas.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+    <script src="~/Scripts/util/PDFObject/pdfobject.min.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new BoletasJS();
+            controlador.inicializarDescargaBoleta();
+
+        });
+
+    </script>
+}

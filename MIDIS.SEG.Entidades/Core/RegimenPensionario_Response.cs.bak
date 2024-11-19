@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MIDIS.ORI.Entidades
+{
+    //public partial class RegimenPensionario_Response
+    //{
+    //    public int iCodRegistroRegimenPen { get; set; }
+    //    public int iCodRegimenPen { get; set; }
+    //    public int iCodTipoRegimenPen { get; set; }
+    //    public int iCodAPF { get; set; }
+    //    public int iMes { get; set; }
+    //    public int iAnio { get; set; }
+    //    public string sNombre { get; set; }
+    //    public string sTipo { get; set; }
+    //    public decimal dcComision { get; set; }
+    //    public decimal dcPrimaSeguro { get; set; }
+    //    public decimal dcAporte { get; set; }
+    //    public decimal dcTope { get; set; }
+    //    public string sEtado { get; set; }
+
+    //    public RegimenPensionario_Response(int _iCodRegistroRegimenPen, int _iCodRegimenPen, int _iCodTipoRegimenPen, int _iCodAPF, int _iMes, int _iAnio, String _sNombre,
+    //        String _sTipo, decimal _dcComision, decimal _dcPrimaSeguro, decimal _dcAporte, decimal _dcTope, String _sEtado)
+    //    {
+    //    iCodRegistroRegimenPen = _iCodRegistroRegimenPen;
+    //    iCodRegimenPen = _iCodRegimenPen;
+    //    iCodTipoRegimenPen=_iCodTipoRegimenPen;
+    //    iCodAPF=_iCodAPF;
+    //    iMes = _iMes;
+    //    iAnio = _iAnio;
+    //    sNombre = _sNombre;
+    //    sTipo = _sTipo;
+    //    dcComision = _dcComision;
+    //    dcPrimaSeguro = _dcPrimaSeguro;
+    //    dcAporte = _dcAporte;
+    //    dcTope = _dcTope;
+    //    sEtado=_sEtado;
+    //    }
+    //}
+    public partial class RegimenPensionario_Response
+    {
+        public string iCodRegistroRegimenPen { get; set; }
+        public string iCodRegimenPen { get; set; }
+        public string iCodTipoRegimenPen { get; set; }
+        public string iCodAPF { get; set; }
+        public string iMes { get; set; }
+        public string iAnio { get; set; }
+        public string sNombre { get; set; }
+        public string sTipo { get; set; }
+        public string dcComision { get; set; }
+        public string dcPrimaSeguro { get; set; }
+        public string dcAporte { get; set; }
+        public string dcTope { get; set; }
+        public string sEtado { get; set; }
+
+        public RegimenPensionario_Response(string _iCodRegistroRegimenPen, string _iCodRegimenPen, string _iCodTipoRegimenPen, string _iCodAPF, string _iMes, string _iAnio, string _sNombre,
+            string _sTipo, string _dcComision, string _dcPrimaSeguro, string _dcAporte, string _dcTope, string _sEtado)
+        {
+            iCodRegistroRegimenPen = _iCodRegistroRegimenPen;
+            iCodRegimenPen = _iCodRegimenPen;
+            iCodTipoRegimenPen = _iCodTipoRegimenPen;
+            iCodAPF = _iCodAPF;
+            iMes = _iMes;
+            iAnio = _iAnio;
+            sNombre = _sNombre;
+            sTipo = _sTipo;
+            dcComision = _dcComision;
+            dcPrimaSeguro = _dcPrimaSeguro;
+            dcAporte = _dcAporte;
+            dcTope = _dcTope;
+            sEtado = _sEtado;
+        }
+    }
+}

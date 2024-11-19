@@ -1,0 +1,327 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "RECLUTAMIENTO Y SELECCIÓN  ->  BANDEJA DE BASES DE CONVOCATORIAS";
+}
+@section SubTitulo { 
+    <div id="toolbar" class="form-group row k-toolbar k-widget k-toolbar-resizable" style="border-color: #b1acac; color: #32364c; margin: 5px ">
+        &nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <h6>@ViewBag.Title</h6> 
+    </div> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px !important;
+    }
+
+    .btn-group-xs > .btn, .btn-xs {
+        padding: .25rem .4rem;
+        font-size: .875rem;
+        line-height: .5;
+        border-radius: .2rem;
+    }
+
+    .demo-section ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .demo-section ul li {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 10px 10px 20px;
+            min-height: 28px;
+            line-height: 28px;
+            vertical-align: middle;
+            border-top: 1px solid rgba(128,128,128,.5);
+        }
+
+    .demo-section {
+        min-width: 220px;
+        margin-top: 15px;
+        padding: 0;
+    }
+
+        .demo-section ul li .k-switch {
+            float: right;
+        }
+
+    .wrapper {
+        height: auto;
+        min-height: 600px;
+        /*margin: 20px auto;
+        padding: 20px 0 0;*/
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#collapseDatos">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INGRESE CRITERIOS DE B&Uacute;SQUEDA
+                </a>
+            </div>
+            <div id="collapseDatos" class="collapse show">
+                <div class="card-body">
+                    <div class="row form-horizontal">
+                        <div class="col-12">
+                            <form id="frmBandeja" name="frmBandeja" novalidate="" onsubmit="controlador.CargarBandejaPrincipal(event)">
+                                <div class="form-group row">
+                                    <label for="ddlOrgano_busqueda" class="col-md-1 control-label">Órgano </label>
+                                    <div class="col-md-3">
+                                        <select id="ddlOrgano_busqueda" name="ddlOrgano_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Todos --</option>
+                                        </select>
+                                    </div>
+                                    <label for="ddlUUOO_busqueda" class="col-md-1 control-label">Unidad Orgánica </label>
+                                    <div class="col-md-3">
+                                        <select id="ddlUUOO_busqueda" name="ddlUUOO_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Todos --</option>
+                                        </select>
+                                    </div>
+                                    <label for="ddlEstado_busqueda" class="col-md-1 control-label">Estado </label>
+                                    <div class="col-md-1">
+                                        <select id="ddlEstado_busqueda" name="ddlEstado_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Todos --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2" style="text-align: right; padding-top: 10px;">
+                                        <button type="reset" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                                        </button>
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                        </button>
+
+                                    </div>
+                                    @*<label for="txtFechaInicio" class="col-md-2 control-label">Fecha Inicio </label>
+        <div class="col-md-4">
+            <input id="txtFechaInicio" name="txtFechaInicio" type="text" class="form-control input-sm" placeholder="Fecha inicio" style="width: 75%;" />
+        </div>
+        <label for="txtFechaFin" class="col-md-2 control-label">Fecha Fin </label>
+        <div class="col-md-4">
+            <input id="txtFechaFin" name="txtFechaFin" type="text" class="form-control input-sm" placeholder="Fecha Fin" style="width: 75%;" />
+        </div>*@
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FORMULARIO DE BÚSQUEDA-->
+        <div id="pResultado" class="card">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#collapseReclamo">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  RESULTADO DE LA B&Uacute;SQUEDA
+                </a>
+            </div>
+            <div class="card-body" id="divListarAplicacion">
+                <div class="row">
+                    <div id="divTotal" class="col-md-2">
+                        <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
+                    </div>
+                    <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                        <button id="btnNuevo" type="button" class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" id="divGridBases"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <input id="hdIdCodTrabajador" name="hdIdCodTrabajadorBand" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />
+    <input id="hdIdBasePerfilPuesto" name="hdIdBasePerfilPuesto" type="hidden" value="" />
+
+</section>
+<!-- /.content -->
+<!-- The Modal -->
+<div id="divModalFormato" style="display:none;">
+    <div class="panel panel-default">
+        <form id="frmNuevoFormato" name="frmNuevoFormato" novalidate="" enctype="multipart/form-data" onsubmit="controlador.agregarBasesArchivo(event)">
+            <div class="panel-body">
+                <div class="row">
+                    @*<div class="col-md-6">
+                            <label for="ddlTipoFormato" class="col-md-4 control-label">Tipo de Bases </label>
+                            <div class="col-md-8">
+                                <select id="ddlTipoFormato" name="ddlTipoFormato" class="form-control" style="width: 100%;">
+                                    <option value="">SIN EXAMEN DE CONOCIMIENTOS</option>
+                                </select>
+                            </div>
+                        </div>*@
+                    <div class="col-md-6">
+                        <button id="btnGenerarFicha" type="button" class="btn btn-info btn-sm" onclick="controlador.GenerarFormatoBases()">
+                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Descargar Bases de Convocatoria
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="fileFormato" class="control-label">Seleccionar bases de convocatoria (Formato PDF)*</label>
+                        <input name="fileFormato" id="fileFormato" type="file" aria-label="files" accept=".pdf" />
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer" style="text-align:right;">
+                <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Actualizar
+                </button>
+                <button type="button" class="btn btn-default" onclick="controlador.cerrarModalFormato()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="ModalBasesPerfilPuestoObservacion" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmBasesPerfilPuestoObservacion" name="frmBasesPerfilPuestoObservacion" novalidate="">
+            <div id="pBasesPerfilPuestoObservacion" class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" href="#collapseReclamo">
+                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  OBSERVACIONES
+                    </a>
+                </div>
+                <div id="collapseReclamo" class="panel-collapse collapse in">
+                    <div class="panel-body" id="divListarAplicacion">
+                        <div class="row">
+                            <div id="divGridObservaciones"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-sm" onclick="controlador.cerrarModalBasesPerfilPuestoObservacion()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>Close
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    @*<script src="~/Scripts/App/Intranet/PerfilesPuesto.js"></script>*@
+    <script src="~/Scripts/App/Intranet/BasesPerfilPuesto.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+
+        $(document).ready(function () {
+            //$("#txtFechaInicio").kendoDatePicker({ format: "dd/MM/yyyy" });
+            controlador = new BasesPerfilPuestoJS();
+            //alert(controlador);
+            controlador.inicializarBandeja();
+            //getUUOO(@VariablesWeb.oT_Genm_Usuario.iCodTrabajador);
+
+
+        });
+
+        $("#btnNuevo").click(function () {
+            window.location.href = controladorApp.obtenerRutaBase() + "Bases/Nuevo";
+        });
+
+    </script>
+}

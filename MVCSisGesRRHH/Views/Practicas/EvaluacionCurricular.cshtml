@@ -1,0 +1,452 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "CONVOCATORIAS DE PRÁCTICAS   ->   EVALUACIÓN CURRICULAR";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutEvaluacion.cshtml"; ;
+}
+@section SubTitulo { <div class="k-toolbar k-widget k-toolbar-resizable">&nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <h6>@ViewBag.Title</h6> </div> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px !important;
+    }
+
+    /* Only resize the element if PDF is embedded */
+    .pdfobject-container {
+        width: 100%;
+        height: 700px;
+    }
+
+    .aptoTotal {
+        /*font-weight: bold;*/
+        background-color: rgb(214, 248, 205);
+    }
+
+    .noaptoTotal {
+        background-color: rgb(247, 187, 187);
+    }
+
+    .k-tabstrip-items .k-state-active .k-link {
+        color: #fffbfb;
+        font-weight: 700;
+        /*text-decoration:underline;*/
+    }
+
+    .k-tabstrip-item > span.k-link {
+        color: #bebebe;
+        /*#color: #e9ecef;
+    background-color: #17a2b8;
+    border-color: #bee5eb;*/
+    }
+
+    .wrapper {
+        height: auto;
+        min-height: 600px;
+        /*margin: 20px auto;
+        padding: 20px 0 0;*/
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <!--FORMULARIO DE BÚSQUEDA-->
+    <div class="panel-group" id="accordion">
+        <!--<div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" href="#collapseDatos">
+                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INGRESE CRITERIOS DE B&Uacute;SQUEDA
+                    </a>
+                </div>
+                <div id="collapseDatos" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="row form-horizontal">
+                            <form id="frmBusqueda" onsubmit="controlador.buscar(event)">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <label for="txtProceso_busqueda" class="col-md-4 control-label">Proceso </label>
+                                        <div class="col-md-8">
+                                            <input id="txtProceso_busqueda" name="txtProceso_busqueda" type="text" class="form-control input-sm text-uppercase" maxlength="8" onkeypress="SoloNumeros(event);" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="ddlDependencia_busqueda" class="col-md-2 control-label">Dependencia </label>
+                                        <div class="col-md-10">
+                                            <select id="ddlDependencia_busqueda" name="ddlDependencia_busqueda" class="form-control" style="width: 100%;">
+                                                <option value="">-- Seleccione --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="txtCargo_busqueda" class="col-md-2 control-label">Cargo </label>
+                                        <div class="col-md-10">
+                                            <input id="txtCargo_busqueda" name="txtCargo_busqueda" type="text" class="form-control input-sm text-uppercase" maxlength="30" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="ddlEstado_busqueda" class="col-md-4 control-label">Estado </label>
+                                        <div class="col-md-8">
+                                            <select id="ddlEstado_busqueda" name="ddlEstado_busqueda" class="form-control" style="width: 100%;">
+                                                <option value="">-- Todos --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="text-align: right; padding-top: 10px;">
+                                        <button type="reset" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                                        </button>
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+        <!--FORMULARIO DE BÚSQUEDA-->
+        <div id="pResultado" class="card">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  RELACI&Oacute;N DE POSTULANTES
+                </a>
+            </div>
+            <div id="collapseReclamo" class="collapse show">
+                <div class="card-body" id="divListarAplicacion">
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <label for="txtNroConvocatoria" class="control-label">Nro de Convocatoria*</label>
+                            <input id="txtNroConvocatoria" name="txtNroConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" value="@ViewBag.Convocatoria" />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="txtCantidadConvocatoria" class="control-label">Nro de vacantes*</label>
+                            <input id="txtCantidadConvocatoria" name="txtCantidadConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" value="@ViewBag.Vacantes" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="txtCargoConvocatoria" class="control-label">Cargo*</label>
+                            <input id="txtCargoConvocatoria" name="txtCargoConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" value="@ViewBag.Cargo" />
+                        </div>
+                        <div class="form-group col-md-2 text-center" style="padding-top: 15px">
+                            @*<button id="btnCancelar" type="button" class="btn btn-primary" onclick="controlador.cancelarPostulacion()">
+                                    <span class="glyphicon glyphicon-cancel" aria-hidden="true"></span> Cancelar Postulación
+                                </button>*@
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="divTotal" class="col-md-2">
+                            <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
+                        </div>
+                        <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                            <button id="btnFinalizar" type="button" class="btn btn-primary btn-sm" onclick="controlador.abrirModalFormato()">
+                                @*finalizarEvaluacionCurricular*@
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Finalizar Evaluación
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="divGrid"></div>
+                        <script type="text/x-kendo-template" id="template">
+                            <div class="tabstrip">
+                                <ul>
+                                    <li class="k-state-active">
+                                        DOCUMENTACION DE SUSTENTO
+                                    </li>
+                                    <!--<li>
+                                        FORMACIÓN ACADÉMICA--> @*<label class="label label-info totalPostulantes" style="font-size: 11px"></label>*@
+                                    <!--</li>
+                                    <li>
+                                        PROGRAMAS DE ESPECIALIZACIÓN, DIPLOMADO, CURSO
+                                    </li>
+                                    <li>
+                                        EXPERIENCIA LABORAL (GENERAL Y ESPECÍFICA)
+                                    </li>-->
+                                    <li>
+                                        OBSERVACIONES
+                                    </li>
+                                </ul>
+                                <div>
+                                    @*<div class='employee-details'>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="col-md-4 divFecha1" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div>
+                                                                <strong><span class="fecha1" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>1. Publicación de la convocatoria en el portal institucional del Ministerio de Desarrollo e Inclusión Social</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 divFecha2" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <strong><span class="fecha2" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>2. Registro y/o inscripción de la hoja de vida (CV) del postulante</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 divFecha3" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div style="height:125px">
+                                                                <strong><span class="fecha3" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>3. Evaluación de la hoja de vida</p>
+                                                            </div>
+                                                            <div>
+                                                                <button type="button" class="btn btn-info btn-sm btnEvaluacionCurricular" style="width:88%" disabled="disabled">
+                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iniciar evaluación
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="col-md-4 divFecha4" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <strong><span class="fecha4" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>4. Publicación de resultados de la hoja de vida en el portal institucional del Ministerio de Desarrollo e Inclusión Social</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 divFecha5" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div style="height:125px">
+                                                                <strong><span class="fecha5" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>5. Evaluación de conocimientos</p>
+                                                            </div>
+                                                            <div>
+                                                                <button id="btnEvaluacionConocimiento" type="button" class="btn btn-info btn-sm" style="width: 88%" disabled="disabled">
+                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iniciar evaluación
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 divFecha6" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div style="height:125px">
+                                                                <strong><span class="fecha6" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>6. Evaluación psicológica</p>
+                                                            </div>
+                                                            <div>
+                                                                <button id="btnEvaluacionPsicologica" type="button" class="btn btn-info btn-sm" style="width: 88%" disabled="disabled">
+                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iniciar evaluación
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="col-md-4 divFecha7" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div style="height:125px">
+                                                                <strong><span class="fecha7" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>7. Entrevista (virtual)</p>
+                                                            </div>
+                                                            <div>
+                                                                <button id="btnEvaluacionEntrevista" type="button" class="btn btn-info btn-sm" style="width: 88%" disabled="disabled">
+                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iniciar evaluación
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 divFecha8" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <strong><span class="fecha8" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>8. Publicación de resultado final en el portal institucional del Ministerio de Desarrollo e Inclusión Social</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 divFecha9" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <strong><span class="fecha9" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>9. Suscripción del contrato</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>*@
+                                    <div class="col-md-6">
+                                        <div class="divGridDocumento"></div>
+                                    </div>
+
+                                </div>
+                                @*<div>
+                                    <div class="divGridEstudio"></div>
+                                </div>
+                                <div>
+                                    <div class="divGridCapacitacion"></div>
+                                </div>
+                                <div>
+                                    <div class="divGridExperiencia"></div>
+                                </div>*@
+                                <div>
+                                    <div class="form-group col-md-12">
+                                        <label for="txtObservacion" class="control-label">Información adicional que desee ingresar sobre la evalución</label>
+                                        <textarea class="form-control input-sm txtObservacion" rows="2" style="width: 100%" maxlength="490"></textarea> @*id="txtObservacion" name="txtObservacion"*@
+                                        <button type="button" class="btn btn-info btn-sm btnGuardarObs" style="margin-top: 5px" @*onclick="controlador.actualizarEvaluacionObservacion(this)"*@>
+                                            <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Guardar observación
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </script>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="divModalVisor" style="display:none;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div id="app">
+
+                </div>
+            </div>
+            <div class="panel-footer" style="text-align:right;">
+                <button type="button" class="btn btn-default" onclick="controlador.cerrarModalVisor()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="divModalFormato" style="display:none;">
+        <div class="panel panel-default">
+            <form id="frmNuevoFormato" name="frmNuevoFormato" novalidate="" enctype="multipart/form-data" onsubmit="controlador.agregarEvaluacionCurricularPracticaArchivo(event)">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button id="btnGenerarFicha" type="button" class="btn btn-primary btn-sm" onclick="controlador.GenerarFormatoPerfilPractica()">
+                                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Descargar acta de evaluación curricular
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        &nbsp;
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="fileFormato" class="control-label">Acta de evaluación curricular firmado (Formato PDF)*</label>
+                            <input name="fileFormato" id="fileFormato" type="file" aria-label="files" accept=".pdf" />
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Actualizar
+                    </button>
+                    <button type="button" class="btn btn-default" onclick="controlador.cerrarModalFormato()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <input id="hdnUid" name="hdnUid" type="hidden" />
+    <input id="hdnNroRuc" name="hdnNroRuc" type="hidden" value="" />
+    <input id="hdIdConvocatoria" name="hdIdConvocatoria" type="hidden" value="@ViewBag.IdConvocatoria" />
+    <input id="hdIdTrabajador" name="hdIdTrabajador" type="hidden" value="@ViewBag.IdTrabajador" />
+    <input id="hdTrabajador" name="hdTrabajador" type="hidden" value="@ViewBag.Trabajador" />
+    <input id="hdIdNombre" name="hdIdNombre" type="hidden" value="" />
+
+</section>
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Evaluacion.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+    <script src="~/Scripts/util/PDFObject/pdfobject.min.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new EvaluacionJS();
+            controlador.inicializarCurricularPractica();
+
+        });
+
+
+    </script>
+}

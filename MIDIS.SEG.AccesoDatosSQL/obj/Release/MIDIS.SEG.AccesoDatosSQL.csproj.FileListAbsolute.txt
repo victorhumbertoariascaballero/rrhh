@@ -1,0 +1,30 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\Newtonsoft.Json.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\log4net.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Release\Newtonsoft.Json.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\Newtonsoft.Json.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\log4net.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Release\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Release\Newtonsoft.Json.xml

@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SISPAD </title>
+
+    <!-- Bootstrap -->
+    <link href="~/Content/vendor/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <!-- Bootstrap -->
+    <link href="~/Content/vendor/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/Content/vendor/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="~/Content/css/custom.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="~/Content/vendor/js/jquery.min.js"></script>
+</head>
+<body class="login">
+    <div class="color-line"></div>
+    @Html.Hidden("UrlLogin", Url.Action("Login", "Account"))
+    <div>
+        <a class="hiddenanchor" id="signup"></a>
+        <a class="hiddenanchor" id="signin"></a>
+        <div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    <form>
+                        <img src="~/Content/Images/logo-midis.jpg" class="m-b-sm">
+                        <h2>SISTEMA DE PROCEDIMIENTO ADMINISTRATIVO DISCIPLINARIO</h2>
+                        <div class="hpanel">
+                            <div class="panel-body">
+                                <div>
+                                    <input type="text" id="vUsuario" class="form-control" placeholder="ingrese su usuario" required="" />
+                                </div>
+                                <div>
+                                    <input type="password" id="vPassword" class="form-control" placeholder="ingrese su contraseña" required="" />
+                                    <input type="hidden" id="hdnUrlRedireccion" value="@ViewBag.urlRedireccion" />
+                                </div>
+                                <div>
+                                    <a id="btnLogin" class="btn btn-success">Iniciar Sesión</a>
+                                    <a class="btn btn-warning" href="@Url.Action("ChangePassword","Account")">Olvidaste tu contraseña?</a>
+                                </div>
+                            </div>
+                            <div><a href="~/Utilitario/ManualUsuario.pdf" target="_blank" style="float: left;margin: 5px;color:red;">Manual de Usuario</a></div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="separator">
+                            <div class="clearfix"></div>
+                            <br />
+                            <div>
+                                <h2> SISPAD</h2>
+                                <p>© PNAE Qali warma.</p>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="@Url.Content("~/Scripts/Account/Login.js?qw="+Guid.NewGuid().ToString())" type="text/javascript"></script>

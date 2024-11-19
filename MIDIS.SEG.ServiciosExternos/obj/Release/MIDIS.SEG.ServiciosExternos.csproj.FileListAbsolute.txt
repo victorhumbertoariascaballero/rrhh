@@ -1,0 +1,24 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Release\log4net.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Release\log4net.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Release\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Release\MIDIS.SEG.ServiciosExternos.pdb

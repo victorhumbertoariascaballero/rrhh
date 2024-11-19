@@ -1,0 +1,20 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\bin\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\bin\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\bin\Release\Newtonsoft.Json.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\bin\Release\Newtonsoft.Json.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.csprojAssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\bin\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\bin\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\bin\Release\Newtonsoft.Json.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\obj\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.Entidades\bin\Release\Newtonsoft.Json.xml

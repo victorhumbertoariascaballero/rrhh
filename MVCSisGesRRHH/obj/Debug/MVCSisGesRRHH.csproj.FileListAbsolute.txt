@@ -1,0 +1,1031 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Helper\Formato1.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\credentials.json
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Boleta\EnvioRegistroSolicitud.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo07_practica.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_practica.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_se.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_ce.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_practica.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_se.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_ce.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo07.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Correo\EnvioAsignarEvaluacion.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPracticaPos.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPractica.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Correo\EnvioObservacionPos.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionConocimientoPos.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPos.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevista.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Correo\EnvioContrato.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_autenticidad.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_conocimiento.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_directivas.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_incompatibilidad.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_nepotismo_no.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_nepotismo_si.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_afp.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_no_afiliado.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_onp.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_sueldo_no.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_sueldo_si.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\ficha_personal1.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\ficha_personal2.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\formato_postulacion1.html
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Postulante\logo_ogrh.png
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\util\x64\7z.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\util\x86\7z.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\util\SevenZipSharp.Interop.targets
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\docs\RSG_028_2019MIDIS.pdf
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Contrato\formato\CONTRATO_ADMINISTRATIVO_SERVICIOS_N.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_20.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_20.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_50.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_50.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Bases\formato\ANEXO_05_FORMATO_BASES_CAS.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Bases\formato\ANEXO_05_FORMATO_BASES_CAS_EVAL.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CONOCIMIENTO_20.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CONOCIMIENTO_50.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_CONOCIMIENTO_20.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_CONOCIMIENTO_50.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_ENTREVISTA_20.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_ENTREVISTA_50.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\adjuntos\GUIA_RAPIDA_PARA_ACCEDER_VIDEOLLAMADA.pdf
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\adjuntos\RECOMENDACIONES_PARA_ENTREVISTA_A_TRAVES_VIDEOLLAMADA.pdf
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_100.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_20.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_50.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_PRACTICA_20.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_PRACTICA_50.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_100.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_200.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_100.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_200.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_200.docx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Formato1.rpt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\Report_DetEsSalud.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\Report_ReporteEjecucionMensualMetaEspGasto.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\Report_ReporteEstructuraInfoAFPNET.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\Report_ReporteTrabajadoresAfiliadosONPE.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\Report_ReporteInfoPortalTranspEstandar.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\Report_ReportePlanillaUnicaPagos.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\Report_ReportePlanillaUnicaPagos_2.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\Report_ReporteResumenAnuaPorTrab.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\Report_ReporteResumenIngRent4ta.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\Report_ReporteResumenPlanillaMensIngEgreEsSalud.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenDetalladoBcos.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenGralBcosFteFtoMeta.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenGralBcosPorInstCantTotIngTotEgre.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\Report_ReporteResumenGralAFPconAFPDepMetaClasGasto.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\Report_ReporteResumenGralAFPconNroAfiliados.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\Report_ResumenIngEgreMetaPartidaConcepto.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\Report_RetFuenteFinMetaPartConcepto.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_1.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_2.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_3.rdlc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Formato11.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Formatos.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MVCSisGesRRHH.dll.config
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MVCSisGesRRHH.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MVCSisGesRRHH.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Antlr3.Runtime.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\EntityFramework.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\EntityFramework.SqlServer.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Auth.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Core.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.PlatformServices.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.Owin.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.Owin.Security.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.SEG.LogicaNegocio.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Newtonsoft.Json.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Owin.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Select.HtmlToPdf.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SENACE.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SevenZip.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SevenZipSharp.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.Helpers.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.Mvc.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.Optimization.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.Razor.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.WebPages.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.WebPages.Razor.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\WebGrease.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Xceed.Document.NET.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Xceed.Words.NET.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SITRADOC.Servicios.Tramite.Datacontract.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\stdole.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.SEG.LogicaNegocio.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\EntityFramework.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\EntityFramework.SqlServer.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Auth.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Auth.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Core.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Core.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.Owin.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.Owin.Security.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Newtonsoft.Json.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Select.HtmlToPdf.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SevenZip.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\SevenZipSharp.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.Helpers.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.Optimization.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.Razor.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.WebPages.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\System.Web.WebPages.Razor.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Antlr3.Runtime.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Select.Html.dep
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisGesRRHH\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Helper\Formato1.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\credentials.json
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Boleta\EnvioRegistroSolicitud.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo07_practica.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_practica.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_se.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_ce.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_practica.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_se.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_ce.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo07.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioSolicitarAprobarPerfil.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioAsignarNuevoPerfil.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioAsignarEvaluacion.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionAccesitario.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPracticaPos.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPractica.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioObservacionPos.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionConocimientoPos.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPos.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevista.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Correo\EnvioContrato.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\PerfilPuesto\logo_servir.png
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\PerfilPuesto\perfil_anexo1.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\PerfilPuesto\perfil_puesto2.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\PerfilPuesto\perfil_puesto1.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_autenticidad.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_conocimiento.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_directivas.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_incompatibilidad.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_nepotismo_no.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_nepotismo_si.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_afp.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_no_afiliado.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_onp.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_sueldo_no.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_sueldo_si.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\ficha_personal1.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\ficha_personal2.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\formato_postulacion1.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Postulante\logo_ogrh.png
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\util\x64\7z.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\util\x86\7z.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\util\SevenZipSharp.Interop.targets
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\docs\RSG_028_2019MIDIS.pdf
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Contrato\formato\CONTRATO_ADMINISTRATIVO_SERVICIOS_N.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_20.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_20.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_50.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_50.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Bases\formato\ANEXO_05_FORMATO_BASES_CAS.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Bases\formato\ANEXO_05_FORMATO_BASES_CAS_EVAL.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CONOCIMIENTO_20.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CONOCIMIENTO_50.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_CONOCIMIENTO_20.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_CONOCIMIENTO_50.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_ENTREVISTA_20.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_ENTREVISTA_50.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\adjuntos\GUIA_RAPIDA_PARA_ACCEDER_VIDEOLLAMADA.pdf
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\adjuntos\RECOMENDACIONES_PARA_ENTREVISTA_A_TRAVES_VIDEOLLAMADA.pdf
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_100.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_20.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_50.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_PRACTICA_20.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_PRACTICA_50.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_100.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_200.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_100.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_200.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_200.docx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Formato1.rpt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\Report_DetEsSalud.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\Report_ReporteEjecucionMensualMetaEspGasto.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\Report_ReporteEstructuraInfoAFPNET.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\Report_ReporteTrabajadoresAfiliadosONPE.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\Report_ReporteInfoPortalTranspEstandar.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\Report_ReportePlanillaUnicaPagos.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\Report_ReportePlanillaUnicaPagos_2.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\Report_ReporteResumenAnuaPorTrab.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\Report_ReporteResumenIngRent4ta.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\Report_ReporteResumenPlanillaMensIngEgreEsSalud.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenDetalladoBcos.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenGralBcosFteFtoMeta.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenGralBcosPorInstCantTotIngTotEgre.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\Report_ReporteResumenGralAFPconAFPDepMetaClasGasto.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\Report_ReporteResumenGralAFPconNroAfiliados.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\Report_ResumenIngEgreMetaPartidaConcepto.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\Report_RetFuenteFinMetaPartConcepto.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_1.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_2.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_3.rdlc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Formato11.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Formatos.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MVCSisGesRRHH.dll.config
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MVCSisGesRRHH.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MVCSisGesRRHH.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Antlr3.Runtime.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\EntityFramework.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\EntityFramework.SqlServer.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Auth.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Core.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.PlatformServices.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.Owin.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.Owin.Security.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.SEG.LogicaNegocio.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Newtonsoft.Json.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Owin.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Select.HtmlToPdf.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SENACE.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SevenZip.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SevenZipSharp.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.Helpers.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.Mvc.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.Optimization.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.Razor.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.WebPages.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.WebPages.Razor.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\WebGrease.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Xceed.Document.NET.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Xceed.Words.NET.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SITRADOC.Servicios.Tramite.Datacontract.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\stdole.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.SEG.LogicaNegocio.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\EntityFramework.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\EntityFramework.SqlServer.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Auth.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Auth.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Core.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Core.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.Owin.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.Owin.Security.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Newtonsoft.Json.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Select.HtmlToPdf.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SevenZip.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\SevenZipSharp.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.Helpers.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.Optimization.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.Razor.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.WebPages.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\System.Web.WebPages.Razor.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Antlr3.Runtime.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\bin\Select.Html.dep
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\obj\Debug\RdlCompile.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\obj\Debug\RdlCompile.compiled
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.pdb
+D:\victor arias\MVCSisGesRRHH\bin\SqlServerTypes\x64\msvcr120.dll
+D:\victor arias\MVCSisGesRRHH\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\victor arias\MVCSisGesRRHH\bin\SqlServerTypes\x86\msvcr120.dll
+D:\victor arias\MVCSisGesRRHH\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\victor arias\MVCSisGesRRHH\bin\Helper\Formato1.cs
+D:\victor arias\MVCSisGesRRHH\bin\credentials.json
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xsc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xss
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xsd
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xss
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Boleta\EnvioRegistroSolicitud.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo07_practica.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_practica.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_se.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_ce.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_practica.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_se.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_ce.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo07.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioSolicitarAprobarPerfil.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioAsignarNuevoPerfil.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioAsignarEvaluacion.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionAccesitario.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPracticaPos.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPractica.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioObservacionPos.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionConocimientoPos.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPos.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevista.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Correo\EnvioContrato.txt
+D:\victor arias\MVCSisGesRRHH\bin\Templates\PerfilPuesto\logo_servir.png
+D:\victor arias\MVCSisGesRRHH\bin\Templates\PerfilPuesto\perfil_anexo1.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\PerfilPuesto\perfil_puesto2.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\PerfilPuesto\perfil_puesto1.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_autenticidad.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_conocimiento.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_directivas.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_incompatibilidad.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_nepotismo_no.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_nepotismo_si.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_afp.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_no_afiliado.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_onp.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_sueldo_no.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_sueldo_si.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\ficha_personal1.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\ficha_personal2.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\formato_postulacion1.html
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Postulante\logo_ogrh.png
+D:\victor arias\MVCSisGesRRHH\bin\util\x64\7z.dll
+D:\victor arias\MVCSisGesRRHH\bin\util\x86\7z.dll
+D:\victor arias\MVCSisGesRRHH\bin\util\SevenZipSharp.Interop.targets
+D:\victor arias\MVCSisGesRRHH\bin\docs\RSG_028_2019MIDIS.pdf
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Contrato\formato\CONTRATO_ADMINISTRATIVO_SERVICIOS_N.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_20.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_20.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_50.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_50.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Bases\formato\ANEXO_05_FORMATO_BASES_CAS.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Bases\formato\ANEXO_05_FORMATO_BASES_CAS_EVAL.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CONOCIMIENTO_20.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CONOCIMIENTO_50.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_CONOCIMIENTO_20.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_CONOCIMIENTO_50.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_ENTREVISTA_20.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_ENTREVISTA_50.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\adjuntos\GUIA_RAPIDA_PARA_ACCEDER_VIDEOLLAMADA.pdf
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\adjuntos\RECOMENDACIONES_PARA_ENTREVISTA_A_TRAVES_VIDEOLLAMADA.pdf
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_100.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_20.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_50.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_PRACTICA_20.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_PRACTICA_50.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_100.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_200.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_100.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_200.docx
+D:\victor arias\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_200.docx
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Formato1.rpt
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\Report_DetEsSalud.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\Report_ReporteEjecucionMensualMetaEspGasto.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\Report_ReporteEstructuraInfoAFPNET.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\Report_ReporteTrabajadoresAfiliadosONPE.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\Report_ReporteInfoPortalTranspEstandar.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\Report_ReportePlanillaUnicaPagos.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\Report_ReportePlanillaUnicaPagos_2.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\Report_ReporteResumenAnuaPorTrab.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\Report_ReporteResumenIngRent4ta.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\Report_ReporteResumenPlanillaMensIngEgreEsSalud.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenDetalladoBcos.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenGralBcosFteFtoMeta.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenGralBcosPorInstCantTotIngTotEgre.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\Report_ReporteResumenGralAFPconAFPDepMetaClasGasto.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\Report_ReporteResumenGralAFPconNroAfiliados.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\Report_ResumenIngEgreMetaPartidaConcepto.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\Report_RetFuenteFinMetaPartConcepto.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_1.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_2.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_3.rdlc
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Formato11.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Formatos.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.Designer.cs
+D:\victor arias\MVCSisGesRRHH\bin\MVCSisGesRRHH.dll.config
+D:\victor arias\MVCSisGesRRHH\bin\MVCSisGesRRHH.dll
+D:\victor arias\MVCSisGesRRHH\bin\MVCSisGesRRHH.pdb
+D:\victor arias\MVCSisGesRRHH\bin\Antlr3.Runtime.dll
+D:\victor arias\MVCSisGesRRHH\bin\EntityFramework.dll
+D:\victor arias\MVCSisGesRRHH\bin\EntityFramework.SqlServer.dll
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Auth.dll
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Auth.PlatformServices.dll
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Core.dll
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.dll
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.dll
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.PlatformServices.dll
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.Core.dll
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.Owin.dll
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.Owin.Security.Cookies.dll
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.Owin.Security.dll
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.ReportViewer.Common.dll
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.Web.Infrastructure.dll
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.ORI.Entidades.dll
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.SEG.LogicaNegocio.dll
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.SEG.ServiciosExternos.dll
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.Utiles.dll
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.UtilesMVC.dll
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.UtilesWeb.dll
+D:\victor arias\MVCSisGesRRHH\bin\Newtonsoft.Json.dll
+D:\victor arias\MVCSisGesRRHH\bin\Owin.dll
+D:\victor arias\MVCSisGesRRHH\bin\Select.HtmlToPdf.dll
+D:\victor arias\MVCSisGesRRHH\bin\SENACE.Entidades.dll
+D:\victor arias\MVCSisGesRRHH\bin\SevenZip.dll
+D:\victor arias\MVCSisGesRRHH\bin\SevenZipSharp.dll
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.Helpers.dll
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.Mvc.dll
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.Optimization.dll
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.Razor.dll
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.WebPages.Deployment.dll
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.WebPages.dll
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.WebPages.Razor.dll
+D:\victor arias\MVCSisGesRRHH\bin\WebGrease.dll
+D:\victor arias\MVCSisGesRRHH\bin\Xceed.Document.NET.dll
+D:\victor arias\MVCSisGesRRHH\bin\Xceed.Words.NET.dll
+D:\victor arias\MVCSisGesRRHH\bin\DataAnnotationsExtensions.dll
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.SEG.AccesoDatosSQL.dll
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.Entidades.dll
+D:\victor arias\MVCSisGesRRHH\bin\SITRADOC.Servicios.Tramite.Datacontract.dll
+D:\victor arias\MVCSisGesRRHH\bin\stdole.dll
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.ORI.Entidades.pdb
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.SEG.LogicaNegocio.pdb
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.SEG.ServiciosExternos.pdb
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.UtilesMVC.pdb
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.UtilesWeb.pdb
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.Utiles.pdb
+D:\victor arias\MVCSisGesRRHH\bin\EntityFramework.xml
+D:\victor arias\MVCSisGesRRHH\bin\EntityFramework.SqlServer.xml
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.pdb
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.xml
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Auth.pdb
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Auth.xml
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Core.pdb
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Core.xml
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.pdb
+D:\victor arias\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.xml
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.Core.xml
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.Owin.xml
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.Owin.Security.xml
+D:\victor arias\MVCSisGesRRHH\bin\Microsoft.Owin.Security.Cookies.xml
+D:\victor arias\MVCSisGesRRHH\bin\Newtonsoft.Json.xml
+D:\victor arias\MVCSisGesRRHH\bin\Select.HtmlToPdf.xml
+D:\victor arias\MVCSisGesRRHH\bin\SevenZip.xml
+D:\victor arias\MVCSisGesRRHH\bin\SevenZipSharp.pdb
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.Helpers.xml
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.Optimization.xml
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.Razor.xml
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.WebPages.xml
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.WebPages.Deployment.xml
+D:\victor arias\MVCSisGesRRHH\bin\System.Web.WebPages.Razor.xml
+D:\victor arias\MVCSisGesRRHH\bin\Antlr3.Runtime.pdb
+D:\victor arias\MVCSisGesRRHH\bin\MIDIS.SEG.AccesoDatosSQL.pdb
+D:\victor arias\MVCSisGesRRHH\bin\Select.Html.dep
+D:\victor arias\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.AssemblyReference.cache
+D:\victor arias\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.CoreCompileInputs.cache
+D:\victor arias\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.CopyComplete
+D:\victor arias\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.dll
+D:\victor arias\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.pdb
+D:\robocop\MVCSisGesRRHH\bin\SqlServerTypes\x64\msvcr120.dll
+D:\robocop\MVCSisGesRRHH\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\robocop\MVCSisGesRRHH\bin\SqlServerTypes\x86\msvcr120.dll
+D:\robocop\MVCSisGesRRHH\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\robocop\MVCSisGesRRHH\bin\Helper\Formato1.cs
+D:\robocop\MVCSisGesRRHH\bin\credentials.json
+D:\robocop\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xsc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.xss
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xsd
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.xss
+D:\robocop\MVCSisGesRRHH\bin\Templates\Boleta\EnvioRegistroSolicitud.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo07_practica.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_practica.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_se.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo11_ce.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_practica.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_se.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_entrevista_ce.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\evaluacion_anexo07.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioSolicitarAprobarPerfil.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioAsignarNuevoPerfil.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioAsignarEvaluacion.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionAccesitario.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPracticaPos.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPractica.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioObservacionPos.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionConocimientoPos.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevistaPos.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioNotificacionEntrevista.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\Correo\EnvioContrato.txt
+D:\robocop\MVCSisGesRRHH\bin\Templates\PerfilPuesto\logo_servir.png
+D:\robocop\MVCSisGesRRHH\bin\Templates\PerfilPuesto\perfil_anexo1.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\PerfilPuesto\perfil_puesto2.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\PerfilPuesto\perfil_puesto1.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_autenticidad.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_conocimiento.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_directivas.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_incompatibilidad.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_nepotismo_no.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_nepotismo_si.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_afp.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_no_afiliado.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_pensiones_onp.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_sueldo_no.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\declaracion_sueldo_si.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\ficha_personal1.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\ficha_personal2.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\formato_postulacion1.html
+D:\robocop\MVCSisGesRRHH\bin\Templates\Postulante\logo_ogrh.png
+D:\robocop\MVCSisGesRRHH\bin\util\x64\7z.dll
+D:\robocop\MVCSisGesRRHH\bin\util\x86\7z.dll
+D:\robocop\MVCSisGesRRHH\bin\util\SevenZipSharp.Interop.targets
+D:\robocop\MVCSisGesRRHH\bin\docs\RSG_028_2019MIDIS.pdf
+D:\robocop\MVCSisGesRRHH\bin\Templates\Contrato\formato\CONTRATO_ADMINISTRATIVO_SERVICIOS_N.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_20.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_20.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_50.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_50.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Bases\formato\ANEXO_05_FORMATO_BASES_CAS.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Bases\formato\ANEXO_05_FORMATO_BASES_CAS_EVAL.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CONOCIMIENTO_20.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CONOCIMIENTO_50.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_CONOCIMIENTO_20.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_CONOCIMIENTO_50.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_ENTREVISTA_20.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_CON_ENTREVISTA_50.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\adjuntos\GUIA_RAPIDA_PARA_ACCEDER_VIDEOLLAMADA.pdf
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\adjuntos\RECOMENDACIONES_PARA_ENTREVISTA_A_TRAVES_VIDEOLLAMADA.pdf
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_100.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_20.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_50.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_PRACTICA_20.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_FINAL_PRACTICA_50.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_100.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_CONOCIMIENTO_200.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_100.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_CON_ENTREVISTA_200.docx
+D:\robocop\MVCSisGesRRHH\bin\Templates\Convocatoria\formato\RESULTADOS_EVALUACION_CURRICULAR_PRACTICA_200.docx
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Formato1.rpt
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\Report_DetEsSalud.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\Report_ReporteEjecucionMensualMetaEspGasto.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\Report_ReporteEstructuraInfoAFPNET.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\Report_ReporteTrabajadoresAfiliadosONPE.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\Report_ReporteInfoPortalTranspEstandar.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\Report_ReportePlanillaUnicaPagos.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\Report_ReportePlanillaUnicaPagos_2.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\Report_ReporteResumenAnuaPorTrab.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\Report_ReporteResumenIngRent4ta.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\Report_ReporteResumenPlanillaMensIngEgreEsSalud.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenDetalladoBcos.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenGralBcosFteFtoMeta.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\Report_ReporteResumenGralBcosPorInstCantTotIngTotEgre.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\Report_ReporteResumenGralAFPconAFPDepMetaClasGasto.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\Report_ReporteResumenGralAFPconNroAfiliados.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\Report_ResumenIngEgreMetaPartidaConcepto.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\Report_RetFuenteFinMetaPartConcepto.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_1.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_2.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\Report_3.rdlc
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Formato11.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Formatos.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\FormatoBoletas.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteDetalladoEsSalud\dsReporteDetEsSalud.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEjecucionMensualMetaEspGasto\dsReporteEjecucionMensualMetaEspGasto.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteEstructuraInfoAFPNET.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteEstructuraInfoAFPNET\dsReporteTrabajadoresAfiliadosONPE.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteInfoPortalTranspEstandar\dsReporteInfoPortalTranspEstandar.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReportePlanillaUnicaPagos\dsReportePlanillaUnicaPagos.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenAnuaPorTrab\dsReporteResumenAnuaPorTrab.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenDetalladoBcos.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosFteFtoMeta.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenBancos\dsReporteResumenGralBcosPorInstCantTotIngTotEgre.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconAFPDepMetaClasGasto.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenGralAFP\dsReporteResumenGralAFPconNroAfiliados.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngEgreMetaPartidaConcepto\dsReporteResumenIngEgreAporMetaPartidaConcepto.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenIngRent4ta\dsReporteResumenIngRent4ta.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteResumenPlanillaMensIngEgreEsSalud\dsReporteResumenPlanillaMensIngEgreEsSalud.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ReporteRetFuenteFinancMetPartConcepto\dsReporteRetFuenteFinMetaPartConcepto.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\Reportes\Planillas\ResumenGeneral\dsReporte1.Designer.cs
+D:\robocop\MVCSisGesRRHH\bin\MVCSisGesRRHH.dll.config
+D:\robocop\MVCSisGesRRHH\bin\MVCSisGesRRHH.dll
+D:\robocop\MVCSisGesRRHH\bin\MVCSisGesRRHH.pdb
+D:\robocop\MVCSisGesRRHH\bin\Antlr3.Runtime.dll
+D:\robocop\MVCSisGesRRHH\bin\EntityFramework.dll
+D:\robocop\MVCSisGesRRHH\bin\EntityFramework.SqlServer.dll
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Auth.dll
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Auth.PlatformServices.dll
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Core.dll
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.dll
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.dll
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.PlatformServices.dll
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.Core.dll
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.Owin.dll
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.Owin.Security.Cookies.dll
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.Owin.Security.dll
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.ReportViewer.Common.dll
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.Web.Infrastructure.dll
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.ORI.Entidades.dll
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.SEG.LogicaNegocio.dll
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.SEG.ServiciosExternos.dll
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.Utiles.dll
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.UtilesMVC.dll
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.UtilesWeb.dll
+D:\robocop\MVCSisGesRRHH\bin\Newtonsoft.Json.dll
+D:\robocop\MVCSisGesRRHH\bin\Owin.dll
+D:\robocop\MVCSisGesRRHH\bin\Select.HtmlToPdf.dll
+D:\robocop\MVCSisGesRRHH\bin\SENACE.Entidades.dll
+D:\robocop\MVCSisGesRRHH\bin\SevenZip.dll
+D:\robocop\MVCSisGesRRHH\bin\SevenZipSharp.dll
+D:\robocop\MVCSisGesRRHH\bin\System.Web.Helpers.dll
+D:\robocop\MVCSisGesRRHH\bin\System.Web.Mvc.dll
+D:\robocop\MVCSisGesRRHH\bin\System.Web.Optimization.dll
+D:\robocop\MVCSisGesRRHH\bin\System.Web.Razor.dll
+D:\robocop\MVCSisGesRRHH\bin\System.Web.WebPages.Deployment.dll
+D:\robocop\MVCSisGesRRHH\bin\System.Web.WebPages.dll
+D:\robocop\MVCSisGesRRHH\bin\System.Web.WebPages.Razor.dll
+D:\robocop\MVCSisGesRRHH\bin\WebGrease.dll
+D:\robocop\MVCSisGesRRHH\bin\Xceed.Document.NET.dll
+D:\robocop\MVCSisGesRRHH\bin\Xceed.Words.NET.dll
+D:\robocop\MVCSisGesRRHH\bin\DataAnnotationsExtensions.dll
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.SEG.AccesoDatosSQL.dll
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.Entidades.dll
+D:\robocop\MVCSisGesRRHH\bin\SITRADOC.Servicios.Tramite.Datacontract.dll
+D:\robocop\MVCSisGesRRHH\bin\stdole.dll
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.ORI.Entidades.pdb
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.SEG.LogicaNegocio.pdb
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.SEG.ServiciosExternos.pdb
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.UtilesMVC.pdb
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.UtilesWeb.pdb
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.Utiles.pdb
+D:\robocop\MVCSisGesRRHH\bin\EntityFramework.xml
+D:\robocop\MVCSisGesRRHH\bin\EntityFramework.SqlServer.xml
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.pdb
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.xml
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Auth.pdb
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Auth.xml
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Core.pdb
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Core.xml
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.pdb
+D:\robocop\MVCSisGesRRHH\bin\Google.Apis.Drive.v3.xml
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.Core.xml
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.Owin.xml
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.Owin.Security.xml
+D:\robocop\MVCSisGesRRHH\bin\Microsoft.Owin.Security.Cookies.xml
+D:\robocop\MVCSisGesRRHH\bin\Newtonsoft.Json.xml
+D:\robocop\MVCSisGesRRHH\bin\Select.HtmlToPdf.xml
+D:\robocop\MVCSisGesRRHH\bin\SevenZip.xml
+D:\robocop\MVCSisGesRRHH\bin\SevenZipSharp.pdb
+D:\robocop\MVCSisGesRRHH\bin\System.Web.Helpers.xml
+D:\robocop\MVCSisGesRRHH\bin\System.Web.Optimization.xml
+D:\robocop\MVCSisGesRRHH\bin\System.Web.Razor.xml
+D:\robocop\MVCSisGesRRHH\bin\System.Web.WebPages.xml
+D:\robocop\MVCSisGesRRHH\bin\System.Web.WebPages.Deployment.xml
+D:\robocop\MVCSisGesRRHH\bin\System.Web.WebPages.Razor.xml
+D:\robocop\MVCSisGesRRHH\bin\Antlr3.Runtime.pdb
+D:\robocop\MVCSisGesRRHH\bin\MIDIS.SEG.AccesoDatosSQL.pdb
+D:\robocop\MVCSisGesRRHH\bin\Select.Html.dep
+D:\robocop\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.AssemblyReference.cache
+D:\robocop\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.CoreCompileInputs.cache
+D:\robocop\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.csproj.CopyComplete
+D:\robocop\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.dll
+D:\robocop\MVCSisGesRRHH\obj\Debug\MVCSisGesRRHH.pdb

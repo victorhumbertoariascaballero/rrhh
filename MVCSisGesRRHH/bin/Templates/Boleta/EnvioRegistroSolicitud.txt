@@ -1,0 +1,9 @@
+<div class="WordSection1" style="width: 650px; padding: 30px; border-radius: 5px; border: 2px solid #6773b9;"><img style="width: 300px; height: 55px;" src="https://sdv.midis.gob.pe/Sis_GesRRHH/Content/img/logo_midis.png" data-placeholder="no" /><br /><br />
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Hola <span style="color: red;">_NOMBRE_!</span></span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Se ha registrado con &eacute;xito tu solicitud de consulta de boletas de pago<br /><br />Para continuar por favor ingrese la siguiente contrase&ntilde;a en este enlace:&nbsp;<u><span style="color: red;"><a style="color: red;" href="_URLVALIDACION_" target="_blank"> &lt; Ingresar aqui</a> &gt;</span></u><br /><br /><br /></span></p>
+<p class="MsoNormal" style="text-align: center; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt; padding: 5px; border-style:solid; border-color:#e1e1e1; color:#919191; font-weight:700; border-radius:5px" ><span lang="ES">_CLAVE_</span></p>  
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Atentamente,</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">&nbsp;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">Oficina General de Recursos Humanos</span></p>
+</div>

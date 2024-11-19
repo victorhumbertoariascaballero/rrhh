@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReporteResumenAnuaPorTrab" targetNamespace="http://tempuri.org/dsReporteResumenAnuaPorTrab.xsd" xmlns:mstns="http://tempuri.org/dsReporteResumenAnuaPorTrab.xsd" xmlns="http://tempuri.org/dsReporteResumenAnuaPorTrab.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReporteResumenAnuaPorTrab" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReporteResumenAnuaPorTrab" msprop:Generator_UserDSName="dsReporteResumenAnuaPorTrab">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsReporteResumenAnuaPorTrab" msprop:Generator_TableClassName="dsReporteResumenAnuaPorTrabDataTable" msprop:Generator_TableVarName="tabledsReporteResumenAnuaPorTrab" msprop:Generator_TablePropName="_dsReporteResumenAnuaPorTrab" msprop:Generator_RowDeletingName="dsReporteResumenAnuaPorTrabRowDeleting" msprop:Generator_RowChangingName="dsReporteResumenAnuaPorTrabRowChanging" msprop:Generator_RowEvHandlerName="dsReporteResumenAnuaPorTrabRowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteResumenAnuaPorTrabRowDeleted" msprop:Generator_UserTableName="dsReporteResumenAnuaPorTrab" msprop:Generator_RowChangedName="dsReporteResumenAnuaPorTrabRowChanged" msprop:Generator_RowEvArgName="dsReporteResumenAnuaPorTrabRowChangeEvent" msprop:Generator_RowClassName="dsReporteResumenAnuaPorTrabRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iCodTrabajador" msprop:Generator_ColumnVarNameInTable="columniCodTrabajador" msprop:Generator_ColumnPropNameInRow="iCodTrabajador" msprop:Generator_ColumnPropNameInTable="iCodTrabajadorColumn" msprop:Generator_UserColumnName="iCodTrabajador" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreCompleto" msprop:Generator_ColumnVarNameInTable="columnsNombreCompleto" msprop:Generator_ColumnPropNameInRow="sNombreCompleto" msprop:Generator_ColumnPropNameInTable="sNombreCompletoColumn" msprop:Generator_UserColumnName="sNombreCompleto" type="xs:string" minOccurs="0" />
+              <xs:element name="sNroCta" msprop:Generator_ColumnVarNameInTable="columnsNroCta" msprop:Generator_ColumnPropNameInRow="sNroCta" msprop:Generator_ColumnPropNameInTable="sNroCtaColumn" msprop:Generator_UserColumnName="sNroCta" type="xs:string" minOccurs="0" />
+              <xs:element name="sDependencia" msprop:Generator_ColumnVarNameInTable="columnsDependencia" msprop:Generator_ColumnPropNameInRow="sDependencia" msprop:Generator_ColumnPropNameInTable="sDependenciaColumn" msprop:Generator_UserColumnName="sDependencia" type="xs:string" minOccurs="0" />
+              <xs:element name="sCargo" msprop:Generator_ColumnVarNameInTable="columnsCargo" msprop:Generator_ColumnPropNameInRow="sCargo" msprop:Generator_ColumnPropNameInTable="sCargoColumn" msprop:Generator_UserColumnName="sCargo" type="xs:string" minOccurs="0" />
+              <xs:element name="iCodTipoConcepto" msprop:Generator_ColumnVarNameInTable="columniCodTipoConcepto" msprop:Generator_ColumnPropNameInRow="iCodTipoConcepto" msprop:Generator_ColumnPropNameInTable="iCodTipoConceptoColumn" msprop:Generator_UserColumnName="iCodTipoConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="sMes" msprop:Generator_ColumnVarNameInTable="columnsMes" msprop:Generator_ColumnPropNameInRow="sMes" msprop:Generator_ColumnPropNameInTable="sMesColumn" msprop:Generator_UserColumnName="sMes" type="xs:string" minOccurs="0" />
+              <xs:element name="iAnio" msprop:Generator_ColumnVarNameInTable="columniAnio" msprop:Generator_ColumnPropNameInRow="iAnio" msprop:Generator_ColumnPropNameInTable="iAnioColumn" msprop:Generator_UserColumnName="iAnio" type="xs:string" minOccurs="0" />
+              <xs:element name="sConcepto" msprop:Generator_ColumnVarNameInTable="columnsConcepto" msprop:Generator_ColumnPropNameInRow="sConcepto" msprop:Generator_ColumnPropNameInTable="sConceptoColumn" msprop:Generator_UserColumnName="sConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="dcTotalIng" msprop:Generator_ColumnVarNameInTable="columndcTotalIng" msprop:Generator_ColumnPropNameInRow="dcTotalIng" msprop:Generator_ColumnPropNameInTable="dcTotalIngColumn" msprop:Generator_UserColumnName="dcTotalIng" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreReporte" msprop:Generator_ColumnVarNameInTable="columnsNombreReporte" msprop:Generator_ColumnPropNameInRow="sNombreReporte" msprop:Generator_ColumnPropNameInTable="sNombreReporteColumn" msprop:Generator_UserColumnName="sNombreReporte" type="xs:string" minOccurs="0" />
+              <xs:element name="sTipoConcepto" msprop:Generator_ColumnVarNameInTable="columnsTipoConcepto" msprop:Generator_ColumnPropNameInRow="sTipoConcepto" msprop:Generator_ColumnPropNameInTable="sTipoConceptoColumn" msprop:Generator_UserColumnName="sTipoConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="sNumeroDocumento" msprop:Generator_ColumnVarNameInTable="columnsNumeroDocumento" msprop:Generator_ColumnPropNameInRow="sNumeroDocumento" msprop:Generator_ColumnPropNameInTable="sNumeroDocumentoColumn" msprop:Generator_UserColumnName="sNumeroDocumento" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsReporteResumenAnuaPorTrab_Detalle" msprop:Generator_TableClassName="dsReporteResumenAnuaPorTrab_DetalleDataTable" msprop:Generator_TableVarName="tabledsReporteResumenAnuaPorTrab_Detalle" msprop:Generator_TablePropName="dsReporteResumenAnuaPorTrab_Detalle" msprop:Generator_RowDeletingName="dsReporteResumenAnuaPorTrab_DetalleRowDeleting" msprop:Generator_RowChangingName="dsReporteResumenAnuaPorTrab_DetalleRowChanging" msprop:Generator_RowEvHandlerName="dsReporteResumenAnuaPorTrab_DetalleRowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteResumenAnuaPorTrab_DetalleRowDeleted" msprop:Generator_UserTableName="dsReporteResumenAnuaPorTrab_Detalle" msprop:Generator_RowChangedName="dsReporteResumenAnuaPorTrab_DetalleRowChanged" msprop:Generator_RowEvArgName="dsReporteResumenAnuaPorTrab_DetalleRowChangeEvent" msprop:Generator_RowClassName="dsReporteResumenAnuaPorTrab_DetalleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sMes" msprop:Generator_ColumnVarNameInTable="columnsMes" msprop:Generator_ColumnPropNameInRow="sMes" msprop:Generator_ColumnPropNameInTable="sMesColumn" msprop:Generator_UserColumnName="sMes" type="xs:string" minOccurs="0" />
+              <xs:element name="iCodTipoConcepto" msprop:Generator_ColumnVarNameInTable="columniCodTipoConcepto" msprop:Generator_ColumnPropNameInRow="iCodTipoConcepto" msprop:Generator_ColumnPropNameInTable="iCodTipoConceptoColumn" msprop:Generator_UserColumnName="iCodTipoConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="sConcepto" msprop:Generator_ColumnVarNameInTable="columnsConcepto" msprop:Generator_ColumnPropNameInRow="sConcepto" msprop:Generator_ColumnPropNameInTable="sConceptoColumn" msprop:Generator_UserColumnName="sConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="sTipoConcepto" msprop:Generator_ColumnVarNameInTable="columnsTipoConcepto" msprop:Generator_ColumnPropNameInRow="sTipoConcepto" msprop:Generator_ColumnPropNameInTable="sTipoConceptoColumn" msprop:Generator_UserColumnName="sTipoConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="dcTotalIng" msprop:Generator_ColumnVarNameInTable="columndcTotalIng" msprop:Generator_ColumnPropNameInRow="dcTotalIng" msprop:Generator_ColumnPropNameInTable="dcTotalIngColumn" msprop:Generator_UserColumnName="dcTotalIng" type="xs:string" minOccurs="0" />
+              <xs:element name="sNumeroDocumento" msprop:Generator_ColumnVarNameInTable="columnsNumeroDocumento" msprop:Generator_ColumnPropNameInRow="sNumeroDocumento" msprop:Generator_ColumnPropNameInTable="sNumeroDocumentoColumn" msprop:Generator_UserColumnName="sNumeroDocumento" type="xs:string" minOccurs="0" />
+              <xs:element name="iMes" msprop:Generator_ColumnVarNameInTable="columniMes" msprop:Generator_ColumnPropNameInRow="iMes" msprop:Generator_ColumnPropNameInTable="iMesColumn" msprop:Generator_UserColumnName="iMes" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsReporteResumenAnuaPorTrab_Encabezado" msprop:Generator_TableClassName="dsReporteResumenAnuaPorTrab_EncabezadoDataTable" msprop:Generator_TableVarName="tabledsReporteResumenAnuaPorTrab_Encabezado" msprop:Generator_TablePropName="dsReporteResumenAnuaPorTrab_Encabezado" msprop:Generator_RowDeletingName="dsReporteResumenAnuaPorTrab_EncabezadoRowDeleting" msprop:Generator_RowChangingName="dsReporteResumenAnuaPorTrab_EncabezadoRowChanging" msprop:Generator_RowEvHandlerName="dsReporteResumenAnuaPorTrab_EncabezadoRowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteResumenAnuaPorTrab_EncabezadoRowDeleted" msprop:Generator_UserTableName="dsReporteResumenAnuaPorTrab_Encabezado" msprop:Generator_RowChangedName="dsReporteResumenAnuaPorTrab_EncabezadoRowChanged" msprop:Generator_RowEvArgName="dsReporteResumenAnuaPorTrab_EncabezadoRowChangeEvent" msprop:Generator_RowClassName="dsReporteResumenAnuaPorTrab_EncabezadoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sNombreCompleto" msprop:Generator_ColumnVarNameInTable="columnsNombreCompleto" msprop:Generator_ColumnPropNameInRow="sNombreCompleto" msprop:Generator_ColumnPropNameInTable="sNombreCompletoColumn" msprop:Generator_UserColumnName="sNombreCompleto" type="xs:string" minOccurs="0" />
+              <xs:element name="sNroCta" msprop:Generator_ColumnVarNameInTable="columnsNroCta" msprop:Generator_ColumnPropNameInRow="sNroCta" msprop:Generator_ColumnPropNameInTable="sNroCtaColumn" msprop:Generator_UserColumnName="sNroCta" type="xs:string" minOccurs="0" />
+              <xs:element name="sDependencia" msprop:Generator_ColumnVarNameInTable="columnsDependencia" msprop:Generator_ColumnPropNameInRow="sDependencia" msprop:Generator_ColumnPropNameInTable="sDependenciaColumn" msprop:Generator_UserColumnName="sDependencia" type="xs:string" minOccurs="0" />
+              <xs:element name="sCargo" msprop:Generator_ColumnVarNameInTable="columnsCargo" msprop:Generator_ColumnPropNameInRow="sCargo" msprop:Generator_ColumnPropNameInTable="sCargoColumn" msprop:Generator_UserColumnName="sCargo" type="xs:string" minOccurs="0" />
+              <xs:element name="sNumeroDocumento" msprop:Generator_ColumnVarNameInTable="columnsNumeroDocumento" msprop:Generator_ColumnPropNameInRow="sNumeroDocumento" msprop:Generator_ColumnPropNameInTable="sNumeroDocumentoColumn" msprop:Generator_UserColumnName="sNumeroDocumento" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

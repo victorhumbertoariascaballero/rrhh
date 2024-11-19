@@ -1,0 +1,211 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\obj\Release\MVCSisRRHH.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\obj\Release\MVCSisRRHH.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Reportes\Formato1.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Reportes\FormatoPostulante.xsc
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Reportes\FormatoPostulante.xsd
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Reportes\FormatoPostulante.xss
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Templates\Correo\EvaluacionProceso.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Templates\Correo\RegistroPostulacion.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Templates\Correo\InicioProceso.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Reportes\Formato1.rpt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Reportes\Formato11.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Reportes\FormatoPostulante.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Reportes\Formatos.Designer.cs
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MVCSisRRHH.dll.config
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MVCSisRRHH.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MVCSisRRHH.XmlSerializers.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MVCSisRRHH.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Antlr3.Runtime.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\EntityFramework.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\EntityFramework.SqlServer.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.Owin.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.Owin.Security.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.SEG.LogicaNegocio.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Newtonsoft.Json.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Owin.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Select.HtmlToPdf.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\SENACE.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.Helpers.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.Mvc.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.Optimization.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.Razor.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.WebPages.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.WebPages.Razor.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\WebGrease.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\SITRADOC.Servicios.Tramite.Datacontract.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\stdole.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.SEG.LogicaNegocio.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\EntityFramework.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\EntityFramework.SqlServer.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.Owin.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.Owin.Security.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Select.HtmlToPdf.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.Helpers.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.Optimization.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.Razor.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.WebPages.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\System.Web.WebPages.Razor.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Antlr3.Runtime.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Newtonsoft.Json.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Select.Html.dep
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\obj\Release\MVCSisRRHH.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\obj\Release\MVCSisRRHH.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\obj\Release\MVCSisRRHH.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\obj\Release\MVCSisRRHH.XmlSerializers.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Content\img\instructivo_cas.pdf
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Content\img\ANEXOS_CONCURSO_PRACTICAS.xlsx
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Templates\Correo\RegistroPostulacionPracticas.txt
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Content\img\instructivo_practica.pdf
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MVCSisRRHH\bin\Templates\Postulacion\declaracion_anexo06.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Reportes\Formato1.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Content\img\instructivo_cas.pdf
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Content\img\ANEXOS_CONCURSO_PRACTICAS.xlsx
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Content\img\instructivo_practica.pdf
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Content\img\anexo_practicas.pdf
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Reportes\FormatoPostulante.xsc
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Reportes\FormatoPostulante.xsd
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Reportes\FormatoPostulante.xss
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Correo\EvaluacionProceso.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Correo\RegistroPostulacionPracticas.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Correo\RegistroPostulacion.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Correo\InicioProceso.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulacion\declaracion_anexo06.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_formato01.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulacion\declaracion_formato02_anexo.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulacion\declaracion_formato02.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulacion\declaracion_formato01.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulacion\declaracion_prohibicion.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_autenticidad.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_autenticidad_copia.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_directivas.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_domicilio.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_nepotismo.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_pensiones.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_pensiones_no_afiliado.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_pensiones_afp.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_pensiones_onp.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_prohibicion.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_sueldo.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_sueldo_no.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_sueldo_si.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_conocimiento.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_nepotismo_si.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_nepotismo_no.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_incompatibilidad.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_derechohabientes.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\formato_postulacion1.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\ficha_personal2.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\ficha_personal1.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\logo_ogrh.png
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Reportes\Formato1.rpt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Reportes\Formato11.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Reportes\FormatoPostulante.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Reportes\Formatos.Designer.cs
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MVCSisRRHH.dll.config
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MVCSisRRHH.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MVCSisRRHH.XmlSerializers.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MVCSisRRHH.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Antlr3.Runtime.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\EntityFramework.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\EntityFramework.SqlServer.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.Owin.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.Owin.Security.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.SEG.LogicaNegocio.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Newtonsoft.Json.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Owin.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Select.HtmlToPdf.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\SENACE.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.Helpers.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.Mvc.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.Optimization.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.Razor.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.WebPages.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.WebPages.Razor.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\WebGrease.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\SITRADOC.Servicios.Tramite.Datacontract.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\stdole.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.SEG.LogicaNegocio.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\EntityFramework.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\EntityFramework.SqlServer.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.Owin.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.Owin.Security.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Select.HtmlToPdf.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.Helpers.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.Optimization.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.Razor.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.WebPages.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\System.Web.WebPages.Razor.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Antlr3.Runtime.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Newtonsoft.Json.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Select.Html.dep
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\obj\Release\MVCSisRRHH.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\obj\Release\MVCSisRRHH.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\obj\Release\MVCSisRRHH.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\obj\Release\MVCSisRRHH.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\obj\Release\MVCSisRRHH.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\obj\Release\MVCSisRRHH.XmlSerializers.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_interes.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_doble_percepcion.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Postulante\declaracion_integridad.html
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Correo\ErrorConsultaIrma.txt
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MVCSisRRHH\bin\Templates\Correo\RegistroPostulacionServir.txt

@@ -1,0 +1,102 @@
+﻿@using MIDIS.SEG.Entidades
+@model IEnumerable<MIDIS.SEG.Entidades.T_genm_error>
+@{
+    ViewBag.Title = "BITÁCORA DE ERRORES";
+    List<T_genm_aplicacion> listarAplicaciones = (List<T_genm_aplicacion>)ViewBag.ListarAplicaciones;
+}
+@section SubTitulo { <h3>@ViewBag.Title</h3> }
+<script src="~/Scripts/Aplicacion/Index.js"></script>
+
+@using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "divListarAplicacion", HttpMethod = "GET", InsertionMode = InsertionMode.Replace }))
+{
+    <div class="container-fluid">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" href="#collapseDatos">
+                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INGRESE PARÁMETROS DE BÚSQUEDA
+                    </a>
+                </div>
+                @*<div id="collapseDatos" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="row form-horizontal">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="txtFiltro" class="col-md-3 control-label ">Búsqueda por Des cripción:</label>
+                                    <div class="col-md-9">
+                                        <div class="input-group">
+                                            <input type="text" id="txtDescError" placeholder="Filtre por Nombre de Sector" name="vFiltro" class="form-control input-sm">
+                                            <span class="input-group-btn">
+
+                                                <button type="submit" class="btn btn-default btn-sm">
+                                                    <span class="glyphicon glyphicon-search"></span>&nbsp;Buscar
+                                                </button>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+                <div id="collapseDatos" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <fieldset class="dhhBorder">
+                            <legend class="dhhBorder">Parámetros de búsqueda</legend>
+                            <div class="row form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="cboApplicacion" class="col-md-2 control-label">Aplicación</label>
+                                                <div class="col-md-10">
+                                                    @Html.DropDownList("aplicacion", new SelectList(listarAplicaciones, "Id_aplicacion", "Nombre_aplicacion"), new { @class = "form-control input-sm selectpicker" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="txtCiudadano" class="col-md-2 control-label">Descripción</label>
+                                                <div class="col-md-10">
+                                                    <div class="input-group">
+                                                        <input id="txtDescError" name="Consultora" type="text" placeholder="Ingrese descripción del error a consultar" class="form-control input-sm text-uppercase">
+                                                        <span class="input-group-btn">
+                                                            <button type="submit" class="btn btn-default btn-sm">
+                                                                <i class="glyphicon glyphicon-search"></i> Buscar
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" href="#collapseReclamo">
+                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  RESULTADO DE LA BÚSQUEDA
+                    </a>
+                </div>
+                <div id="collapseReclamo" class="panel-collapse collapse in">
+                    <div class="panel-body" id="divListarAplicacion">
+                        hi  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

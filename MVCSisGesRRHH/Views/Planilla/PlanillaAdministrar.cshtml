@@ -1,0 +1,532 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "PLANILLAS  ->  ADMINISTRAR";
+}
+@section SubTitulo { <h3>@ViewBag.Title</h3> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <div class="panel-group" id="accordion">      
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="#collapseBusqueda">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> BÚSQUEDA DE PLANILLAS
+                </a>
+            </div>
+            <div id="collapseGenerar" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="row form-horizontal">
+                        <form id="frmBuscarPlanillas" name="frmBuscarPlanillas" novalidate="">
+                            <div class="col-md-12">
+                                <label for="ddlMesPlan" class="col-md-3 control-label">Mes </label>
+                                <div class="col-md-2">
+                                    <select id="ddlMesPlan" name="ddlMesPlan" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                                <label for="ddlAnioPlan" class="col-md-1 control-label">Año </label>
+                                <div class="col-md-2">
+                                    <select id="ddlAnioPlan" name="ddlAnioPlan" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                                <div class="col-md-4" style="text-align: center;">
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="controlador.CargarBandejaPrincipalPlanillaEjecucion(event)">
+                                        <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Buscar
+                                    </button>                                    
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="#collapsePlanilla">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> PLANILLA
+                </a>
+            </div>
+            <div id="collapsePlanilla" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="row form-horizontal">
+                        <form id="frmBandejaPlanilla" name="frmBandejaPlanilla" novalidate="">
+                            <div class="row"></div>
+                            <div class="col-md-12" style="text-align: right;">
+                                @*<div class="col-md-3" style="text-align: right;">*@
+                                    <label for="botones" class="control-label">&nbsp;</label>
+                                    <div>
+                                        <button id="btnGenerarPDT_PLAME" type="submit" class="btn btn-primary btn-sm" onclick="controlador.GenerarArchivosPDT_PLAME(event)">
+                                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Generar PDT_PLAME
+                                        </button>
+                                        <button id="btnGenerarTXT" type="submit" class="btn btn-primary btn-sm" onclick="controlador.GenerarArchivosTXT(event)">
+                                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Generar TXT
+                                        </button>
+                                        <button id="btnGenerarTXTJudicial" type="submit" class="btn btn-primary btn-sm" onclick="controlador.GenerarArchivosTXTJudicial(event)">
+                                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Generar TXT Judicial
+                                        </button>
+                                        <button id="btnNuevoPlanilla" type="submit" class="btn btn-primary btn-sm" onclick="controlador.abrirModalAgregarPlanilla(event)">
+                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
+                                        </button>
+                                    </div>
+                                @*</div>*@
+                            </div>
+                        </form>
+
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div id="divTotal" class="col-md-2">
+                            <h5><label>Total de Registros: &nbsp;</label><label id="lblTotalPlanillas" class="label label-info"></label></h5>
+                        </div>
+                        <div id="divGridBandejaPlanilla">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- /.content -->
+<div id="ModalAgregarPlanilla" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmModalAgregarPlanilla" name="frmModalAgregarPlanilla" novalidate="">
+            <div class="panel-body">
+
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="ddlPlanilla" class="col-md-2 control-label">Planilla: </label>
+                                <div class="col-md-8">
+                                    <select id="ddlPlanilla" name="ddlPlanilla" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="ddlTipoPlanilla" class="col-md-2 control-label">Tipo Planilla: </label>
+                                <div class="col-md-8">
+                                    <select id="ddlTipoPlanilla" name="ddlTipoPlanilla" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="ddlMesPlanilla" class="col-md-2 control-label">Mes: </label>
+                                <div class="col-md-8">
+                                    <select id="ddlMesPlanilla" name="ddlMesPlanilla" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="ddlAnioPlanilla" class="col-md-2 control-label">Año: </label>
+                                <div class="col-md-8">
+                                    <select id="ddlAnioPlanilla" name="ddlAnioPlanilla" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                @*<div class="row text-right">
+                    <label for="filterVacTruncas" class="text-right">BUSCAR  </label>
+                    <input id="filterVacTruncas" class="k-textbox" style="width:200px" />
+                </div>
+                <br />
+                <div class="row" id="divAgregarTrabajadorVacTruncas"></div>*@
+            </div>
+            <div class="modal-footer">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-sm" id="btnAgregar" onclick="controlador.InsertarPlanilla(event)">
+                                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm" id="btnCancelar" onclick="controlador.cerrarModalAgregarPlanilla(event)">
+                                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="ModalModificarFasePlanilla" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmModalModificarFasePlanilla" name="frmModalModificarFasePlanilla" novalidate="">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <label for="lblPlanillaMod" class="col-md-2 control-label text-right">Planilla</label>
+                                <div class="form-group col-md-10">
+                                    <input type="text" id="lblPlanillaMod" name="lblPlanillaMod" class="form-control input-sm " required="required" validationmessage="requerido" readonly />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="lblTipoPlanillaMod" class="col-md-4 control-label text-right">Tipo Planilla</label>
+                                <div class="form-group col-md-8">
+                                    <input type="text" id="lblTipoPlanillaMod" name="lblTipoPlanillaMod" class="form-control input-sm " required="required" validationmessage="requerido" readonly />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="lblMesPlanillaMod" class="col-md-2 control-label text-right">Mes</label>
+                                <div class="form-group col-md-10">
+                                    <input type="text" id="lblMesPlanillaMod" name="lblMesPlanillaMod" class="form-control input-sm " required="required" validationmessage="requerido" readonly />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <div class="row">
+                            <div class="col-md-12"> 
+                                <label for="lblAnioPlanillaMod" class="col-md-2 control-label text-right">Año</label>
+                                <div class="form-group col-md-10">
+                                    <input type="text" id="lblAnioPlanillaMod" name="lblAnioPlanillaMod" class="form-control input-sm " required="required" validationmessage="requerido" readonly />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <label for="ddlRegAsistenciaMod" class="col-md-2 control-label text-right">Estado Reg. Asistencia </label>
+                        <div class="col-md-8">
+                            <select id="ddlRegAsistenciaMod" name="ddlRegAsistenciaMod" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                @*<option value="">--Seleccione--</option>
+                                <option value="0">Abierto</option>
+                                <option value="1">Cerrado</option>*@
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlDsctoFijoVaribMod" class="col-md-2 control-label text-right">Estado Dscto. Fijo y Variable </label>
+                        <div class="col-md-8">
+                            <select id="ddlDsctoFijoVaribMod" name="ddlDsctoFijoVaribMod" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                @*<option value="">--Seleccione--</option>
+                                <option value="0">Abierto</option>
+                                <option value="1">Cerrado</option>*@
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlCerradoMod" class="col-md-2 control-label text-right">Estado Planilla  </label>
+                        <div class="col-md-8">
+                            <select id="ddlCerradoMod" name="ddlCerradoMod" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                @*<option value="">--Seleccione--</option>
+                                <option value="0">Abierto</option>
+                                <option value="1">Cerrado</option>*@
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="txtObservacionMod" class="col-md-4 control-label text-right">Observación: </label>
+                                <div class="col-md-8">
+                                    <textarea id="txtObservacionMod" name="txtObservacionMod" cols="20" rows="10" style="width: 100%;" required="required" validationmessage="requerido"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        @*<div class="row text-right">
+                    <label for="filterVacTruncas" class="text-right">BUSCAR  </label>
+                    <input id="filterVacTruncas" class="k-textbox" style="width:200px" />
+                </div>
+                <br />
+                <div class="row" id="divAgregarTrabajadorVacTruncas"></div>*@
+                    </div>
+                    <div class="modal-footer">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-sm" id="btnAgregar" onclick="controlador.ModificarFasePlanilla(event)">
+                                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" id="btnCancelar" onclick="controlador.cerrarModalAgregarPlanilla(event)">
+                                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                                    </button>
+                                    <input id="hdiCodPlanillaModFase" name="hdiCodPlanillaModFase" type="hidden" value="0" />
+                                    <input id="hdiCodTipoPlanillaModFase" name="hdiCodTipoPlanillaModFase" type="hidden" value="0" />
+                                    <input id="hdiMesModFase" name="hdiMesModFase" type="hidden" value="0" />
+                                    <input id="hdiAnioModFase" name="hdiAnioModFase" type="hidden" value="0" />
+                                    <input id="hdiCodDetPlanillaModFase" name="hdiCodDetPlanillaModFase" type="hidden" value="0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</form>
+    </div>
+</div>
+
+<div id="ModalPlanillaReporte" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmModalPlanillaReporte" name="frmModalPlanillaReporte" novalidate="">
+            <div class="panel-body">
+
+
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="ddlReportes" class="col-md-2 control-label">Reportes: </label>
+                                <div class="col-md-8">
+                                    <select id="ddlReportes" name="ddlReportes" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>                
+                <br />
+                @*<div class="row text-right">
+                    <label for="filterVacTruncas" class="text-right">BUSCAR  </label>
+                    <input id="filterVacTruncas" class="k-textbox" style="width:200px" />
+                </div>
+                <br />
+                <div class="row" id="divAgregarTrabajadorVacTruncas"></div>*@
+            </div>
+            <div class="modal-footer">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-sm" id="btnGenerarReporte" onclick="controlador.GenerarReporteResumenGeneral()">
+                                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Generar
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm" id="btnCancelarPlanillaReporte" onclick="controlador.cerrarModalPlanillaReporte(event)">
+                                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                            </button>
+                            <input id="hdiCodPlanillaRpte" name="hdiCodPlanillaRpte" type="hidden" value="0" />
+                            <input id="hdiCodTipoPlanillaRpte" name="hdiCodTipoPlanillaRpte" type="hidden" value="0" />
+                            <input id="hdiMesRpte" name="hdiMesRpte" type="hidden" value="0" />
+                            <input id="hdiAnioRpte" name="hdiAnioRpte" type="hidden" value="0" />
+                            <input id="hdiCodDetPlanillaRpte" name="hdiCodDetPlanillaRpte" type="hidden" value="0" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/kendo/2018.1.221/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Planillas.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new PlanillasJS();
+            controlador.inicializarVerBandejaPlanilla();
+
+        });
+
+        function LoadPersonaConcepto() { //campo, campoId
+            var tipo = "Solic";
+            var TIPO_DOC_DNI = '01';
+            var TIPO_DOC_CE = '02';
+            var campo = document.getElementById("txtNumeroDocumento");
+            //var tipoDoc = $("#ddlPersonaTipoDeDocumento").data("kendoDropDownList").value();
+
+            var urlBuscarPersona = URL + 'Persona/Buscar';
+
+            debugger;
+
+            if (campo.value.trim().length < 8) {
+                controladorApp.notificarMensajeDeAlerta("Ingrese un número de documento válido");
+                return false;
+            }
+            //if (tipoDoc == '') {
+            //    controladorApp.notificarMensajeDeAlerta("Seleccione el tipo de documento");
+            //    return false;
+            //}
+
+            if (campo.value.trim().length == 8) {
+                // PRIMERO BUSCAMOS SI EL SOLICITANTE EXISTE EN NUESTRA BD
+                var data_param = {};
+                //data_param.TipoDeDocumento = $("#ddlPersonaTipoDeDocumento").data("kendoDropDownList").value();
+                data_param.TipoDeDocumento = 1;
+                data_param.IdDependencia = 0;
+                data_param.Estado = 1;
+                data_param.IdEmpleado = 0
+                data_param.NroDocumento = $("#txtNumeroDocumento").val();
+
+                $.ajax({
+                    url: controladorApp.obtenerRutaBase() + 'Empleado/ListarEmpleados',
+                    type: 'GET',
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
+                    processData: true,
+                    cache: false,
+                    data: data_param,
+                    success: function (res) {
+                        if (res != null && res.length > 0) {
+                            var vEmpleado = res[0].Paterno + ' ' + res[0].Materno + ' ' + res[0].Nombre;
+                            $("#hdIdTrabajador").val(res[0].IdEmpleado);
+                            $("#txtNombreTrabajador").val(vEmpleado);
+                        }
+                        else {
+                            debugger;
+                            // LimpiarModalRegistroPersona();
+                            $("#hdIdTrabajador").val('');
+                            $("#txtNombreTrabajador").val('');
+                            controladorApp.notificarMensajeDeAlerta('No existe el número de documento, consultar con el administrador');
+                        }
+                    },
+                    error: function (res) {
+                        debugger;
+                    }
+                });
+
+            }
+
+            else {
+                controladorApp.notificarMensajeDeAlerta("Ingrese un número de documento válido");
+                return false;
+            }
+
+        }
+
+    </script>
+}
+

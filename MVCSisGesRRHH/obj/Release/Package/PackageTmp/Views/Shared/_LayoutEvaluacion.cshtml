@@ -1,0 +1,218 @@
+﻿@using System.Configuration
+@using System.Web.Configuration
+@using MVCSisGesRRHH.Models;
+<!doctype html>
+@{
+    var cadena = Context.IsDebuggingEnabled ? "/" : Url.Content("~/");
+    var user = "Usuario no válido";
+    if (!String.IsNullOrEmpty(User.Identity.Name))
+    {
+        user = User.Identity.Name;
+    }
+}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=EDGE" />
+    @*<meta http-equiv="X-UA-Compatible" content="IE=9" />*@
+    <title>MIDIS - RRHH</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap_extend.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/css/styles.css" rel="stylesheet" />
+
+    <script src="~/Scripts/core/jquery.js"></script>
+    <script src="~/Scripts/core/jquery-ui.min.js"></script>
+    <script src="~/Scripts/core/bootstrap.min.js"></script>
+    <script src="~/Scripts/core/bootstrap-select.min.js"></script>
+    <script src="~/Scripts/core/jquery.paginate.js"></script>
+    <script src="~/Scripts/core/paginacionhandler.js"></script>
+    <script src="~/Scripts/core/util.dhh.js"></script>
+    <script src="~/Scripts/core/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/core/jquery.blockUI.js"></script>
+    <script src="~/Scripts/core/bootbox.js"></script>
+    <script src="~/Scripts/source/modMensajes.js"></script>
+
+    <script>
+        var globalRutaServidor = '@cadena';
+        var globalDatoObligatorio = "Dato obligatorio";
+        var globalMaxRequestLength = '';
+    </script>
+    @*<script>
+            $(function () {
+                $('#selectMenuMain').selectpicker();
+            });
+        </script>*@
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/script")
+
+    @Styles.Render("~/Content/kendouicss")
+
+    @Scripts.Render("~/bundles/kendoui")
+
+    @*@Styles.Render("~/Content/style")*@
+
+    <link href="~/Content/kendo/2022.1.456/kendo.nova.min.css" rel="stylesheet">
+    @*<link href="~/Content/css/examples-offline.css" rel="stylesheet" />*@
+
+    <script type="text/javascript" src="https://dsp.reniec.gob.pe/refirma_invoker/resources/js/clientclickonce.js"></script>
+    <script src="~/Scripts/Invoker.js"></script>
+
+    <script>
+        var controladorApp;
+        $(document).ready(function () {
+            controladorApp = new IntranetAnonimoAppJS({ rutaBase: '@Url.Content("~")' });
+            controladorApp.inicializar();
+        });
+
+        var URL ="@Url.Content("~/")";
+    </script>
+    <style>
+        .form-control, /* if this class is applied to a Kendo UI widget, its layout may change */
+        .container,
+        .container-fluid,
+        .row,
+        .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1,
+        .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,
+        .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+        .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,
+        .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5,
+        .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+        .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7,
+        .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8,
+        .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+        .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10,
+        .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11,
+        .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .btn-xs, .btn-group-sm > .btn {
+            padding: 0.1rem 0.35rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            border-radius: 0.2rem;
+        }
+
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #286090;
+            border-color: #204d74;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contentWrap">
+            <div class="logoTop">
+                <a href="#">
+                    <img src="~/Content/img/logo_midis.png" alt="" style="width:350px" />
+                </a>
+            </div>
+            <div class="titleWebSystem">
+                Gestión de Recursos Humanos 
+            </div>
+            
+            <div class="optionUser">
+                <i class="fa fa-user"></i>
+                Evaluador:  <a href="#">@ViewBag.Trabajador </a>
+            </div>
+        </div>
+    </header>
+    
+        <nav class="navigation" style="height: 40px !important">
+                <div class="contentWrap">
+                    <div class="titlePage">
+                        @RenderSection("SubTitulo", required: false)
+                    </div>
+                </div>
+            </nav>
+        
+        @*<input type="hidden" id="hdIdusuario" name="hdIdusuario" value="@VariablesWeb.ConsultaInformacion.iCodUsuario" />*@
+    
+    <section class="contentPage">
+        <div class="contentWrap">
+            <div class="pageContent">
+                <div class="allContent">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="contentWrap" style="text-align: center">
+                © Sistema de Convocatorias CAS @DateTime.Now.Year - Desarrollado por la Oficina General de Tecnologías de la Información<br>
+                Sede central: Av. Paseo de la República 3101 - San Isidro, Lima, Perú <img src="~/Content/img/icoPhone.png" /> (511) 631 8000<br>
+                <img src="~/Content/img/icoMail.png" /> <a href="mailto:soporte@midis.gob.pe">soporte@midis.gob.pe</a>
+            </div>
+        </footer>
+    </section>
+
+    <div class="resolutionOff">
+        No soporta en esta resolución!
+    </div>
+
+    <div id="divModalSenace" class="modal fade in">
+        <div class="contenedorSenace"> </div>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+
+
+    <div id="resultadoAlerta" class="container">
+    </div>
+
+    <!-- INICIA PLANTILLA DE NOTIFICACIÓN -->
+    <span id="notification" style="display:none;"></span>
+    <script id="informacionTemplate" type="text/x-kendo-template">
+        <div class="alert alert-info alert-dismissible" style="margin: 0px; min-width:300px;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h3><i class="icon fa fa-info"></i> #= title #</h3>
+            <hr />
+            <span>#= message #</span>
+        </div>
+    </script>
+    <script id="errorTemplate" type="text/x-kendo-template">
+        <div class="alert alert-danger alert-dismissible" style="margin: 0px; min-width:300px;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h3><i class="icon fa fa-ban"></i> #= title #</h3>
+            <hr />
+            <span>#= message #</span>
+        </div>
+    </script>
+    <script id="alertaTemplate" type="text/x-kendo-template">
+        <div class="alert alert-warning alert-dismissible" style="margin: 0px; min-width:300px;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h3><i class="icon fa fa-warning"></i> #= title #</h3>
+            <hr />
+            <span>#= message #</span>
+        </div>
+    </script>
+    <script id="satisfactorioTemplate" type="text/x-kendo-template">
+        <div class="alert alert-success alert-dismissible" style="margin: 0px; min-width:300px;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h3><i class="icon fa fa-check"></i> #= title #</h3>
+            <hr />
+            <span>#= message #</span>
+        </div>
+    </script>
+    <!-- CIERRA PLANTILLA DE NOTIFICACIÓN -->
+</body>
+</html>

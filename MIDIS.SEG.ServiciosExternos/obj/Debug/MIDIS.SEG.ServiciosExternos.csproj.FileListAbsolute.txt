@@ -1,0 +1,36 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Debug\log4net.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Debug\log4net.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.pdb
+D:\victor arias\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.dll
+D:\victor arias\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.pdb
+D:\victor arias\MIDIS.SEG.ServiciosExternos\bin\Debug\log4net.dll
+D:\victor arias\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Entidades.dll
+D:\victor arias\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.dll
+D:\victor arias\MIDIS.SEG.ServiciosExternos\bin\Debug\DataAnnotationsExtensions.dll
+D:\victor arias\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.pdb
+D:\victor arias\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.AssemblyReference.cache
+D:\victor arias\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CoreCompileInputs.cache
+D:\victor arias\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CopyComplete
+D:\victor arias\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.dll
+D:\victor arias\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.pdb

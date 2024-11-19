@@ -1,0 +1,25 @@
+<div class="WordSection1" style="width: 650px; padding: 30px; border-radius: 5px; border: 2px solid #6773b9;"><img style="width: 300px; height: 55px;" src="https://sdv.midis.gob.pe/Sis_GesRRHH/Content/img/logo_midis.png" data-placeholder="no" /> <br /><br />
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">Estimados/as Miembros del Comit&eacute;:</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">Reciban un cordial saludo, para informarles que la Entrevista Personal del Proceso CAS <span style="color: red;">_PROCESOCAS_</span>, se realizara seg&uacute;n el siguiente cuadro.<br /></span></p>
+<table style="font-family: 'PT Sans Narrow', sans-serif; font-size: 11px; width: 500px; border: 0px solid #f0f0f0;" border="1" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td style="background-color: #d1d1d1; font-size: 11px; width: 15px; text-align: center;"><strong>N&deg;</strong></td>
+<td style="background-color: #d1d1d1; font-size: 11px; width: 335px; text-align: left;"><strong>&nbsp;APELLIDOS Y NOMBRES</strong></td>
+<td style="background-color: #d1d1d1; font-size: 11px; width: 75px; text-align: center;"><strong>FECHA</strong></td>
+<td style="background-color: #d1d1d1; font-size: 11px; width: 75px; text-align: center;"><strong>HORA</strong></td>
+</tr>
+//TODOS
+</tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">En este sentido, se adjunta el link al sistema de convocatorias donde se encuentran las hojas de vida de los postulantes aptos del proceso, asimismo la ficha de entrevista personal debe ser ingresada, firmada y publicada en el sistema.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">Para ingresar al sistema <u><span style="color: red;"><a style="color: red;" href="_URLEVALUACION_" target="_blank" rel="noopener"> Haz click aqu&iacute;</a></span></u>.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;">Por otro lado, el link de las Salas Zoom programadas es el siguiente:</p>
+<p style="border-width: 1px; border-style: solid; width: 490px; padding: 5px;">_ZOOM_</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES"><strong>IMPORTANTE</strong>: <br />Asimismo se les recuerda a los Miembros del Comit&eacute;, que en cumplimiento a lo establecido en la Secci&oacute;n VI CONDICIONES GENERALES: Numeral 9 de las Bases del Concurso, lo siguiente:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal; font-size:13px"><em><span lang="ES">(...) "Los miembros del Comit&eacute; de Selecci&oacute;n est&aacute;n sujetos a las responsabilidades administrativas que hubiere lugar, en caso de incumplimiento de sus responsabilidades. Se abstendr&aacute;n de participar en la etapa de selecci&oacute;n del proceso respectivo, siendo reemplazados por sus suplentes, bajo responsabilidad, siempre y cuando se presenten las siguientes incompatibilidades: Si es c&oacute;nyuge, conviviente, pariente dentro del cuarto grado de consanguinidad o segundo de afinidad, con cualquiera de las/los candidatas/os o con sus representantes, mandatarios, con los administradores de sus empresas, o con quienes les presten servicios; Cuando tuviere amistad &iacute;ntima, enemistad manifiesta o conflicto de intereses objetivo con cualquiera de los candidatos finalistas, que se hagan evidentes mediante actitudes o hechos evidentes en el procedimiento; Cuando tuviere o hubiese tenido en los &uacute;ltimos doce (12) meses, relaci&oacute;n de servicio o de subordinaci&oacute;n con cualquiera de los postulantes interesados en el asunto, o si tuviera en proyecto una concertaci&oacute;n de negocios con alguna de las partes, aun cuando no se concrete posteriormente. La abstenci&oacute;n de los miembros del Comit&eacute; de Selecci&oacute;n aplica para el proceso de selecci&oacute;n en su totalidad y se regula de conformidad con los art&iacute;culos 99&deg;del TUO de la Ley N&deg; 27444. (...) </span></em></p><br>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Gracias.</span></p><br>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Atentamente,</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">&nbsp;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">Oficina General de Recursos Humanos</span></p>
+</div>

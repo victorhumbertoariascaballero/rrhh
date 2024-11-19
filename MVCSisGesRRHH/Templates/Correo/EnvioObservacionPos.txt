@@ -1,0 +1,8 @@
+<div class="WordSection1" style="width: 650px; padding: 30px; border-radius: 5px; border: 2px solid #6773b9;"><img style="width: 300px; height: 55px;" src="https://sdv.midis.gob.pe/Sis_GesRRHH/Content/img/logo_midis.png" data-placeholder="no" /> <br /><br />
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Hola <span style="color: red;"> _POSTULANTE_ !</span></span><br /><br /></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">Mediante el presente te comunicamos que tenemos una observacion sobre la documentaci&oacute;n enviada para la generaci&oacute;n de su contrato laboral, por favor ingrese al sistema y revise la observaci&oacute;n enviada en la secci&oacute;n de NOTIFICACIONES SOBRE EL PROCESO CAS.<br /><br /> Para ingresar al sistema <u><span style="color: red;"><a style="color: red;" href="_URLEXTERNO_" target="_blank" rel="noopener"> Haz click aqu&iacute;</a></span></u>.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Atentamente,</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">&nbsp;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">Oficina General de Recursos Humanos</span></p>
+</div>

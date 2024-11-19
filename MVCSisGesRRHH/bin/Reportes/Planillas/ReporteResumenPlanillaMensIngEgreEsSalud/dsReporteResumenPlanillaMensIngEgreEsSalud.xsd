@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReporteResumenPlanillaMensIngEgreEsSalud" targetNamespace="http://tempuri.org/dsReporteResumenPlanillaMensIngEgreEsSalud.xsd" xmlns:mstns="http://tempuri.org/dsReporteResumenPlanillaMensIngEgreEsSalud.xsd" xmlns="http://tempuri.org/dsReporteResumenPlanillaMensIngEgreEsSalud.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReporteResumenPlanillaMensIngEgreEsSalud" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReporteResumenPlanillaMensIngEgreEsSalud" msprop:Generator_UserDSName="dsReporteResumenPlanillaMensIngEgreEsSalud">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsReporteResumenPlanillaMensIngEgreEsSalud" msprop:Generator_TableClassName="dsReporteResumenPlanillaMensIngEgreEsSaludDataTable" msprop:Generator_TableVarName="tabledsReporteResumenPlanillaMensIngEgreEsSalud" msprop:Generator_TablePropName="_dsReporteResumenPlanillaMensIngEgreEsSalud" msprop:Generator_RowDeletingName="dsReporteResumenPlanillaMensIngEgreEsSaludRowDeleting" msprop:Generator_RowChangingName="dsReporteResumenPlanillaMensIngEgreEsSaludRowChanging" msprop:Generator_RowEvHandlerName="dsReporteResumenPlanillaMensIngEgreEsSaludRowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteResumenPlanillaMensIngEgreEsSaludRowDeleted" msprop:Generator_UserTableName="dsReporteResumenPlanillaMensIngEgreEsSalud" msprop:Generator_RowChangedName="dsReporteResumenPlanillaMensIngEgreEsSaludRowChanged" msprop:Generator_RowEvArgName="dsReporteResumenPlanillaMensIngEgreEsSaludRowChangeEvent" msprop:Generator_RowClassName="dsReporteResumenPlanillaMensIngEgreEsSaludRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iCodPlanilla" msprop:Generator_ColumnVarNameInTable="columniCodPlanilla" msprop:Generator_ColumnPropNameInRow="iCodPlanilla" msprop:Generator_ColumnPropNameInTable="iCodPlanillaColumn" msprop:Generator_UserColumnName="iCodPlanilla" type="xs:string" minOccurs="0" />
+              <xs:element name="sNumeroDocumento" msprop:Generator_ColumnVarNameInTable="columnsNumeroDocumento" msprop:Generator_ColumnPropNameInRow="sNumeroDocumento" msprop:Generator_ColumnPropNameInTable="sNumeroDocumentoColumn" msprop:Generator_UserColumnName="sNumeroDocumento" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreCompleto" msprop:Generator_ColumnVarNameInTable="columnsNombreCompleto" msprop:Generator_ColumnPropNameInRow="sNombreCompleto" msprop:Generator_ColumnPropNameInTable="sNombreCompletoColumn" msprop:Generator_UserColumnName="sNombreCompleto" type="xs:string" minOccurs="0" />
+              <xs:element name="dcTotalIng" msprop:Generator_ColumnVarNameInTable="columndcTotalIng" msprop:Generator_ColumnPropNameInRow="dcTotalIng" msprop:Generator_ColumnPropNameInTable="dcTotalIngColumn" msprop:Generator_UserColumnName="dcTotalIng" type="xs:string" minOccurs="0" />
+              <xs:element name="sMes" msprop:Generator_ColumnVarNameInTable="columnsMes" msprop:Generator_ColumnPropNameInRow="sMes" msprop:Generator_ColumnPropNameInTable="sMesColumn" msprop:Generator_UserColumnName="sMes" type="xs:string" minOccurs="0" />
+              <xs:element name="sPlanilla" msprop:Generator_ColumnVarNameInTable="columnsPlanilla" msprop:Generator_ColumnPropNameInRow="sPlanilla" msprop:Generator_ColumnPropNameInTable="sPlanillaColumn" msprop:Generator_UserColumnName="sPlanilla" type="xs:string" minOccurs="0" />
+              <xs:element name="iCodDetPlanilla" msprop:Generator_ColumnVarNameInTable="columniCodDetPlanilla" msprop:Generator_ColumnPropNameInRow="iCodDetPlanilla" msprop:Generator_ColumnPropNameInTable="iCodDetPlanillaColumn" msprop:Generator_UserColumnName="iCodDetPlanilla" type="xs:string" minOccurs="0" />
+              <xs:element name="sTipoPlanilla" msprop:Generator_ColumnVarNameInTable="columnsTipoPlanilla" msprop:Generator_ColumnPropNameInRow="sTipoPlanilla" msprop:Generator_ColumnPropNameInTable="sTipoPlanillaColumn" msprop:Generator_UserColumnName="sTipoPlanilla" type="xs:string" minOccurs="0" />
+              <xs:element name="iAnio" msprop:Generator_ColumnVarNameInTable="columniAnio" msprop:Generator_ColumnPropNameInRow="iAnio" msprop:Generator_ColumnPropNameInTable="iAnioColumn" msprop:Generator_UserColumnName="iAnio" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreReporte" msprop:Generator_ColumnVarNameInTable="columnsNombreReporte" msprop:Generator_ColumnPropNameInRow="sNombreReporte" msprop:Generator_ColumnPropNameInTable="sNombreReporteColumn" msprop:Generator_UserColumnName="sNombreReporte" type="xs:string" minOccurs="0" />
+              <xs:element name="iCodTipoConcepto" msprop:Generator_ColumnVarNameInTable="columniCodTipoConcepto" msprop:Generator_ColumnPropNameInRow="iCodTipoConcepto" msprop:Generator_ColumnPropNameInTable="iCodTipoConceptoColumn" msprop:Generator_UserColumnName="iCodTipoConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="sTipoConcepto" msprop:Generator_ColumnVarNameInTable="columnsTipoConcepto" msprop:Generator_ColumnPropNameInRow="sTipoConcepto" msprop:Generator_ColumnPropNameInTable="sTipoConceptoColumn" msprop:Generator_UserColumnName="sTipoConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="iMes" msprop:Generator_ColumnVarNameInTable="columniMes" msprop:Generator_ColumnPropNameInRow="iMes" msprop:Generator_ColumnPropNameInTable="iMesColumn" msprop:Generator_UserColumnName="iMes" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

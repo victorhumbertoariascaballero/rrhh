@@ -1,0 +1,20 @@
+<div class=WordSection1 style='width: 650px;border-style: solid;border-width: 2px;border-color: #6773b9;padding: 30px;border-radius: 5px;'>
+<img data-placeholder='no' src='https://sdv.midis.gob.pe/Sis_Convocatoria/Content/img/logo_midis.png' style='width:300px;height:55px;'>
+<br><br>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:justify;line-height:normal'>
+	<span lang=ES style='font-family:'Arial Black,sans-serif'>Equipo de Incorporaci&oacute;n  - MIDIS !<o:p></o:p></span><br><br>
+</p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:" justify;line-height:normal'>
+	<span lang=ES style='font-family:'Arial Black,sans-serif'>Mediante el presente le comunicamos que se ha registrado en el sistema los documentos requeridos para la evaluaci&oacute;n del ganador al proceso de selecci&oacute;n<span style='color:red'> _PROCESOCAS_ </span>.<br><br> Para ingresar al sistema <u><span style='color:red'><a style='color:red' href='_URLINTERNO_' target='_blank'> Haz click aqu&iacute;</a></span></u>.<o:p></o:p></span>
+</p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:justify;line-height:normal'><span lang=ES style='font-family:'Arial Black,sans-serif'>Atentamente,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm; margin-left:141.6pt;margin-bottom:.0001pt;text-align:justify;text-indent:35.4pt;
+line-height:normal'><span lang=ES style='font-family:'Arial Black,sans-serif'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm; margin-left:141.6pt;margin-bottom:.0001pt;text-align:justify;text-indent:35.4pt;
+line-height:normal'><span lang=ES style='font-family:'Arial Black,sans-serif'>Oficina General de Recursos Humanos<o:p></o:p></span></p>
+
+</div>

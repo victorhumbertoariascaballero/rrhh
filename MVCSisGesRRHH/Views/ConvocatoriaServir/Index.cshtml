@@ -1,0 +1,1195 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "RECLUTAMIENTO Y SELECCIÓN  ->  PROCESOS DE CONVOCATORIAS SERVIR";
+}
+@section SubTitulo { <div id="toolbar" class="form-group row k-toolbar k-widget k-toolbar-resizable" style="border-color: #b1acac; color: #32364c; margin: 5px ">&nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <h6>@ViewBag.Title</h6> </div> }
+
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px !important;
+    }
+
+    /* Only resize the element if PDF is embedded */
+    .pdfobject-container {
+        width: 100%;
+        height: 550px;
+    }
+
+
+    /*#tabstrip h2 {
+        font-weight: lighter;
+        font-size: 5em;
+        line-height: 1;
+        padding: 0 0 0 30px;
+        margin: 0;
+    }
+
+        #tabstrip h2 span {
+            background: none;
+            padding-left: 5px;
+            font-size: .3em;
+            vertical-align: top;
+        }
+
+    #tabstrip p {
+        margin: 0;
+        padding: 0;
+    }*/
+
+    .k-tabstrip-items .k-state-active .k-link {
+        color: #fffbfb;
+        font-weight:700;
+        /*text-decoration:underline;*/
+    }
+    /*.k-tabstrip-item .k-item .k-last {
+        color: #f7cf0aa0;
+    }*/
+
+    /*#span .k-link {
+        color: red;
+        
+    }*/
+    .k-tabstrip-item > span.k-link {
+        color: #bebebe;
+        /*#color: #e9ecef;
+    background-color: #17a2b8;
+    border-color: #bee5eb;*/
+
+    }
+
+    .wrapper {
+        height: auto;
+        min-height: 600px;
+        /*margin: 20px auto;
+        padding: 20px 0 0;*/
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <!--FORMULARIO DE BÚSQUEDA-->
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#collapseDatos">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> INGRESE CRITERIOS DE B&Uacute;SQUEDA
+                </a>
+            </div>
+            <div id="collapseDatos" class="collapse show">
+                <div class="card-body">
+                    <div class="row form-horizontal">
+                        <div class="col-12">
+                            <form id="frmBusqueda" onsubmit="controlador.buscar(event)">
+                                <div class="form-group row">
+                                    <label for="txtProceso_busqueda" class="col-md-1 control-label">Nro de Proceso: </label>
+                                    <div class="col-md-1">
+                                        <input id="txtProceso_busqueda" name="txtProceso_busqueda" type="text" class="form-control input-sm text-uppercase" maxlength="8" onkeypress="SoloNumeros(event);" />
+                                    </div>
+                                    <label for="ddlDependencia_busqueda" class="col-md-1 control-label">Órgano: </label>
+                                    <div class="col-md-3">
+                                        <select id="ddlDependencia_busqueda" name="ddlDependencia_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Seleccione --</option>
+                                        </select>
+                                    </div>
+                                    <label for="txtCargo_busqueda" class="col-md-1 control-label">Cargo: </label>
+                                    <div class="col-md-1">
+                                        <input id="txtCargo_busqueda" name="txtCargo_busqueda" type="text" class="form-control input-sm text-uppercase" maxlength="30" />
+                                    </div>
+                                    <label for="ddlEstado_busqueda" class="col-md-1 control-label">Estado </label>
+                                    <div class="col-md-1">
+                                        <select id="ddlEstado_busqueda" name="ddlEstado_busqueda" class="form-control" style="width: 100%;">
+                                            <option value="">-- Todos --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2" style="text-align: right; padding-top: 10px;">
+                                        <button type="reset" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                                        </button>
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                        </button>
+                                    </div>
+                                    @*<div class="col-md-3">
+                                            <label for="ddlCondicion_busqueda" class="col-md-4 control-label">Condición </label>
+                                            <div class="col-md-8">
+                                                <select id="ddlCondicion_busqueda" name="ddlCondicion_busqueda" class="form-control" style="width: 100%;">
+                                                    <option value="">-- Todos --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                            <div class="col-md-3">
+                                            <label for="ddlSede_busqueda" class="col-md-4 control-label">Sede </label>
+                                            <div class="col-md-8">
+                                                <select id="ddlSede_busqueda" name="ddlSede_busqueda" class="form-control" style="width: 100%;">
+                                                    <option value="">-- Todos --</option>
+                                                </select>
+                                            </div>
+                                        </div>*@
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--FORMULARIO DE BÚSQUEDA-->
+        </div>
+        <div id="pResultado" class="card">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  RESULTADO DE LA B&Uacute;SQUEDA
+                </a>
+            </div>
+            <div class="card-body" id="divListarAplicacion">
+                <div class="row">
+                    <div id="divTotal" class="col-md-2">
+                        <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
+                    </div>
+                    <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                        @*<button id="btnNuevoP" type="button" class="btn btn-primary btn-sm" onclick="controlador.abrirModalRegistroPostulante()">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo (Modalidad Postulante)
+                            </button>*@
+                        <button id="btnNuevo" type="button" class="btn btn-primary btn-sm" onclick="controlador.abrirModalRegistroConvocatoria(0)">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nueva Convocatoria
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" id="divGrid"></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="divModalRegistroConvocatoria" style="display: none; font-size: 11px">
+        <div class="card">
+            <form id="frmRegistroConvocatoria" name="frmRegistroConvocatoria" novalidate="" onsubmit="controlador.agregarConvocatoria(event)">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="ddlDependencia" class="control-label">Órgano </label>
+                            <select id="ddlDependencia" name="ddlDependencia" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="ddlBases" class="control-label">Bases</label>
+                            <select id="ddlBases" name="ddlBases" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                        </div>
+                    </div>
+                    @*<div class="col-12">*@
+                        <div class="col-12">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li id="liTab1" class="nav-item">
+                                    @*<a data-toggle="tab" href="#tab1"></a>*@
+                                    <button class="nav-link active" id="tab1-tab" data-toggle="tab" data-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">DATOS DE LA CONVOCATORIA</button>
+                                </li>
+                                <li id="liTab2" class="nav-item">
+                                    <button class="nav-link" id="tab2-tab" data-toggle="tab" data-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="true">BASES DE LA CONVOCATORIA</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="padding:10px 0px 10px 0px">
+                                <div id="tab1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab1-tab">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="form-group col-md-2">
+                                                <label for="txtNroConvocatoria" class="control-label">Nro de Convocatoria*</label>
+                                                <input id="txtNroConvocatoria" name="txtNroConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label for="txtCantidadConvocatoria" class="control-label">Nro de vacantes*</label>
+                                                <input id="txtCantidadConvocatoria" name="txtCantidadConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label for="txtRemuneracionConvocatoria" class="control-label">Remuneración*</label>
+                                                <input id="txtRemuneracionConvocatoria" name="txtRemuneracionConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" maxlength="100" validationmessage=" " />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="txtCargoConvocatoria" class="control-label">Cargo*</label>
+                                                <input id="txtCargoConvocatoria" name="txtCargoConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                                            </div>
+                                            @*<div id="divExiste" class="form-group col-md-4" style="margin-top: 25px;">
+                                                    <span style="background-color: #ffffcc;border-left: 6px solid #ffeb3b;padding: 8px;border-radius: 3px;">TRABAJADOR YA ESTÁ REGISTRADO</span>
+                                                </div>*@
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-2">
+                                                <label for="txtAIRHSPConvocatoria" class="control-label">AIRHSP*</label>
+                                                <input id="txtAIRHSPConvocatoria" name="txtAIRHSPConvocatoria" type="text" class="form-control input-sm text-uppercase" required="required" maxlength="50" validationmessage="requerido" />
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label for="txtMetaConvocatoria" class="control-label">Meta*</label>
+                                                <input id="txtMetaConvocatoria" name="txtMetaConvocatoria" type="text" class="form-control input-sm text-uppercase" required="required" maxlength="50" validationmessage="requerido" />
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label for="ddlTipoConvocatoria" class="control-label">Tipo*</label>
+                                                <select id="ddlTipoConvocatoria" name="ddlTipoConvocatoria" class="form-control" style="width: 100%;" required="required" validationmessage="requerido" >
+                                                    
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            &nbsp;
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="control-label">DOCUMENTACION SUSTENTATORIA</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <label for="fileDocRequerimiento" class="control-label">Anexo 01: Formato de requerimiento de personal CAS*</label>
+                                                <input name="fileDocRequerimiento" id="fileDocRequerimiento" type="file" aria-label="files" accept=".pdf" />
+                                                <input name="hdDocRequerimiento" id="hdDocRequerimiento" type="hidden" required="required" validationmessage="requerido" />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="fileDocComite" class="control-label">Anexo 03: Formato para conformación del comité de selección*</label>
+                                                <input name="fileDocComite" id="fileDocComite" type="file" aria-label="files" accept=".pdf" />
+                                                <input name="hdDocComite" id="hdDocComite" type="hidden" required="required" validationmessage="requerido" />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="fileDocCertificacion" class="control-label">Anexo 04: Acta de instalación del comité de selección*</label>
+                                                <input name="fileDocCertificacion" id="fileDocCertificacion" type="file" aria-label="files" accept=".pdf" />
+                                                <input name="hdDocCertificacion" id="hdDocCertificacion" type="hidden" required="required" validationmessage="requerido" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            &nbsp;
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="control-label">COMITÉ DE SELECCIÓN</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <label for="ddlComiteDependencia1" class="control-label">PRESIDENTE: Dependencia</label>
+                                                <select id="ddlComiteDependencia1" name="ddlComiteDependencia1" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="ddlComiteMiembro1T" class="control-label">Titular</label>
+                                                <select id="ddlComiteMiembro1T" name="ddlComiteMiembro1T" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="ddlComiteMiembro1S" class="control-label">Suplente</label>
+                                                <select id="ddlComiteMiembro1S" name="ddlComiteMiembro1S" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <label for="ddlComiteDependencia2" class="control-label">MIEMBRO 1: Dependencia</label>
+                                                <select id="ddlComiteDependencia2" name="ddlComiteDependencia2" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="ddlComiteMiembro2T" class="control-label">Titular</label>
+                                                <select id="ddlComiteMiembro2T" name="ddlComiteMiembro2T" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="ddlComiteMiembro2S" class="control-label">Suplente</label>
+                                                <select id="ddlComiteMiembro2S" name="ddlComiteMiembro2S" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="display:none">
+                                            <div class="form-group col-md-4">
+                                                <label for="ddlComiteDependencia3" class="control-label">MIEMBRO 2: Dependencia (OPCIONAL)</label>
+                                                <select id="ddlComiteDependencia3" name="ddlComiteDependencia3" class="form-control input-sm" style="width: 100%;">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="ddlComiteMiembro3T" class="control-label">Titular</label>
+                                                <select id="ddlComiteMiembro3T" name="ddlComiteMiembro3T" class="form-control input-sm" style="width: 100%;">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="ddlComiteMiembro3S" class="control-label">Suplente</label>
+                                                <select id="ddlComiteMiembro3S" name="ddlComiteMiembro3S" class="form-control input-sm" style="width: 100%;">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab-pane fade" role="tabpanel" aria-labelledby="tab2-tab">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div id="app">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @*</div>*@
+                </div>
+
+                <div class="panel-footer" style="text-align:right;">
+                    <button id="btnGuardarAdmin" type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Guardar
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalRegistroConvocatoria()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="divModalEdicionConvocatoria" style="display: none; font-size: 11px">
+        <div class="panel panel-default">
+            <form id="frmEdicionConvocatoria" name="frmEdicionConvocatoria" novalidate="" onsubmit="controlador.actualizarConvocatoria(event)">
+                <div class="wrapper">
+                    
+                    @*<div class="row">
+                        <div id="tabstripE" class="panel-body">*@
+                            <ul id="pnlConvocatoria">
+                                <li id="liTab1E" @*class="k-expanded"*@>
+                                    @*<span class="k-link k-selected">DATOS DE LA CONVOCATORIA</span>*@
+                                    I. DATOS DE LA CONVOCATORIA
+                                    <div class="card">
+                                        <div id="tab1E" class="card-body">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="txtDependenciaE" class="control-label">Dependencia</label>
+                                                        <input id="txtDependenciaE" name="txtDependenciaE" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-md-2">
+                                                        <label for="txtNroConvocatoriaE" class="control-label">Nro de Convocatoria*</label>
+                                                        <input id="txtNroConvocatoriaE" name="txtNroConvocatoriaE" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                                                    </div>
+                                                    <div class="form-group col-md-2">
+                                                        <label for="txtCantidadConvocatoriaE" class="control-label">Nro de vacantes*</label>
+                                                        <input id="txtCantidadConvocatoriaE" name="txtCantidadConvocatoriaE" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                                                    </div>
+                                                    <div class="form-group col-md-2">
+                                                        <label for="txtRemuneracionConvocatoriaE" class="control-label">Remuneración*</label>
+                                                        <input id="txtRemuneracionConvocatoriaE" name="txtRemuneracionConvocatoriaE" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" maxlength="100" validationmessage=" " />
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="txtCargoConvocatoriaE" class="control-label">Cargo*</label>
+                                                        <input id="txtCargoConvocatoriaE" name="txtCargoConvocatoriaE" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-md-2">
+                                                        <label for="txtAIRHSPConvocatoriaE" class="control-label">AIRHSP*</label>
+                                                        <input id="txtAIRHSPConvocatoriaE" name="txtAIRHSPConvocatoriaE" type="text" class="form-control input-sm text-uppercase" required="required" maxlength="50" validationmessage="requerido" />
+                                                    </div>
+                                                    <div class="form-group col-md-2">
+                                                        <label for="txtMetaConvocatoriaE" class="control-label">Meta*</label>
+                                                        <input id="txtMetaConvocatoriaE" name="txtMetaConvocatoriaE" type="text" class="form-control input-sm text-uppercase" required="required" maxlength="50" validationmessage="requerido" />
+                                                    </div>
+                                                    <div class="form-group col-md-2">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    &nbsp;
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label class="control-label">DOCUMENTACION SUSTENTATORIA</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-md-4">
+                                                        <div class="row">
+                                                            <label for="fileDocRequerimientoE" class="control-label col-md-9">Anexo 01: Formato de requerimiento de servidores civiles*</label>
+                                                            <a id="btnActualDocRequerimientoE" href="#" target="_blank" class="btn btn-info btn-sm col-md-3" style="display:none"><span class="glyphicon glyphicon-download-alt"></span> Descargar </a>
+                                                        </div>
+                                                        <input name="fileDocRequerimientoE" id="fileDocRequerimientoE" type="file" aria-label="files" accept=".pdf" />
+                                                        <input name="hdDocRequerimientoE" id="hdDocRequerimientoE" type="hidden" required="required" validationmessage="requerido" />
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <div class="row" style="display: flex;">
+                                                            <label for="fileDocComiteE" class="control-label col-md-9">Anexo 02: Formato para conformación del comité de selección*</label>
+                                                            <a id="btnActualDocComiteE" href="#" target="_blank" class="btn btn-info btn-sm col-md-3" style="display:none"><span class="glyphicon glyphicon-download-alt"></span> Descargar  </a>
+                                                        </div>
+                                                        <input name="fileDocComiteE" id="fileDocComiteE" type="file" aria-label="files" accept=".pdf" />
+                                                        <input name="hdDocComiteE" id="hdDocComiteE" type="hidden" required="required" validationmessage="requerido" />
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <div class="row">
+                                                            <label for="fileDocCertificacionE" class="control-label col-md-9">Anexo 06: Aviso de convocatoria*</label>
+                                                            <a id="btnActualDocCertificacionE" href="#" target="_blank" class="btn btn-info btn-sm col-md-3" style="display:none; padding-left:5px"><span class="glyphicon glyphicon-download-alt"></span>Descargar</a>
+                                                        </div>
+                                                        <input name="fileDocCertificacionE" id="fileDocCertificacionE" type="file" aria-label="files" accept=".pdf" />
+                                                        <input name="hdDocCertificacionE" id="hdDocCertificacionE" type="hidden" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    &nbsp;
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label class="control-label">COMITÉ DE SELECCIÓN</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-md-4">
+                                                        <input name="hdComiteDependencia1E" id="hdComiteDependencia1E" type="hidden" />
+                                                        <label for="txtComiteDependencia1E" class="control-label">PRESIDENTE: Dependencia</label>
+                                                        <input id="txtComiteDependencia1E" name="txtComiteDependencia1E" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="ddlComiteMiembro1TE" class="control-label">Titular</label>
+                                                        <select id="ddlComiteMiembro1TE" name="ddlComiteMiembro1TE" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                            <option value="">-- Seleccione --</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="ddlComiteMiembro1SE" class="control-label">Suplente</label>
+                                                        <select id="ddlComiteMiembro1SE" name="ddlComiteMiembro1SE" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                            <option value="">-- Seleccione --</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-md-4">
+                                                        <input name="hdComiteDependencia2E" id="hdComiteDependencia2E" type="hidden" />
+                                                        <label for="txtComiteDependencia2E" class="control-label">MIEMBRO 1: Dependencia</label>
+                                                        <input id="txtComiteDependencia2E" name="txtComiteDependencia2E" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="ddlComiteMiembro2TE" class="control-label">Titular</label>
+                                                        <select id="ddlComiteMiembro2TE" name="ddlComiteMiembro2TE" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                            <option value="">-- Seleccione --</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="ddlComiteMiembro2SE" class="control-label">Suplente</label>
+                                                        <select id="ddlComiteMiembro2SE" name="ddlComiteMiembro2SE" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                            <option value="">-- Seleccione --</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div id="divMiembro2" class="row" style="display:none">
+                                                    <div class="form-group col-md-4">
+                                                        <input name="hdComiteDependencia3E" id="hdComiteDependencia3E" type="hidden" />
+                                                        <label for="txtComiteDependencia3E" class="control-label">MIEMBRO 2: Dependencia (OPCIONAL)</label>
+                                                        <input id="txtComiteDependencia3E" name="txtComiteDependencia3E" type="text" class="form-control input-sm text-uppercase" readonly="readonly" />
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="ddlComiteMiembro3TE" class="control-label">Titular</label>
+                                                        <select id="ddlComiteMiembro3TE" name="ddlComiteMiembro3TE" class="form-control input-sm" style="width: 100%;">
+                                                            <option value="">-- Seleccione --</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="ddlComiteMiembro3SE" class="control-label">Suplente</label>
+                                                        <select id="ddlComiteMiembro3SE" name="ddlComiteMiembro3SE" class="form-control input-sm" style="width: 100%;">
+                                                            <option value="">-- Seleccione --</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="card-footer" style="text-align:right;">
+                                            <button id="btnGuardarAdminE" type="submit" class="btn btn-primary btn-sm">
+                                                <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Guardar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="liTab2E">
+                                    II. EVALUACIÓN CURRICULAR
+                                    <div class="card">
+                                        <div id="tab2E" class="card-body">
+                                            <div class="row">
+                                                <div id="divTotalCurri" class="col-md-2">
+                                                    <h5><label>Total de Registros: &nbsp;</label><label id="lblTotalCurri" class="label label-info"></label></h5>
+                                                </div>
+                                                <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                                                    @*<button id="btnFinalizar" type="button" class="btn btn-info btn-sm" onclick="controlador.abrirModalFormato()">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Descargar acta de evaluación curricular
+                    </button>*@
+                                                    <a id="btnActaEvaluacionCurriE" href="#" target="_blank" class="btn btn-info btn-sm" style="display:none"><span class="glyphicon glyphicon-download-alt"></span> Descargar acta de evaluación curricular </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12" id="divGridCurricular"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="liTab3E">
+                                    III. EVALUACIÓN DE CONOCIMIENTOS
+                                    <div class="card">
+                                        <div id="tab3E" class="card-body">
+                                            <div class="row">
+                                                <div id="divTotalConoc" class="col-md-2">
+                                                    <h5><label>Total de Registros: &nbsp;</label><label id="lblTotalConoc" class="label label-info"></label></h5>
+                                                </div>
+                                                <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12" id="divGridConocimientos"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="liTab4E">
+                                    IV. ENTREVISTA PERSONAL
+                                    <div class="card">
+                                        <div id="tab4E" class="card-body">
+                                            <div class="row">
+                                                <div id="divTotalEnt" class="col-md-2">
+                                                    <h5 style="display:none"><label>Total de Registros: &nbsp;</label><label id="lblTotalEnt" class="label label-info"></label></h5>
+                                                </div>
+                                                <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                                                    <a id="btnActaEvaluacionEntrevistaE" href="#" target="_blank" class="btn btn-info btn-sm" style="display:none"><span class="glyphicon glyphicon-download-alt"></span> Descargar acta de resultado final </a>
+                                                    <button id="btnFinalizarEntrevista" type="button" class="btn btn-info btn-sm" onclick="controlador.abrirModalFormatoEnt()">
+                                                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Ingresar acta de resultado final
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12" id="divGridEntrevistas"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="liTab5E">
+                                    V. RESULTADOS FINALES
+                                    <div class="card">
+                                        <div id="tab5E" class="card-body">
+                                            <div class="row">
+                                                <div id="divTotalTot" class="col-md-2">
+                                                    <h5><label>Total de Registros: &nbsp;</label><label id="lblTotalTot" class="label label-info"></label></h5>
+                                                </div>
+                                                <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12" id="divGridTotales"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="liTab6E">
+                                    VI. ACTAS Y COMUNICADOS DEL PROCESO
+                                    <div class="card">
+                                        <div id="tab6E" class="card-body">
+                                            <div class="row">
+                                                <div id="divTotal" class="col-md-2">
+                                                    <h5><label>Total de Registros: &nbsp;</label><label id="lblTotalComu" class="label label-info"></label></h5>
+                                                </div>
+                                                <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                                                    <button id="btnNuevaComunicacion" type="button" class="btn btn-info btn-sm" onclick="controlador.abrirModalFormato()">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nueva comunicación
+                                                    </button>
+                                                    @*<a id="btnNuevaComunicacionE" href="#" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-download-alt"></span> Nueva comunicación </a>*@
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12" id="divGridComunicacion"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        @*</div>
+                    </div>*@
+                </div>
+
+                <div class="panel-footer" style="text-align:right;">
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalEdicionConvocatoria()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="divModalEvaluacionCurri" style="display: none; font-size: 11px">
+        <div class="card">
+            <form id="frmEvaluacionCurri" name="frmEvaluacionCurri" novalidate="" onsubmit="controlador.agregarEvaluacionEntrevista(event)">
+                @*<input id="hdIdEmpleado" name="hdIdEmpleado" type="hidden" value="0" />*@
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="form-group col-md-3">
+                                    <label for="txtNroConvocatoriaCurri" class="control-label">Nro de Convocatoria*</label>
+                                    <input id="txtNroConvocatoriaCurri" name="txtNroConvocatoriaCurri" type="text" class="form-control input-sm text-uppercase" readonly="readonly" />
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <label for="txtCargoConvocatoriaCurri" class="control-label">Cargo*</label>
+                                    <input id="txtCargoConvocatoriaCurri" name="txtCargoConvocatoriaCurri" type="text" class="form-control input-sm text-uppercase" readonly="readonly" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                &nbsp;
+                            </div>
+                            <div class="row">
+                                <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                    <strong>SELECCIONE LOS MIEMBROS DEL COMITÉ QUE REALIZARÁN LA ENTREVISTA:</strong>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="control-label">COMITÉ DE SELECCIÓN</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="ddlComiteDependencia1Curri" class="control-label">PRESIDENTE: Dependencia</label>
+                                    <select id="ddlComiteDependencia1Curri" name="ddlComiteDependencia1Curri" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="ddlComiteMiembro1Curri" class="control-label">Trabajador</label>
+                                    <select id="ddlComiteMiembro1Curri" name="ddlComiteMiembro1Curri" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="ddlComiteDependencia2Curri" class="control-label">MIEMBRO 1: Dependencia</label>
+                                    <select id="ddlComiteDependencia2Curri" name="ddlComiteDependencia2Curri" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="ddlComiteMiembro2Curri" class="control-label">Trabajador</label>
+                                    <select id="ddlComiteMiembro2Curri" name="ddlComizsqteMiembro2Curri" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="divMiembro2Entrevista" class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="ddlComiteDependencia3Curri" class="control-label">MIEMBRO 2: Dependencia</label>
+                                    @*<input id="txtComiteDependencia3Entrevista" name="txtComiteDependencia3Entrevista" type="text" class="form-control input-sm text-uppercase" readonly="readonly" />*@
+                                    <select id="ddlComiteDependencia3Curri" name="ddlComiteDependencia3Curri" class="form-control input-sm" style="width: 100%;">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="ddlComiteMiembro3Curri" class="control-label">Trabajador</label>
+                                    <select id="ddlComiteMiembro3Curri" name="ddlComiteMiembro3Curri" class="form-control input-sm" style="width: 100%;">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label for="txtEnlaceReunion" class="control-label">Enlace a la reunión virtual</label>
+                                    <textarea id="txtEnlaceReunion" name="txtEnlaceReunion" class="form-control input-sm" rows="3" style="width: 100%" maxlength="490" onblur="this.value = this.value.trim();"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="ddlTipoNotificacion" class="control-label">Tipo de Notificación</label>
+                                    <select id="ddlTipoNotificacion" name="ddlTipoNotificacion" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h5><label class="control-label">POSTULANTES APTOS: &nbsp;</label><label id="lblTotalPos" class="label label-info"></label></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" id="divGridEntrevista"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer" style="text-align:right;">
+                    <button id="btnGenerarAcceso" type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Notificar
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalEvaluacionCurri()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="divModalAsignarEvaluacion" style="display: none; font-size: 11px">
+        <div class="card">
+            <form id="frmAsignarEvaluacion" name="frmAsignarEvaluacion" novalidate="" onsubmit="controlador.asignarEvaluacionCurricular(event)">
+                @*<input id="hdIdEmpleado" name="hdIdEmpleado" type="hidden" value="0" />*@
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="form-group col-md-3">
+                                    <label for="txtNroConvocatoriaAsigna" class="control-label">Nro de Convocatoria*</label>
+                                    <input id="txtNroConvocatoriaAsigna" name="txtNroConvocatoriaAsigna" type="text" class="form-control input-sm text-uppercase" readonly="readonly" />
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <label for="txtCargoConvocatoriaAsigna" class="control-label">Cargo*</label>
+                                    <input id="txtCargoConvocatoriaAsigna" name="txtCargoConvocatoriaAsigna" type="text" class="form-control input-sm text-uppercase" readonly="readonly" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                &nbsp;
+                            </div>
+                            <div class="row">
+                                <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                    <strong>SELECCIONE EL TRABAJADOR QUE REALIZARÁ LA EVALUACIÓN CURRICULAR:</strong>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label for="ddlAsignarEvaluacion" class="control-label">Trabajador</label>
+                                    <select id="ddlAsignarEvaluacion" name="ddlAsignarEvaluacion" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer" style="text-align:right;">
+                    <button id="btnAsignarAcceso" type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Asignar
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalAsignarEvaluacion()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="divModalFormato" style="display:none;">
+        <div class="panel panel-default">
+            <form id="frmNuevoFormato" name="frmNuevoFormato" novalidate="" enctype="multipart/form-data" onsubmit="controlador.agregarConvocatoriaDocumento(event)">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <label for="ddlTipoFormato" class="col-md-4 control-label">Tipo de Comunicación </label>
+                            <div class="col-md-8">
+                                <select id="ddlTipoFormato" name="ddlTipoFormato" class="form-control" style="width: 100%; font-size: 11px">
+                                    <option value="">--Seleccione--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <button id="btnGenerarFicha" type="button" class="btn btn-info btn-sm" onclick="controlador.GenerarFormatoComunicado()" style="display:none">
+                                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Descargar Documento
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="fileFormato" class="control-label">Seleccionar documento a publicar (Formato PDF)*</label>
+                            <input name="fileFormato" id="fileFormato" type="file" aria-label="files" accept=".pdf" />
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Actualizar
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalFormato()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="divModalFormatoEnt" style="display:none;">
+        <div class="card">
+            <form id="frmNuevoFormatoEnt" name="frmNuevoFormatoEnt" novalidate="" enctype="multipart/form-data" onsubmit="controlador.agregarResultadoFinalArchivo(event)">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button id="btnGenerarFichaEnt" type="button" class="btn btn-info btn-sm" onclick="controlador.GenerarFormatoResultadoFinal()">
+                                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Descargar acta de resultado final (Anexo 11)
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        &nbsp;
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="fileFormatoEnt" class="control-label">Anexo 11: Acta de resultado final firmado (Formato PDF)*</label>
+                            <input name="fileFormatoEnt" id="fileFormatoEnt" type="file" aria-label="files" accept=".pdf" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer" style="text-align:right;">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Actualizar
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalFormatoEnt()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <input id="hdnUid" name="hdnUid" type="hidden" />
+    <input id="hdnNroRuc" name="hdnNroRuc" type="hidden" value="" />
+    @*<input id="hdIdContrato" name="hdIdContrato" type="hidden" value="" />
+        <input id="hdIdPostulante" name="hdIdPostulante" type="hidden" value="" />
+        <input id="hdIdPostulacion" name="hdIdPostulacion" type="hidden" value="" />*@
+    <input id="hdIdConvocatoria" name="hdIdConvocatoria" type="hidden" value="" />
+    <input id="hdIdPerfil" name="hdIdPerfil" type="hidden" value="" />
+    <input id="hdIdNombre" name="hdIdNombre" type="hidden" value="" />
+
+</section>
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/ConvocatoriaServir.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+    <script src="~/Scripts/util/PDFObject/pdfobject.min.js"></script>
+
+    <script type="text/x-kendo-template" id="template">
+                            <div class="card-body tabstrip">
+                                <ul>
+                                    <li class="k-state-active" style="border-width: 0px;">
+                                        ETAPAS DEL PROCESO
+                                    </li>
+                                    <li>
+                                        POSTULANTES INSCRITOS &nbsp;<span class="btn btn-info btn-xs totalPostulantes" style="font-size: 11px"></span>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <div class='employee-details col-md-12'>
+                                        <div class="row">
+                                            <div class="row col-md-4">
+
+                                                <div class="col-md-4 divFecha1" style="padding:5px">
+                                                    <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                        <div>
+                                                            <strong><span class="fecha1" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>1. Publicación de la convocatoria en el portal institucional del Ministerio de Desarrollo e Inclusión Social</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 divFecha2" style="padding:5px">
+                                                    <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                        <strong><span class="fecha2" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                        <p>2. Registro y/o inscripción de la hoja de vida (CV) del postulante</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 divFecha3" style="padding:5px">
+                                                    <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                        <div style="height:97px">
+                                                            <strong><span class="fecha3" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>3. Evaluación de la hoja de vida</p>
+                                                        </div>
+                                                        <div>
+                                                            <button type="button" class="btn btn-link btn-sm btnEvaluacionCurricularOtro" style="width:88%; font-size: 10px; font-weight: 600" disabled="disabled">
+                                                                <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> ASIGNAR EVALUACIÓN
+                                                            </button>
+                                                            <button type="button" class="btn btn-info btn-sm btnEvaluacionCurricular" style="width:88%" disabled="disabled">
+                                                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Iniciar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row col-md-4">
+                                                <div class="col-md-4 divFecha4" style="padding:5px">
+                                                    <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                        <strong><span class="fecha4" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                        <p>4. Publicación de resultados de la hoja de vida en el portal institucional del Ministerio de Desarrollo e Inclusión Social</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 divFecha5" style="padding:5px">
+                                                    <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                        <div style="height:125px">
+                                                            <strong><span class="fecha5" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>5. Evaluación de conocimientos</p>
+                                                        </div>
+                                                        <div>
+                                                            <button type="button" class="btn btn-info btn-sm btnEvaluacionConocimiento" style="width: 88%" disabled="disabled">
+                                                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Iniciar 
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 divFecha6" style="padding:5px">
+                                                    <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                        <div style="height:125px">
+                                                            <strong><span class="fecha6" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>6. Publicación de resultados de la evaluación de conocimientos</p>
+                                                        </div>
+                                                        @*<div>
+                                                                <button id="btnEvaluacionPsicologica" type="button" class="btn btn-info btn-sm" style="width: 88%" disabled="disabled">
+                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iniciar evaluación
+                                                                </button>
+                                                            </div>*@
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row col-md-4">
+                                                <div class="col-md-4 divFecha7" style="padding:5px">
+                                                    <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                        <div style="height:125px">
+                                                            <strong><span class="fecha7" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>7. Entrevista (virtual)</p>
+                                                        </div>
+                                                        <div>
+                                                            <button type="button" class="btn btn-info btn-sm btnEvaluacionEntrevista" style="width: 88%" disabled="disabled">
+                                                                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Notificar 
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 divFecha8" style="padding:5px">
+                                                    <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                        <strong><span class="fecha8" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                        <p>8. Publicación de resultado final en el portal institucional del Ministerio de Desarrollo e Inclusión Social</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 divFecha9" style="padding:5px">
+                                                    <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                        <strong><span class="fecha9" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                        <p>9. Suscripción del contrato</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        @*<div class="row">
+                                                <div class="col-md-7">
+                                                    <div class="col-md-3 divFecha1" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div>
+                                                                <strong><span class="fecha1" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>1. Publicación de la convocatoria en el portal institucional del Ministerio de Desarrollo e Inclusión Social</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 divFecha2" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <strong><span class="fecha2" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>2. Registro y/o inscripción de la hoja de vida (CV) del postulante</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 divFecha3" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div style="height:125px">
+                                                                <strong><span class="fecha3" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>3. Evaluación de la hoja de vida</p>
+                                                            </div>
+                                                            <div>
+                                                                <button type="button" class="btn btn-info btn-sm btnEvaluacionCurricular" style="width:88%" disabled="disabled">
+                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iniciar evaluación
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 divFecha4" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <strong><span class="fecha4" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>4. Publicación de resultados de la hoja de vida en el portal institucional del Ministerio de Desarrollo e Inclusión Social</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    @<div class="col-md-4 divFecha5" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div style="height:125px">
+                                                                <strong><span class="fecha5" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>5. Evaluación de conocimientos</p>
+                                                            </div>
+                                                            <div>
+                                                                <button id="btnEvaluacionConocimiento" type="button" class="btn btn-info btn-sm" style="width: 88%" disabled="disabled">
+                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iniciar evaluación
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 divFecha6" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div style="height:125px">
+                                                                <strong><span class="fecha6" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>6. Evaluación psicológica</p>
+                                                            </div>
+                                                            <div>
+                                                                <button id="btnEvaluacionPsicologica" type="button" class="btn btn-info btn-sm" style="width: 88%" disabled="disabled">
+                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iniciar evaluación
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>@
+
+                                                    <div class="col-md-4 divFecha7" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <div style="height:125px">
+                                                                <strong><span class="fecha7" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                                <p>5. Entrevista (virtual)</p>
+                                                            </div>
+                                                            <div>
+                                                                <button id="btnEvaluacionEntrevista" type="button" class="btn btn-info btn-sm" style="width: 88%" disabled="disabled">
+                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Iniciar evaluación
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 divFecha8" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <strong><span class="fecha8" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>6. Publicación de resultado final en el portal institucional del Ministerio de Desarrollo e Inclusión Social</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 divFecha9" style="padding:5px">
+                                                        <div class="alert alert-warning" style="height: 150px; padding: 5px; margin-bottom: 0px; border: 1px solid transparent; border-radius: 4px;">
+                                                            <strong><span class="fecha9" style="text-align:center; position:absolute; width: 90%"></span></strong><br /><br />
+                                                            <p>7. Suscripción del contrato</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="postulantes"></div>
+                                </div>
+                            </div>
+    </script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new ConvocatoriaServirJS();
+            controlador.inicializar();
+
+            //$("#timeline").kendoTimeline({
+            //    dataSource: {
+            //        transport: {
+            //            read: {
+            //                url: "../content/web/timeline/events.json",
+            //                dataType: "json"
+            //            }
+            //        },
+            //        schema: {
+            //            model: {
+            //                fields: {
+            //                    date: {
+            //                        type: "date"
+            //                    },
+            //                }
+            //            }
+            //        }
+            //    },
+            //    orientation: "horizontal"
+            //});
+        });
+
+
+    </script>
+}

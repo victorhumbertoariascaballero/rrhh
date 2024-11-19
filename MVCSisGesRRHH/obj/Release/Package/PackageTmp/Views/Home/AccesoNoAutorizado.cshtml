@@ -1,0 +1,13 @@
+﻿@using SENACE.UtilesWeb
+
+@{
+    ViewBag.Title = "No tiene acceso a la aplicacion";
+}
+@if (VariablesWeb.oT_Genm_Usuario != null && VariablesWeb.oT_Genm_Usuario.Id_usuario > 0)
+{
+    @section SubTitulo { <h3>@ViewBag.Title</h3> }
+}
+
+
+
+<h3>@ViewBag.MensajeErrorAcceso</h3>

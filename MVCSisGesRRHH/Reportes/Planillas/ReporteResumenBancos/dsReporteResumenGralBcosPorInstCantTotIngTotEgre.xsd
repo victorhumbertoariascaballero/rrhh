@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReporteResumenGralBcosPorInstCantTotIngTotEgre" targetNamespace="http://tempuri.org/dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsd" xmlns:mstns="http://tempuri.org/dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsd" xmlns="http://tempuri.org/dsReporteResumenGralBcosPorInstCantTotIngTotEgre.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReporteResumenGralBcosPorInstCantTotIngTotEgre" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReporteResumenGralBcosPorInstCantTotIngTotEgre" msprop:Generator_UserDSName="dsReporteResumenGralBcosPorInstCantTotIngTotEgre">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsReporteResumenGralBcosPorInstCantTotIngTotEgre" msprop:Generator_TableClassName="dsReporteResumenGralBcosPorInstCantTotIngTotEgreDataTable" msprop:Generator_TableVarName="tabledsReporteResumenGralBcosPorInstCantTotIngTotEgre" msprop:Generator_TablePropName="_dsReporteResumenGralBcosPorInstCantTotIngTotEgre" msprop:Generator_RowDeletingName="dsReporteResumenGralBcosPorInstCantTotIngTotEgreRowDeleting" msprop:Generator_RowChangingName="dsReporteResumenGralBcosPorInstCantTotIngTotEgreRowChanging" msprop:Generator_RowEvHandlerName="dsReporteResumenGralBcosPorInstCantTotIngTotEgreRowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteResumenGralBcosPorInstCantTotIngTotEgreRowDeleted" msprop:Generator_UserTableName="dsReporteResumenGralBcosPorInstCantTotIngTotEgre" msprop:Generator_RowChangedName="dsReporteResumenGralBcosPorInstCantTotIngTotEgreRowChanged" msprop:Generator_RowEvArgName="dsReporteResumenGralBcosPorInstCantTotIngTotEgreRowChangeEvent" msprop:Generator_RowClassName="dsReporteResumenGralBcosPorInstCantTotIngTotEgreRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sEntidadBancaria" msprop:Generator_ColumnVarNameInTable="columnsEntidadBancaria" msprop:Generator_ColumnPropNameInRow="sEntidadBancaria" msprop:Generator_ColumnPropNameInTable="sEntidadBancariaColumn" msprop:Generator_UserColumnName="sEntidadBancaria" type="xs:string" minOccurs="0" />
+              <xs:element name="iCantTrabEntBancaria" msprop:Generator_ColumnVarNameInTable="columniCantTrabEntBancaria" msprop:Generator_ColumnPropNameInRow="iCantTrabEntBancaria" msprop:Generator_ColumnPropNameInTable="iCantTrabEntBancariaColumn" msprop:Generator_UserColumnName="iCantTrabEntBancaria" type="xs:string" minOccurs="0" />
+              <xs:element name="dcMontoTotalIng" msprop:Generator_ColumnVarNameInTable="columndcMontoTotalIng" msprop:Generator_ColumnPropNameInRow="dcMontoTotalIng" msprop:Generator_ColumnPropNameInTable="dcMontoTotalIngColumn" msprop:Generator_UserColumnName="dcMontoTotalIng" type="xs:string" minOccurs="0" />
+              <xs:element name="dcMontoTotalEgre" msprop:Generator_ColumnVarNameInTable="columndcMontoTotalEgre" msprop:Generator_ColumnPropNameInRow="dcMontoTotalEgre" msprop:Generator_ColumnPropNameInTable="dcMontoTotalEgreColumn" msprop:Generator_UserColumnName="dcMontoTotalEgre" type="xs:string" minOccurs="0" />
+              <xs:element name="dcMontoTotalSaldo" msprop:Generator_ColumnVarNameInTable="columndcMontoTotalSaldo" msprop:Generator_ColumnPropNameInRow="dcMontoTotalSaldo" msprop:Generator_ColumnPropNameInTable="dcMontoTotalSaldoColumn" msprop:Generator_UserColumnName="dcMontoTotalSaldo" type="xs:string" minOccurs="0" />
+              <xs:element name="iAnio" msprop:Generator_ColumnVarNameInTable="columniAnio" msprop:Generator_ColumnPropNameInRow="iAnio" msprop:Generator_ColumnPropNameInTable="iAnioColumn" msprop:Generator_UserColumnName="iAnio" type="xs:string" minOccurs="0" />
+              <xs:element name="sMes" msprop:Generator_ColumnVarNameInTable="columnsMes" msprop:Generator_ColumnPropNameInRow="sMes" msprop:Generator_ColumnPropNameInTable="sMesColumn" msprop:Generator_UserColumnName="sMes" type="xs:string" minOccurs="0" />
+              <xs:element name="sPlanilla" msprop:Generator_ColumnVarNameInTable="columnsPlanilla" msprop:Generator_ColumnPropNameInRow="sPlanilla" msprop:Generator_ColumnPropNameInTable="sPlanillaColumn" msprop:Generator_UserColumnName="sPlanilla" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreReporte" msprop:Generator_ColumnVarNameInTable="columnsNombreReporte" msprop:Generator_ColumnPropNameInRow="sNombreReporte" msprop:Generator_ColumnPropNameInTable="sNombreReporteColumn" msprop:Generator_UserColumnName="sNombreReporte" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

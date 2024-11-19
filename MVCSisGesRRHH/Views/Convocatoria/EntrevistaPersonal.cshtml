@@ -1,0 +1,818 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "ENTREVISTA PERSONAL  ->  PROCESOS DE CONVOCATORIAS CAS";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutEvaluacion.cshtml"; ;
+}
+@section SubTitulo { <div class="k-toolbar k-widget k-toolbar-resizable">&nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <h6>@ViewBag.Title</h6> </div> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px !important;
+    }
+
+    /* Only resize the element if PDF is embedded */
+    .pdfobject-container {
+        width: 100%;
+        height: 700px;
+    }
+
+    .aptoTotal {
+        /*font-weight: bold;*/
+        background-color: rgb(214, 248, 205);
+    }
+
+    .noaptoTotal {
+        background-color: rgb(247, 187, 187);
+    }
+    .k-tabstrip-items .k-state-active .k-link {
+        color: #fffbfb;
+        font-weight: 700;
+        /*text-decoration:underline;*/
+    }
+
+    .k-tabstrip-item > span.k-link {
+        color: #bebebe;
+        /*#color: #e9ecef;
+    background-color: #17a2b8;
+    border-color: #bee5eb;*/
+    }
+
+    .wrapper {
+        height: auto;
+        min-height: 600px;
+        /*margin: 20px auto;
+        padding: 20px 0 0;*/
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <!--FORMULARIO DE BÚSQUEDA-->
+    <div class="panel-group" id="accordion">
+        <!--FORMULARIO DE BÚSQUEDA-->
+        <div id="pResultado" class="card">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  RELACI&Oacute;N DE POSTULANTES
+                </a>
+            </div>
+            <div id="collapseReclamo" class="collapse show">
+                <div class="card-body" id="divListarAplicacion">
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <label for="txtNroConvocatoria" class="control-label">Nro de Convocatoria*</label>
+                            <input id="txtNroConvocatoria" name="txtNroConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" value="@ViewBag.Convocatoria" />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="txtCantidadConvocatoria" class="control-label">Nro de vacantes*</label>
+                            <input id="txtCantidadConvocatoria" name="txtCantidadConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" value="@ViewBag.Vacantes" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="txtCargoConvocatoria" class="control-label">Cargo*</label>
+                            <input id="txtCargoConvocatoria" name="txtCargoConvocatoria" type="text" class="form-control input-sm text-uppercase" readonly="readonly" value="@ViewBag.Cargo" />
+                        </div>
+                        <div class="form-group col-md-2 text-center" style="padding-top: 15px">
+                            @*<button id="btnCancelar" type="button" class="btn btn-primary" onclick="controlador.cancelarPostulacion()">
+                                    <span class="glyphicon glyphicon-cancel" aria-hidden="true"></span> Cancelar Postulación
+                                </button>*@
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-10" style="font-size:11px">
+                            @*<label for="txtPreguntasSE" class="control-label">Preguntas realizadas</label>*@
+                            <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                <strong>INGRESE LAS PREGUNTAS QUE SERÁN REGISTRADAS PARA TODAS LAS ENTREVISTAS, RECUERDE REALIZAR ESTE REGISTRO ANTES DE INICIAR LA EVALUACIÓN DE LOS ENTREVISTADOS :</strong>
+                            </div>
+                            <div id="divGridPreguntaMaestra"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div id="divTotal" class="col-md-2">
+                            <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
+                        </div>
+                        <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                            <button id="btnFinalizar" type="button" class="btn btn-primary btn-sm" onclick="return controlador.finalizarEvaluacionEntrevista()">
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Finalizar Evaluación
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="divGrid"></div>
+                        <script type="text/x-kendo-template" id="template">
+                            <div class="tabstrip">
+                                <ul>
+                                    <li class="k-state-active">
+                                        DOCUMENTACION DE SUSTENTO
+                                    </li>
+                                    <li>
+                                        FORMACIÓN ACADÉMICA @*<label class="label label-info totalPostulantes" style="font-size: 11px"></label>*@
+                                    </li>
+                                    <li>
+                                        PROGRAMAS DE ESPECIALIZACIÓN, DIPLOMADO, CURSO
+                                    </li>
+                                    <li>
+                                        EXPERIENCIA LABORAL (GENERAL Y ESPECÍFICA)
+                                    </li>
+                                    @*<li>
+                                            OBSERVACIONES
+                                        </li>*@
+                                </ul>
+                                <div>
+                                    <div class="col-md-6">
+                                        <div class="divGridDocumento"></div>
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <div class="divGridEstudio"></div>
+                                </div>
+                                <div>
+                                    <div class="divGridCapacitacion"></div>
+                                </div>
+                                <div>
+                                    <div class="divGridExperiencia"></div>
+                                </div>
+                            </div>
+                        </script>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="divModalVisor" style="display:none;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div id="app">
+
+                </div>
+            </div>
+            <div class="panel-footer" style="text-align:right;">
+                <button type="button" class="btn btn-default" onclick="controlador.cerrarModalVisor()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="divModalFormato" style="display:none;">
+        <div class="panel panel-default">
+            <form id="frmNuevoFormato" name="frmNuevoFormato" novalidate="" enctype="multipart/form-data" onsubmit="controlador.agregarEvaluacionEntrevistaArchivo(event)">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-12" style="font-size:11px">
+                            <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                <strong>PARA FINALIZAR LA EVALUACIÓN DE ESTA ENTREVISTA DEBE ADJUNTAR EL FORMATO DE ENTREVISTA FIRMADO, PUEDE REALIZAR LA FIRMA DE FORMA AUTOMÁTICA DESDE EL SISTEMA O LA FIRMA MANUAL EN LA QUE DEBE DESCARGAR EL FORMATO, FIRMARLO FUERA DEL SISTEMA Y ADJUNTARLO EN EL SISTEMA</strong>
+                            </div>
+                        </div>
+                        <div ID="tabstrip" class="panel-body">
+                            <ul class="nav nav-tabs" style="font-size: 11px">
+                                <li id="liTab1" class="nav-item">
+                                    <button class="nav-link active" id="tab1-tab" data-toggle="tab" data-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">FIRMA AUTOMÁTICA</button>
+                                </li>
+                                <li id="liTab2" class="nav-item">
+                                    <button class="nav-link" id="tab2-tab" data-toggle="tab" data-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="true">FIRMA MANUAL</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="padding:10px 0px 10px 0px">
+                                <div id="tab1" class="tab-pane fade show active">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <button id="btnFirmarFicha" type="button" class="btn btn-info btn-sm" onclick="controlador.FirmarFormatoEntrevista()">
+                                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Firmar formato de entrevista personal
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab-pane fade">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <button id="btnGenerarFicha" type="button" class="btn btn-info btn-sm" onclick="controlador.GenerarFormatoEntrevista()">
+                                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Descargar formato de entrevista personal
+                                                </button>
+                                            </div>
+                                            <div class="col-md-9"></div>
+                                        </div>
+                                            <div class="row">
+                                                &nbsp;
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <label for="fileFormato" class="control-label">Formato de entrevista personal firmado (Formato PDF)*</label>
+                                                    <input name="fileFormato" id="fileFormato" type="file" aria-label="files" accept=".pdf" />
+                                                </div>
+                                            </div>
+                                            <div class="row col-md-12" style="text-align:right;">
+                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Actualizar
+                                                </button>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalFormato()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="divModalEntrevistaSE" style="display:none;">
+        <div class="card">
+            <form id="frmNuevoEntrevistaSE" name="frmNuevoEntrevistaSE" novalidate="" onsubmit="controlador.agregarEvaluacionEntrevistaSE(event)">
+                <div class="card-body">
+                    @*<div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="txtPostulanteSE" class="control-label">Postulante</label>
+                                <input id="txtPostulanteSE" name="txtPostulanteSE" type="text" class="form-control input-sm text-uppercase" readonly="readonly" required="required" validationmessage=" " />
+                            </div>
+                        </div>
+                        <div class="row">
+                            &nbsp;
+                        </div>*@
+                    <div class="row">
+                        @*<div class="col-md-12">*@
+                        <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                            <strong>CALIFIQUE AL POSTULANTE SEGÚN EL NIVEL DE DESARROLLO DE LA COMPETENCIA EVALUADA:</strong>
+                        </div>
+                        <div class="alert alert-success" style="padding: 5px; border: 1px solid #94e884; ">
+                            <strong>RECUERDE QUE EL PUNTAJE MÍNIMO DE APROBACIÓN ES: 35</strong>
+                        </div>
+                        @*</div>*@
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12 text-center">
+                                <label class="control-label">ASPECTOS</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <label class="control-label col-md-2">Muy por encima de lo esperado</label>
+                            <label class="control-label col-md-2">Por encima de lo esperado</label>
+                            <label class="control-label col-md-2">Dentro de lo esperado</label>
+                            <label class="control-label col-md-2">Por debajo de lo esperado</label>
+                            <label class="control-label col-md-2">Muy por debajo de lo esperado</label>
+                            <label class="control-label col-md-2 text-center">TOTAL</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Presentación personal, comunicación y seguridad</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="10" onclick="CalculoTotalSE(this, 1)">10</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="9" onclick="CalculoTotalSE(this, 1)">9</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="8" onclick="CalculoTotalSE(this, 1)">8</label>
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="7" onclick="CalculoTotalSE(this, 1)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="6" onclick="CalculoTotalSE(this, 1)">6</label>
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="5" onclick="CalculoTotalSE(this, 1)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="4" onclick="CalculoTotalSE(this, 1)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="3" onclick="CalculoTotalSE(this, 1)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="2" onclick="CalculoTotalSE(this, 1)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP1SE" value="1" onclick="CalculoTotalSE(this, 1)">1</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input id="txtP1SE" name="txtP1SE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Conocimientos institucionales y ética en la función pública</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="10" onclick="CalculoTotalSE(this, 2)">10</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="9" onclick="CalculoTotalSE(this, 2)">9</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="8" onclick="CalculoTotalSE(this, 2)">8</label>
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="7" onclick="CalculoTotalSE(this, 2)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="6" onclick="CalculoTotalSE(this, 2)">6</label>
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="5" onclick="CalculoTotalSE(this, 2)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="4" onclick="CalculoTotalSE(this, 2)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="3" onclick="CalculoTotalSE(this, 2)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="2" onclick="CalculoTotalSE(this, 2)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP2SE" value="1" onclick="CalculoTotalSE(this, 2)">1</label>
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtP2SE" name="txtP2SE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Conocimientos técnicos o dominio temático</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="10" onclick="CalculoTotalSE(this, 3)">10</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="9" onclick="CalculoTotalSE(this, 3)">9</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="8" onclick="CalculoTotalSE(this, 3)">8</label>
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="7" onclick="CalculoTotalSE(this, 3)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="6" onclick="CalculoTotalSE(this, 3)">6</label>
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="5" onclick="CalculoTotalSE(this, 3)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="4" onclick="CalculoTotalSE(this, 3)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="3" onclick="CalculoTotalSE(this, 3)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="2" onclick="CalculoTotalSE(this, 3)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP3SE" value="1" onclick="CalculoTotalSE(this, 3)">1</label>
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtP3SE" name="txtP3SE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Experiencia compatible con el puesto</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="10" onclick="CalculoTotalSE(this, 4)">10</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="9" onclick="CalculoTotalSE(this, 4)">9</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="8" onclick="CalculoTotalSE(this, 4)">8</label>
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="7" onclick="CalculoTotalSE(this, 4)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="6" onclick="CalculoTotalSE(this, 4)">6</label>
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="5" onclick="CalculoTotalSE(this, 4)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="4" onclick="CalculoTotalSE(this, 4)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="3" onclick="CalculoTotalSE(this, 4)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="2" onclick="CalculoTotalSE(this, 4)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP4SE" value="1" onclick="CalculoTotalSE(this, 4)">1</label>
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtP4SE" name="txtP4SE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Competencias / Habilidades</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="10" onclick="CalculoTotalSE(this, 5)">10</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="9" onclick="CalculoTotalSE(this, 5)">9</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="8" onclick="CalculoTotalSE(this, 5)">8</label>
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="7" onclick="CalculoTotalSE(this, 5)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="6" onclick="CalculoTotalSE(this, 5)">6</label>
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="5" onclick="CalculoTotalSE(this, 5)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="4" onclick="CalculoTotalSE(this, 5)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="3" onclick="CalculoTotalSE(this, 5)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="2" onclick="CalculoTotalSE(this, 5)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP5SE" value="1" onclick="CalculoTotalSE(this, 5)">1</label>
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtP5SE" name="txtP5SE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-10">
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtTotalSE" name="txtTotalSE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="txtObsSE" class="control-label">Observaciones</label>
+                            <textarea id="txtObsSE" name="txtObsSE" class="form-control input-sm" rows="2" style="width: 100%" maxlength="490"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12" style="font-size:11px">
+                            <label for="txtPreguntasSE" class="control-label">Preguntas realizadas</label>
+                            <div id="divGridPreguntasSE"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Actualizar
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalEntrevistaSE()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="divModalEntrevistaCE" style="display:none;">
+        <div class="card">
+            <form id="frmNuevoEntrevistaCE" name="frmNuevoEntrevistaCE" novalidate="" onsubmit="controlador.agregarEvaluacionEntrevistaCE(event)">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                            <strong>CALIFIQUE AL POSTULANTE SEGÚN EL NIVEL DE DESARROLLO DE LA COMPETENCIA EVALUADA:</strong>
+                        </div>
+                        <div class="alert alert-success" style="padding: 5px; border: 1px solid #94e884; ">
+                            <strong>RECUERDE QUE EL PUNTAJE MÍNIMO DE APROBACIÓN ES: 30</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12 text-center">
+                                <label class="control-label">ASPECTOS</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <label class="control-label col-md-2">Muy por encima de lo esperado</label>
+                            <label class="control-label col-md-2">Por encima de lo esperado</label>
+                            <label class="control-label col-md-2">Dentro de lo esperado</label>
+                            <label class="control-label col-md-2">Por debajo de lo esperado</label>
+                            <label class="control-label col-md-2">Muy por debajo de lo esperado</label>
+                            <label class="control-label col-md-2 text-center">TOTAL</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Presentación personal, comunicación y seguridad</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1CE" value="8" onclick="CalculoTotalCE(this, 1)">8</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1CE" value="7" onclick="CalculoTotalCE(this, 1)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1CE" value="6" onclick="CalculoTotalCE(this, 1)">6</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1CE" value="5" onclick="CalculoTotalCE(this, 1)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP1CE" value="4" onclick="CalculoTotalCE(this, 1)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP1CE" value="3" onclick="CalculoTotalCE(this, 1)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP1CE" value="2" onclick="CalculoTotalCE(this, 1)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP1CE" value="1" onclick="CalculoTotalCE(this, 1)">1</label>
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtP1CE" name="txtP1CE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Conocimientos institucionales y ética en la función pública</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2CE" value="8" onclick="CalculoTotalCE(this, 2)">8</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2CE" value="7" onclick="CalculoTotalCE(this, 2)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2CE" value="6" onclick="CalculoTotalCE(this, 2)">6</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2CE" value="5" onclick="CalculoTotalCE(this, 2)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP2CE" value="4" onclick="CalculoTotalCE(this, 2)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP2CE" value="3" onclick="CalculoTotalCE(this, 2)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP2CE" value="2" onclick="CalculoTotalCE(this, 2)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP2CE" value="1" onclick="CalculoTotalCE(this, 2)">1</label>
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtP2CE" name="txtP2CE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Conocimientos técnicos o dominio temático</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3CE" value="8" onclick="CalculoTotalCE(this, 3)">8</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3CE" value="7" onclick="CalculoTotalCE(this, 3)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3CE" value="6" onclick="CalculoTotalCE(this, 3)">6</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3CE" value="5" onclick="CalculoTotalCE(this, 3)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP3CE" value="4" onclick="CalculoTotalCE(this, 3)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP3CE" value="3" onclick="CalculoTotalCE(this, 3)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP3CE" value="2" onclick="CalculoTotalCE(this, 3)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP3CE" value="1" onclick="CalculoTotalCE(this, 3)">1</label>
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtP3CE" name="txtP3CE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Experiencia compatible con el puesto</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4CE" value="8" onclick="CalculoTotalCE(this, 4)">8</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4CE" value="7" onclick="CalculoTotalCE(this, 4)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4CE" value="6" onclick="CalculoTotalCE(this, 4)">6</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4CE" value="5" onclick="CalculoTotalCE(this, 4)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP4CE" value="4" onclick="CalculoTotalCE(this, 4)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP4CE" value="3" onclick="CalculoTotalCE(this, 4)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP4CE" value="2" onclick="CalculoTotalCE(this, 4)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP4CE" value="1" onclick="CalculoTotalCE(this, 4)">1</label>
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtP4CE" name="txtP4CE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group col-md-12">
+                                <label class="control-label">Competencias / Habilidades</label>
+                            </div>
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5CE" value="8" onclick="CalculoTotalCE(this, 5)">8</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5CE" value="7" onclick="CalculoTotalCE(this, 5)">7</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5CE" value="6" onclick="CalculoTotalCE(this, 5)">6</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5CE" value="5" onclick="CalculoTotalCE(this, 5)">5</label>
+                                <label class="radio-inline"><input type="radio" name="optP5CE" value="4" onclick="CalculoTotalCE(this, 5)">4</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="radio-inline"><input type="radio" name="optP5CE" value="3" onclick="CalculoTotalCE(this, 5)">3</label>
+                                <label class="radio-inline"><input type="radio" name="optP5CE" value="2" onclick="CalculoTotalCE(this, 5)">2</label>
+                                <label class="radio-inline"><input type="radio" name="optP5CE" value="1" onclick="CalculoTotalCE(this, 5)">1</label>
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtP5CE" name="txtP5CE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="row col-md-10">
+                            <div class="form-group col-md-10">
+                            </div>
+                            <div class="form-group col-md-2 text-center">
+                                <input id="txtTotalCE" name="txtTotalCE" type="text" class="form-control input-sm text-center" readonly="readonly" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="txtObsCE" class="control-label">Observaciones</label>
+                            <textarea id="txtObsCE" name="txtObsCE" class="form-control input-sm" rows="2" style="width: 100%" maxlength="490"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12" style="font-size:11px">
+                            <label for="txtPreguntasCE" class="control-label">Preguntas realizadas</label>
+                            <div id="divGridPreguntasCE"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Actualizar
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalEntrevistaCE()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <input id="hdnUid" name="hdnUid" type="hidden" />
+    <input id="hdnNroRuc" name="hdnNroRuc" type="hidden" value="" />
+    <input id="hdIdConvocatoria" name="hdIdConvocatoria" type="hidden" value="@ViewBag.IdConvocatoria" />
+    <input id="hdIdTrabajador" name="hdIdTrabajador" type="hidden" value="@ViewBag.IdTrabajador" />
+    <input id="hdTrabajador" name="hdTrabajador" type="hidden" value="@ViewBag.Trabajador" />
+    <input id="hdIdNombre" name="hdIdNombre" type="hidden" value="" />
+    <input id="hdIdEvaluacion" name="hdIdEvaluacion" type="hidden" value="" />
+    <input id="hdIdPregunta" name="hdIdPregunta" type="hidden" value="" />
+    <input id="hdIdExamen" name="hdIdExamen" type="hidden" value="" />
+    <input id="hdIdPresento" name="hdIdPresento" type="hidden" value="" />
+</section>
+
+<div id="addComponent"></div>
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Evaluacion.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+    <script src="~/Scripts/util/PDFObject/pdfobject.min.js"></script>
+    @*<script type="text/javascript" src="https://dsp.reniec.gob.pe/refirma_invoker/resources/js/clientclickonce.js"></script>
+        <script src="~/Scripts/Invoker.js"></script>*@
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new EvaluacionJS();
+            controlador.inicializarEntrevistas();
+
+        });
+
+        function CalculoTotalSE(obj, fila) {
+            if (fila == 1) $('#txtP1SE').val(obj.value);
+            if (fila == 2) $('#txtP2SE').val(obj.value);
+            if (fila == 3) $('#txtP3SE').val(obj.value);
+            if (fila == 4) $('#txtP4SE').val(obj.value);
+            if (fila == 5) $('#txtP5SE').val(obj.value);
+
+            $('#txtTotalSE').val(parseInt($('#txtP1SE').val()) +
+                parseInt($('#txtP2SE').val()) +
+                parseInt($('#txtP3SE').val()) +
+                parseInt($('#txtP4SE').val()) +
+                parseInt($('#txtP5SE').val()));
+        }
+        function CalculoTotalCE(obj, fila) {
+            if (fila == 1) $('#txtP1CE').val(obj.value);
+            if (fila == 2) $('#txtP2CE').val(obj.value);
+            if (fila == 3) $('#txtP3CE').val(obj.value);
+            if (fila == 4) $('#txtP4CE').val(obj.value);
+            if (fila == 5) $('#txtP5CE').val(obj.value);
+
+            $('#txtTotalCE').val(parseInt($('#txtP1CE').val()) +
+                parseInt($('#txtP2CE').val()) +
+                parseInt($('#txtP3CE').val()) +
+                parseInt($('#txtP4CE').val()) +
+                parseInt($('#txtP5CE').val()));
+        }
+    </script>
+}

@@ -1,0 +1,782 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+@{
+    ViewBag.Title = "PERFILES DE PUESTO  ->  VER";
+}
+@section SubTitulo { <h3>@ViewBag.Title</h3> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;        
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 75%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 14px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 14px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 14px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input, textarea, selected, option {
+        font-size: 14px;
+    }
+    hr.style4 {
+        border-top: 1px dotted #8c8b8b;
+    }
+    div .panel-heading a {
+        font-size: medium !important;
+        text-transform: uppercase !important;
+    }
+</style>
+<!-- Main content -->
+<section class="content">
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        Identificación del Puesto
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+                <form id="frmRegistroPerfilCab" name="frmRegistroPerfilCab" novalidate="" onsubmit="controlador.RegCab(event)">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="txtOrgano" class="col-md-2 control-label text-right">Órgano </label>
+                                <div class="col-md-10">
+                                    <input type="text" id="txtOrgano" name="txtOrgano" style="width: 75%;" readonly />
+                                </div>
+                                @*<div class="col-md-10">
+                    <select id="ddlOrgano" name="ddlOrgano" class="form-control" style="width: 75%;" readonly>
+                        <option value="">-- Todos --</option>
+                    </select>
+                </div>*@
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="txtUUOO" class="col-md-2 control-label text-right">Unidad Orgánica </label>                                
+                                <div class="col-md-10">
+                                    <input type="text" id="txtUUOO" name="txtUUOO" style="width: 75%;" readonly />
+                                </div>
+                                    @*<select id="ddlUUOO" name="ddlUUOO" class="form-control" style="width: 75%;" readonly>
+                        <option value="">-- Todos --</option>
+                    </select>*@
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="txtPuestoEstructural" class="col-md-2 control-label text-right">Puesto Estructural </label>
+                                <div class="col-md-10">
+                                    <input type="text" id="txtPuestoEstructural" name="txtPuestoEstructural" value="No Aplica" style="width: 75%;" readonly />                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="txtNombrePuesto" class="col-md-2 control-label text-right">Nombre del Puesto </label>
+                                <div class="col-md-10">
+                                    <textarea id="txtNombrePuesto" name="txtNombrePuesto" rows="2" cols="128" readonly></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="txtDependenciaJerarquicaLineal" class="col-md-2 control-label text-right">Dependencia Jerárquica Lineal </label>
+                                <div class="col-md-10">
+                                    <input type="text" id="txtDependenciaJerarquicaLineal" name="txtDependenciaJerarquicaLineal" style="width: 75%;" readonly />                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="txtDependenciaFuncional" class="col-md-2 control-label text-right">Dependencia Funcional </label>
+                                <div class="col-md-10">
+                                    <input type="text" id="txtDependenciaFuncional" name="txtDependenciaFuncional" style="width: 75%;" readonly />                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="txtPuestoCargo" class="col-md-2 control-label text-right">Puestos a su Cargo </label>
+                                <div class="col-md-10">
+                                    <input type="text" id="txtPuestoCargo" name="txtPuestoCargo" style="width: 75%;" readonly />                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-sm" style="display: none;">
+                                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" id="btnCancelar" style="display: none;">
+                                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        Misión del Puesto
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <form id="frmRegistroPerfilMision" name="frmRegistroPerfilMision" novalidate="" onsubmit="controlador.RegMision(event)">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="txtMision" class="col-md-2 control-label text-right">Misión </label>
+                            <div class="col-md-10">                                
+                                <textarea id="txtMision" name="txtMision" rows="2" cols="150" readonly></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-sm" style="display: none;">
+                                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" id="btnCancelar" style="display: none;">
+                                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+        </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        Funciones del Puesto
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">                    
+                    <div class="row" id="divGridFunciones"></div>                    
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                        Coordinaciones Principales
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">                    
+                    <div class="content">
+                        <h4>
+                            Coordinaciones Interna
+                        </h4>
+                        <hr class="style4" />
+                    </div>
+                    <div class="row" id="divGridCoordInternas"></div>                    
+                    <div class="content">
+                        <h4>
+                            Coordinaciones Externas
+                        </h4>
+                        <hr class="style4" />
+                    </div>                    
+                    <div class="row" id="divGridCoordExternas"></div>                    
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                        Formación Académica
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="content">
+                        <h4>
+                            Nivel Educativo Básico
+                        </h4>
+                        <hr class="style4" />
+                    </div>
+                    <div class="row" id="divGridCarreraBasico">
+                        <div class="k-header k-grid-toolbar">
+                            <a role="button" class="k-button k-button-icontext btnAddCarreraBasico" onclick="controlador.abrirModalRegistroNivelBasico(0)" style="display: none;"><span class="k-icon k-i-plus"></span>Agregar</a>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="content">
+                        <h4>
+                            Nivel Profesional
+                        </h4>
+                        <hr class="style4" />
+                    </div>                    
+                    <div class="row" id="divGridCarreraPreGrado">                        
+                        <div class="k-header k-grid-toolbar">
+                            <a role="button" class="k-button k-button-icontext btnAddCarreraPreGrado" onclick="controlador.abrirModalRegistroNivelEducativo(0)" style="display: none;"><span class="k-icon k-i-plus"></span>Agregar</a>
+                        </div>                        
+                    </div>
+                    <br />                    
+                    <div class="content">
+                        <h4>
+                            Maestría
+                        </h4>
+                        <hr class="style4" />
+                    </div>                   
+                    <div class="row" id="divGridCarreraMaestria">
+                        <div class="k-header k-grid-toolbar">
+                            <a role="button" class="k-button k-button-icontext btnAddCarreraMaetria" onclick="controlador.abrirModalRegistroMaestria(0)" style="display: none;"><span class="k-icon k-i-plus"></span>Agregar</a>
+                        </div>                        
+                    </div>                    
+                    <br />                    
+                    <br />
+                    <div class="content">
+                        <h4>
+                            Doctorado
+                        </h4>
+                        <hr class="style4" />
+                    </div>                    
+                    <div class="row" id="divGridCarreraProDoctorado">                        
+                        <div class="k-header k-grid-toolbar">                            
+                            <a role="button" class="k-button k-button-icontext btnAddCarreraProDoctorado" onclick="controlador.abrirModalRegistroDoctorado(0)" style="display: none;"><span class="k-icon k-i-plus"></span>Agregar</a>
+                        </div>                        
+                    </div>
+                    <br />                    
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">            
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                        Conocimientos
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="content">
+                        <h4>
+                            Conocimientos Técnicos principales requeridos para el puesto
+                        </h4>
+                        <hr class="style4" />
+                    </div>                    
+                    <div class="row" id="divGridConocTec"></div>
+                    <br />
+                    <div class="content">
+                        <h4>
+                            Cursos y Programas de Especialización Requeridos y Sustentado con Documentos
+                        </h4>
+                        <hr class="style4" />
+                    </div>                    
+                    <div class="row" id="divGridCursoProg"></div>                    
+                    <br />
+                    <div class="content">
+                        <h4>
+                            Conocimientos de Ofimática e Idiomas / Dialectos
+                        </h4>
+                        <hr class="style4" />
+                    </div>                    
+                    <div class="row" id="divGridOfimatica_Idiomas"></div>
+                    <br />                    
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                        Experiencia
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <form id="frmRegistroPerfilExperiencia" name="frmRegistroPerfilExperiencia" novalidate="" onsubmit="controlador.RegExperiencia(event)">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="txtAnioExperienciaGeneral" class="col-md-3 control-label text-right">General </label>
+                                <div class="col-md-9">
+                                    <input type="number" id="txtAnioExperienciaGeneral" name="txtAnioExperienciaGeneral" style="width:50%" readonly />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="txtAnioExperienciaEspecifica" class="col-md-3 control-label text-right">Específica </label>
+                                <div class="col-md-9">
+                                    <input type="number" id="txtAnioExperienciaEspecifica" name="txtAnioExperienciaEspecifica" style="width:50%" readonly />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="txtAnioExperienciaSectorPublico" class="col-md-3 control-label text-right">Sector Público </label>
+                                <div class="col-md-9">
+                                    <input type="number" id="txtAnioExperienciaSectorPublico" name="txtAnioExperienciaSectorPublico" style="width:50%" readonly />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ddlNivelMinimoPuesto" class="col-md-3 control-label text-right">Nivel Mínimo de Puesto </label>
+                                <div class="col-md-9">
+                                    <select id="ddlNivelMinimoPuesto" name="ddlNivelMinimoPuesto" class="form-control" style="width: 50%;" readonly>
+                                        <option value="">-- Todos --</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-sm" style="display: none;">
+                                            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm" id="btnCancelar" style="display: none;">
+                                            <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+                        Habilidades o Competencias
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+                <div class="panel-body">                    
+                    <div class="content">
+                        <h4>
+                            Habilidades
+                        </h4>
+                        <hr class="style4" />
+                    </div>
+                    <div class="row" id="divGridHabilidades"></div>
+                    <div class="content">
+                        <h4>
+                            Competencias
+                        </h4>
+                        <hr class="style4" />
+                    </div>
+                    <div class="row" id="divGridCompetencias">
+                    </div>
+                </div>
+                            
+            </div>            
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                        Requisitos Adicionales
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse">
+                <div class="panel-body">                    
+                    <div class="row" id="divGridRequisitosAdicionales"></div>
+                </div>            
+            </div>        
+        </div>
+        <div class="footer">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-sm" id="btnRegresar">
+                            <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Regresar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input id="hdiCodOrgano" name="hdiCodOrgano" type="hidden" value="0" />
+        <input id="hdiCodDependencia" name="hdiCodDependencia" type="hidden" value="0" />
+        <input id="hdDependenciaJerarquicaLineal" name="hdDependenciaJerarquicaLineal" type="hidden" value="" />
+        <input id="hdDependenciaFuncional" name="hdDependenciaFuncional" type="hidden" value="" />
+        <input id="hdIdPerfilPuesto" name="hdIdPerfilPuesto" type="hidden" value="@ViewBag.idPerfil" />
+        <input id="hdIdCodTrabajador" name="hdIdCodTrabajador" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />
+        <input id="hdISecuenciaNivelEducativo" name="hdISecuenciaNivelEducativo" type="hidden" value="" />
+        <input id="hdISecuenciaMaestria" name="hdISecuenciaMaestria" type="hidden" value="" />
+        <input id="hdISecuenciaDoctorado" name="hdISecuenciaDoctorado" type="hidden" value="" />
+</section>
+
+<!-- The Modal -->
+
+    <div id="ModalAgregarNivelEducativo" style="display: none; font-size: 11px">
+        <div class="panel panel-default">
+            <form id="frmRegistroNivelEducativo" name="frmRegistroNivelEducativo" novalidate="" onsubmit="controlador.registrarNivelEducativo(event)">
+                <!-- Modal body -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlNivelEducativo" class="col-md-2 control-label text-right">Nivel Educativo </label>
+                        <div class="col-md-7">
+                            <select id="ddlNivelEducativo" name="ddlNivelEducativo" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="chkCompletoNivelEduc">
+                            <label class="custom-control-label" for="chkCompletoNivelEduc">Completo</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlNivelAlcanzado" class="col-md-2 control-label text-right">Nivel Alcanzado </label>
+                        <div class="col-md-7">
+                            <select id="ddlNivelAlcanzado" name="ddlNivelAlcanzado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN1" class="col-md-2 control-label text-right">Nivel 1 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN1" name="ddlCarreraN1" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN2" class="col-md-2 control-label text-right">Nivel 2 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN2" name="ddlCarreraN2" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN3" class="col-md-2 control-label text-right">Nivel 3 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN3" name="ddlCarreraN3" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN4" class="col-md-2 control-label text-right">Carrera Profesional </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN4" name="ddlCarreraN4" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-3 custom-control custom-checkbox">
+                        </div>
+                        <div class="col-md-3 custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="chkColegiado">
+                            <label class="custom-control-label" for="chkColegiado">Colegiado</label>
+                        </div>
+                        <div class="col-md-3 custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="chkHabilitado">
+                            <label class="custom-control-label" for="chkHabilitado">Habilitado</label>
+                        </div>
+                        <div class="col-md-3 custom-control custom-checkbox">
+                        </div>
+                    </div>
+                </div>                
+                <br />
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-sm" id="btnGrabarNivelEducativo">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Grabar
+                    </button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </form>
+</div>
+    </div>
+
+    <div id="ModalAgregarMaestria" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmRegistroMaestria" name="frmRegistroMaestria" novalidate="" onsubmit="controlador.registrarMaestria(event)">
+            <!-- Modal body -->            
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="ddlNivelAlcanzadoMaestria" class="col-md-2 control-label text-right">Nivel Alcanzado </label>
+                    <div class="col-md-7">
+                        <select id="ddlNivelAlcanzadoMaestria" name="ddlNivelAlcanzadoMaestria" class="form-control" style="width: 100%;">
+                            <option value="">-- Todos --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="ddlCarreraN1Maestria" class="col-md-2 control-label text-right">Nivel 1 </label>
+                    <div class="col-md-7">
+                        <select id="ddlCarreraN1Maestria" name="ddlCarreraN1Maestria" class="form-control" style="width: 100%;">
+                            <option value="">-- Todos --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="ddlCarreraN2Maestria" class="col-md-2 control-label text-right">Nivel 2 </label>
+                    <div class="col-md-7">
+                        <select id="ddlCarreraN2Maestria" name="ddlCarreraN2Maestria" class="form-control" style="width: 100%;">
+                            <option value="">-- Todos --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="ddlCarreraN3Maestria" class="col-md-2 control-label text-right">Nivel 3 </label>
+                    <div class="col-md-7">
+                        <select id="ddlCarreraN3Maestria" name="ddlCarreraN3Maestria" class="form-control" style="width: 100%;">
+                            <option value="">-- Todos --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="ddlCarreraN4Maestria" class="col-md-2 control-label text-right">Carrera Profesional </label>
+                    <div class="col-md-7">
+                        <select id="ddlCarreraN4Maestria" name="ddlCarreraN4Maestria" class="form-control" style="width: 100%;">
+                            <option value="">-- Todos --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>            
+            
+            <br />
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-sm" id="btnGrabarMaestria">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Grabar
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+    <div id="ModalAgregarDoctorado" style="display: none; font-size: 11px">
+        <div class="panel panel-default">
+            <form id="frmRegistroDoctorado" name="frmRegistroDoctorado" novalidate="" onsubmit="controlador.registrarDoctorado(event)">
+                <!-- Modal body -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlNivelAlcanzadoDoctorado" class="col-md-2 control-label text-right">Nivel Alcanzado </label>
+                        <div class="col-md-7">
+                            <select id="ddlNivelAlcanzadoDoctorado" name="ddlNivelAlcanzadoDoctorado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN1Doctorado" class="col-md-2 control-label text-right">Nivel 1 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN1Doctorado" name="ddlCarreraN1Doctorado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN2Doctorado" class="col-md-2 control-label text-right">Nivel 2 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN2Doctorado" name="ddlCarreraN2Doctorado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN3Doctorado" class="col-md-2 control-label text-right">Nivel 3 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN3Doctorado" name="ddlCarreraN3Doctorado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN4Doctorado" class="col-md-2 control-label text-right">Carrera Profesional </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN4Doctorado" name="ddlCarreraN4Doctorado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-sm" id="btnGrabarDoctorado">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Grabar
+                    </button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    @*<script src="~/Scripts/App/Intranet/PerfilesPuesto.js"></script>*@
+    <script src="~/Scripts/App/Intranet/PerfilPuesto.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    @*<link rel="stylesheet" href="../Content/Plugin/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../Content/Plugin/datatables.net-bs/css/responsive.bootstrap.min.css">*@
+
+
+    @*<script src="~/Content/Plugin/datatables.net/js/jquery.dataTables.min.js"></script>*@
+    @*<script src="~/Content/Plugin/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Content/Plugin/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+    <script src="~/Content/Plugin/datatables.net-bs/js/responsive.bootstrap.min.js"></script>*@
+    @*<script src="~/Content/Javascript/jquery-1.7.2.min.js"></script>*@
+
+
+    <script type="text/javascript">
+        var controlador;
+        
+        $(document).ready(function () {                                               
+            controlador = new PerfilPuestoJS();
+            controlador.inicializarVer();            
+        });
+
+        $("#btnRegresar").click(function () {
+            window.location.href = "index_jefeRRHH";
+        });
+
+    </script>
+}

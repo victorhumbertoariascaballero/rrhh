@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td[rowspan], th[rowspan] {
+            border: 1px solid black !important; /* Forzar el borde en las celdas con rowspan */
+        }
+
+        td[colspan], th[colspan] {
+            border: 1px solid black !important; /* Forzar el borde en las celdas con rowspan */
+        }
+        table, tr, td, th, tbody, thead, tfoot {
+            page-break-inside: avoid !important;
+        }
+    </style>
+</head>
+
+<body style="box-sizing: border-box; font-family: 'Calibri';">
+    <table style="width: 100%; border: 1px solid black; text-align: center; border-collapse: collapse;">
+        <tr>
+            <th style="width: 15%; border: 1px solid black;">LOGO ENTIDAD</th>
+            <th style="width: 60%;">
+                FICHA DE POSTULANTE <br /> DECLARACIÓN JURADA DE DATOS PERSONALES
+            </th>
+            <th style="width: 15%; border: 1px solid black;">CÓDIGO DE CONVOCATORIA</th>
+        </tr>
+    </table>
+    <!-- DATOS LABORALES -->
+    <table style="width: 100%; text-align: center; font-size: 11px; border: 1px solid black; border-collapse: collapse; margin-top: 20px;">
+        <caption style="font-weight: bold; text-align: center; font-size: 11px;">I. DATOS LABORALES*</caption>
+        <tr>
+            <th style="border: 1px solid black; padding: 10px;width: 10%;">CÓDIGO DEL PUESTO</th>
+            <th style="border: 1px solid black; padding: 10px;width: 10%;">CÓDIGO DE POSICIÓN**</th>
+            <th style="border: 1px solid black; padding: 10px;width: 40%;">NOMBRE DEL PUESTO</th>
+            <th style="border: 1px solid black; padding: 10px;width: 20%;">GRUPO DE SERVIDORES CIVILES</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 10px;">//codigo_puesto</td>
+            <td style="border: 1px solid black; padding: 10px;">//codigo_posicion</td>
+            <td style="border: 1px solid black; padding: 10px;">//nombre_puesto</td>
+            <td style="border: 1px solid black; padding: 10px;">//grupo_servidores</td>
+        </tr>
+    </table>
+    <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse;">
+        <caption style="font-weight: bold;caption-side:bottom; text-align: left; font-size: 9px;">
+            * Para ser llenado por
+            la Oficina de
+            Recursos Humanos o la que haga sus veces.
+        </caption>
+        <caption style="font-weight: bold;caption-side:bottom; text-align: left; font-size: 9px;">
+            ** Para ser usado
+            cuando el puesto
+            contempla posiciones en ubicaciones geográficas diversas.
+        </caption>
+        <tr>
+            <th style="border-width: 1px; border-color: black; border-style: none solid; padding: 5px;width: 33.3%;">
+                ÓRGANO
+            </th>
+            <th style="border-width: 1px; border-color: black; border-style: none solid; padding: 5px;width: 33.3%;">
+                UNIDAD ORGÁNICA
+            </th>
+            <th style="border-width: 1px; border-color: black; border-style: none solid; padding: 5px;width: 33.3%;">
+                PUESTO DEL JEFE DIRECTO
+            </th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; padding: 5px;">//organo</td>
+            <td style="border: 1px solid black; padding: 5px;">//unidad_organica</td>
+            <td style="border: 1px solid black; padding: 5px;">//puesto_jefe</td>
+        </tr>
+    </table>
+    <!-- FIN DATOS LABORALES -->
+    <!-- DATOS PERSONALES -->
+    <table border="1" style="width: 100%; text-align: center; font-size: 11px; border: 1px solid black; border-collapse: collapse; margin-top: 20px;">
+        <caption style="font-weight: bold; text-align: center; font-size: 11px;">II. DATOS PERSONALES</caption>
+        <tbody>
+            <tr>
+                <th colspan="2" style="border: 1px solid black;width: 10%;">DOCUMENTO DE IDENTIDAD</th>
+                <th style="border: 1px solid black;width: 60%;">APELLIDOS Y NOMBRES</th>
+                <th colspan="3" style="border: 1px solid black;width: 10%;">SEXO</th>
+            </tr>
+            <tr>
+                <th style="border: 1px solid black; padding: 5px;width: 5%;">DNI</th>
+                <th style="border: 1px solid black; padding: 5px;width: 5%;">CARNET EXTRANJERÍA</th>
+                <td rowspan="2" style="border: 1px solid black;">//nombre_apellidos</td>
+                <td style="border: 1px solid black; width: 5%;">M</td>
+                <td style="border: 1px solid black; width: 5%;">F</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 5px;width: 10%;">
+                    //nroDni
+                </td>
+                <td style="border: 1px solid black; padding: 5px;width: 10%;">
+                    //NroExtranjeria
+                </td>
+                <td style="border: 1px solid black; width: 5%;">//masculino</td>
+                <td style="border: 1px solid black; width: 5%;">//femenino</td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <th style="width: 70%;border-width: 1px; border-color: black; border-style: none solid;">
+                    DIRECCIÓN DEL
+                    DOMICILIO
+                </th>
+                <th style="width: 30%;border-width: 1px; border-color: black; border-style: none solid;">DISTRITO</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//direccion_domicilio</td>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//distrito</td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <th style="width: 20%;border-width: 1px; border-color: black; border-style: none solid;">PROVINCIA</th>
+                <th style="width: 20%;border-width: 1px; border-color: black; border-style: none solid;">
+                    DEPARTAMENTO
+                </th>
+                <th style="width: 60%;border-width: 1px; border-color: black; border-style: none solid;">
+                    REFERENCIA
+                    DIRECCIÓN
+                </th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//provincia</td>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//departamento</td>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//referencia</td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <th style="width: 20%;border-width: 1px; border-color: black; border-style: none solid;">
+                    FECHA
+                    NACIMIENTO (DD/MM/AAAA)
+                </th>
+                <th style="width: 50%;border-width: 1px; border-color: black; border-style: none solid;">
+                    LUGAR DE
+                    NACIMIENTO (Distrito/Provincia/Departamento)
+                </th>
+                <th style="width: 30%;border-width: 1px; border-color: black; border-style: none solid;">
+                    NACIONALIDAD
+                </th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//fecha_nacimiento</td>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//lugar_nacimiento</td>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//nacionalidad</td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <th style="width: 15%;border-width: 1px; border-color: black; border-style: none solid;">
+                    TELÉFONO
+                    DOMICILIO
+                </th>
+                <th style="width: 15%;border-width: 1px; border-color: black; border-style: none solid;">
+                    TELÉFONO
+                    CELULAR 1
+                </th>
+                <th style="width: 15%;border-width: 1px; border-color: black; border-style: none solid;">
+                    TELÉFONO
+                    CELULAR 2
+                </th>
+                <th style="width: 30%;border-width: 1px; border-color: black; border-style: none solid;">
+                    CORREO
+                    ELECTRÓNICO
+                    PERSONAL
+                </th>
+                <th style="width: 20%;border-width: 1px; border-color: black; border-style: none solid;">
+                    CORREO
+                    ELECTRÓNICO
+                    OPCIONAL
+                </th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//tel_domicilio</td>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//telefono_celular</td>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//celular_2</td>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//correo_electronico</td>
+                <td style="border: 1px solid black;padding: 10px;width: 10%;">//correo_opcional</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse; margin-top: 20px;">
+        <tr>
+            <th style="border: 1px solid black;padding: 5px;width: 15%;">Acreditación Discapacidad</th>
+            <td colspan="3" style="border: 1px solid black;padding: 5px;width: 15%;">//acreditacion_discapacidad</td>
+            <th style="border: 1px solid black;padding: 5px;width: 15%;">FUERZAS ARMADAS</th>
+            <th style="border: 1px solid black;padding: 5px;width: 15%;">N° Carnet / Código</th>
+            <td colspan="2" style="border: 1px solid black;padding: 5px;width: 10%;">//carnet_fuerzas</td>
+        </tr>
+    </table>
+    <p style="font-size: 9px; font-weight: bold;">
+        ESPECIFICAR SI REQUIERE DE ALGÚN TIPO DE ASISTENCIA/AJUSTE RASONABLE,
+        DURANTE CADA ETAPA DEL PROCESO DE
+        SELECCIÓN:
+    </p>
+    <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse;">
+        <tr>
+            <th style="border: 1px solid black;">DEPORTISTA CALIFICADO ALTO NIVEL</th>
+            <td style="width: 3%;border: 1px solid black;"></td>
+            <td style="width: 3%;border: 1px solid black;">SI</td>
+            <td style="width: 3%;border: 1px solid black;">//depoSi</td>
+            <td style="width: 3%;border: 1px solid black;">NO</td>
+            <td style="width: 3%;border: 1px solid black;">//depoNo</td>
+            <th style="border: 1px solid black;">Documento que lo acredite</th>
+            <td style="width: 35%;border: 1px solid black;">//depoDoc</td>
+        </tr>
+    </table>
+    <!-- FIN DATOS PERSONALES -->
+    <!-- FORMACIÓN ACADEMICA -->
+    <table border="1" style="width: 100%; text-align: center; font-size: 11px; border: 1px solid black; border-collapse: collapse; margin-top: 20px;">
+        <caption style="font-weight: bold; text-align: center; font-size: 11px;">III. FORMACIÓN ACADÉMICA</caption>
+        <tr>
+            <th rowspan="2" style="border-right: solid; border-right-width: 1px; width: 25%;">NIVEL</th>
+            <th rowspan="2" style="border: 1px solid black; width: 15%;">GRADO ACADÉMICO / SITUACIÓN</th>
+            <th rowspan="2" style="border: 1px solid black; width: 30%;">
+                NOMBRE DE LA CARRERA O ESPECIALIDAD, MAESTRÍA
+                O DOCTORADO
+            </th>
+            <th colspan="2" style="border: 1px solid black;">MES / AÑO</th>
+            <th rowspan="2" style="border: 1px solid black; width: 10%;">Fecha Obtención grado/título</th>
+            <th rowspan="2" style="border: 1px solid black; width: 30%;">CENTRO DE ESTUDIOS</th>
+        </tr>
+        <tr>
+            <th style="border: 1px solid black;">DESDE</th>
+            <th style="border: 1px solid black;">HASTA</th>
+        </tr>
+        //estudios
+    </table>
+
+    <table style="width: 80%; text-align: center; font-size: 11px; border: 1px solid black; border-collapse: collapse; margin-top: 20px; text-align: left;">
+        <caption style="font-weight: bold;caption-side:bottom; text-align: left; font-size: 9px;">
+            Solo para aquellos
+            puestos donde se requiere formación técnica o universitaria completa
+        </caption>
+        <tr>
+            <th style="border: 1px solid black; width: 25%; padding: 5px;">
+                Fecha de egreso de la formación técnica o
+                universitaria
+                completa (DD/MM/AA)
+            </th>
+            <td style="border: 1px solid black; width: 10%; padding: 5px 8px;"></td>
+        </tr>
+    </table>
+    <!-- FIN FORMACIÓN ACADEMICA -->
+    <!-- COLEGIATURA -->
+    <table style="width: 100%; text-align: center; font-size: 11px; border: 1px solid black; border-collapse: collapse; margin-top: 20px;">
+        <caption style="font-weight: bold; text-align: center; font-size: 11px;">IV. COLEGIATURA</caption>
+        <tr>
+            <th style="border: 1px solid black; width: 15%;padding: 10px 5px;">Colegio Profesional:</th>
+            <td style="border: 1px solid black; width: 25%;padding: 10px 5px;">//ColegioProfesional</td>
+            <th style="border: 1px solid black; width: 15%;padding: 10px 5px;">Número de Colegiatura:</th>
+            <td style="border: 1px solid black; width: 25%;padding: 10px 5px;">//NroColegiatura</td>
+        </tr>
+    </table>
+
+    <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse; margin-top: 5px;">
+        <tr>
+            <th style="border: 1px solid black; width: 18%; padding: 5px;">Condición a la fecha:</th>
+            <td style="width: 5%;"></td>
+            <th>¿Habilitado?</th>
+            <td>SI</td>
+            <td style="border: 1px solid black;width: 3%; padding: 5px;">//ColegiaturaHabilitadoSi</td>
+            <td>NO</td>
+            <td style="border: 1px solid black;width: 3%; padding: 5px;">//ColegiaturaHabilitadoNo</td>
+            <th>¿Inhabilitado?</th>
+            <td style="border: 1px solid black; width: 40%; padding: 10px 5px;">//ColegiaturaInhabilitado</td>
+        </tr>
+    </table>
+    <!--FIN DE COLEGIATURA -->
+    <!-- CAPACITACIONES -->
+    <table style="width: 100%; text-align: center; font-size: 11px; border: 1px solid black; border-collapse: collapse; margin-top: 20px;">
+        <caption style="font-weight: bold; text-align: center; font-size: 11px;">V. CAPACITACIONES</caption>
+        <caption style="font-weight: bold; text-align: center; font-size: 10px;">
+            (Diplomados, programas de
+            especialización, cursos)
+        </caption>
+        <tr>
+            <th rowspan="2" style="border: 1px solid black; width: 20%;">
+                TIPO DE ESTUDIO (Curso / Diplomado / Programa
+                de Especialización)
+            </th>
+            <th rowspan="2" style="border: 1px solid black; width: 20%;">
+                NOMBRE DE LOS ESTUDIOS (Curso / Diplomado /
+                Programa de Especialización, etc)
+            </th>
+            <th colspan="2" style="border: 1px solid black;">PERIODO DE ESTUDIOS (Fecha o AAAA/MM)</th>
+            <th rowspan="2" style="border: 1px solid black; width: 5%;">N° DE HORAS</th>
+            <th rowspan="2" style="border: 1px solid black; width: 25%;">CENTRO DE ESTUDIOS</th>
+        </tr>
+        <tr>
+            <th style="border: 1px solid black; width: 8%;">INICIO</th>
+            <th style="border: 1px solid black;  width: 8%;">FIN</th>
+        </tr>
+        //capacitacion
+    </table>
+    <!-- FIN DE CAPACITACIONES -->
+    <!-- CONOCIMIENTOS DE OFIMÁTICA E IDIOMAS/DIALECTOS-->
+    <p style="font-weight: bold; text-align: center;font-size: 11px; margin: 0; padding: 0; margin-top: 20px;">
+        VI.
+        CONOCIMIENTOS DE OFIMÁTICA E IDIOMAS/DIALECTOS
+    </p>
+    <span style="font-weight: bold; text-align: center; display: block;font-size: 10px; padding: 0; margin: 0;">
+        (Idiomas,
+        herramientas
+        informáticas)
+    </span>
+    <div style="width: 100%; display: flex; gap: 20px;">
+        <div style="width:49.5%">
+            <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse; margin-top: 5px;">
+                <caption style="font-weight: bold; text-align: center; font-size: 11px;">IDIOMAS Y/O DIALECTOS</caption>
+                <caption style="font-weight: bold; text-align: center; font-size: 10px; visibility: hidden;">xxxxx</caption>
+                <tr>
+                    <th rowspan="2" style="border: 1px solid black; width: 40%;">IDIOMA O DIALECTO</th>
+                    <th colspan="4" style="border: 1px solid black;">(Marque con una "X" el nivel alcanzado)</th>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid black;">No aplica</th>
+                    <th style="border: 1px solid black;">Básico</th>
+                    <th style="border: 1px solid black;">Intermedio</th>
+                    <th style="border: 1px solid black;">Avanzado</th>
+                </tr>
+                //idiomaDialecto
+            </table>
+        </div>
+        <div style="width:50%">
+            <table style="width: 100%;text-align: center; font-size: 11px; border-collapse: collapse; margin-top: 5px;">
+                <caption style="font-weight: bold; text-align: center; font-size: 11px;">OFIMÁTICA</caption>
+                <caption style="font-weight: bold; text-align: center; font-size: 10px;">
+                    (procesador de textos, hojas de
+                    cálculo, programas de prestaciones, otros):
+                </caption>
+                <tr>
+                    <th rowspan="2" style="border: 1px solid black; width: 40%;">PROGRAMA O SOFTWARE</th>
+                    <th colspan="4" style="border: 1px solid black;">(Marque con una "X" el nivel alcanzado)</th>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid black;">No aplica</th>
+                    <th style="border: 1px solid black;">Básico</th>
+                    <th style="border: 1px solid black;">Intermedio</th>
+                    <th style="border: 1px solid black;">Avanzado</th>
+                </tr>
+                //ofimatica
+            </table>
+        </div>
+    </div>
+    <!-- FIN CONOCIMIENTOS DE OFIMÁTICA E IDIOMAS/DIALECTOS-->
+    <!-- EXPERIENCIA LABORAL -->
+    <table style="width: 100%; text-align: center; font-size: 11px;border-collapse: collapse; margin-top: 20px;">
+        <caption style="font-weight: bold; text-align: center; font-size: 11px;">VII. EXPERIENCIA LABORAL</caption>
+        <caption style="font-weight: bold; text-align: center; font-size: 10px; margin-bottom: 5px;">
+            (Completar desde el
+            último trabajo o actual)
+        </caption>
+        <tr>
+            <th style="width: 28%;text-align: right;padding: 3px;">
+                TIEMPO DE EXPERIENCIA EN EL SECTOR PÚBLICO (Años,
+                meses, días):
+            </th>
+            <td style="border: 1px solid black; width: 25%;padding: 3px;"></td>
+            <td style="width: 1%;"></td>
+            <th style="width: 28%;text-align: right;padding: 3px">
+                TIEMPO DE EXPERIENCIA EN EL SECTOR PRIVADO
+                (Años, meses, días):
+            </th>
+            <td style="border: 1px solid black; width: 25%;padding: 3px;"></td>
+        </tr>
+    </table>
+    <div>
+        //experiencia_laboral
+    </div>
+    <!-- FIN EXPERIENCIA LABORAL -->
+    <!-- INFORMACIÓN ADICIONAL -->
+    <p style="font-weight: bold; text-align: center;font-size: 11px; margin: 0; padding: 0; margin-top: 20px;">
+        VII. INFORMACIÓN ADICIONAL
+    </p>
+    <table style="width: 75%; text-align: center; font-size: 11px; border-collapse: collapse; margin-top: 5px;">
+        <tr>
+            <th style="width: 25%; text-align: left;">Disponibilidad para trabajar en el interior del pais.</th>
+            <td style="width: 8%;"></td>
+            <td style="width: 8%;"></td>
+            <td style="width: 5%;">SI</td>
+            <td style="border: 1px solid black; padding: 2px; width: 2%">//trabajarInteriorSi</td>
+            <td style="width: 5%">NO</td>
+            <td style="border: 1px solid black; padding: 2px; width: 2%;">//trabajarInteriorNo</td>
+        </tr>
+    </table>
+
+    <table style="width: 75%; text-align: center; font-size: 11px; border-collapse: collapse; margin-top: 5px;">
+        <tr>
+            <td style="padding: 5px;"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left;">Provincias:</th>
+            <td style="border: 1px solid black; padding: 10px; width: 90%">//trabajarInteriorProvincia</td>
+        </tr>
+    </table>
+
+    <p style="font-weight: bold; text-align: left;font-size: 11px; margin: 0; padding: 0; margin-top: 10px;">
+        Declaro que la información proporcionada es verdadera y podrá ser verificada por la entidad.
+    </p>
+
+    <table style="width: 100%; text-align: center; font-size: 11px; border-collapse: collapse; margin-top: 25px;">
+        <tr>
+            <th style="width: 10%; text-align: left;">Fecha:</th>
+            <td style="border: 1px solid black; width: 20%;">//dia de //mes del //anio</td>
+            <td></td>
+            <td style="width: 40%;">
+                <br>
+                ______________________________ <br>
+                Firma del Postulante
+            </td>
+        </tr>
+    </table>
+    <!-- FIN INFORMACIÓN ADICIONAL -->
+</body>
+
+</html>

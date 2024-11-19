@@ -1,0 +1,53 @@
+﻿@using System.Configuration
+@model string
+
+<script>
+    if (window.addEventListener) {
+        window.addEventListener("message", receive, false);
+    }
+    else {
+        if (window.attachEvent) {
+            window.attachEvent("onmessage", receive, false);
+        }
+    }
+
+    function receive(event) {
+        var data = event.data;
+        if (typeof (window[data.func]) == "function") {
+            window[data.func].call(null, data.params[0]);
+        }
+    }
+
+    function cerrarModal() {
+        $('#divModalSenace').modal('hide');
+    }
+
+
+</script>
+
+<div class="modal-dialog modal-md" style="width=">
+    @*<div class="modal-content">*@
+    @*<div class="modal-header" style="cursor: pointer;">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+            <h5 class="modal-title">
+                Cambio de Clave SSO
+            </h5>
+        </div>*@
+    <div class="modal-body">
+        <div class="row">
+            <iframe id='ifReporte' height="520" width="450" frameborder='0'
+                    src="@Model?urlPadre=@Request.Url.AbsoluteUri"></iframe>
+        </div>
+
+    </div>
+    
+
+    @*<div class="modal-footer">
+            <div class="btn-group">
+                <button id="btnGrabarModal" type="button" class="btn btn-success btn-sm">Guardar</button>
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>*@
+    @*</div>*@
+</div>

@@ -1,0 +1,26 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Utiles\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Utiles\bin\Debug\log4net.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Utiles\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Utiles\bin\Debug\log4net.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.AssemblyReference.cache
+D:\victor arias\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.dll
+D:\victor arias\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.pdb
+D:\victor arias\MIDIS.Utiles\bin\Debug\DataAnnotationsExtensions.dll
+D:\victor arias\MIDIS.Utiles\bin\Debug\log4net.dll
+D:\victor arias\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.AssemblyReference.cache
+D:\victor arias\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CoreCompileInputs.cache
+D:\victor arias\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CopyComplete
+D:\victor arias\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.dll
+D:\victor arias\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.pdb

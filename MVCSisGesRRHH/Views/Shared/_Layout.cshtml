@@ -1,0 +1,367 @@
+﻿@using System.Configuration
+@using System.Web.Configuration
+@using MVCSisGesRRHH.Models;
+<!doctype html>
+@{
+    var cadena = Context.IsDebuggingEnabled ? "/" : Url.Content("~/");
+    var user = "Usuario no válido";
+    if (!String.IsNullOrEmpty(User.Identity.Name))
+    {
+        user = User.Identity.Name;
+    }
+}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=EDGE" />
+    @*<meta http-equiv="X-UA-Compatible" content="IE=9" />*@
+    <title>MIDIS - RRHH</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap_extend.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/css/styles.css" rel="stylesheet" />
+    @*<link href="~/Content/kendo/2022.1.456/kendo.metro.min.css" rel="stylesheet">*@
+
+    <script src="~/Scripts/core/jquery.js"></script>
+    <script src="~/Scripts/core/jquery-ui.min.js"></script>
+    <script src="~/Scripts/core/bootstrap.min.js"></script>
+    <script src="~/Scripts/core/bootstrap-select.min.js"></script>
+    <script src="~/Scripts/core/jquery.paginate.js"></script>
+    <script src="~/Scripts/core/paginacionhandler.js"></script>
+    <script src="~/Scripts/core/util.dhh.js"></script>
+    <script src="~/Scripts/core/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/core/jquery.blockUI.js"></script>
+    <script src="~/Scripts/core/bootbox.js"></script>
+    <script src="~/Scripts/source/modMensajes.js"></script>
+
+    <script>
+        var globalRutaServidor = '@cadena';
+        var globalDatoObligatorio = "Dato obligatorio";
+        var globalMaxRequestLength = '';
+    </script>
+
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/script")
+
+    @Styles.Render("~/Content/kendouicss")
+
+    @Scripts.Render("~/bundles/kendoui")
+
+    @*@Styles.Render("~/Content/style")*@
+
+    <link href="~/Content/kendo/2022.1.456/kendo.nova.min.css" rel="stylesheet">
+    @*<link href="~/Content/css/examples-offline.css" rel="stylesheet" />*@
+
+    <script type="text/javascript" src="https://dsp.reniec.gob.pe/refirma_invoker/resources/js/clientclickonce.js"></script>
+    <script src="~/Scripts/Invoker.js"></script>
+
+    <script>
+        var controladorApp;
+        $(document).ready(function () {
+            controladorApp = new IntranetAppJS({ rutaBase: '@Url.Content("~")' });
+            controladorApp.inicializar();
+        });
+
+        var URL ="@Url.Content("~/")";
+    </script>
+    <style>
+        .navigation .nav > li a:hover, .navigation .nav > li a:focus {
+            color: #fff !important;
+            font-weight: bold;
+            background-color: #2e65ae !important;
+        }
+    </style>
+    <style>
+            .form-control, /* if this class is applied to a Kendo UI widget, its layout may change */
+            .container,
+            .container-fluid,
+            .row,
+            .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1,
+            .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,
+            .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+            .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,
+            .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5,
+            .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+            .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7,
+            .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8,
+            .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+            .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10,
+            .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11,
+            .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+        .btn-xs, .btn-group-sm > .btn {
+            padding: 0.1rem 0.35rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            border-radius: 0.2rem;
+        }
+
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #286090;
+            border-color: #204d74;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+        </style>
+
+    @*<style>
+            .form-group {
+                margin-bottom: 5px;
+            }
+
+            .form-horizontal .form-group {
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+
+            #contentMenu ul#menuMain > li {
+                display: inline-block;
+                font-size: 15px;
+                /*font-family: 'Source Sans Pro', sans-serif;*/
+                font-family: 'Calibri', sans-serif;
+                padding: 8px 15px;
+                text-align: center;
+                cursor: pointer;
+                color: #4d4d4d;
+                position: relative;
+            }
+
+                #contentMenu ul#menuMain > li div.subMenu {
+                    background: #fff;
+                    font-size: 13px;
+                    width: 200px;
+                    border-radius: 0 0 4px 4px;
+                    position: absolute;
+                    left: 0;
+                    top: 30px;
+                    display: none;
+                }
+        </style>*@
+</head>
+
+<body>
+    <header class="header">
+        <div class="contentWrap">
+            @*<div class="logoTop">*@
+            <div id="page-wrapper" class="white-bg" style="padding: 0 0px">
+                @*<div class="wrapper wrapper-content fondopag" style="padding-top: 0px; padding-bottom: 0px; min-height:100vh; width: 98% ">*@
+                <div class="container11" style="background-color: #ffffff;box-shadow: 0 10px 30px 0 #bbb; width:100%">
+                    <!-- HEADER LOGOS -->
+                    <div class="row border-bottom header-bg" style="border-bottom: none !important; padding-bottom: 0px; padding-top: 10px;">
+                        <div style="float: left; padding-top: 0px; padding-left: 40px;" class="col-sm-3 hidden-xs">
+                            <a href="http://www.midis.gob.pe" target="_blank">
+                                <img src="~/Content/img/logo_midis.png" style="float:left; height:50px;">
+                            </a>
+                        </div>
+                        <div style="text-align:center;" class="col-sm-6 hidden-xs">
+                            <a href="http://www.midis.gob.pe" target="_blank">
+                                <img src="~/Content/img/logo_punche_peru.png" style="height:64px;">
+                            </a>
+                        </div>
+                        <div class="col-sm-3 text-center" style="margin: 0 auto; float: right; text-align: right; right: 0px;">
+                            <img id="logoCentral" src="~/Content/img/logo_ogrh.png" style="height:75px;">
+                            @*&nbsp;
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <img src="~/Content/img/icoResponsive.png">
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>*@
+                        </div>
+                    </div>
+                </div>
+                @*</div>*@
+
+
+                
+            </div>
+            @*</div>*@
+            @*<div class="titleWebSystem">
+            Gestión de Recursos Humanos
+        </div>*@
+            
+
+            
+        </div>
+    </header>
+
+    <!--<div class="row white-bg">
+        <div class="row white-bg" style="margin-right: 0px; margin-left: 0px;">
+            <nav role="navigation" class="navbar navbar-static-top mainmenu col-md-10">-->
+                @*<div id="navbarCollapse" class="collapse navbar-collapse">*@
+                    <!--<ul id="fresponsive" class="nav navbar-nav dropdown">
+                        <li class="dropdown active">
+                            <a aria-expanded="false" role="button" href="#" title="Ir a Bandeja de Actividades de Capacitación">Home</a>
+                        </li>
+                    </ul>-->
+                @*</div>*@
+            <!--</nav>
+        </div>
+    </div>-->
+    
+    @if (User.Identity.Name != null && User.Identity.IsAuthenticated)
+    {
+        if (VariablesWeb.ListaOpciones != null && VariablesWeb.ListaOpciones.Count() > 0)
+        {
+            @*<nav class="navigation" style="background-color: #e7e6e7">*@
+<div class="row contentWrap" style="background-color: #e7e6e7">
+    <div class="contentMenuMain col-md-10">
+        <nav id="contentMenu">
+            @Html.HelperMenu(VariablesWeb.ListaOpciones, "menuMain")
+        </nav>
+    </div>
+    <div class="contentMenuMain col-md-2">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <nav id="contentMenu" @*style="top: 5px; right: -100px "*@>
+                <ul id="menuMain" class="nav navbar-nav navbar-right">
+                    <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>-->
+
+                    <li>
+                        <a class="dropdown-toggle" href="#" style="color: #2e65ae; font-size: 11pt">
+                            <span class="glyphicon glyphicon-user" style="margin-right:10px"></span>@user
+                            @*<span class="caret"></span>*@
+                        </a>
+                        <div class="subMenu">
+                            @if (!VariablesWeb.ConsultaInformacion.bFlgUsuarioIntegrado)
+                            {
+                                <div class="contentSubMenu">
+                                    <ul class="menuSecondary">
+                                        <li>
+                                            <a href="#">@String.Format("{0} {1} {2}", VariablesWeb.ConsultaInformacion.Persona.vNombres, VariablesWeb.ConsultaInformacion.Persona.vApePaterno, VariablesWeb.ConsultaInformacion.Persona.vApeMaterno)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                            }
+                            <a href="@String.Format("{0}{1}", cadena, "Account/LogOut")">Cerrar Sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            @*<div class="optionUser">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                </div>
+            </div>*@
+        }
+        else
+        {
+            <div class="optionUser">
+                <i class="fa fa-user"></i>
+                <a href="@String.Format("{0}{1}", cadena, "Account/Index")">Iniciar Sesión</a>
+            </div>
+        }
+    </div>
+</div>
+                <div class="contentWrap">
+                    <div class="titlePage">
+                        @RenderSection("SubTitulo", required: false)
+                    </div>
+                </div>
+            @*</nav>*@
+        }
+        else
+        {
+            <nav class="navigation-NoMenu">
+                <div class="contentWrap">
+                    <div class="contentMenuMain">
+                        <nav id="contentMenu">
+                            @*@Html.HelperMenu(VariablesWeb.ListaOpciones, "menuMain")*@
+                        </nav>
+                    </div>
+                </div>
+                <div class="contentWrap">
+                    <div class="titlePage">
+                        @RenderSection("SubTitulo", required: false)
+                    </div>
+                </div>
+            </nav>
+        }
+
+        <input type="hidden" id="hdIdusuario" name="hdIdusuario" value="@VariablesWeb.ConsultaInformacion.iCodUsuario" />
+    }
+    <section class="contentPage">
+        <div class="contentWrap">
+            <div class="pageContent">
+                <div class="allContent">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="contentWrap" style="text-align: center">
+                © Sistema de Gestión de Recursos Humanos @DateTime.Now.Year - Desarrollado por la Oficina General de Tecnologías de la Información<br>
+                Sede central: Av. Paseo de la República 3101 - San Isidro, Lima, Perú <img src="~/Content/img/icoPhone.png" /> (511) 631 8000<br>
+                <img src="~/Content/img/icoMail.png" /> <a href="mailto:soporte@midis.gob.pe">soporte@midis.gob.pe</a>
+            </div>
+        </footer>
+    </section>
+
+    <div class="resolutionOff">
+        No soporta en esta resolución!
+    </div>
+
+    <div id="divModalSenace" class="modal fade in">
+        <div class="contenedorSenace"> </div>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+
+
+    <div id="resultadoAlerta" class="container">
+    </div>
+
+    <!-- INICIA PLANTILLA DE NOTIFICACIÓN -->
+    <span id="notification" style="display:none;"></span>
+    <script id="informacionTemplate" type="text/x-kendo-template">
+        <div class="alert alert-info alert-dismissible" style="margin: 0px; min-width:300px;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h3><i class="icon fa fa-info"></i> #= title #</h3>
+            <hr />
+            <span>#= message #</span>
+        </div>
+    </script>
+    <script id="errorTemplate" type="text/x-kendo-template">
+        <div class="alert alert-danger alert-dismissible" style="margin: 0px; min-width:300px;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h3><i class="icon fa fa-ban"></i> #= title #</h3>
+            <hr />
+            <span>#= message #</span>
+        </div>
+    </script>
+    <script id="alertaTemplate" type="text/x-kendo-template">
+        <div class="alert alert-warning alert-dismissible" style="margin: 0px; min-width:300px;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h3><i class="icon fa fa-warning"></i> #= title #</h3>
+            <hr />
+            <span>#= message #</span>
+        </div>
+    </script>
+    <script id="satisfactorioTemplate" type="text/x-kendo-template">
+        <div class="alert alert-success alert-dismissible" style="margin: 0px; min-width:300px;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h3><i class="icon fa fa-check"></i> #= title #</h3>
+            <hr />
+            <span>#= message #</span>
+        </div>
+    </script>
+    <!-- CIERRA PLANTILLA DE NOTIFICACIÓN -->
+</body>
+</html>

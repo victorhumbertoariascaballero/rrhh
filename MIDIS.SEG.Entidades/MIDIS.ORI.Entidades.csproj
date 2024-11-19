@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF3844DF-E723-4FB4-A8C9-BFDF0A466A19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIDIS.ORI.Entidades</RootNamespace>
+    <AssemblyName>MIDIS.ORI.Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataAnnotationsExtensions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=358a5681c50fd84c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MIDIS.Utiles\Binarios\DataAnnotationsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MVCSisRRHH\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SENACE.Entidades">
+      <HintPath>..\SENACE.Utiles\Binarios\SENACE.Entidades.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\APIChangePasswordResponse.cs" />
+    <Compile Include="Auth\ApiOpciones.cs" />
+    <Compile Include="Auth\ApiPerfiles.cs" />
+    <Compile Include="Auth\ApiUser.cs" />
+    <Compile Include="Auth\BE_Encryption.cs" />
+    <Compile Include="Auth\BE_Generico.cs" />
+    <Compile Include="Auth\BE_TAB_Usuario.cs" />
+    <Compile Include="Base\BEPaginacion.cs" />
+    <Compile Include="Base\BETreeView.cs" />
+    <Compile Include="Core\ArchivosTXT_Response.cs" />
+    <Compile Include="Core\ConceptoFijoVariable_Registro.cs" />
+    <Compile Include="Core\ConceptoFijoVariable_Request.cs" />
+    <Compile Include="Core\BasesPerfilPuestoObservacionRegistro.cs" />
+    <Compile Include="Core\BasesPerfilPuestoObservacionRequest.cs" />
+    <Compile Include="Core\BasesPerfilPuestoRegistro.cs" />
+    <Compile Include="Core\BasesPerfilPuesto_Request.cs" />
+    <Compile Include="Core\Conceptos_Response.cs" />
+    <Compile Include="Core\JustificacionesArchivos_Registro.cs" />
+    <Compile Include="Core\TipoJustificacion_Request.cs" />
+    <Compile Include="Core\TipoJustificacion_Registro.cs" />
+    <Compile Include="Core\TipoGoce_Request.cs" />
+    <Compile Include="Core\TipoGoce_Registro.cs" />
+    <Compile Include="Core\JustificacionesProceso_Registro.cs" />
+    <Compile Include="Core\JustificacionesProceso_Request.cs" />
+    <Compile Include="Core\Justificaciones_Registro.cs" />
+    <Compile Include="Core\JustificacionesArchivos_Request.cs" />
+    <Compile Include="Core\TurnoTrabajador_Registro.cs" />
+    <Compile Include="Core\TurnoDiaSemana_Registro.cs" />
+    <Compile Include="Core\TurnoDiaSemana_Request.cs" />
+    <Compile Include="Core\Justificaciones_Request.cs" />
+    <Compile Include="Core\Turno_Request.cs" />
+    <Compile Include="Core\Turno_Registro.cs" />
+    <Compile Include="Core\TurnoTrabajador_Request.cs" />
+    <Compile Include="Core\Marcaciones_Request.cs" />
+    <Compile Include="Core\Marcaciones_Registro.cs" />
+    <Compile Include="Core\TipoMarcaciones_Registro.cs" />
+    <Compile Include="Core\Concepto_Registro.cs" />
+    <Compile Include="Core\Concepto_Request.cs" />
+    <Compile Include="Core\Concepto_Response.cs" />
+    <Compile Include="Core\ConvocatoriaComite_Registro.cs" />
+    <Compile Include="Core\ConvocatoriaDocumento_Registro.cs" />
+    <Compile Include="Core\Convocatoria_Historica.cs" />
+    <Compile Include="Core\EmpleadoBoletaSolicitud_Registro.cs" />
+    <Compile Include="Core\EmpleadoDesplazamiento_Registro.cs" />
+    <Compile Include="Core\EmpleadoEstudio_Registro.cs" />
+    <Compile Include="Core\EmpleadoFamiliar_Registro.cs" />
+    <Compile Include="Core\EmpleadoEncargatura_Registro.cs" />
+    <Compile Include="Core\EmpleadoReporteBanco_Registro.cs" />
+    <Compile Include="Core\EmpleadoReporte_Request.cs" />
+    <Compile Include="Core\FormaPago_Response.cs" />
+    <Compile Include="Core\Perfil_Nivel.cs" />
+    <Compile Include="Core\PlanillaControlAsistencia_Registro.cs" />
+    <Compile Include="Core\PlanillaAsistencia_Registro.cs" />
+    <Compile Include="Core\Metas_Response.cs" />
+    <Compile Include="Core\PlanillaCalculada_Request.cs" />
+    <Compile Include="Core\PlanillaEjecucion_Registro.cs" />
+    <Compile Include="Core\PlanillaProyeccionAnualRta5ta_Registro.cs" />
+    <Compile Include="Core\PlanillaRpteEstructuraInfoAFPNETResponse.cs" />
+    <Compile Include="Core\PlanillaRpteResumenGeneralAnualResponse.cs" />
+    <Compile Include="Core\PlanillaRpteResumenGeneralResponse2.cs" />
+    <Compile Include="Core\PlanillaRpteResumenGeneraResponse.cs" />
+    <Compile Include="Core\PostulacionAnexo_Registro.cs" />
+    <Compile Include="Core\PostulacionEntrevistaPersonalPregunta_Registro.cs" />
+    <Compile Include="Core\PostulacionEntrevistaPersonal_Registro.cs" />
+    <Compile Include="Core\PostulacionEvaluacionEntrevista_Registro.cs" />
+    <Compile Include="Core\PostulacionEvaluacionConocimiento_Registro.cs" />
+    <Compile Include="Core\PostulacionEvaluacionCurricular_Registro.cs" />
+    <Compile Include="Core\PostulacionResultadoTotal_Registro.cs" />
+    <Compile Include="Core\Postulacion_Registro.cs" />
+    <Compile Include="Core\Convocatoria_Request.cs" />
+    <Compile Include="Core\Convocatoria_Registro.cs" />
+    <Compile Include="Core\EmpleadoContrato_Registro.cs" />
+    <Compile Include="Core\Contrato_Request.cs" />
+    <Compile Include="Core\Parentesco_Registro.cs" />
+    <Compile Include="Core\Condicion_Request.cs" />
+    <Compile Include="Core\Condicion_Registro.cs" />
+    <Compile Include="Core\Cualidad_Response.cs" />
+    <Compile Include="Core\EmpleadoOrden_Registro.cs" />
+    <Compile Include="Core\EmpleadoBoletaResumen_Registro.cs" />
+    <Compile Include="Core\Habilidad_Competencias_Registro.cs" />
+    <Compile Include="Core\PerfilCarrera_Response.cs" />
+    <Compile Include="Core\PerfilFormacionAcademica_Registro.cs" />
+    <Compile Include="Core\PerfilGrados_Response.cs" />
+    <Compile Include="Core\PerfillNivelEducativo_Response.cs" />
+    <Compile Include="Core\PerfilNivelMateria_Response.cs" />
+    <Compile Include="Core\PerfilTipoMateriaOtros_Response.cs" />
+    <Compile Include="Core\PerfilTipoMateria_Response.cs" />
+    <Compile Include="Core\PerfilTipoSubMateriaOtros_Response.cs" />
+    <Compile Include="Core\NivelMinimo_Registro.cs" />
+    <Compile Include="Core\PerfilConocimientos_Registro.cs" />
+    <Compile Include="Core\PerfilCoordinaciones_Registro.cs" />
+    <Compile Include="Core\PerfilFunciones_Request.cs" />
+    <Compile Include="Core\PerfilPuestoRegistro.cs" />
+    <Compile Include="Core\PerfilPuesto_Request.cs" />
+    <Compile Include="Core\PostulacionDocumento_Registro.cs" />
+    <Compile Include="Core\PostulacionCapacitacion_Registro.cs" />
+    <Compile Include="Core\PostulanteDocumento_Registro.cs" />
+    <Compile Include="Core\PostulacionEstudio_Registro.cs" />
+    <Compile Include="Core\PostulanteEstudio_Registro.cs" />
+    <Compile Include="Core\PostulanteCapacitacion_Registro.cs" />
+    <Compile Include="Core\PostulacionExperiencia_Registro.cs" />
+    <Compile Include="Core\PostulanteExperiencia_Registro.cs" />
+    <Compile Include="Core\PostulanteFamiliar_Registro.cs" />
+    <Compile Include="Core\PostulacionPostulante_Registro.cs" />
+    <Compile Include="Core\Legajo_Registro.cs" />
+    <Compile Include="Core\Postulante_Registro.cs" />
+    <Compile Include="Core\PostulanteNotificacion_Registro.cs" />
+    <Compile Include="Core\PostulantePostulacion_Registro.cs" />
+    <Compile Include="Core\PostulanteInformacion_Registro.cs" />
+    <Compile Include="Core\PostulanteFicha_Registro.cs" />
+    <Compile Include="Core\Postulante_Request.cs" />
+    <Compile Include="Core\RegimenAfp_Registro.cs" />
+    <Compile Include="Core\RegimenAfp_Request.cs" />
+    <Compile Include="Core\RegimenAfp_Response.cs" />
+    <Compile Include="Core\RegimenPensionario_Registro.cs" />
+    <Compile Include="Core\RegimenPensionario_Request.cs" />
+    <Compile Include="Core\RegimenPensionario_Response.cs" />
+    <Compile Include="Core\RegistroRegimenPensionario_Registro.cs" />
+    <Compile Include="Core\RegistroRegimenPensionario_Request.cs" />
+    <Compile Include="Core\Reporte_Response.cs" />
+    <Compile Include="Core\RequisitosAdicionales_Registro.cs" />
+    <Compile Include="Core\Sede_Request.cs" />
+    <Compile Include="Core\Sede_Registro.cs" />
+    <Compile Include="Core\Banco_Registro.cs" />
+    <Compile Include="Core\Dependencia_Registro.cs" />
+    <Compile Include="Core\Banco_Request.cs" />
+    <Compile Include="Core\Dependencia_Request.cs" />
+    <Compile Include="Core\EmpleadoConceptoSisper_Registro.cs" />
+    <Compile Include="Core\EmpleadoSisper_Registro.cs" />
+    <Compile Include="Core\EmpleadoCuenta_Registro.cs" />
+    <Compile Include="Core\Empleado_Request.cs" />
+    <Compile Include="Core\EnumeradoCabecera_Registro.cs" />
+    <Compile Include="Core\EnumeradoCabecera_Request.cs" />
+    <Compile Include="Core\EnumeradoCabecera_Response.cs" />
+    <Compile Include="Core\EnumeradoDetalle_Registro.cs" />
+    <Compile Include="Core\EnumeradoDetalle_Request.cs" />
+    <Compile Include="Core\EnumeradoDetalle_Response.cs" />
+    <Compile Include="Core\Estado_Response.cs" />
+    <Compile Include="Core\Mes_Response.cs" />
+    <Compile Include="Core\BoletaCarga_Registro.cs" />
+    <Compile Include="Core\Persona_Registro.cs" />
+    <Compile Include="Core\Persona_Request.cs" />
+    <Compile Include="Core\Persona_Response.cs" />
+    <Compile Include="Core\SubTipoConcepto_Request.cs" />
+    <Compile Include="Core\SubTipoConcepto_Response.cs" />
+    <Compile Include="Core\SuspensionRetencionCuartaCat_Registro.cs" />
+    <Compile Include="Core\TipoConcepto_Request.cs" />
+    <Compile Include="Core\TipoConcepto_Response.cs" />
+    <Compile Include="Core\TipoPlanillaAdicional_Response.cs" />
+    <Compile Include="Core\TipoRegimenPensionario_Request.cs" />
+    <Compile Include="Core\TipoRegimenPensionario_Response.cs" />
+    <Compile Include="Core\Tipo_Cualidad_Response.cs" />
+    <Compile Include="Core\TrabajadorFirma_Registro.cs" />
+    <Compile Include="Core\T_genm_grupo_aplicacion.cs" />
+    <Compile Include="Core\Anio_Response.cs" />
+    <Compile Include="Core\Grilla_Request.cs" />
+    <Compile Include="Core\Grilla_Response.cs" />
+    <Compile Include="Core\ItemMenu_Registro.cs" />
+    <Compile Include="Core\ItemMenu_Request.cs" />
+    <Compile Include="Core\ItemMenu_Response.cs" />
+    <Compile Include="Core\T_gend_empresa_aplicacion.cs" />
+    <Compile Include="Core\T_gend_perfil_horario.cs" />
+    <Compile Include="Core\T_gend_perfil_ip.cs" />
+    <Compile Include="Core\T_gend_perfil_operacion.cs" />
+    <Compile Include="Core\T_genm_accion.cs" />
+    <Compile Include="Core\T_genm_aplicacion.cs" />
+    <Compile Include="Core\T_genm_error.cs" />
+    <Compile Include="Core\T_genm_opcion.cs" />
+    <Compile Include="Core\T_genm_opcion_permiso.cs" />
+    <Compile Include="Core\T_genm_operacion.cs" />
+    <Compile Include="Core\T_genm_perfil.cs" />
+    <Compile Include="Core\T_genm_perfil_accion.cs" />
+    <Compile Include="Core\T_genm_perfil_opcion.cs" />
+    <Compile Include="Core\T_genm_perfil_opcion_permiso.cs" />
+    <Compile Include="Core\T_genm_permiso.cs" />
+    <Compile Include="Core\T_genm_sector_aplicacion.cs" />
+    <Compile Include="Core\T_genm_usuario.cs" />
+    <Compile Include="Core\T_genm_usuario_accion.cs" />
+    <Compile Include="Core\T_genm_usuario_opcion.cs" />
+    <Compile Include="Core\T_genm_usuario_opcion_permiso.cs" />
+    <Compile Include="Core\T_genm_usuario_perfil.cs" />
+    <Compile Include="Core\Ubigeo_Registro.cs" />
+    <Compile Include="Core\Ubigeo_Request.cs" />
+    <Compile Include="Core\Ubigeo_Response.cs" />
+    <Compile Include="Core\Empleado_Registro.cs" />
+    <Compile Include="Core\UnidadOrganica_Registro.cs" />
+    <Compile Include="Core\Verbo_Registro.cs" />
+    <Compile Include="Core\DescuentoJudicial_Registro.cs" />
+    <Compile Include="Core\DescuentoJudicial_Request.cs" />
+    <Compile Include="Core\DescuentoJudicialBeneficiario_Registro.cs" />
+    <Compile Include="Core\DescuentoJudicialBeneficiario_Request.cs" />
+    <Compile Include="DescuentoJudicial_Response.cs" />
+    <Compile Include="Parcial\T_gend_empresa_aplicacion_Parcial.cs" />
+    <Compile Include="Parcial\T_gend_perfil_horario_Parcial.cs" />
+    <Compile Include="Parcial\T_gend_perfil_ip_Parcial.cs" />
+    <Compile Include="Parcial\T_gend_perfil_operacion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_accion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_aplicacion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_error_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_grupo_aplicacion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_opcion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_opcion_permiso_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_operacion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_perfil_accion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_perfil_opcion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_perfil_opcion_permiso_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_perfil_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_permiso_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_sector_aplicacion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_usuario_accion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_usuario_opcion_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_usuario_opcion_permiso_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_usuario_Parcial.cs" />
+    <Compile Include="Parcial\T_genm_usuario_perfil_Parcial.cs" />
+    <Compile Include="Core\Planilla_Request.cs" />
+    <Compile Include="Core\Planilla_Response.cs" />
+    <Compile Include="Core\PlanillaEjecucion_Request.cs" />
+    <Compile Include="Core\PlanillaEjecucion_Response.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\TipoPlanilla_Request.cs" />
+    <Compile Include="Core\TipoPlanilla_Response.cs" />
+    <Compile Include="Core\TipoRetencion_Response.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

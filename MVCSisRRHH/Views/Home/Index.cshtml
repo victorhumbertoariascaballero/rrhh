@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "FED";
+}
+
+@if (User.Identity.Name != null && User.Identity.IsAuthenticated)
+{
+    @section SubTitulo{
+        <h3>Página de Inicio</h3>
+    }
+}
+
+<div class="page-header">
+    <h1>MIDIS - RRHH</h1>
+</div>
+<div class="jumbotron" style="padding:20px 20px 20px 40px">
+    <p class="lead"><b>Ministerio de Desarrollo e Inclusión Social</b></p>
+    <br />
+    <p class="lead">Bienvenido a la Plataforma Informática de Gestión de la Oficina de Recursos Humanos. Para ingresar presione clic en <img src="~/Content/img/img_login.png"></p>
+    <br />
+    @*<p class="lead">Mediante esta Plataforma puede ingresar las boletas firmadas digitalmente para notificar a los trabajadores del MIDIS</p>*@
+    
+    @*<h1>SENACE</h1>
+        <p class="lead">Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles</p>
+        <br />*@
+
+
+</div>

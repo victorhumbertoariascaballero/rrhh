@@ -1,0 +1,560 @@
+﻿@using System.Configuration
+
+@{
+    ViewBag.Title = "GESTIÓN Y ORGANIZACIÓN  ->  BANDEJA DE BOLETAS DE TRABAJO";
+    String verEnvio = ConfigurationManager.AppSettings["OPCION_ENVIO"];
+
+}
+@section SubTitulo { 
+    <div id="toolbar" class="form-group row k-toolbar k-widget k-toolbar-resizable" style="border-color: #b1acac; color: #32364c; margin: 5px ">
+        &nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+        <h6>@ViewBag.Title</h6>
+    </div> }
+
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+    input, label, .k-input {
+        font-size: 11px !important;
+    }
+    #progressBar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .btn-group-xs > .btn, .btn-xs {
+        padding: .25rem .4rem;
+        font-size: .875rem;
+        line-height: .5;
+        border-radius: .2rem;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <!--FORMULARIO DE BÚSQUEDA-->
+    <div id="accordion">
+        <!--FORMULARIO DE BÚSQUEDA-->
+        @*</div>*@
+        <div class="card">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  INFORMACI&Oacute;N DE LAS BOLETAS DE PAGO 
+                </a>
+            </div>
+                <div class="card-body">
+                    @*<div class="row">
+            <div id="divTotal" class="col-md-2"></div>
+            <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                <button id="btnNuevo" type="button" class="btn btn-primary btn-sm" onclick="controlador.abrirModalNuevo()">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="divGrid"></div>
+        </div>*@
+
+                    @*<ul class="nav nav-tabs" id="myTab_" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><p>Placeholder content for the tab panel. This one relates to the home tab. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.1</p></div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><p>Placeholder content for the tab panel. This one relates to the home tab. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.2</p></div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><p>Placeholder content for the tab panel. This one relates to the home tab. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.3</p></div>
+                    </div>*@
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="sisper-tab" data-toggle="tab" data-target="#sisper" type="button" role="tab" aria-controls="sisper" aria-selected="true">INFORMACION DEL SISPER</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="notifica-tab" data-toggle="tab" data-target="#notifica" type="button" role="tab" aria-controls="notifica" aria-selected="true">ENVIO DE NOTIFICACIONES</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent" style="padding:10px 0px 10px 0px">
+                        <div id="sisper" class="tab-pane fade show active" role="tabpanel" aria-labelledby="sisper-tab">
+                            <div class="row form-horizontal">
+                                <div class="col-12">
+                                    <form id="frmBusquedaSisper" onsubmit="controlador.buscarSisper(event)">
+                                        <div class="form-group row">
+                                            @*<div class="col-md-1"></div>*@
+                                            <label for="ddlAnio_busquedaSisper" class="col-md-1 control-label">A&ntilde;o: </label>
+                                            <div class="col-md-1">
+                                                <select id="ddlAnio_busquedaSisper" name="ddlAnio_busquedaSisper" class="form-control" style="width: 100%;">
+                                                    <option value="">-- Todos --</option>
+                                                </select>
+                                            </div>
+                                            <label for="ddlMes_busquedaSisper" class="col-md-1 control-label">Mes: </label>
+                                            <div class="col-md-2">
+                                                <select id="ddlMes_busquedaSisper" name="ddlMes_busquedaSisper" class="form-control" style="width: 100%;">
+                                                    <option value="">-- Todos --</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3" style="display:none">
+                                                <label for="ddlDependencia_busquedaSisper" class="col-md-2 control-label">Dependencia </label>
+                                                <div class="col-md-10">
+                                                    <select id="ddlDependencia_busquedaSisper" name="ddlDependencia_busquedaSisper" class="form-control" style="width: 100%;">
+                                                        <option value="">-- Seleccione --</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2" style="display:none">
+                                                <label for="ddlEmpleado_busquedaSisper" class="col-md-2 control-label">Empleado </label>
+                                                <div class="col-md-10">
+                                                    <select id="ddlEmpleado_busquedaSisper" name="ddlEmpleado_busquedaSisper" class="form-control" style="width: 100%;">
+                                                        <option value="">-- Seleccione --</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin-bottom: 10px">
+                                            <div id="divTotalSisper" class="col-md-3">
+                                                <h5><label>Total de Registros: &nbsp;</label><label id="lblTotalSisper" class="label label-info"></label></h5>
+                                            </div>
+                                            <div class="col-md-9" style="text-align: right; padding-top: 10px;">
+                                                <button type="reset" class="btn btn-default btn-sm">
+                                                    <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                                                </button>
+                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                                </button>
+                                                <button id="btnValidar" type="button" class="btn btn-info btn-sm" onclick="controlador.abrirModalValidacion(event)">
+                                                    @*validarBoletas*@
+                                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Validar Boletas de Pago
+                                                </button>
+                                                @*<button id="btnFirmar" type="button" class="btn btn-info btn-sm" onclick="controlador.validarBoletas(event)">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Firmar Boletas de Pago
+                    </button>*@
+                                                <button id="btnNuevo" type="button" class="btn btn-primary btn-sm" onclick="controlador.exportarBoletas(event)" style="display:none">
+                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Exportar
+                                                </button>
+                                                <button id="btnEliminarTemp" type="button" class="btn btn-primary btn-sm" onclick="controlador.eliminarTemporal(event)" style="display:none">
+                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Eliminar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" id="divGridSisper">
+                                </div>
+                            </div>
+                            </div>
+                        <!--<div id="tab2" class="tab-pane fade in active">
+            <div class="row form-horizontal">
+                <form id="frmBusquedaSispla" onsubmit="controlador.buscarSispla(event)">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2">
+                            <label for="ddlAnio_busquedaSispla" class="col-md-4 control-label">A&ntilde;o </label>
+                            <div class="col-md-8">
+                                <select id="ddlAnio_busquedaSispla" name="ddlAnio_busquedaSispla" class="form-control" style="width: 100%;">
+                                    <option value="">-- Todos --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="ddlMes_busquedaSispla" class="col-md-4 control-label">Mes </label>
+                            <div class="col-md-8">
+                                <select id="ddlMes_busquedaSispla" name="ddlMes_busquedaSispla" class="form-control" style="width: 100%;">
+                                    <option value="">-- Todos --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3" style="display:none">
+                            <label for="ddlDependencia_busquedaSispla" class="col-md-2 control-label">Dependencia </label>
+                            <div class="col-md-10">
+                                <select id="ddlDependencia_busquedaSispla" name="ddlDependencia_busquedaSispla" class="form-control" style="width: 100%;">
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="display:none">
+                            <label for="ddlEmpleado_busquedaSispla" class="col-md-2 control-label">Empleado </label>
+                            <div class="col-md-10">
+                                <select id="ddlEmpleado_busquedaSispla" name="ddlEmpleado_busquedaSispla" class="form-control" style="width: 100%;">
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10px">
+                        <div id="divTotalSispla" class="col-md-3">
+                            <h5><label>Total de Registros: &nbsp;</label><label id="lblTotalSispla" class="label label-info"></label></h5>
+                        </div>
+                        <div class="col-md-9" style="text-align: right; padding-top: 10px;">
+                            <button type="reset" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                            </button>
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                            </button>
+                            <button id="btnValidarSispla" type="button" class="btn btn-info btn-sm" onclick="controlador.abrirModalValidacionSispla(event)">
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Validar Boletas de Pago
+                            </button>-->
+                        @*<button id="btnFirmar" type="button" class="btn btn-info btn-sm" onclick="controlador.validarBoletas(event)">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Firmar Boletas de Pago
+            </button>*@
+                        <!--<button id="btnNuevoSispla" type="button" class="btn btn-primary btn-sm" onclick="controlador.exportarBoletasSispla(event)" style="display:none">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Exportar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div id="divGridSispla"></div>
+            </div>
+        </div>-->
+                        <div id="notifica" class="tab-pane fade" role="tabpanel" aria-labelledby="notifica-tab">
+                            <div class="row form-horizontal">
+                                <div class="col-12">
+                                    <form id="frmBusqueda" onsubmit="controlador.buscar(event)">
+                                        <div class="form-group row">
+                                            @*<div class="col-md-1"></div>*@
+                                            <label for="ddlAnio_busqueda" class="col-md-1 control-label">A&ntilde;o: </label>
+                                            <div class="col-md-1">
+                                                <select id="ddlAnio_busqueda" name="ddlAnio_busqueda" class="form-control" style="width: 100%;">
+                                                    <option value="">-- Todos --</option>
+                                                </select>
+                                            </div>
+                                            <label for="ddlMes_busqueda" class="col-md-1 control-label">Mes: </label>
+                                            <div class="col-md-2">
+                                                <select id="ddlMes_busqueda" name="ddlMes_busqueda" class="form-control" style="width: 100%;">
+                                                    <option value="">-- Todos --</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="txtDNI_busqueda" class="col-md-1 control-label">DNI: </label>
+                                            <div class="col-md-1">
+                                                <input id="txtDNI_busqueda" name="txtDNI_busqueda" type="text" class="form-control input-sm text-uppercase" maxlength="8" onkeypress="SoloNumeros(event);" />
+                                            </div>
+                                            <label for="txtEmpleado_busqueda" class="col-md-1 control-label">Empleado </label>
+                                            <div class="col-md-2">
+                                                <input id="txtEmpleado_busqueda" name="txtEmpleado_busqueda" type="text" class="form-control input-sm text-uppercase" maxlength="30" />
+                                            </div>
+                                            <label for="ddlDependencia_busqueda" class="col-md-1 control-label">Dependencia: </label>
+                                            <div class="col-md-4">
+                                                <select id="ddlDependencia_busqueda" name="ddlDependencia_busqueda" class="form-control" style="width: 100%;">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-bottom: 10px">
+                                            <div id="divTotal" class="col-md-3">
+                                                <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
+                                            </div>
+                                            <div class="col-md-6"></div>
+                                            <div class="col-md-3" style="text-align: right; padding-top: 10px;">
+                                                <button type="reset" class="btn btn-default btn-sm">
+                                                    <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                                                </button>
+                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                                </button>
+                                                <button id="btnNuevo" type="button" class="btn btn-info btn-sm" style="display:none" onclick="controlador.abrirModalNuevo()">
+                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Cargar Boletas
+                                                </button>
+                                                @if (verEnvio == "1")
+                                                {
+                                                    <button id="btnNotificacion" type="button" class="btn btn-info btn-sm" style="display:none" onclick="controlador.enviarNotificacion()">
+                                                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Enviar Notificación
+                                                    </button>
+                                                }
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            @*<div>
+                    &nbsp;
+                </div>*@
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="divGrid"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div id="divModalValidar" style="display:none; font-size: 12px">
+        <div class="panel panel-default">
+            <form id="frmValidar" name="frmValidar" novalidate="" onsubmit="controlador.validar(event)">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-3" @*style="padding-right:0px; padding-left: 0px "*@>
+                            <label id="lblBoletas" class="control-label">Total de Boletas de Pago: </label>
+                            <div id="divBoletas" class="well well-sm text-right"></div>
+                        </div>
+                        <div class="form-group col-md-3" @*style="padding-right:0px; padding-left: 0px "*@>
+                            <label id="lblBoletasValidas" class="control-label">Boletas Validadas: </label>
+                            <div id="divBoletasValidas" class="well well-sm text-right" style="color:#4cae4c; font-weight:bold"></div>@*background-color: #5cb85c; border-color: #4cae4c;*@
+                        </div>
+                    </div>
+                    <div class="row" style="display:none">
+                        <div class="form-group col-md-12" style="padding-right:0px; padding-left: 0px ">
+                            <div id="progressBar"></div>
+                            @*<button id="startProgress" class="k-button k-primary">Start progress</button>*@
+                        </div>
+                    </div>
+                    <div class="row" style="display:none">
+                        <div class="form-group col-md-12" style="padding-right:0px; padding-left: 0px ">
+                            <div class="progress">
+                                <div id="bar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                    <span class="sr-only">0% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12" style="font-size:11px">
+                            <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                <strong>SELECCIONE LAS PLANILLAS QUE DESEA VALIDAR, RECUERDE QUE UNA VEZ VALIDADOS SE ENVIARÁN LAS PLANILLAS PARA LA FIRMA</strong>
+                            </div>
+                            <div id="divGridPlanillas"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div id="divMensajeError" class="alert alert-warning" style="display:none">
+                            <strong>Error!</strong> No se pudo completar el proceso de validación, inténtelo nuevamente por favor.
+                        </div>
+                        <div id="divMensajeExito" class="alert alert-success" style="display:none">
+                            <strong>Éxito!</strong> Se completó el proceso de validación.
+                        </div>
+                    </div>
+                    @*
+                        <div id="divConsole" class="row" style="display:none">
+                            <div class="form-group col-md-12 box" style="padding-right:0px; padding-left: 0px ">
+                                <label class="control-label">VALIDACIÓN DE LAS BOLETAS SELECCIONADAS</label>
+                                <div id="console" class="console"></div>
+                            </div>
+                        </div>*@
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button id="startProgress" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Iniciar Validación
+                    </button>
+                    @*<button type="submit" class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Registrar
+                        </button>*@
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalValidar()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="divModalNuevo" style="display:none;">
+        <div class="panel panel-default">
+            <form id="frmNuevo" name="frmNuevo" novalidate="" enctype="multipart/form-data" onsubmit="controlador.registrar(event)">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-6" style="padding-right:0px; padding-left: 0px ">
+                            <label for="ddlAnio" class="control-label">A&ntilde;o*</label>
+                            <select id="ddlAnio" name="ddlAnio_nuevo" class="form-control" style="width: 98%;" required="required" validationmessage="El campo es requerido">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6" style="padding-right:0px; padding-left: 0px ">
+                            <label for="ddlMes" class="control-label">Mes*</label>
+                            <select id="ddlMes" name="ddlMes" class="form-control" style="width: 98%;" required="required" validationmessage="El campo es requerido">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12" style="padding-right:0px; padding-left: 0px ">
+                            <label for="ddlIdCad" class="control-label">Seleccionar Boletas Digitales*</label>
+                            <input name="fileFirma" id="fileFirma" type="file" aria-label="files" accept=".pdf" />
+                        </div>
+                    </div>
+                    <div id="divConsole" class="row" style="display:none">
+                        <div class="form-group col-md-12 box" style="padding-right:0px; padding-left: 0px ">
+                            <label class="control-label">VALIDACIÓN DE LAS BOLETAS SELECCIONADAS</label>
+                            <div id="console" class="console"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Registrar
+                    </button>
+                    <button type="button" class="btn btn-default" onclick="controlador.cerrarModalNuevo()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="divModalEliminacion" style="display:none;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4 id="hEliminacion">¿Está seguro de eliminar la propuesta seleccionada?</h4>
+                <p id="pEliminacion"></p>
+            </div>
+            <div class="panel-footer" style="text-align:right;">
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalEliminacion()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                </button>
+                <button id="btnEliminar" type="button" class="btn btn-primary btn-sm" onclick="controlador.eliminar()">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="divModalEnvioMail" style="display:none; font-size: 12px">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-6" style="padding-right:0px; padding-left: 0px ">
+                        <label id="lblEnvioEmail" class="control-label">Correo electrónico: </label>
+                        <input id="txtEnvioEmail" name="txtEnvioEmail" type="email" class="form-control input-sm " validationmessage="Ingrese un formato de email válido" maxlength="100" />
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer" style="text-align:right;">
+                <button type="button" class="btn btn-primary btn-sm" onclick="controlador.enviarEmail()">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Enviar Email
+                </button>
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalEnviarEmail()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <input id="hdnUid" name="hdnUid" type="hidden" />
+    <input id="hdnNroRuc" name="hdnNroRuc" type="hidden" value="" />
+    <input id="argumentos" type="hidden" value="" />
+    <input id="hdBoletas" type="hidden" value="" />
+    <input id="hdBoletasValidas" type="hidden" value="" />
+    <input id="hdContrasenaEmail" type="hidden" value="" />
+
+</section>
+
+<div id="addComponent"></div>
+
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Boletas.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new BoletasJS();
+            controlador.inicializar();
+
+        });
+
+    </script>
+}

@@ -1,0 +1,23 @@
+<div class="WordSection1" style="width: 650px; padding: 30px; border-radius: 5px; border: 2px solid #6773b9;"><img style="width: 300px; height: 55px;" src="https://sdv.midis.gob.pe/Sis_GesRRHH/Content/img/logo_midis.png" data-placeholder="no" /> <br /><br />
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">Estimados/as Miembros del Comit&eacute;:</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">Reciban un cordial saludo, para informarles que la Entrevista Personal del Proceso de Pr&aacute;cticas <span style="color: red;">_PROCESOCAS_</span>, se realizara seg&uacute;n el siguiente cuadro.<br /></span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><table style="font-family: 'PT Sans Narrow', sans-serif; font-size: 11px; width: 500px; border: 0px solid #f0f0f0;" border="1" cellspacing="0" cellpadding="2">
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #d1d1d1; font-size: 11px; width: 15px; text-align: center;"><strong>N&deg;</strong></td>
+                                    <td style="background-color: #d1d1d1; font-size: 11px; width: 335px; text-align: left;"><strong>&nbsp;APELLIDOS Y NOMBRES</strong></td>
+                                    <td style="background-color: #d1d1d1; font-size: 11px; width: 75px; text-align: center;"><strong>FECHA</strong></td>
+                                    <td style="background-color: #d1d1d1; font-size: 11px; width: 75px; text-align: center;"><strong>HORA</strong></td>
+                                </tr>
+                                //TODOS
+                            </tbody>
+                        </table></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">En este sentido, se adjunta el link al sistema de convocatorias donde se encuentran las hojas de vida de los postulantes aptos del proceso, asimismo la ficha de entrevista personal debe ser ingresada en el sistema.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">Para ingresar al sistema <u><span style="color: red;"><a style="color: red;" href="_URLEVALUACION_" target="_blank" rel="noopener"> Haz click aqu&iacute;</a></span></u>.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;">Por otro lado, el link de las Salas Zoom programadas es el siguiente:</p>
+<p style="border-width: 1px; border-style: solid; width: 490px; padding: 5px;">_ZOOM_</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Gracias.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Atentamente,</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">&nbsp;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">Oficina General de Recursos Humanos</span></p>
+</div>

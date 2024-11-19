@@ -1,0 +1,626 @@
+﻿@using System.Configuration
+@using MVCSisRRHH.Models;
+
+@{
+    ViewBag.Title = "MIS POSTULACIONES  ->  LISTADO DE PROCESOS CAS EN LOS QUE HA PARTICIPADO";
+}
+@section SubTitulo { <h5>@ViewBag.Title</h5> } @*style="font-size: 16px; font-family: 'PT Sans Narrow''',sans-serif;"*@
+
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 0px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .input-sm {
+        height: 26px;
+        padding: 5px 10px;
+        font-size: 11px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+    .form-group {
+        margin-bottom: 3px;
+    }
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+    .console div {
+        background-position: 6px -95px;
+        border-bottom: 1px solid #DDD;
+        padding: 5px 10px;
+        height: 2em;
+        line-height: 2em;
+        vertical-align: middle;
+    }
+
+    input, label, .k-input {
+        font-size: 11px;
+    }
+    .panel-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: inherit;
+    }
+    .panel-heading {
+        color: #fff !important;
+        background-color: #F05454;
+        border-color: #FA76B1;
+    }
+    .k-radio:checked + .k-radio-label:after {
+        background-color: #f05454;
+        border-radius: 50%;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <form id="frmBusqueda" onsubmit="controlador.buscar(event)">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" href="#collapseDatosF" style="color:#fff">
+                        <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  MIS POSTULACIONES
+                    </a>
+                </div>
+                <div id="collapseDatosF" class="panel-collapse collapse in">
+                    <div class="panel-body" id="divListarAplicacion">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="row">
+                                    <div id="divGridPostulaciones"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <div id="divModalRegistroPersona" style="display: none; font-size: 11px">
+        <div class="panel panel-default">
+            <form id="frmRegistroPersona" name="frmRegistroPersona" novalidate="" onsubmit="controlador.agregarTrabajador(event)">
+                @*<input id="hdIdEmpleado" name="hdIdEmpleado" type="hidden" value="0" />*@
+                <input id="hdFoto" name="hdFoto" type="hidden" value="" />
+                <div id="tabstrip" class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li id="liTab1" class="active"><a data-toggle="tab" href="#tab1">DATOS DEL TRABAJADOR</a></li>
+                        <li id="liTab2"><a data-toggle="tab" href="#tab2">DATOS LABORALES</a></li>
+                        <li id="liTab3"><a data-toggle="tab" href="#tab3">DATOS DE CONTACTO</a></li>
+                        <li id="liTab4"><a id="_tab4" data-toggle="tab" href="#tab4">DATOS FINANCIEROS</a></li>
+                    </ul>
+                    <input id="hdPerfil" name="hdPerfil" type="hidden" value="43" />
+
+                    <div class="tab-content" style="padding:10px 0px 10px 0px">
+                        <div id="tab1" class="tab-pane fade in active">
+
+                        </div>
+                        <div id="tab2" class="tab-pane fade">
+                            <div class="row">
+                                <div class="form-group col-md-3">
+                                    <label for="ddlPersonaEstado" class="control-label">Estado*</label>
+                                    <select id="ddlPersonaEstado" name="ddlPersonaEstado" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="txtRUC" class="control-label">RUC</label>
+                                    <input id="txtRUC" name="txtRUC" type="text" class="form-control input-sm text-uppercase" maxlength="11" onkeypress="SoloNumeros(event);" validationmessage="requerido" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-3">
+                                    <label for="ddlPersonaCondicion" class="control-label">Condición*</label>
+                                    <select id="ddlPersonaCondicion" name="ddlPersonaCondicion" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="ddlPersonaSede" class="control-label">Sede*</label>
+                                    <select id="ddlPersonaSede" name="ddlPersonaSede" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="txtPersonaFechaInicioLabores" class="control-label">Inicio de labores*</label>
+                                    <input id="txtPersonaFechaInicioLabores" name="txtPersonaFechaInicioLabores" type="text" class="form-control input-sm" placeholder="Fecha de inicio de labores" style="width: 100%;" required="required" validationmessage="requerido" />
+                                </div>
+                                <div class="form-group col-md-3" id="divCese">
+                                    <label for="txtPersonaFechaFinLabores" class="control-label">Fin de labores*</label>
+                                    <input id="txtPersonaFechaFinLabores" name="txtPersonaFechaFinLabores" type="text" class="form-control input-sm" placeholder="Fecha de fin de labores" style="width: 100%;" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="ddlPersonaDependencia" class="control-label">Dependencia*</label>
+                                    <select id="ddlPersonaDependencia" name="ddlPersonaDependencia" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="txtPersonaCargo" class="control-label">Cargo*</label>
+                                    <input id="txtPersonaCargo" name="txtPersonaCargo" type="text" class="form-control input-sm text-uppercase" maxlength="200" required="required" validationmessage="requerido" />
+                                </div>
+                            </div>
+                            <div class="row" id="divOrdenes" style="display:none">
+                                <div class="form-group col-md-12">
+                                    <label for="txtPersonaOrdenes" class="control-label">Órdenes de Servicio</label>
+                                    <div id="divGridOrdenes"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab3" class="tab-pane fade">
+                            <div class="row">
+                                <label for="txtPersonaTexto1" class="control-label">INFORMACIÓN PERSONAL</label>
+                            </div>
+
+                            <div class="row">
+                                <label for="txtPersonaTexto1" class="control-label">INFORMACIÓN LABORAL</label>
+                                <span style="background-color: #ffffcc; border-left: 6px solid #ffeb3b; padding: 5px 5px 4px 4px; border-radius: 3px;">(INGRESADO POR LA OFICINA DE TECNOLOGÍAS DE INFORMACIÓN)</span>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-3">
+                                    <label for="txtPersonaCorreoElectronico" class="control-label">Correo electrónico</label>
+                                    <input id="txtPersonaCorreoElectronico" name="txtPersonaCorreoElectronico" type="email" class="form-control input-sm" validationmessage="Ingrese un formato de email válido" maxlength="150" />
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="txtTelefonoCelular" class="control-label">Teléfono celular</label>
+                                    <input id="txtTelefonoCelular" name="txtTelefonoCelular" type="text" class="form-control input-sm text-uppercase" maxlength="15" onkeypress="SoloNumeros(event);" />
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="txtTelefonoLaboral" class="control-label">Teléfono fijo</label>
+                                    <input id="txtTelefonoLaboral" name="txtTelefonoLaboral" type="text" class="form-control input-sm text-uppercase" maxlength="15" onkeypress="SoloNumeros(event);" />
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="txtTelefonoAnexo" class="control-label">Anexo</label>
+                                    <input id="txtTelefonoAnexo" name="txtTelefonoAnexo" type="text" class="form-control input-sm text-uppercase" maxlength="10" onkeypress="SoloNumeros(event);" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-4" style="display:none">
+                                    <label for="txtPersonaFechaDeNacimiento" class="control-label">Fecha de nacimiento</label>
+                                    <input id="txtPersonaFechaDeNacimiento" name="txtPersonaFechaDeNacimiento" type="text" class="form-control input-sm" placeholder="Fecha de nacimiento" style="width: 100%;" />
+                                </div>
+                                <div class="form-group col-md-4" style="display:none">
+                                    <label for="ddlPersonaIdUbigeoNacimiento" class="control-label">Ubigeo nacimiento</label>
+                                    <select id="ddlPersonaIdUbigeoNacimiento" name="ddlPersonaIdUbigeoNacimiento" class="form-control input-sm" style="width: 100%;" validationmessage="requerido">
+                                        <option value="">-- Seleccione --</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab4" class="tab-pane fade">
+                            <div class="row" style="display:none">
+                                <div class="form-group col-md-3">
+                                    <label for="txtPersonaSalario" class="control-label">Salario</label>
+                                    <input id="txtPersonaSalario" name="txtPersonaSalario" type="text" class="form-control input-sm" placeholder="Salario del trabalador" style="width: 100%;" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label for="txtPersonaCuentas" class="control-label">Cuentas bancarias</label>
+                                    <div id="divGridCuentas"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" style="text-align:right;">
+
+                    <button id="btnGuardarAdmin" type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Guardar
+                    </button>
+
+                    <button id="btnGuardarAbastecimiento" type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Guardar
+                    </button>
+
+                    <button id="btnGuardarContacto" type="button" class="btn btn-primary btn-sm" onclick="controlador.actualizarTrabajadorContacto(event);">
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Guardar
+                    </button>
+
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalRegistroPersona()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="divModalEliminacion" style="display:none;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4 id="hEliminacion">¿Está seguro de eliminar la propuesta seleccionada?</h4>
+                <p id="pEliminacion"></p>
+            </div>
+            <div class="panel-footer" style="text-align:right;">
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalEliminacion()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                </button>
+                <button id="btnEliminar" type="button" class="btn btn-primary btn-sm" onclick="controlador.eliminar()">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+    <input id="hdnUid" name="hdnUid" type="hidden" />
+    <input id="hdnNroRuc" name="hdnNroRuc" type="hidden" value="" />
+    <input id="hdIdPostulante" name="hdIdPostulante" type="hidden" value="0" />
+    <input id="hdIdUbigeoEmpleado" name="hdIdUbigeoEmpleado" type="hidden" value="" />
+
+</section>
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2018.1.221/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Postulante.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new PostulanteJS();
+            controlador.inicializarGridPostulaciones(@ViewBag.IdPostulante);
+            
+        });
+
+        function LoadPersona() { //campo, campoId
+            var tipo = "Solic";
+            var TIPO_DOC_DNI = '01';
+            var TIPO_DOC_CE = '02';
+            var campo = document.getElementById("txtPersonaNumeroDeDocumento");
+            var tipoDoc = $("#ddlPersonaTipoDeDocumento").data("kendoDropDownList").value();
+
+            var urlBuscarPersona = URL + 'Persona/Buscar';
+
+            if (campo.value.trim().length < 8) {
+                controladorApp.notificarMensajeDeAlerta("Ingrese un número de documento válido");
+                return false;
+            }
+            if (tipoDoc == '') {
+                controladorApp.notificarMensajeDeAlerta("Seleccione el tipo de documento");
+                return false;
+            }
+
+            if (campo.value.trim().length == 8) {
+                // PRIMERO BUSCAMOS SI EL SOLICITANTE EXISTE EN NUESTRA BD
+                var data_param = {};
+                //data_param.TipoDeDocumento = $("#ddlPersonaTipoDeDocumento").data("kendoDropDownList").value();
+                data_param.IdDependencia = 0;
+                data_param.Estado = 1;
+                data_param.IdEmpleado = 0
+                data_param.NroDocumento = $("#txtPersonaNumeroDeDocumento").val();
+
+                $.ajax({
+                    url: controladorApp.obtenerRutaBase() + 'Empleado/ListarEmpleados',
+                    type: 'GET',
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
+                    processData: true,
+                    cache: false,
+                    data: data_param,
+                    success: function (res) {
+                        if (res != null && res.length > 0) {
+                            var modal = $('#divModalRegistroPersona').data('kendoWindow');
+                            $("#hdIdEmpleado").val(res[0].IdEmpleado);
+
+                            $("#_tab4").attr("data-toggle", "tab");
+                            $('#_tab4').prop("onclick", null).off("click");
+
+                            controlador.CargarFormularioTrabajador(res[0].IdEmpleado);
+                            controlador.CargarFormularioCuentasBancarias(res[0].IdEmpleado);
+
+                            $("#divExiste").show();
+                            if ($("#btnGuardarAdmin") != null) $("#btnGuardarAdmin").text("Actualizar");
+                            if ($("#btnGuardarAbastecimiento") != null) $("#btnGuardarAbastecimiento").text("Actualizar");
+                            if ($("#btnGuardarContacto") != null) $("#btnGuardarContacto").text("Actualizar");
+                            modal.title("Actualizar Trabajador");
+                        }
+                        else {
+                            debugger;
+                            LimpiarModalRegistroPersona();
+                            if (campo.value.trim().length == 8 && tipoDoc == TIPO_DOC_DNI) {
+                                // BUSCAMOS EN LA PIDE
+                                return "" == campo
+                                ? (alert("Ingrese el número de documento"), !1)
+                                : $.getJSON(urlBuscarPersona, {
+                                    'vNumDocum': campo.value.trim(),
+                                    'tipoDoc': tipoDoc
+                                }).done(function (data) {
+                                    if (data.IdPersona == -1) {
+                                        controladorApp.abrirMensajeDeConfirmacion(
+                                        data.Nombres + "\n\r¿Desea registrar manualmente el trabajador?", 'SI', 'NO'
+                                        , function (arg) {
+                                            $("#txtPersonaApellidoPaterno").removeAttr("readonly");
+                                            $("#txtPersonaApellidoMaterno").removeAttr("readonly");
+                                            $("#txtPersonaNombres").removeAttr("readonly");
+                                            $("#txtPersonaApellidoPaterno").val("");
+                                            $("#txtPersonaApellidoMaterno").val("");
+                                            $("#txtPersonaNombres").val("");
+                                        }, null);
+                                    }
+                                    else {
+                                        //alert(data.Nombres);
+                                        if (data.Nombres == null) {
+                                            controladorApp.abrirMensajeDeConfirmacion(
+                                            "No existe el número de documento ingresado" + "\n\r¿Desea registrar manualmente el trabajador?", 'SI', 'NO'
+                                            , function (arg) {
+                                                //controladorApp.notificarMensajeDeAlerta(document.getElementById("txtSolicitanteApellidoPaterno"));
+                                                $("#txtPersonaApellidoPaterno").removeAttr("readonly");
+                                                $("#txtPersonaApellidoMaterno").removeAttr("readonly");
+                                                $("#txtPersonaNombres").removeAttr("readonly");
+                                                $("#txtPersonaApellidoPaterno").val("");
+                                                $("#txtPersonaApellidoMaterno").val("");
+                                                $("#txtPersonaNombres").val("");
+                                            }, null);
+                                        }
+                                        else {
+                                            debugger;
+                                            $("#txtPersonaApellidoPaterno").attr("readonly", "readonly");
+                                            $("#txtPersonaApellidoMaterno").attr("readonly", "readonly");
+                                            $("#txtPersonaNombres").attr("readonly", "readonly");
+
+                                            //alert(data.IdPersona);
+                                            $('#hdnIdPersona').val(data.IdPersona);
+                                            $("#txtPersonaNombres").val(data.Nombres);
+                                            $("#txtPersonaApellidoPaterno").val(data.ApellidoPaterno);
+                                            $("#txtPersonaApellidoMaterno").val(data.ApellidoMaterno);
+                                            $("#ddlPersonaSexo").data("kendoDropDownList").value(data.Sexo);
+                                            $("#ddlPersonaEstadoCivil").data("kendoDropDownList").value(data.EstadoCivil);
+
+                                            var fecha = new Date(parseInt(data.FechaDeNacimiento.substr(6)));
+                                            $("#txtPersonaFechaNacimiento").data("kendoDatePicker").value(kendo.parseDate(fecha.getDate().toString() + "/" + (fecha.getMonth() + 1).toString() + "/" + fecha.getFullYear().toString()));
+                                            $("#hdIdUbigeoEmpleado").val(data.Ubigeo.CodigoReniec);
+                                            $("#txtPersonaUbigeo").val(data.DescripcionUbigeo);
+                                            $("#txtPersonaDireccionDomicilio").val(data.DireccionDomicilio);
+                                            $("#hdFoto").val(data.sFoto);
+
+                                            document.getElementById('imgFoto').setAttribute(
+                                                'src', 'data:image/png;base64,' + data.sFoto
+                                            );
+                                        }
+                                    }
+                                })
+                                .fail(function (jqxhr, textStatus, error) {
+                                    var err = textStatus + ", " + error;
+                                    controladorApp.notificarMensajeDeAlerta('No se pudo conectar al servidor');
+                                    console.log("Request Failed: " + err);
+                                });
+                            } else {
+                                controladorApp.notificarMensajeDeAlerta('No existe el número de documento ingresado, debe registrar manualmente el trabajador');
+                                $("#txtPersonaApellidoPaterno").removeAttr("readonly");
+                                $("#txtPersonaApellidoMaterno").removeAttr("readonly");
+                                $("#txtPersonaNombres").removeAttr("readonly");
+                                $("#txtPersonaApellidoPaterno").val("");
+                                $("#txtPersonaApellidoMaterno").val("");
+                                $("#txtPersonaNombres").val("");
+                            }
+
+                        }
+                    },
+                    error: function (res) {
+                        debugger;
+                    }
+                });
+
+            }
+            else if (campo.value.trim().length == 9 && tipoDoc == TIPO_DOC_CE) {
+                //alert("entro");
+                var nroruc = $("#txtPersonaNumeroDeDocumento").val();
+
+                var urlBuscarSIS = controladorApp.obtenerRutaBase() + 'Persona/BuscarProgramaRENIEC_CE';
+                $.getJSON(urlBuscarSIS, {
+                    'vNumDocum': nroruc
+                }).done(function (data) {
+                    $("#txtPersonaNombres").val(data.Nombres);
+                    $("#txtPersonaApellidoMaterno").val(data.ApellidoMaterno);
+                    $("#txtPersonaApellidoPaterno").val(data.ApellidoPaterno);
+                });
+
+            } else {
+                controladorApp.notificarMensajeDeAlerta("Ingrese un número de documento válido");
+                return false;
+            }
+        }
+
+        function LoadPersonaReniec() {
+            var tipo = "Solic";
+            var TIPO_DOC_DNI = '01';
+            var TIPO_DOC_CE = '02';
+            var campo = document.getElementById("txtPersonaNumeroDeDocumento");
+            var tipoDoc = $("#ddlPersonaTipoDeDocumento").data("kendoDropDownList").value();
+
+            //var urlBuscarPersona_old = URL + "Persona/Buscar?vNumDocum=" + campo.value.trim() + "&tipoDoc=" + tipoDoc;
+            //var urlBuscarPersona = URL + "Persona/Buscar?vNumDocum=" + campo.value.trim() + "&tipoDoc=" + tipoDoc;
+            var urlBuscarPersona = URL + 'Persona/Buscar';
+
+            if (campo.value.trim().length < 8) {
+                controladorApp.notificarMensajeDeAlerta("Ingrese un número de documento válido");
+                return false;
+            }
+            if (tipoDoc == '') {
+                controladorApp.notificarMensajeDeAlerta("Seleccione el tipo de documento");
+                return false;
+            }
+
+            if (campo.value.trim().length == 8) {
+                // PRIMERO BUSCAMOS SI EL SOLICITANTE EXISTE EN NUESTRA BD
+                var data_param = {};
+                data_param.IdDependencia = 0;
+                data_param.Estado = 1;
+                data_param.IdEmpleado = 0
+                data_param.NroDocumento = $("#txtPersonaNumeroDeDocumento").val();
+
+                if (campo.value.trim().length == 8 && tipoDoc == TIPO_DOC_DNI) {
+                    // BUSCAMOS EN LA PIDE
+                    return "" == campo
+                    ? (alert("Ingrese el número de documento"), !1)
+                    : $.getJSON(urlBuscarPersona, {
+                        'vNumDocum': campo.value.trim(),
+                        'tipoDoc': tipoDoc
+                    }).done(function (data) {
+                        if (data.IdPersona == -1) {
+                            controladorApp.abrirMensajeDeConfirmacion(
+                            data.Nombres + "\n\r¿Desea registrar manualmente el trabajador?", 'SI', 'NO'
+                            , function (arg) {
+                                $("#txtPersonaApellidoPaterno").removeAttr("readonly");
+                                $("#txtPersonaApellidoMaterno").removeAttr("readonly");
+                                $("#txtPersonaNombres").removeAttr("readonly");
+                                $("#txtPersonaApellidoPaterno").val("");
+                                $("#txtPersonaApellidoMaterno").val("");
+                                $("#txtPersonaNombres").val("");
+                            }, null);
+                        }
+                        else {
+                            //alert(data.Nombres);
+                            if (data.Nombres == null) {
+                                controladorApp.abrirMensajeDeConfirmacion(
+                                "No existe el número de documento ingresado" + "\n\r¿Desea registrar manualmente el trabajador?", 'SI', 'NO'
+                                , function (arg) {
+                                    //controladorApp.notificarMensajeDeAlerta(document.getElementById("txtSolicitanteApellidoPaterno"));
+                                    $("#txtPersonaApellidoPaterno").removeAttr("readonly");
+                                    $("#txtPersonaApellidoMaterno").removeAttr("readonly");
+                                    $("#txtPersonaNombres").removeAttr("readonly");
+                                    $("#txtPersonaApellidoPaterno").val("");
+                                    $("#txtPersonaApellidoMaterno").val("");
+                                    $("#txtPersonaNombres").val("");
+                                }, null);
+                            }
+                            else {
+                                debugger;
+                                $("#txtPersonaApellidoPaterno").attr("readonly", "readonly");
+                                $("#txtPersonaApellidoMaterno").attr("readonly", "readonly");
+                                $("#txtPersonaNombres").attr("readonly", "readonly");
+
+                                $('#hdnIdPersona').val(data.IdPersona);
+                                $("#txtPersonaNombres").val(data.Nombres);
+                                $("#txtPersonaApellidoPaterno").val(data.ApellidoPaterno);
+                                $("#txtPersonaApellidoMaterno").val(data.ApellidoMaterno);
+                                $("#ddlPersonaSexo").data("kendoDropDownList").value(data.Sexo);
+                                $("#ddlPersonaEstadoCivil").data("kendoDropDownList").value(data.EstadoCivil);
+
+                                var fecha = new Date(parseInt(data.FechaDeNacimiento.substr(6)));
+                                $("#txtPersonaFechaNacimiento").data("kendoDatePicker").value(kendo.parseDate(fecha.getDate().toString() + "/" + (fecha.getMonth() + 1).toString() + "/" + fecha.getFullYear().toString()));
+                                $("#hdIdUbigeoEmpleado").val(data.Ubigeo.CodigoReniec);
+                                $("#txtPersonaUbigeo").val(data.DescripcionUbigeo);
+                                $("#txtPersonaDireccionDomicilio").val(data.DireccionDomicilio);
+                                $("#hdFoto").val(data.sFoto);
+
+                                document.getElementById('imgFoto').setAttribute(
+                                    'src', 'data:image/png;base64,' + data.sFoto
+                                );
+                            }
+                        }
+                    })
+                    .fail(function (jqxhr, textStatus, error) {
+                        var err = textStatus + ", " + error;
+                        controladorApp.notificarMensajeDeAlerta('No se pudo conectar al servidor');
+                        console.log("Request Failed: " + err);
+                    });
+                } else {
+                    controladorApp.notificarMensajeDeAlerta('No existe el número de documento ingresado, debe registrar manualmente el trabajador');
+                    $("#txtPersonaApellidoPaterno").removeAttr("readonly");
+                    $("#txtPersonaApellidoMaterno").removeAttr("readonly");
+                    $("#txtPersonaNombres").removeAttr("readonly");
+                    $("#txtPersonaApellidoPaterno").val("");
+                    $("#txtPersonaApellidoMaterno").val("");
+                    $("#txtPersonaNombres").val("");
+                }
+
+            }
+            else if (campo.value.trim().length == 9 && tipoDoc == TIPO_DOC_CE) {
+                //alert("entro");
+                var nroruc = $("#txtPersonaNumeroDeDocumento").val();
+
+                var urlBuscarSIS = controladorApp.obtenerRutaBase() + 'Persona/BuscarProgramaRENIEC_CE';
+                $.getJSON(urlBuscarSIS, {
+                    'vNumDocum': nroruc
+                }).done(function (data) {
+                    $("#txtPersonaNombres").val(data.Nombres);
+                    $("#txtPersonaApellidoMaterno").val(data.ApellidoMaterno);
+                    $("#txtPersonaApellidoPaterno").val(data.ApellidoPaterno);
+                });
+
+            } else {
+                controladorApp.notificarMensajeDeAlerta("Ingrese un número de documento válido");
+                return false;
+            }
+        }
+
+    </script>
+}

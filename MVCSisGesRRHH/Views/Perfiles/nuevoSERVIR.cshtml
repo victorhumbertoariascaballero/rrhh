@@ -1,0 +1,985 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+@{
+    ViewBag.Title = "PERFILES DE PUESTO  ->  REGISTRO DE PERFIL DE PUESTO SERVIR";
+}
+@section SubTitulo { 
+    <div id="toolbar" class="form-group row k-toolbar k-widget k-toolbar-resizable" style="border-color: #b1acac; color: #32364c; margin: 5px ">
+        &nbsp;&nbsp;<span class="indicador glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <h6>@ViewBag.Titulo</h6> 
+    </div> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 0px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .input-sm {
+        height: 26px;
+        padding: 5px 10px;
+        font-size: 11px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+    .form-group {
+        margin-bottom: 3px;
+    }
+
+    input, label, .k-input {
+        font-size: 11px !important;
+    }
+
+    .panel-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: inherit;
+    }
+
+    .panel-heading {
+        color: #fff !important;
+        background-color: #F05454;
+        border-color: #FA76B1;
+    }
+
+    .k-radio:checked + .k-radio-label:after {
+        background-color: #f05454;
+        border-radius: 50%;
+    }
+
+    .k-primary {
+        color: #fff;
+        border-color: #46b8da;
+        background-color: #5bc0de;
+        background-image: none;
+        background-image: none,-webkit-gradient(linear,left top,left bottom,from(false));
+        background-image: none,-webkit-linear-gradient(top,false);
+        background-image: none,linear-gradient(to bottom,false);
+    }
+
+    .btn-group-xs > .btn, .btn-xs {
+        padding: .25rem .4rem;
+        font-size: .875rem;
+        line-height: .5;
+        border-radius: .2rem;
+    }
+
+    .demo-section ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .demo-section ul li {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 10px 10px 20px;
+            min-height: 28px;
+            line-height: 28px;
+            vertical-align: middle;
+            border-top: 1px solid rgba(128,128,128,.5);
+        }
+
+    .demo-section {
+        min-width: 220px;
+        margin-top: 15px;
+        padding: 0;
+    }
+
+        .demo-section ul li .k-switch {
+            float: right;
+        }
+
+    .wrapper {
+        height: auto;
+        min-height: 600px;
+        /*margin: 20px auto;
+        padding: 20px 0 0;*/
+    }
+</style>
+<!-- Main content -->
+<section class="content">
+    @*<div class="row">
+        <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; width: 100%">
+            <strong>EN CASO SEA NECESARIO ACTUALICE LOS ANEXOS 1 Y ANEXO 2 REQUERIDOS PARA EL PERFIL DE PUESTO :</strong>
+        </div>
+    </div>*@
+    <div class="row">
+        <div class="col-md-6" ></div>
+        <div class="col-md-6" style="text-align: right; padding-top: 10px;">
+            <button id="btnSolEvaluacion" type="button" class="btn btn-primary btn-sm" onclick="controlador.aprobarRegistroPerfil()">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Aprobar perfil de puesto
+            </button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary btn-sm" id="btnCancelar_1">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+            </button>
+        </div>
+    </div>
+    <div id="accordion">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="sisper-tab" data-toggle="tab" data-target="#sisper" type="button" role="tab" aria-controls="sisper" aria-selected="true">ANEXO N° 1: FORMATO DE REQUERIMIENTO DE PERSONAL SERVIR</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="notifica-tab" data-toggle="tab" data-target="#notifica" type="button" role="tab" aria-controls="notifica" aria-selected="true">ANEXO N° 2: FORMATO DE PERFIL DE PUESTO SERVIR</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent" style="padding:10px 0px 0px 0px">
+            <div id="sisper" class="tab-pane fade show active" role="tabpanel" aria-labelledby="sisper-tab">
+                <div class="card">
+                    <div id="collapse1" class="collapse show">
+                        <div class="col-12" style="padding-left: 0px">
+                            <form id="frmRegistroAnexo1" name="frmRegistroAnexo1" novalidate="" onsubmit="controlador.RegAnexo1(event)">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a data-toggle="collapse" href="#">
+                                            <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> I. MOTIVO DEL REQUERIMIENTO
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <label for="ddlCabTipoRequerimiento" class="control-label">Tipo de requerimiento </label>
+                                                @*<input type="text" id="txtOrgano" name="txtOrgano" class="form-control input-sm text-uppercase" readonly />*@
+                                                <select id="ddlCabTipoRequerimiento" name="ddlCabTipoRequerimiento" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-6" id="divCese1" style="display:none">
+                                                <label for="txtPerfilNombreCese" class="control-label">Apellidos y nombres del personal cesado*</label>
+                                                <input id="txtPerfilNombreCese" name="txtPerfilNombreCese" type="text" class="form-control input-sm" placeholder="" style="width: 100%;" />
+                                            </div>
+                                            <div class="form-group col-md-3" id="divCese2" style="display:none">
+                                                <label for="txtPerfilCese" class="control-label">Fin de labores*</label>
+                                                <input id="txtPerfilCese" name="txtPerfilCese" type="text" class="form-control input-sm" style="width: 100%;" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <label for="txtCabRemuneracion" class="control-label">Remuneración mensual *</label>
+                                                <input type="text" id="txtCabRemuneracion" name="txtCabRemuneracion" class="form-control input-sm" required="required" validationmessage="requerido" maxlength="100" @*onkeypress="return SoloLetras(event)"*@ />
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <label for="txtCabNombrePuesto" class="control-label">Denominación del puesto * </label>
+                                                <input type="text" id="txtCabNombrePuesto" name="txtCabNombrePuesto" class="form-control input-sm" required="required" validationmessage="requerido" maxlength="200" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a data-toggle="collapse" href="#">
+                                            <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> II. INFORMACIÓN DEL PUESTO A CUBRIR
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <label for="txtCabCantPuestos" class="control-label">Nro de posiciones *</label>
+                                                <input type="text" id="txtCabCantPuestos" name="txtCabCantPuestos" class="form-control input-sm" required="required" validationmessage="requerido" maxlength="3" onkeypress="return SoloNumeros(event)" />
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="txtCabPeriodoCont" class="control-label">Periodo de contratación *</label>
+                                                <input type="text" id="txtCabPeriodoCont" name="txtCabPeriodoCont" class="form-control input-sm" required="required" validationmessage="requerido" maxlength="100" />
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="txtCabMeta" class="control-label">Meta presupuestaria afecta * </label>
+                                                <input type="text" id="txtCabMeta" name="txtCabMeta" class="form-control input-sm" required="required" validationmessage="requerido" maxlength="10" />
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="ddlCabTipoServicio" class="control-label">Tipo de servicio (Cuando corresponda) *</label>
+                                                <select id="ddlCabTipoServicio" name="ddlCabTipoServicio" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        @*<div class="row">
+                                            
+                                        </div>*@
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a data-toggle="collapse" href="#">
+                                            <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> III. JUSTIFICACIÓN DEL REQUERIMIENTO
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <label for="txtCabJustificacion" class="control-label">Descripción * </label>
+                                                @*<input type="text" id="txtMision" name="txtMision" class="form-control input-sm text-uppercase" required="required" validationmessage="requerido" maxlength="990" />*@
+                                                <textarea id="txtCabJustificacion" name="txtCabJustificacion" class="form-control input-sm" required="required" validationmessage="requerido" maxlength="200" rows="3" style="height: 60px;"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <label for="ddlCabExamenConoc" class="control-label">¿Requiere examen de conocimiento? *</label>
+                                                <select id="ddlCabExamenConoc" name="ddlCabExamenConoc" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="ddlCabExamenPsico" class="control-label">¿Requiere examen psicológico? * </label>
+                                                <select id="ddlCabExamenPsico" name="ddlCabExamenPsico" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Seleccione --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12 text-center">
+                                                    <button id="btnGenerarFicha" type="button" class="btn btn-primary btn-sm" onclick="controlador.GenerarFormatoRequerimiento()">
+                                                        <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Descargar formato de requerimiento de personal SERVIR (Anexo 1)
+                                                    </button>
+
+                                                    @*<button id="btnFinalizar" type="button" class="btn btn-primary btn-sm" onclick="controlador.Finalizar()" style="display:none">
+            <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Finalizar
+        </button>*@&nbsp;&nbsp;
+                                                    <button type="submit" class="btn btn-primary btn-sm">
+                                                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar Anexo 1
+                                                    </button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="notifica" class="tab-pane fade" role="tabpanel" aria-labelledby="notifica-tab">
+                <div class="card">
+                    <div id="collapse2" class="collapse show">
+                        <div class="col-12" style="padding-left: 0px">
+                            <form id="frmRegistroAnexo2" name="frmRegistroAnexo2" novalidate="" onsubmit="controlador.RegAnexo2(event)">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a data-toggle="collapse" href="#collapse2">
+                                            <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> I. IDENTIFICACIÓN DEL PUESTO
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        @*<div class="row">
+                    <label class="col-md-12 control-label text-left">IDENTIFICACIÓN DEL PUESTO </label>
+                </div>*@
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <label for="txtOrgano" class="control-label">Órgano </label>
+                                                @*<input type="text" id="txtOrgano" name="txtOrgano" class="form-control input-sm text-uppercase" readonly />*@
+                                                <select id="ddlOrgano" name="ddlOrgano" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                                    <option value="">-- Todos --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-8">
+                                                <label for="txtUUOO" class="control-label text-right">Unidad Orgánica </label>
+                                                @*<input type="text" id="txtUUOO" name="txtUUOO" class="form-control input-sm text-uppercase" readonly />*@
+                                                <select id="ddlUUOO" name="ddlOrgano" class="form-control input-sm" style="width: 100%;">
+                                                    <option value="">-- Todos --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <label for="txtDependenciaJerarquicaLineal" class="control-label">Dependencia Jerárquica Lineal </label>
+                                                <input type="text" id="txtDependenciaJerarquicaLineal" name="txtDependenciaJerarquicaLineal" class="form-control input-sm" maxlength="100" onkeypress="return SoloLetras(event)" readonly />
+                                            </div>
+                                            <div class="form-group col-md-8">
+                                                <label for="txtNombrePuesto" class="control-label">Nombre del Puesto * </label>
+                                                <input type="text" id="txtNombrePuesto" name="txtNombrePuesto" class="form-control input-sm" required="required" validationmessage="requerido" maxlength="200" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <label for="txtPuestoEstructural" class="control-label">Puesto Estructural </label>
+                                                <input type="text" id="txtPuestoEstructural" name="txtPuestoEstructural" class="form-control input-sm" value="No Aplica" readonly />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="txtDependenciaFuncional" class="control-label">Dependencia Funcional </label>
+                                                <input type="text" id="txtDependenciaFuncional" name="txtDependenciaFuncional" class="form-control input-sm" value="No Aplica" readonly />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="txtPuestoCargo" class="control-label">Puestos a su Cargo </label>
+                                                <input type="text" id="txtPuestoCargo" name="txtPuestoCargo" class="form-control input-sm" value="No Aplica" readonly />
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a data-toggle="collapse" href="#collapse2">
+                                            <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> II. FUNCIONES
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <label for="txtMision" class="control-label">Misión * </label>
+                                                @*<input type="text" id="txtMision" name="txtMision" class="form-control input-sm text-uppercase" required="required" validationmessage="requerido" maxlength="990" />*@
+                                                <textarea id="txtMision" name="txtMision" class="form-control input-sm" required="required" validationmessage="requerido" maxlength="990" rows="3" style="height: 60px;"></textarea>
+                                            </div>
+                                        </div>
+                                        <div id="divFunciones" class="row" style="display:none">
+                                            @*<hr style="border: 1px dashed #e2e2e2;">*@
+                                            <label class="col-md-12 control-label text-left">Funciones del Puesto </label>
+                                            <div class="form-group col-md-12">
+                                                <div class="row" id="divGridFunciones"></div>
+                                            </div>
+                                        </div>
+                                        <div id="divCondiciones" class="row" style="display:none">  
+                                            <div class="form-group col-md-6">
+                                                <label class="col-md-12 control-label text-left">Condiciones Atípicas para el Desempeño del Puesto </label>
+                                                <textarea id="txtCondiciones" name="txtMision" class="form-control input-sm" maxlength="200" rows="4" style="height: 60px;"></textarea>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <div class="form-group row">
+                                                    <label class="col-md-8 control-label text-left">Periodicidad de la aplicacion (marca con una X y luego explicar o sustentar) </label>
+                                                    <div class="col-md-4">
+                                                        <select id="ddlPeriodicidad" name="ddlPeriodicidad" class="form-control input-sm" style="width: 100%;">
+                                                            <option value="">-- Todos --</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <textarea id="txtPeriodicidad" name="txtMision" class="form-control input-sm" maxlength="200" rows="2" style="height: 50px;"></textarea>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div id="divCoordinaciones" class="row" style="display:none">
+                                            <hr style="border: 1px dashed #e2e2e2;">
+                                            <label class="col-md-12 control-label text-left">COORDINACIONES PRINCIPALES </label>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-md-12 control-label" style="float:none">Coordinaciones Internas : </label>
+                                                <div class="row" id="divGridCoordInternas"></div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-md-12 control-label" style="float:none">Coordinaciones Externas : </label>
+                                                <div class="row" id="divGridCoordExternas"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a data-toggle="collapse" href="#collapse3">
+                                            <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> III. REQUISITOS
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="divFormacion" class="row" style="display:none">
+                                            @*<hr style="border: 1px dashed #e2e2e2;" />*@
+                                            <label class="col-md-12 control-label text-left">FORMACIÓN ACADÉMICA </label>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-md-12 control-label" style="float:none">Nivel Educativo Básico : </label>
+                                                <div class="row" id="divGridCarreraBasico">
+                                                    @*<div class="k-header k-grid-toolbar">*@
+                                                    @*<div class="k-icon k-i-plus k-grid-add k-button k-button-md k-button-rectangle k-rounded-md k-button-solid k-button-solid-base">*@
+                                                    <div class="k-header k-grid-toolbar">
+                                                        <a role="button" class="k-button k-button-icontext btnAddCarreraBasico" onclick="controlador.abrirModalRegistroNivelBasico(0)"><span class="k-icon k-i-plus"></span>Agregar</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                &nbsp;
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="col-md-12 control-label" style="float:none">Nivel Profesional : </label>
+                                                <div class="row" id="divGridCarreraPreGrado">
+                                                    <div class="k-header k-grid-toolbar">
+                                                        <a role="button" class="k-button k-button-icontext btnAddCarreraPreGrado" onclick="controlador.abrirModalRegistroNivelEducativo(0)"><span class="k-icon k-i-plus"></span>Agregar</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="col-md-12 control-label" style="float:none">Maestría : </label>
+                                                <div class="row" id="divGridCarreraMaestria">
+                                                    <div class="k-header k-grid-toolbar">
+                                                        <a role="button" class="k-button k-button-icontext btnAddCarreraMaetria" onclick="controlador.abrirModalRegistroMaestria(0)"><span class="k-icon k-i-plus"></span>Agregar</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="col-md-12 control-label" style="float:none">Doctorado : </label>
+                                                <div class="row" id="divGridCarreraProDoctorado">
+                                                    <div class="k-header k-grid-toolbar">
+                                                        <a role="button" class="k-button k-button-icontext btnAddCarreraProDoctorado" onclick="controlador.abrirModalRegistroDoctorado(0)"><span class="k-icon k-i-plus"></span>Agregar</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="divExperiencia" class="row" style="display:none">
+                                            <hr style="border: 1px dashed #e2e2e2;">
+                                            <label class="col-md-12 control-label text-left">EXPERIENCIA LABORAL</label>
+                                            <div class="form-group col-md-2">
+                                                <label for="txtAnioExperienciaGeneral" class="control-label">General (en años)</label>
+                                                <input type="number" id="txtAnioExperienciaGeneral" name="txtAnioExperienciaGeneral" class="form-control input-sm " validationmessage="valor inválido" min="0" max="25" />
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label for="txtAnioExperienciaEspecifica" class="control-label">Específica (en años)</label>
+                                                <input type="number" id="txtAnioExperienciaEspecifica" name="txtAnioExperienciaEspecifica" class="form-control input-sm " validationmessage="valor inválido" min="0" max="25" />
+                                            </div>
+                                            <div class="form-group col-md-8">
+                                                <label for="txtDesExperienciaEspecifica" class="control-label">Descripción adicional de la experiencia específica</label>
+                                                <input type="text" id="txtDesExperienciaEspecifica" name="txtDesExperienciaEspecifica" class="form-control input-sm " maxlength="490" />
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label for="txtAnioExperienciaSectorPublico" class="control-label">En el sector público (en años)</label>
+                                                <input type="number" id="txtAnioExperienciaSectorPublico" name="txtAnioExperienciaSectorPublico" class="form-control input-sm " validationmessage="valor inválido" min="0" max="25" />
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label for="ddlNivelMinimoPuesto" class="control-label">Nivel mínimo de puesto</label>
+                                                <select id="ddlNivelMinimoPuesto" name="ddlNivelMinimoPuesto" class="form-control input-sm" style="width: 100%;" validationmessage="requerido">
+                                                    <option value="">-- Todos --</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div id="divConocimientos" class="row" style="display:none">
+                                            <hr style="border: 1px dashed #e2e2e2;" />
+                                            <label class="col-md-12 control-label text-left">CONOCIMIENTOS </label>
+
+                                            <div class="form-group col-md-12">
+                                                <label class="col-md-12 control-label" style="float:none">Conocimientos Técnicos principales requeridos para el puesto : </label>
+                                                <div class="row" id="divGridConocTec"></div>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="col-md-12 control-label" style="float:none">Cursos y Programas de Especialización Requeridos y Sustentado con Documentos : </label>
+                                                <div class="row" id="divGridCursoProg"></div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-md-12 control-label" style="float:none">Conocimientos de Ofimática e Idiomas / Dialectos : </label>
+                                                <div class="row" id="divGridOfimatica_Idiomas"></div>
+                                            </div>
+                                        </div>
+                                        <div id="divHabilidades" class="row" style="display:none">
+                                            <hr style="border: 1px dashed #e2e2e2;" />
+                                            <label class="col-md-12 control-label text-left">HABILIDADES Y COMPETENCIAS </label>
+
+                                            <div class="form-group col-md-6">
+                                                <label class="col-md-12 control-label" style="float:none">Habilidades : </label>
+                                                <div class="row" id="divGridHabilidades"></div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-md-12 control-label" style="float:none">Competencias : </label>
+                                                <div class="row" id="divGridCompetencias"></div>
+                                            </div>
+                                        </div>
+                                        <div id="divRequisitos" class="row" style="display:none">
+                                            <hr style="border: 1px dashed #e2e2e2;" />
+                                            <label class="col-md-12 control-label text-left">REQUISITOS ADICIONALES </label>
+
+                                            <div class="form-group col-md-12">
+                                                <div class="row" id="divGridRequisitosAdicionales"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12 text-center">
+                                                    <button id="btnGenerarFicha" type="button" class="btn btn-primary btn-sm" onclick="controlador.GenerarFormatoPerfil()">
+                                                        <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Descargar formato de perfil de puesto (Anexo 2)
+                                                    </button>
+                                                    
+                                                    @*<button id="btnFinalizar" type="button" class="btn btn-primary btn-sm" onclick="controlador.Finalizar()" style="display:none">
+            <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Finalizar
+        </button>*@&nbsp;&nbsp;
+                                                    @*<button type="button" class="btn btn-primary btn-sm" id="btnCancelar_2">
+            <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+        </button>*@
+
+                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar Anexo 2
+                                                </button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+            
+            
+            @*<div id="divMision" class="panel panel-default">
+            <div id="collapse2" class="panel-collapse collapse">
+                <form id="frmRegistroPerfilMision" name="frmRegistroPerfilMision" novalidate="" onsubmit="controlador.RegMision(event)">
+
+                    <div class="footer">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm" id="btnCancelar_2">
+                                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>*@
+
+
+
+            @*<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                        Experiencia
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <form id="frmRegistroPerfilExperiencia" name="frmRegistroPerfilExperiencia" novalidate="" onsubmit="controlador.RegExperiencia(event)">
+                        <div class="footer">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Grabar
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm" id="btnCancelar_3">
+                                            <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>*@
+            @*<div class="footer">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-sm" onclick="controlador.Finalizar()">
+                            <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Finalizar
+                        </button>
+                    </div>
+                </div>
+            </div>*@
+        <input id="hdiCodOrgano" name="hdiCodOrgano" type="hidden" value="0" />
+        <input id="hdiCodDependencia" name="hdiCodDependencia" type="hidden" value="0" />
+        <input id="hdDependenciaJerarquicaLineal" name="hdDependenciaJerarquicaLineal" type="hidden" value="" />
+        <input id="hdDependenciaFuncional" name="hdDependenciaFuncional" type="hidden" value="" />
+        <input id="hdIdPerfilPuesto" name="hdIdPerfilPuesto" type="hidden" value="@ViewBag.idPerfil" />
+        <input id="hdIdCodTrabajador" name="hdIdCodTrabajador" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />
+        <input id="hdISecuenciaNivelEducativoBasico" name="hdISecuenciaNivelEducativoBasico" type="hidden" value="" />
+        <input id="hdISecuenciaNivelEducativo" name="hdISecuenciaNivelEducativo" type="hidden" value="" />
+        <input id="hdISecuenciaMaestria" name="hdISecuenciaMaestria" type="hidden" value="" />
+        <input id="hdISecuenciaDoctorado" name="hdISecuenciaDoctorado" type="hidden" value="" />
+    </div>
+</section>
+
+<!-- The Modal -->
+<div id="ModalAgregarNivelBasico" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmRegistroNivelBasico" name="frmRegistroNivelBasico" novalidate="" onsubmit="controlador.registrarNivelBasico(event)">
+            <!-- Modal body -->
+            <div class="panel-body">
+                <div class="row">
+                    <div class="row col-md-12">
+                        <label for="ddlNivelEducativoBasico" class="col-md-2 control-label text-left">Nivel Educativo </label>
+                        <div class="col-md-7">
+                            <select id="ddlNivelEducativoBasico" name="ddlNivelEducativoBasico" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="chkCompletoNivelEducBasico">
+                            <label class="custom-control-label" for="chkCompletoNivelEducBasico">Completo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="panel-footer" style="text-align:right;">
+                <button type="submit" class="btn btn-primary btn-sm" id="btnGrabarNivelEducativoBasico">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Guardar
+                </button>
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalAgregarNivelBasico()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="ModalAgregarNivelEducativo" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmRegistroNivelEducativo" name="frmRegistroNivelEducativo" novalidate="" onsubmit="controlador.registrarNivelEducativo(event)">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlNivelEducativo" class="col-md-2 control-label text-left">Nivel Educativo </label>
+                        <div class="col-md-10">
+                            <select id="ddlNivelEducativo" name="ddlNivelEducativo" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlNivelAlcanzado" class="col-md-2 control-label text-left">Nivel Alcanzado </label>
+                        <div class="col-md-10">
+                            <select id="ddlNivelAlcanzado" name="ddlNivelAlcanzado" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN1" class="col-md-2 control-label text-right">Nivel 1 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN1" name="ddlCarreraN1" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN2" class="col-md-2 control-label text-right">Nivel 2 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN2" name="ddlCarreraN2" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN3" class="col-md-2 control-label text-right">Nivel 3 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN3" name="ddlCarreraN3" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" id="divCarrera">
+                        <label for="ddlCarreraN4" class="col-md-2 control-label text-left">Carrera Profesional </label>
+                        <div class="col-md-10">
+                            <select id="ddlCarreraN4" name="ddlCarreraN4" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12" id="divNuevaCarrera" style="display:none">
+                        <label for="txtNuevaCarrera" class="col-md-2 control-label text-right">Carrera Profesional </label>
+                        <div class="col-md-10">
+                            <input type="text" id="txtNuevaCarrera" name="txtNuevaCarrera" class="form-control input-sm" />
+                            <a role="button" class="k-button k-button-icontext btnAddNuevaCarrera" onclick="controlador.registrarNuevaCarrera()"><span class="k-icon k-i-add"></span>Agregar</a>
+                            <a role="button" class="k-button k-button-icontext btnCancelarNuevaCarrera" onclick="controlador.cancelarNuevaCarrera()"><span class="k-icon k-i-cancel"></span>Cancelar</a>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row col-md-12">
+                    <div class="col-md-1 custom-control custom-checkbox">
+                    </div>
+                    <div class="col-md-3 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="chkCompletoNivelEduc">
+                        <label class="custom-control-label" for="chkCompletoNivelEduc">Completo</label>
+                    </div>
+                    <div class="col-md-3 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="chkColegiado" onchange="return OnChangeColegiado()">
+                        <label class="custom-control-label" for="chkColegiado">Colegiado</label>
+                    </div>
+                    <div class="col-md-3 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="chkHabilitado" onchange="return OnChangeHabilitado()">
+                        <label class="custom-control-label" for="chkHabilitado">Habilitado</label>
+                    </div>
+                    <div class="col-md-2 custom-control custom-checkbox"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-sm" id="btnGrabarNivelEducativo">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Guardar
+                </button>
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalAgregarNivelEducativo()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="ModalAgregarMaestria" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmRegistroMaestria" name="frmRegistroMaestria" novalidate="" onsubmit="controlador.registrarMaestria(event)">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlNivelAlcanzadoMaestria" class="col-md-2 control-label text-left">Nivel Alcanzado </label>
+                        <div class="col-md-10">
+                            <select id="ddlNivelAlcanzadoMaestria" name="ddlNivelAlcanzadoMaestria" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN1Maestria" class="col-md-2 control-label text-right">Nivel 1 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN1Maestria" name="ddlCarreraN1Maestria" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN2Maestria" class="col-md-2 control-label text-right">Nivel 2 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN2Maestria" name="ddlCarreraN2Maestria" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN3Maestria" class="col-md-2 control-label text-right">Nivel 3 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN3Maestria" name="ddlCarreraN3Maestria" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" id="divMaestria">
+                        <label for="ddlCarreraN4Maestria" class="col-md-2 control-label text-left">Especialidad </label>
+                        <div class="col-md-10">
+                            <select id="ddlCarreraN4Maestria" name="ddlCarreraN4Maestria" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12" id="divNuevaMaestria" style="display:none">
+                        <label for="txtNuevaMaestria" class="col-md-2 control-label text-right">Especialidad </label>
+                        <div class="col-md-10">
+                            <input type="text" id="txtNuevaMaestria" name="txtNuevaMaestria" class="form-control input-sm" />
+                            <a role="button" class="k-button k-button-icontext btnAddNuevaCarrera" onclick="controlador.registrarNuevaMaestria()"><span class="k-icon k-i-add"></span>Agregar</a>
+                            <a role="button" class="k-button k-button-icontext btnCancelarNuevaCarrera" onclick="controlador.cancelarNuevaMaestria()"><span class="k-icon k-i-cancel"></span>Cancelar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-sm" id="btnGrabarMaestria">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Guardar
+                </button>
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalAgregarMaestria()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>Cancelar
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div id="ModalAgregarDoctorado" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmRegistroDoctorado" name="frmRegistroDoctorado" novalidate="" onsubmit="controlador.registrarDoctorado(event)">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlNivelAlcanzadoDoctorado" class="col-md-2 control-label text-right">Nivel Alcanzado </label>
+                        <div class="col-md-10">
+                            <select id="ddlNivelAlcanzadoDoctorado" name="ddlNivelAlcanzadoDoctorado" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN1Doctorado" class="col-md-2 control-label text-right">Nivel 1 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN1Doctorado" name="ddlCarreraN1Doctorado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN2Doctorado" class="col-md-2 control-label text-right">Nivel 2 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN2Doctorado" name="ddlCarreraN2Doctorado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-md-12">
+                        <label for="ddlCarreraN3Doctorado" class="col-md-2 control-label text-right">Nivel 3 </label>
+                        <div class="col-md-7">
+                            <select id="ddlCarreraN3Doctorado" name="ddlCarreraN3Doctorado" class="form-control" style="width: 100%;">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" id="divDoctorado">
+                        <label for="ddlCarreraN4Doctorado" class="col-md-2 control-label text-right">Especialidad </label>
+                        <div class="col-md-10">
+                            <select id="ddlCarreraN4Doctorado" name="ddlCarreraN4Doctorado" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Todos --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12" id="divNuevoDoctorado" style="display:none">
+                        <label for="txtNuevoDoctorado" class="col-md-2 control-label text-right">Especialidad </label>
+                        <div class="col-md-10">
+                            <input type="text" id="txtNuevoDoctorado" name="txtNuevoDoctorado" class="form-control input-sm" />
+                            @*<div class="k-grid-toolbar">*@
+                            <a role="button" class="k-button k-button-icontext btnAddNuevoDoctorado" onclick="controlador.registrarNuevoDoctorado()"><span class="k-icon k-i-add"></span>Agregar</a>
+                            <a role="button" class="k-button k-button-icontext btnCancelarNuevoDoctorado" onclick="controlador.cancelarNuevoDoctorado()"><span class="k-icon k-i-cancel"></span>Cancelar</a>
+                            @*</div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-sm" id="btnGrabarDoctorado">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Guardar
+                </button>
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalAgregarDoctorado()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2022.1.456/jszip.min.js"></script>
+    @*<script src="~/Scripts/App/Intranet/PerfilesPuesto.js"></script>*@
+    <script src="~/Scripts/App/Intranet/PerfilPuesto.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    @*<link rel="stylesheet" href="../Content/Plugin/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../Content/Plugin/datatables.net-bs/css/responsive.bootstrap.min.css">*@
+    @*<script src="~/Content/Plugin/datatables.net/js/jquery.dataTables.min.js"></script>*@
+    @*<script src="~/Content/Plugin/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="~/Content/Plugin/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+        <script src="~/Content/Plugin/datatables.net-bs/js/responsive.bootstrap.min.js"></script>*@
+    @*<script src="~/Content/Javascript/jquery-1.7.2.min.js"></script>*@
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+            controlador = new PerfilPuestoJS();
+            //controlador.inicializarNuevo();
+            controlador.inicializarNuevoRegistro();
+            //$('ddlUUOO').prop('readonly', true);
+        });
+        debugger;
+        //document.getElementById("ddlUUOO").readOnly = false;
+        $("#btnCancelar_1").click(function () {
+            window.location.href = "Index";
+        });
+        $("#btnCancelar_2").click(function () {
+            window.location.href = "Index";
+        });
+        $("#btnCancelar_3").click(function () {
+            window.location.href = "Index";
+        });
+
+        function OnChangeColegiado() {
+            if (!$('#chkColegiado').is(":checked"))
+                $("#chkHabilitado").prop("checked", false);
+            return true;
+        }
+        function OnChangeHabilitado() {
+            if ($('#chkHabilitado').is(":checked"))
+                $("#chkColegiado").prop("checked", true);
+            else
+                $("#chkColegiado").prop("checked", false);
+            return true;
+        }
+    </script>
+}

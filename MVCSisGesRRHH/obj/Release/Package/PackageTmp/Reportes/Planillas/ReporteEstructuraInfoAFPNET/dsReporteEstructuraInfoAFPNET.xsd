@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReporteEstructuraInfoAFPNET" targetNamespace="http://tempuri.org/dsReporteEstructuraInfoAFPNET.xsd" xmlns:mstns="http://tempuri.org/dsReporteEstructuraInfoAFPNET.xsd" xmlns="http://tempuri.org/dsReporteEstructuraInfoAFPNET.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReporteEstructuraInfoAFPNET" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReporteEstructuraInfoAFPNET" msprop:Generator_UserDSName="dsReporteEstructuraInfoAFPNET">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsReporteEstructuraInfoAFPNET" msprop:Generator_TableClassName="dsReporteEstructuraInfoAFPNETDataTable" msprop:Generator_TableVarName="tabledsReporteEstructuraInfoAFPNET" msprop:Generator_TablePropName="_dsReporteEstructuraInfoAFPNET" msprop:Generator_RowDeletingName="dsReporteEstructuraInfoAFPNETRowDeleting" msprop:Generator_RowChangingName="dsReporteEstructuraInfoAFPNETRowChanging" msprop:Generator_RowEvHandlerName="dsReporteEstructuraInfoAFPNETRowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteEstructuraInfoAFPNETRowDeleted" msprop:Generator_UserTableName="dsReporteEstructuraInfoAFPNET" msprop:Generator_RowChangedName="dsReporteEstructuraInfoAFPNETRowChanged" msprop:Generator_RowEvArgName="dsReporteEstructuraInfoAFPNETRowChangeEvent" msprop:Generator_RowClassName="dsReporteEstructuraInfoAFPNETRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sCuspp" msprop:Generator_ColumnVarNameInTable="columnsCuspp" msprop:Generator_ColumnPropNameInRow="sCuspp" msprop:Generator_ColumnPropNameInTable="sCusppColumn" msprop:Generator_UserColumnName="sCuspp" type="xs:string" minOccurs="0" />
+              <xs:element name="iCodigoTipoDocumento" msprop:Generator_ColumnVarNameInTable="columniCodigoTipoDocumento" msprop:Generator_ColumnPropNameInRow="iCodigoTipoDocumento" msprop:Generator_ColumnPropNameInTable="iCodigoTipoDocumentoColumn" msprop:Generator_UserColumnName="iCodigoTipoDocumento" type="xs:string" minOccurs="0" />
+              <xs:element name="sNumeroDocumento" msprop:Generator_ColumnVarNameInTable="columnsNumeroDocumento" msprop:Generator_ColumnPropNameInRow="sNumeroDocumento" msprop:Generator_ColumnPropNameInTable="sNumeroDocumentoColumn" msprop:Generator_UserColumnName="sNumeroDocumento" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreCompleto" msprop:Generator_ColumnVarNameInTable="columnsNombreCompleto" msprop:Generator_ColumnPropNameInRow="sNombreCompleto" msprop:Generator_ColumnPropNameInTable="sNombreCompletoColumn" msprop:Generator_UserColumnName="sNombreCompleto" type="xs:string" minOccurs="0" />
+              <xs:element name="sRelacionLaboral" msprop:Generator_ColumnVarNameInTable="columnsRelacionLaboral" msprop:Generator_ColumnPropNameInRow="sRelacionLaboral" msprop:Generator_ColumnPropNameInTable="sRelacionLaboralColumn" msprop:Generator_UserColumnName="sRelacionLaboral" type="xs:string" minOccurs="0" />
+              <xs:element name="sInicioRL" msprop:Generator_ColumnVarNameInTable="columnsInicioRL" msprop:Generator_ColumnPropNameInRow="sInicioRL" msprop:Generator_ColumnPropNameInTable="sInicioRLColumn" msprop:Generator_UserColumnName="sInicioRL" type="xs:string" minOccurs="0" />
+              <xs:element name="sCeseRL" msprop:Generator_ColumnVarNameInTable="columnsCeseRL" msprop:Generator_ColumnPropNameInRow="sCeseRL" msprop:Generator_ColumnPropNameInTable="sCeseRLColumn" msprop:Generator_UserColumnName="sCeseRL" type="xs:string" minOccurs="0" />
+              <xs:element name="sExcepcionAportar" msprop:Generator_ColumnVarNameInTable="columnsExcepcionAportar" msprop:Generator_ColumnPropNameInRow="sExcepcionAportar" msprop:Generator_ColumnPropNameInTable="sExcepcionAportarColumn" msprop:Generator_UserColumnName="sExcepcionAportar" type="xs:string" minOccurs="0" />
+              <xs:element name="dcRemuneracion" msprop:Generator_ColumnVarNameInTable="columndcRemuneracion" msprop:Generator_ColumnPropNameInRow="dcRemuneracion" msprop:Generator_ColumnPropNameInTable="dcRemuneracionColumn" msprop:Generator_UserColumnName="dcRemuneracion" type="xs:string" minOccurs="0" />
+              <xs:element name="dcAporteVoluntario" msprop:Generator_ColumnVarNameInTable="columndcAporteVoluntario" msprop:Generator_ColumnPropNameInRow="dcAporteVoluntario" msprop:Generator_ColumnPropNameInTable="dcAporteVoluntarioColumn" msprop:Generator_UserColumnName="dcAporteVoluntario" type="xs:string" minOccurs="0" />
+              <xs:element name="sTipoTrabajo" msprop:Generator_ColumnVarNameInTable="columnsTipoTrabajo" msprop:Generator_ColumnPropNameInRow="sTipoTrabajo" msprop:Generator_ColumnPropNameInTable="sTipoTrabajoColumn" msprop:Generator_UserColumnName="sTipoTrabajo" type="xs:string" minOccurs="0" />
+              <xs:element name="iMes" msprop:Generator_ColumnVarNameInTable="columniMes" msprop:Generator_ColumnPropNameInRow="iMes" msprop:Generator_ColumnPropNameInTable="iMesColumn" msprop:Generator_UserColumnName="iMes" type="xs:string" minOccurs="0" />
+              <xs:element name="iAnio" msprop:Generator_ColumnVarNameInTable="columniAnio" msprop:Generator_ColumnPropNameInRow="iAnio" msprop:Generator_ColumnPropNameInTable="iAnioColumn" msprop:Generator_UserColumnName="iAnio" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombreReporte" msprop:Generator_ColumnVarNameInTable="columnsNombreReporte" msprop:Generator_ColumnPropNameInRow="sNombreReporte" msprop:Generator_ColumnPropNameInTable="sNombreReporteColumn" msprop:Generator_UserColumnName="sNombreReporte" type="xs:string" minOccurs="0" />
+              <xs:element name="sNombre" msprop:Generator_ColumnVarNameInTable="columnsNombre" msprop:Generator_ColumnPropNameInRow="sNombre" msprop:Generator_ColumnPropNameInTable="sNombreColumn" msprop:Generator_UserColumnName="sNombre" type="xs:string" minOccurs="0" />
+              <xs:element name="sApePaterno" msprop:Generator_ColumnVarNameInTable="columnsApePaterno" msprop:Generator_ColumnPropNameInRow="sApePaterno" msprop:Generator_ColumnPropNameInTable="sApePaternoColumn" msprop:Generator_UserColumnName="sApePaterno" type="xs:string" minOccurs="0" />
+              <xs:element name="sApeMaterno" msprop:Generator_ColumnVarNameInTable="columnsApeMaterno" msprop:Generator_ColumnPropNameInRow="sApeMaterno" msprop:Generator_ColumnPropNameInTable="sApeMaternoColumn" msprop:Generator_UserColumnName="sApeMaterno" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

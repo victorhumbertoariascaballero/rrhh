@@ -1,0 +1,42 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\log4net.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\MIDIS.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\SENACE.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\SITRADOC.Servicios.Tramite.Datacontract.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\Newtonsoft.Json.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\Microsoft.ReportViewer.WebForms.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\bin\Release\Newtonsoft.Json.xml
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\log4net.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\MIDIS.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\SENACE.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\SITRADOC.Servicios.Tramite.Datacontract.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\Newtonsoft.Json.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\Microsoft.ReportViewer.WebForms.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\obj\Release\MIDIS.UtilesMVC.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesMVC\bin\Release\Newtonsoft.Json.xml

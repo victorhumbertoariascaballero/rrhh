@@ -1,0 +1,510 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "PLANILLAS  ->  CONCEPTOS VARIALES Y FIJOS";
+}
+@section SubTitulo { <h3>@ViewBag.Title</h3> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <div class="panel-group" id="accordion">
+        <!--CONCEPTOS VARIABLES-->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="#collapseConceptosVariables">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> CONCEPTOS FIJO Y VARIABLES
+                </a>
+            </div>
+            <div id="collapseConceptosVariables" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="row form-horizontal">
+                        <form id="frmBandejaConceptosTrabajador" name="frmBandejaConceptosTrabjador" novalidate="" onsubmit="controlador.CargarGrillaConceptoTrabajador(event)">
+                            <div class="col-md-12">
+                                <div class="col-md-3">
+                                    <label for="ddlAnio_busqueda" class="control-label">Año </label>
+                                    <select id="ddlAnio_busqueda" name="ddlAnio_busqueda" class="form-control input-sm" style="width: 100%;">
+                                        <option value="">-- Todos --</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="ddlMes_busqueda" class="control-label">Mes</label>
+                                    <div>
+                                        <select id="ddlMes_busqueda" name="ddlMes_busqueda" class="form-control input-sm" style="width: 100%;">
+                                            <option value="" selected>-- Todos --</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="ddlPlanillaAperturada_busqueda" class="control-label">Planilla Aperturada</label>
+                                    <select id="ddlPlanillaAperturada_busqueda" name="ddlPlanillaAperturada_busqueda" class="form-control input-sm" style="width: 100%;">
+                                        <option value="" selected>-- Seleccione --</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-3" style="text-align: center;">
+                                    <label for="botones" class="control-label">&nbsp;</label>
+                                    <div>
+                                        <button id="btnBuscarPlanillaAperturada" type="submit" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                        </button>
+                                        <button type="reset" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> Limpiar
+                                        </button>
+                                        <button type="button" id="btnCerrarPlanilla" class="btn btn-success btn-sm" onclick="controlador.CerrarFase(3)">
+                                            <span class="glyphicon glyphicon-saved" aria-hidden="true"></span> Cerrar Dsctos Fijos y Variables
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pResultado" class="panel panel-default">
+        <div class="panel-heading">
+            <a data-toggle="collapse" href="#collapseReclamo">
+                <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span>  RESULTADO DE LA B&Uacute;SQUEDA
+            </a>
+        </div>
+        <div id="collapseReclamo" class="panel-collapse collapse in">
+            <div class="panel-body" id="divListarAplicacion">
+                <div class="row">
+                    <div id="divTotal" class="col-md-2">
+                        <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
+                    </div>
+                    <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
+                        <button id="btnAgregarConcepto" type="button" class="btn btn-primary btn-sm" onclick="controlador.abrirModalConceptoMasivoTrabajador(0)">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div id="divGridConceptosVariable"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<input id="hdIdCodTrabajador" name="hdIdCodTrabajadorBand" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />
+        <input id="hdIdBasePerfilPuesto" name="hdIdBasePerfilPuesto" type="hidden" value="" />*@
+
+    <!-- The Modal -->
+    <div id="divModalConceptoTrabajador" style="display:none; font-size: 11px">
+        <div class="panel panel-default">
+            <form id="frmRegistroConceptoTrabajador" name="frmRegistroConceptoTrabajador" novalidate="" onsubmit="controlador.agregarConceptoTrabajador(event)">
+                <input id="hdIdTrabajador" name="hdIdTrabajador" type="hidden" value="0" />
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                            <div class="col-md-4">
+                                <label for="ddlAnio_planilla" class="control-label text-right">Año</label>
+                                <select id="ddlAnio_planilla" name="ddlAnio_planilla" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="ddlMes_planilla" class="control-label">Mes</label>
+                                <div>
+                                    <select id="ddlMes_planilla" name="ddlMes_planilla" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="" selected>-- Todos --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="ddlPlanillaAperturada" class="control-label">Planilla Aperturada</label>
+                                <select id="ddlPlanillaAperturada" name="ddlPlanillaAperturada" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="" selected>-- Seleccione --</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @*<div class="form-group col-md-4">
+                                <label for="ddlPersonaTipoDeDocumento" class="control-label">Tipo de documento*</label>
+                                <select id="ddlPersonaTipoDeDocumento" name="ddlPersonaTipoDeDocumento" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido" >
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>*@
+                            <label for="txtNumeroDocumento" class="col-md-4 control-label text-right">Número de documento*</label>
+                            <div class="form-group col-md-4">
+                                
+                                <div class="input-group">
+                                    <input id="txtNumeroDocumento" name="txtNumeroDocumento" type="text" class="form-control input-sm" required="required" maxlength="8" validationmessage="requerido" onkeypress="SoloNumeros(event);" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default btn-sm" id="btnBuscarP" onclick="LoadPersonaConcepto();" title="Clic aquí para consultar sus datos personales" style="height: 18px;">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </button>
+                                        @*<button type="button" class="btn btn-default btn-sm" id="btnBuscarP" title="Clic aquí para consultar sus datos personales" style="height: 18px;">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </button>*@
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="txtNombreTrabajador" class="col-md-4 control-label text-right">Trabajador</label>
+                            <div class="form-group col-md-6">
+                                <input type="text" id="txtNombreTrabajador" name="txtNombreTrabajador" class="form-control input-sm " required="required" validationmessage="requerido" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="ddlTipoConcepto" class="col-md-4 control-label text-right">Tipo Concepto </label>
+                            <div class="form-group col-md-4">
+                                <select id="ddlTipoConcepto" name="ddlTipoConcepto" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="ddlSubTipoConcepto" class="col-md-4 control-label text-right">Sub Tipo Concepto </label>
+                            <div class="form-group col-md-4">
+                                <select id="ddlSubTipoConcepto" name="ddlSubTipoConcepto" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="ddlConcepto" class="col-md-4 control-label text-right">Concepto </label>
+                            <div class="form-group col-md-4">
+                                <select id="ddlConcepto" name="ddlConcepto" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="txtMontoConcepto" class="col-md-4 control-label text-right">Monto</label>
+                            <div class="form-group col-md-2">
+                                <input type="number" id="txtMontoConcepto" name="txtMontoConcepto" class="form-control input-sm " validationmessage="requerido" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="divSubsidio">
+                        <div class="col-md-12">
+                            <label for="txtDiasSubsidio" class="col-md-4 control-label text-right">N° Dias Subsidio</label>
+                            <div class="form-group col-md-2">
+                                <input type="number" id="txtNroDiaSubsidio" name="txtNroDiaSubsidio" maxlength="3" class="form-control input-sm " validationmessage="requerido" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnGuardarAdmin" type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Guardar
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalConceptoTrabajador()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="divModalConceptoMasivoTrabajador" style="display:none; font-size: 11px">
+        <div class="panel panel-default">
+            <form id="frmRegistroConceptoMasivoTrabajador" name="frmRegistroConceptoMasivoTrabajador" novalidate="" onsubmit="controlador.agregarConceptoMasivoTrabajador(event)">
+                <input id="hdIdTrabajadorMasivo" name="hdIdTrabajadorMasivo" type="hidden" value="0" />
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="col-md-4">
+                                <label for="ddlAnio_planillaMasivo" class="control-label text-right">Año</label>
+                                <select id="ddlAnio_planillaMasivo" name="ddlAnio_planillaMasivo" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="">-- Seleccione --</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="ddlMes_planillaMasivo" class="control-label">Mes</label>
+                                <div>
+                                    <select id="ddlMes_planillaMasivo" name="ddlMes_planillaMasivo" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                        <option value="" selected>-- Todos --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="ddlPlanillaAperturadaMasivo" class="control-label">Planilla Aperturada</label>
+                                <select id="ddlPlanillaAperturadaMasivo" name="ddlPlanillaAperturadaMasivo" class="form-control input-sm" style="width: 100%;" required="required" validationmessage="requerido">
+                                    <option value="" selected>-- Seleccione --</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlTipoConceptoMasivo" class="col-md-4 control-label text-right">Tipo Concepto </label>
+                        <div class="form-group col-md-4">
+                            <select id="ddlTipoConceptoMasivo" name="ddlTipoConceptoMasivo" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlSubTipoConceptoMasivo" class="col-md-4 control-label text-right">Sub Tipo Concepto </label>
+                        <div class="form-group col-md-4">
+                            <select id="ddlSubTipoConceptoMasivo" name="ddlSubTipoConceptoMasivo" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="ddlConceptoMasivo" class="col-md-4 control-label text-right">Concepto </label>
+                        <div class="form-group col-md-4">
+                            <select id="ddlConceptoMasivo" name="ddlConceptoMasivo" class="form-control" style="width: 100%;" required="required" validationmessage="requerido">
+                                <option value="">-- Seleccione --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="panelImportarNormal" class="row">
+                            <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                <strong>COPIE LA INFORMACION QUE DESEA IMPORTAR Y PEGUELA SOBRE LA SIGUIENTE TABLA :</strong>
+                            </div>
+                            <div id="divAgregarConceptoMasivo" tabindex="0"></div>
+                        </div>
+                        <div id="panelImportarSubsidio" class="row" style="display:none">
+                            <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                <strong>COPIE LA INFORMACION QUE DESEA IMPORTAR Y PEGUELA SOBRE LA SIGUIENTE TABLA :</strong>
+                            </div>
+                            <div id="divAgregarConceptoMasivoSubsidio" tabindex="0"></div>
+                        </div>
+                    </div>
+                </div>            
+                <div class="modal-footer">
+                    <button id="btnGuardarAdminMasivo" type="submit" class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Guardar
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalConceptoMasivoTrabajador()">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <input id="hdIdConceptoMasivoTrabajador" name="hdIdConceptoMasivoTrabajador" type="hidden" value="0" />
+    <input id="hdIdPlanillaMasivo" name="hdIdPlanillaMasivo" type="hidden" value="" />
+    <input id="hdIdTipoPlanillaMasivo" name="hdIdTipoPlanillaMasivo" type="hidden" value="" />
+    <input id="hdiCodDetPlanillaMasivo" name="hdiCodDetPlanillaMasivo" type="hidden" value="" />
+    <input id="hdIdPlanilla" name="hdIdPlanilla" type="hidden" value="" />
+    <input id="hdIdTipoPlanilla" name="hdIdTipoPlanilla" type="hidden" value="" />
+    <input id="hdiCodDetPlanilla" name="hdiCodDetPlanilla" type="hidden" value="" />
+    @*<input id="hdIdTrabajador" name="hdIdTrabajador" type="hidden" value="" />*@
+    
+
+</section>
+
+<!-- /.content -->
+@section Scripts {
+    <script src="~/Scripts/kendo/2018.1.221/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/ConceptoFijoVariable.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+
+        $(document).ready(function () {
+
+            controlador = new ConceptoFijoVariableJS();
+            controlador.inicializarBandejaConceptoVariable();
+
+        });
+
+        function LoadPersonaConcepto() { //campo, campoId
+            var tipo = "Solic";
+            var TIPO_DOC_DNI = '01';
+            var TIPO_DOC_CE = '02';
+            var campo = document.getElementById("txtNumeroDocumento");
+            //var tipoDoc = $("#ddlPersonaTipoDeDocumento").data("kendoDropDownList").value();
+
+            var urlBuscarPersona = URL + 'Persona/Buscar';
+
+            debugger;
+
+            if (campo.value.trim().length < 8) {
+                controladorApp.notificarMensajeDeAlerta("Ingrese un número de documento válido");
+                return false;
+            }
+            //if (tipoDoc == '') {
+            //    controladorApp.notificarMensajeDeAlerta("Seleccione el tipo de documento");
+            //    return false;
+            //}
+
+            if (campo.value.trim().length == 8) {
+                // PRIMERO BUSCAMOS SI EL SOLICITANTE EXISTE EN NUESTRA BD
+                var data_param = {};
+                //data_param.TipoDeDocumento = $("#ddlPersonaTipoDeDocumento").data("kendoDropDownList").value();
+                data_param.TipoDeDocumento = 1;
+                data_param.IdDependencia = 0;
+                data_param.Estado = 1;
+                data_param.IdEmpleado = 0
+                data_param.NroDocumento = $("#txtNumeroDocumento").val();
+
+                $.ajax({
+                    url: controladorApp.obtenerRutaBase() + 'Empleado/ListarEmpleados',
+                    type: 'GET',
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
+                    processData: true,
+                    cache: false,
+                    data: data_param,
+                    success: function (res) {
+                        if (res != null && res.length > 0) {
+                            var vEmpleado = res[0].Paterno + ' ' + res[0].Materno + ' ' + res[0].Nombre;
+                            $("#hdIdTrabajador").val(res[0].IdEmpleado);
+                            $("#txtNombreTrabajador").val(vEmpleado);
+                        }
+                        else {
+                            debugger;
+                            // LimpiarModalRegistroPersona();
+                            $("#hdIdTrabajador").val('');
+                            $("#txtNombreTrabajador").val('');
+                            controladorApp.notificarMensajeDeAlerta('No existe el número de documento, consultar con el administrador');
+                        }
+                    },
+                    error: function (res) {
+                        debugger;
+                    }
+                });
+
+            }
+
+            else {
+                controladorApp.notificarMensajeDeAlerta("Ingrese un número de documento válido");
+                return false;
+            }
+
+        }
+
+    </script>
+}
+

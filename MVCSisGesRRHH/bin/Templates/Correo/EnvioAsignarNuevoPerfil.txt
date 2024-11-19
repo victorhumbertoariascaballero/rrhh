@@ -1,0 +1,10 @@
+<div class="WordSection1" style="width: 650px; padding: 30px; border-radius: 5px; border: 2px solid #6773b9;"><img style="width: 300px; height: 55px;" src="https://sdv.midis.gob.pe/Sis_GesRRHH/Content/img/logo_midis.png" data-placeholder="no" /> <br /><br />
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">Estimado(a) Trabajador(a):</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">Reciba un cordial saludo, para informarle que se solicita su apoyo en el registro del perfil de puesto <span style="color: red;">_NOMBREPERFIL_</span></span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">En este sentido, se adjunta el link para ingresar al sistema y realizar el mencionado registro.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: &quot; justify; line-height: normal;"><span lang="ES">Para ingresar al sistema <u><span style="color: red;"><a style="color: red;" href="_URLREGISTRO_" target="_blank" rel="noopener"> Haz click aqu&iacute;</a></span></u>.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Gracias.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="ES">Atentamente,</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">&nbsp;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.4pt; line-height: normal; margin: 0cm 0cm .0001pt 141.6pt;"><span lang="ES">Oficina General de Recursos Humanos</span></p>
+</div>

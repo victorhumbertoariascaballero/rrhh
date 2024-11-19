@@ -1,0 +1,274 @@
+﻿@using System.Configuration
+@using MVCSisGesRRHH.Models;
+
+@{
+    ViewBag.Title = "PLANILLAS  ->  SUSPENSIÓN DE RETENCIÓN DE 4TA. CATEGORÍA";
+}
+@section SubTitulo { <h3>@ViewBag.Title</h3> }
+<style>
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .contentWrap {
+        position: relative;
+        width: 98%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tdDetalle {
+        /*font-weight: bold;*/
+        font-size: 11px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+    }
+
+    .tdDetalleNegrita {
+        font-size: 11px;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        border-color: #ccc;
+        background-color: #F5F5F5;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .k-grid .k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid .k-alt.k-state-selected {
+        background-color: #aaffff !important;
+        color: #000000;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        text-align: center;
+    }
+
+    /*tr.k-footer-template td {
+        font-size: 14px;
+        background-color: RGB(255, 221, 221) !important;
+        border-width: 1px 0px;
+        border-color: RGB(255, 122, 122);
+        border-style: solid;
+        padding: 3px 5px 3px 5px;
+        text-align: right;
+    }
+
+    tr.k-group-footer td {
+        text-align: right;
+    }*/
+
+    .console {
+        background-color: transparent;
+        color: #333;
+        font: 11px Consolas, Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        margin: 0;
+        overflow-x: hidden;
+        text-align: left;
+        height: 200px;
+        border: 1px solid rgba(20,53,80,0.1);
+        background-color: #ffffff;
+        text-indent: 0;
+    }
+
+        .console div {
+            background-position: 6px -95px;
+            border-bottom: 1px solid #DDD;
+            padding: 5px 10px;
+            height: 2em;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+
+    input, label, .k-input {
+        font-size: 11px;
+    }
+</style>
+
+<!-- Main content -->
+<section class="content">
+    <div class="panel-group" id="accordion">
+        <!--GENERAR-->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="#collapseTrabajadoresSuspRet4Ta">
+                    <span class="indicador glyphicon glyphicon-chevron-up" aria-hidden="true"></span> TRABAJADORES
+                </a>
+            </div>
+            <div id="collapseTrabajadoresSuspRet4Ta" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="row form-horizontal">
+                        <form id="frmTrabajadoresSuspRet4Ta" name="frmTrabajadoresSuspRet4Ta" novalidate="">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="ddlMesTrabajadoresSuspRet4Ta" class="col-md-3 control-label">Mes </label>
+                                    <div class="col-md-2">
+                                        <select id="ddlMesTrabajadoresSuspRet4Ta" name="ddlMesTrabajadoresSuspRet4Ta" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                    </div>
+                                    <label for="ddlAnioTrabajadoresSuspRet4Ta" class="col-md-1 control-label">Año </label>
+                                    <div class="col-md-2">
+                                        <select id="ddlAnioTrabajadoresSuspRet4Ta" name="ddlAnioTrabajadoresSuspRet4Ta" class="form-control" style="width: 100%;" required="required" validationmessage="requerido"></select>
+                                    </div>
+                                    <div class="col-md-4" style="text-align: center;">
+                                        <button type="button" class="btn btn-primary btn-sm" onclick="controlador.CargarBandejaPrincipalSuspRet4Ta(event)">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button type="button" id="btnAgregarTrabajadorSuspRet4Ta" class="btn btn-primary btn-sm" onclick="controlador.abrirModalAgregarTrabajadorSuspRet4Ta(event)">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar
+                                    </button>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div id="divTotal" class="col-md-2">
+                                    <h5><label>Total de Registros: &nbsp;</label><label id="lblTotalTrabajadorSuspRet4Ta" class="label label-info"></label></h5>
+                                </div>
+                                <div class="row text-right">
+                                    <label for="filterBusqTrabajadorSuspRet4Ta" class="text-right">BUSCAR  </label>
+                                    <input id="filterBusqTrabajadorSuspRet4Ta" class="k-textbox" style="width:200px" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div id="divGridTrabajadoresSuspRet4Ta">
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+
+
+    @*<input id="hdIdCodTrabajador" name="hdIdCodTrabajadorBand" type="hidden" value="@VariablesWeb.oT_Genm_Usuario.iCodTrabajador" />
+        <input id="hdIdBasePerfilPuesto" name="hdIdBasePerfilPuesto" type="hidden" value="" />*@
+
+</section>
+<!-- /.content -->
+<div id="ModalAgregarTrabajadorSuspRet4Ta" style="display: none; font-size: 11px">
+    <div class="panel panel-default">
+        <form id="frmAgregarTrabajadorSuspRet4Ta" name="frmAgregarTrabajadorSuspRet4Ta" novalidate="">
+            <div class="panel-body">
+                @*<div class="row">
+                <div class="col-md-12">
+                    <label for="txtPerfilPuestoBuscar" class="col-md-2 control-label text-right">Perfil de Puesto </label>
+                    <div class="col-md-6">
+                        <input id="txtPerfilPuestoBuscar" name="txtPerfilPuestoBuscar" type="text" class="form-control" style="width: 100%;" />
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" id="btnBuscarPerfil" class="btn btn-info btn-sm" name="btnBuscarPerfil" onclick="controlador.CargarPerfilesPuesto(event)">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                        </button>
+                        @*<input id="btnBuscarPerfil" name="btnBuscarPerfil" type="submit" class="form-control" value="Buscar" onclick="controlador.CargarPerfilesPuesto(event)"/>*@
+                @*</div>
+                    </div>
+                </div>
+                <br />*@
+                @*<div class="row text-right">
+                    <label for="filterTrabajadorSuspRet4Ta" class="text-right">BUSCAR  </label>
+                    <input id="filterTrabajadorSuspRet4Ta" class="k-textbox" style="width:200px" />
+                </div>*@
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <label for="ddlAnioAgregarAgregarTrabajadorSuspRet4Ta" class="col-md-1 control-label">Año </label>
+                                <select id="ddlAnioAgregarAgregarTrabajadorSuspRet4Ta" name="ddlAnioAgregarAgregarTrabajadorSuspRet4Ta" class="form-control" style="width: 100%;" readonly>                                    
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="ddlMesAgregarAgregarTrabajadorSuspRet4Ta" class="col-md-3 control-label">Mes </label>
+                                <select id="ddlMesAgregarAgregarTrabajadorSuspRet4Ta" name="ddlMesAgregarAgregarTrabajadorSuspRet4Ta" class="form-control" style="width: 100%;" ></select>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col-md-12">                        
+                        <div id="panelImportar" class="row">
+                            <div class="alert alert-warning" style="padding: 5px; border: 1px solid #f7cf0aa0; ">
+                                <strong>COPIE LA INFORMACION QUE DESEA IMPORTAR Y PEGUELA SOBRE LA SIGUIENTE TABLA :</strong>
+                            </div>
+                            <div id="divAgregarTrabajadorSuspRet4Ta" tabindex="0"></div>
+                        </div>
+                    </div>
+                </div>
+                @*<br />
+                <div class="row" id="divAgregarTrabajadorSuspRet4Ta"></div>*@
+            </div>
+            <div class="modal-footer">
+                <button id="btnGenerarSuspRet4Ta" type="button" class="btn btn-primary btn-sm" onclick="controlador.ejecutarRegistroSuspRet4Ta()">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Importar
+                </button>
+                <button type="button" class="btn btn-default btn-sm" onclick="controlador.cerrarModalAgregarTrabajadorSuspRet4Ta()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/Scripts/kendo/2018.1.221/jszip.min.js"></script>
+    <script src="~/Scripts/App/Intranet/Planillas.js"></script>
+    <script src="~/Scripts/source/modBase.js"></script>
+
+    <script type="text/javascript">
+        var controlador;
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+        function getBoolean(str) {
+            if ("true".startsWith(str)) {
+                return true;
+            } else if ("false".startsWith(str)) {
+                return false;
+            } else {
+                return null;
+            }
+        }
+
+        $(document).ready(function () {
+            controlador = new PlanillasJS();
+
+            //$("#txtFechaInicio").kendoDatePicker({ format: "dd/MM/yyyy" });
+
+            //alert(controlador);
+            controlador.inicializarSuspencionRetencion4taCat();
+
+        });
+
+
+
+
+
+    </script>
+}

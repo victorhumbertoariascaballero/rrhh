@@ -1,0 +1,60 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\log4net.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.UtilesWeb\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\log4net.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.UtilesWeb\bin\Debug\Newtonsoft.Json.xml
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\MIDIS.UtilesWeb.dll
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\MIDIS.UtilesWeb.pdb
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\MIDIS.ORI.Entidades.dll
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\MIDIS.Utiles.dll
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\DataAnnotationsExtensions.dll
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\Newtonsoft.Json.dll
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\log4net.dll
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\MIDIS.ORI.Entidades.pdb
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\MIDIS.Utiles.pdb
+D:\victor arias\MIDIS.UtilesWeb\bin\Debug\Newtonsoft.Json.xml
+D:\victor arias\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.AssemblyReference.cache
+D:\victor arias\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.CoreCompileInputs.cache
+D:\victor arias\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.CopyComplete
+D:\victor arias\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.dll
+D:\victor arias\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.pdb
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\MIDIS.UtilesWeb.dll
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\MIDIS.UtilesWeb.pdb
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\MIDIS.ORI.Entidades.dll
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\MIDIS.Utiles.dll
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\DataAnnotationsExtensions.dll
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\Newtonsoft.Json.dll
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\log4net.dll
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\MIDIS.ORI.Entidades.pdb
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\MIDIS.Utiles.pdb
+D:\robocop\MIDIS.UtilesWeb\bin\Debug\Newtonsoft.Json.xml
+D:\robocop\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.AssemblyReference.cache
+D:\robocop\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.CoreCompileInputs.cache
+D:\robocop\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.csproj.CopyComplete
+D:\robocop\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.dll
+D:\robocop\MIDIS.UtilesWeb\obj\Debug\MIDIS.UtilesWeb.pdb

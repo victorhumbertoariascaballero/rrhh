@@ -1,0 +1,154 @@
+﻿@model MVCSisRRHH.Models.LoginSSO
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!doctype html>
+@{
+    //var cadena = Context.IsDebuggingEnabled ? "/" : Url.Content("~/");
+    var cadena = Url.Content("~/");
+    var user = "Usuario no válido";
+    if (!String.IsNullOrEmpty(User.Identity.Name))
+    {
+        user = User.Identity.Name;
+    }
+    var tipoDoc = new List<SelectListItem> 
+        { 
+              new SelectListItem { Text = "DNI", Value = "1" }, 
+              new SelectListItem { Text = "CARNÉ DE EXTRANJERÍA", Value = "3" } 
+        };
+}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=EDGE" />
+    <title>MIDIS</title>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap_extend.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/css/styles.css" rel="stylesheet" />
+
+    <script>
+        var globalRutaServidor = '@cadena';
+        var globalDatoObligatorio = "Dato obligatorio";
+        var globalMaxRequestLength = ''; @*//'@Utiles.Variables.MaxBytesAdjunto';*@
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#NombreUsuario").keypress(function (event) {
+                var tecla_pulsada = (document.all) ? event.keyCode : event.which;
+
+                if (tecla_pulsada == 13) {
+                    $("#Clave").focus();
+                }
+            });
+
+            $("#Clave").keypress(function (event) {
+                var tecla_pulsada = (document.all) ? event.keyCode : event.which;
+
+                if (tecla_pulsada == 13) {
+                    $("#lkSubmit").trigger("click");
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+        .panel-heading {
+            color: #fff !important;
+            background-color: #F05454;
+            border-color: #FA76B1;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="container-fluid">
+                <div>
+                    <br />
+                    <br />
+                    <br />
+                    <div class="col-sm-4 col-md-3 col-md-offset-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading text-center">
+                                <strong>SISTEMA DE CONVOCATORIAS CAS</strong>
+                            </div>
+                            <div class="panel-body">
+                                <form role="form" action="#" method="POST">
+                                    <fieldset>
+                                        <div class="row text-center">
+                                            <div>
+                                                <img src="~/Content/img/logo_midis.png" alt="" style="width:310px" />
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-10  col-md-offset-1">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-list-alt"></i>
+                                                        </span>
+                                                        @Html.DropDownListFor(model => model.TipoDocumento, new SelectList(tipoDoc, "Value", "Text"), new { @class = "form-control", }) @*onchange = "getAlldata()"*@
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-user"></i>
+                                                        </span>
+                                                        @Html.TextBoxFor(model => model.NombreUsuario, new { @onkeypress = "return soloLetrasYnumeros(event);", @placeholder = "Número de documento", @class = "form-control", autofocus = "autofocus", autocomplete = "off", MaxLength = 25 })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-lock"></i>
+                                                        </span>
+                                                        @Html.PasswordFor(model => model.Clave, new { @placeholder = "Contraseña", @class = "form-control", MaxLength = 25 })
+                                                    </div>
+                                                </div>
+                                                @if (!ViewData.ModelState.IsValid)
+                                                {
+                                                    <div class="form-group">
+                                                        <div id="divErrorDomicilio" class="input-group alert alert-warning alert-dismissible">
+                                                            @Html.ValidationSummary(false, "")
+
+                                                        </div>
+                                                    </div>
+                                                }
+                                                <div class="form-group">
+                                                    <input type="submit" class="btn btn-primary btn-block form-control" value="Iniciar Sesión">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="panel-footer">
+                                <div style="font-size:11px; text-align: center">
+                                    Desarrollado por la Oficina de Tecnologías de la Información © @DateTime.Now.Year <br>Sede Central: Av. Paseo de la República 3101 - San Isidro, Lima, Perú<br>
+                                    <img src="~/Content/img/icoPhone.png" />
+                                    (511) 631 8000
+                                    <img src="~/Content/img/icoMail.png" /> <a href="mailto:gortega@midis.gob.pe">gortega@midis.gob.pe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    }
+
+    <section class="contentPage">
+        <footer class="footer">
+            
+        </footer>
+    </section>
+</body>
+</html>

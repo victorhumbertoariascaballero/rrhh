@@ -1,0 +1,60 @@
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\log4net.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csprojAssemblyReference.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.CopyComplete
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\Workspaces\Sistema de Gestión de RRHH\MIDIS.RRHH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.ORI.Entidades.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.Utiles.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\log4net.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.ORI.Entidades.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.Utiles.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.AssemblyReference.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.CoreCompileInputs.cache
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.CopyComplete
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.dll
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.pdb
+C:\Users\kmiota\source\repos\RR_HH\RR_HH\MIDIS.SEG.AccesoDatosSQL\bin\Debug\Newtonsoft.Json.xml
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.SEG.AccesoDatosSQL.dll
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.SEG.AccesoDatosSQL.pdb
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.ORI.Entidades.dll
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.Utiles.dll
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\DataAnnotationsExtensions.dll
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\Newtonsoft.Json.dll
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\log4net.dll
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.ORI.Entidades.pdb
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.Utiles.pdb
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\bin\Debug\Newtonsoft.Json.xml
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.AssemblyReference.cache
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.CoreCompileInputs.cache
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.CopyComplete
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.dll
+D:\victor arias\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.pdb
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.SEG.AccesoDatosSQL.dll
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.SEG.AccesoDatosSQL.pdb
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.ORI.Entidades.dll
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.Utiles.dll
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\DataAnnotationsExtensions.dll
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\Newtonsoft.Json.dll
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\log4net.dll
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.ORI.Entidades.pdb
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\MIDIS.Utiles.pdb
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\bin\Debug\Newtonsoft.Json.xml
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.AssemblyReference.cache
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.CoreCompileInputs.cache
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.csproj.CopyComplete
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.dll
+D:\robocop\MIDIS.SEG.AccesoDatosSQL\obj\Debug\MIDIS.SEG.AccesoDatosSQL.pdb
