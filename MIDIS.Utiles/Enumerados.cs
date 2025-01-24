@@ -85,9 +85,9 @@ namespace MIDIS.Utiles
         SITUACION_GENERALES = 30,
         [EnumMember]
         COLEGIOS_PROFESIONALES = 31,
-          [EnumMember]
+        [EnumMember]
         SUB_SECTOR = 32,
-          [EnumMember]
+        [EnumMember]
         ASUNTO_REUNION = 33
     }
 
@@ -272,4 +272,24 @@ namespace MIDIS.Utiles
         ANULADO = 251
     }
     #endregion
+
+
+    [DataContract]
+    public enum EnumMaeEstadoProceso
+    {
+        [EnumMember]
+        PENDIENTE = 1,
+        [EnumMember]
+        APROBADO_POR_JEFE = 2,
+        [EnumMember]
+        RECHAZADO_POR_JEFE = 3,
+        [EnumMember]
+        APROBADO_POR_ADMINISTRADOR = 4,
+        [EnumMember]
+        RECHAZADO_POR_ADMINISTRADOR = 5,
+        [EnumMember]
+        SUBSANADO = 6,
+        [EnumMember]
+        SUBSANADO_PARA_ADMINISTRADOR = 7
+    }
 }

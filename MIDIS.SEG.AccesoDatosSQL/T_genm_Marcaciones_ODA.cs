@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data;
 using MIDIS.ORI.Entidades;
 using MIDIS.SEG.AccesoDatosSQL.Helpers;
+using System.IO;
 
 namespace MIDIS.SEG.AccesoDatosSQL
 {
@@ -149,5 +150,90 @@ namespace MIDIS.SEG.AccesoDatosSQL
 
             return request;
         }
+
+        public bool Sincronizar(Marcaciones_Registro request)
+        {
+            bool respuesta = false;
+            string folderPath = "D:\\robocop 1";
+            //string filePath = "D:\\robocop 1\\LogMarcaciones_7691232360198_18092024.dat";
+
+            string[] files = Directory.GetFiles(folderPath, "*.dat");
+
+            List<Marcaciones_Registro> listaMarcaciones = new List<Marcaciones_Registro>();
+
+            foreach (var filePath in files)
+            {
+                foreach (var line in File.ReadLines(filePath))
+                {
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+                    string[] fields = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    if (fields.Length >= 4)
+                    {
+                        if (request.vNumeroDocumento == fields[0])
+                        {
+                            Marcaciones_Registro entry = new Marcaciones_Registro
+                            {
+                                iCodigoDependencia = request.iCodigoDependencia,
+                                iCodTrabajador = request.iCodTrabajador,
+                                iCodTipoMarcacion = 1,
+                                dtFechaMarcacion = DateTime.ParseExact(fields[2] + " " + fields[3], "yyyy-MM-dd HH:mm:ss", null),
+                                bEstado = true,
+                                vAuditCreacion = request.vAuditCreacion
+                            };
+                            listaMarcaciones.Add(entry);
+                        }
+                    }
+                }
+            }
+           
+
+            using (SqlConnection connection = _iBasesSqlAdoUnitOfWork.ObtenerComandoDeConexion().Connection)
+            {
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+                {
+                    foreach (Marcaciones_Registro item in listaMarcaciones)
+                    {
+                        using (SqlCommand cmd = _iBasesSqlAdoUnitOfWork.ObtenerComandoDeConexion())
+                        {
+                            if (cmd.Connection.State != ConnectionState.Open) cmd.Connection.Open();
+                            cmd.CommandText = "[dbo].[paMarcacionInsertar]";
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add(new SqlParameter("@iCodTrabajador", item.iCodTrabajador));
+                            cmd.Parameters.Add(new SqlParameter("@iCodigoDependencia", item.iCodigoDependencia));
+                            cmd.Parameters.Add(new SqlParameter("@iCodTipoMarcacion", item.iCodTipoMarcacion));
+                            cmd.Parameters.Add(new SqlParameter("@dtFechaMarcacion", item.dtFechaMarcacion));
+                            cmd.Parameters.Add(new SqlParameter("@vLongitud", item.vLongitud));
+                            cmd.Parameters.Add(new SqlParameter("@vLatitud", item.vLatitud));
+                            cmd.Parameters.Add(new SqlParameter("@vIpCliente", item.vIpCliente));
+                            cmd.Parameters.Add(new SqlParameter("@bEstado", item.bEstado));
+                            cmd.Parameters.Add(new SqlParameter("@vAuditCreacion", item.vAuditCreacion));
+
+                            SqlParameter IdPropuestaParameter = new SqlParameter("@iCodMarcaciones", SqlDbType.Int)
+                            {
+                                Direction = ParameterDirection.Output
+                            };
+                            cmd.Parameters.Add(IdPropuestaParameter);
+
+                            cmd.ExecuteNonQuery();
+                            item.iCodMarcaciones = Int32.Parse(IdPropuestaParameter.Value.ToString());
+                        }
+                    }
+                    transaction.Commit();
+                    respuesta = true;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+            return respuesta;
+        }
+
     }
 }

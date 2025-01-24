@@ -6,10 +6,13 @@ using MIDIS.ORI.Entidades;
 using MIDIS.SEG.AccesoDatosSQL;
 using MIDIS.Utiles;
 using MIDIS.ORI.LogicaNegocio.Base;
+using MIDIS.ORI.LogicaNegocio;
+
 namespace MIDIS.SEG.LogicaNegocio
 {
     public class T_genm_Marcaciones_LN : BaseLN
     {
+        private readonly T_genm_empleado_LN _empleado_Servicio = new T_genm_empleado_LN();
         private readonly T_genm_Marcaciones_ODA _Repositorio = new T_genm_Marcaciones_ODA();
 
         public IEnumerable<TipoMarcaciones_Registro> ListarTipoMarcaciones()
@@ -26,6 +29,12 @@ namespace MIDIS.SEG.LogicaNegocio
         {
             return _Repositorio.Insertar(request);
         }
+
+        public bool Sincronizar(Marcaciones_Registro request)
+        {
+            return _Repositorio.Sincronizar(request);
+        }
+
     }
 
 }

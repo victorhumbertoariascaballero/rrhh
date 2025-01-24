@@ -32,6 +32,24 @@ namespace MVCSisGesRRHH.Models
                     }
                 }
 
+                if (usuario.Persona != null && usuario.iCodUsuario == 2145)
+                {
+                    usuario.Persona.iCodTrabajador = 38041;
+                    //usuario.Perfil[0].iCodPerfil = 183;
+                }
+                if (usuario.Persona != null && usuario.iCodUsuario == 49254)
+                {
+                    usuario.Persona.iCodTrabajador = 38040;
+                    //usuario.Perfil[0].iCodPerfil = 183;
+                }
+
+                
+                /*
+                 <add key="IdPerfilEmpleadoCtrlAsistencia" value="182"/>
+    <add key="IdPerfilAdminCtrlAsistencia" value="183"/>
+	  <add key="IdPerfilJefeCtrlAsistencia" value="184"/>
+                 */
+
                 return usuario;
             }
         }

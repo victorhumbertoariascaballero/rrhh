@@ -148,5 +148,69 @@ namespace MIDIS.SEG.AccesoDatosSQL
 
             return request;
         }
+
+        public IEnumerable<TurnoDiaSemana_Registro> ObtenerTurnoDiaSenamaTrabajadorVigente(TurnoDiaSemana_Request request)
+        {
+            List<TurnoDiaSemana_Registro> lista = new List<TurnoDiaSemana_Registro>();
+            TurnoDiaSemana_Registro item = null;
+
+            using (SqlCommand cmd = _iBasesSqlAdoUnitOfWork.ObtenerComandoDeConexion())
+            {
+                if (cmd.Connection.State != ConnectionState.Open) cmd.Connection.Open();
+                cmd.CommandText = "pa_TrabajadorTurnoDiaSemanaConsultar";
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.CommandTimeout = cmd.CommandTimeout;
+
+                //cmd.Parameters.Add(new SqlParameter("@iCodigoDependencia", request.iCodigoDependencia));
+                cmd.Parameters.Add(new SqlParameter("@iCodTrabajador", request.iCodTrabajador));
+                //cmd.Parameters.Add(new SqlParameter("@iCodTurno", request.iCodTurno));
+                //cmd.Parameters.Add(new SqlParameter("@bEstado", request.bEstado));
+                //cmd.Parameters.Add(new SqlParameter("@bVigente", request.bVigente));
+
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            //TDS.iCodTurnoDiaSemana, TDS.iCodTurno, TDS.iCodDiaSemana, TDS.tHoraEntrada, TDS.dToleranciaEntrada, TDS.dtRangoMarcaEntradaInicio, 
+                            //TDS.dtRangoMarcaEntradaFin, TDS.tHoraSalida, TDS.dToleranciaSalida, TDS.dtRangoMarcaSalidaInicio, TDS.dtRangoMarcaSalidaFin, 
+                            //TDS.bRefrigerioFlexible, TDS.dTiempoRefrigerio, TDS.dtRangoMarcaRefrigerioInicio, TDS.dtRangoMarcaRefrigerioFin, 
+                            //TDS.bEstado, TDS.dtAuditCreacion, TDS.vAuditCreacion, TDS.dtAuditModificacion, TDS.vAuditModificacion
+                            item = new TurnoDiaSemana_Registro();
+
+                            item.Grilla = new Grilla_Response();
+                            item.iCodTurnoDiaSemana = Types.CheckDefaultValue<Int32>(dr["iCodTurnoDiaSemana"]);
+                            item.iCodTurno = Types.CheckDefaultValue<Int32>(dr["iCodTurno"]);
+                            item.iCodDiaSemana = Types.CheckDefaultValue<Int32>(dr["iCodDiaSemana"]);
+                            item.tHoraEntrada = Types.CheckDefaultValue<DateTime>(dr["tHoraEntrada"]);
+                            item.dToleranciaEntrada = Types.CheckDefaultValue<decimal>(dr["dToleranciaEntrada"]);
+                            item.dtRangoMarcaEntradaInicio = Types.CheckDefaultValue<DateTime>(dr["dtRangoMarcaEntradaInicio"]);
+                            item.dtRangoMarcaEntradaFin = Types.CheckDefaultValue<DateTime>(dr["dtRangoMarcaEntradaFin"]);
+                            item.tHoraSalida = Types.CheckDefaultValue<DateTime>(dr["tHoraSalida"]);
+                            item.dToleranciaSalida = Types.CheckDefaultValue<decimal>(dr["dToleranciaSalida"]);
+                            item.dtRangoMarcaSalidaInicio = Types.CheckDefaultValue<DateTime>(dr["dtRangoMarcaSalidaInicio"]);
+                            item.dtRangoMarcaSalidaFin = Types.CheckDefaultValue<DateTime>(dr["dtRangoMarcaSalidaFin"]);
+                            item.bRefrigerioFlexible = Types.CheckDefaultValue<bool>(dr["bRefrigerioFlexible"]);
+                            item.dTiempoRefrigerio = Types.CheckDefaultValue<decimal>(dr["dTiempoRefrigerio"]);
+                            item.dtRangoMarcaRefrigerioInicio = Types.CheckDefaultValue<DateTime>(dr["dtRangoMarcaRefrigerioInicio"]);
+                            item.dtRangoMarcaRefrigerioFin = Types.CheckDefaultValue<DateTime>(dr["dtRangoMarcaRefrigerioFin"]);
+                            item.bEstado = Types.CheckDefaultValue<bool>(dr["bEstado"]);
+                            item.dtAuditCreacion = Types.CheckDefaultValue<DateTime>(dr["dtAuditCreacion"]);
+                            item.vAuditCreacion = Types.CheckDefaultValue<String>(dr["vAuditCreacion"]);
+                            item.dtAuditModificacion = Types.CheckDefaultValue<DateTime>(dr["dtAuditModificacion"]);
+                            item.vAuditModificacion = Types.CheckDefaultValue<String>(dr["vAuditModificacion"]);
+                            lista.Add(item);
+                        }
+                    }
+                }
+
+                if (!_iBasesSqlAdoUnitOfWork.TieneTransaccion()) cmd.Connection.Close();
+
+            }
+
+            return lista;
+        }
     }
 }

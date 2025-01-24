@@ -1,11 +1,16 @@
 ﻿@using System.Configuration
 @using MVCSisGesRRHH.Models;
+@using Newtonsoft.Json;
+
+@model ControlAsistenciaModel
 
 @{
     ViewBag.Title = "CONTROL DE ASISTENCIA  ->  ASIGNACION DE TURNOS";
     String PERFIL_JEFE_CTRL_ASISTENCIA = ConfigurationManager.AppSettings["IdPerfilJefeCtrlAsistencia"];
     String PERFIL_EMPLE_CTRL_ASISTENCIA = ConfigurationManager.AppSettings["IdPerfilEmpleadoCtrlAsistencia"];
     String PERFIL_ADMIN_CTRL_ASISTENCIA = ConfigurationManager.AppSettings["IdPerfilAdminCtrlAsistencia"];
+
+    var cCodPerfil = VariablesWeb.ConsultaInformacion.Perfil[0].iCodPerfil.ToString();
 
 }
 @section SubTitulo {
@@ -163,9 +168,9 @@
     }
 
     /* Ocultar las etiquetas */
-    .k-label {
-        display: none; /* Esto oculta las etiquetas */
-    }
+    /*.k-label {
+        display: none;*/ /* Esto oculta las etiquetas */
+    /*}*/
 
     .k-floating-label-container {
         padding-top: 0px;
@@ -280,15 +285,33 @@
                                 <div class="form-group row">
                                     <label for="ddlDependencia_busqueda" class="col-md-1 col-form-label text-right">Dependencia </label>
                                     <div class="col-md-3">
-                                        <select id="ddlDependencia_busqueda" name="ddlDependencia_busqueda" class="form-control" style="width: 100%;">
-                                            <option value="">-- Seleccione --</option>
-                                        </select>
+                                        @if (cCodPerfil == PERFIL_ADMIN_CTRL_ASISTENCIA)
+                                        {
+                                            <select id="ddlDependencia_busqueda" name="ddlDependencia_busqueda" class="form-control" style="width: 100%;">
+                                                <option value="">-- Seleccione --</option>
+                                            </select>
+                                        }
+                                        else
+                                        {
+                                            <select id="ddlDependencia_busqueda" name="ddlDependencia_busqueda" class="form-control" style="width: 100%;" disabled>
+                                                <option value="">-- Seleccione --</option>
+                                            </select>
+                                        }
                                     </div>
                                     <label for="ddlEmpleado_busqueda" class="col-md-1 col-form-label text-right">Empleado </label>
                                     <div class="col-md-3">
-                                        <select id="ddlEmpleado_busqueda" name="ddlEmpleado_busqueda" class="form-control" style="width: 100%;">
-                                            <option value="">-- Seleccione --</option>
-                                        </select>
+                                        @if (cCodPerfil == PERFIL_ADMIN_CTRL_ASISTENCIA || cCodPerfil == PERFIL_JEFE_CTRL_ASISTENCIA)
+                                        {
+                                            <select id="ddlEmpleado_busqueda" name="ddlEmpleado_busqueda" class="form-control" style="width: 100%;">
+                                                <option value="">-- Seleccione --</option>
+                                            </select>
+                                        }
+                                        else
+                                        {
+                                            <select id="ddlEmpleado_busqueda" name="ddlEmpleado_busqueda" class="form-control" style="width: 100%;" disabled>
+                                                <option value="">-- Seleccione --</option>
+                                            </select>
+                                        }
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -328,10 +351,12 @@
                         <h5><label>Total de Registros: &nbsp;</label><label id="lblTotal" class="label label-info"></label></h5>
                     </div>
                     <div class="col-md-10" style="text-align: right; margin-bottom: 10px">
-
-                        <button id="btnNuevo" type="button" class="btn btn-primary btn-sm" onclick="controlador.abrirModalNuevo()">
-                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
-                        </button>
+                        @if (cCodPerfil == PERFIL_ADMIN_CTRL_ASISTENCIA)
+                        {
+                            <button id="btnNuevo" type="button" class="btn btn-primary btn-sm" onclick="controlador.abrirModalNuevo()">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
+                            </button>
+                        }
 
                     </div>
                 </div>
@@ -360,9 +385,18 @@
                             <div class="form-group row">
                                 <label for="dllEmpleado_registro" class="col-md-3 col-form-label text-right">Empleado </label>
                                 <div class="col-md-8">
-                                    <select id="dllEmpleado_registro" name="dllEmpleado_registro" class="form-control" style="width: 100%;">
-                                        <option value="">-- Seleccione --</option>
-                                    </select>
+                                    @if (cCodPerfil == PERFIL_ADMIN_CTRL_ASISTENCIA || cCodPerfil == PERFIL_JEFE_CTRL_ASISTENCIA)
+                                    {
+                                        <select id="dllEmpleado_registro" name="dllEmpleado_registro" class="form-control" style="width: 100%;">
+                                            <option value="">-- Seleccione --</option>
+                                        </select>
+                                    }
+                                    else
+                                    {
+                                        <select id="dllEmpleado_registro" name="dllEmpleado_registro" class="form-control" style="width: 100%;" disabled>
+                                            <option value="">-- Seleccione --</option>
+                                        </select>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -394,6 +428,18 @@
         //alert(fechaServer);
         $(document).ready(function () {
             controlador = new TurnosJS();
+            controlador.PERFIL_JEFE_CTRL_ASISTENCIA = '@PERFIL_JEFE_CTRL_ASISTENCIA';
+            controlador.PERFIL_EMPLE_CTRL_ASISTENCIA = '@PERFIL_EMPLE_CTRL_ASISTENCIA';
+            controlador.PERFIL_ADMIN_CTRL_ASISTENCIA = '@PERFIL_ADMIN_CTRL_ASISTENCIA';
+
+            controlador.Empleado = @Html.Raw(JsonConvert.SerializeObject(Model.Empleado, new JsonSerializerSettings
+            {
+                MaxDepth = null,
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                PreserveReferencesHandling = PreserveReferencesHandling.None,
+                TypeNameHandling = TypeNameHandling.None
+            }));
+
             controlador.inicializarMaestro();
         });
     </script>

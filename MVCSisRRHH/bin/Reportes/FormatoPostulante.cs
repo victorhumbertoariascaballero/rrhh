@@ -4,9 +4,11 @@
     public partial class FormatoPostulante {
     }
 }
-namespace MVCSisRRHH.Reportes {
-    
-    
-    public partial class Formatos {
+namespace MVCSisRRHH.Reportes
+{
+
+
+    public partial class Formatos
+    {
     }
 }

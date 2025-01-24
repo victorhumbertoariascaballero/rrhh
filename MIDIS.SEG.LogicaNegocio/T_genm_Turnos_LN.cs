@@ -26,6 +26,11 @@ namespace MIDIS.SEG.LogicaNegocio
         {
             return _Repositorio.Insertar(request);
         }
+
+        public IEnumerable<TurnoDiaSemana_Registro> ObtenerTurnoDiaSenamaTrabajadorVigente(TurnoDiaSemana_Request request)
+        {
+            return _Repositorio.ObtenerTurnoDiaSenamaTrabajadorVigente(request);
+        }
     }
 
 }

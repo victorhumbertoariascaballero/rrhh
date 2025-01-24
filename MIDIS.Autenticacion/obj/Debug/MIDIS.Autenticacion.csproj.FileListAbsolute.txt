@@ -15,3 +15,9 @@ D:\victor arias\MIDIS.Autenticacion\obj\Debug\MIDIS.Autenticacion.csproj.Assembl
 D:\victor arias\MIDIS.Autenticacion\obj\Debug\MIDIS.Autenticacion.csproj.CoreCompileInputs.cache
 D:\victor arias\MIDIS.Autenticacion\obj\Debug\MIDIS.Autenticacion.dll
 D:\victor arias\MIDIS.Autenticacion\obj\Debug\MIDIS.Autenticacion.pdb
+C:\robocop2\MIDIS.Autenticacion\bin\Debug\MIDIS.Autenticacion.dll
+C:\robocop2\MIDIS.Autenticacion\bin\Debug\MIDIS.Autenticacion.pdb
+C:\robocop2\MIDIS.Autenticacion\obj\Debug\MIDIS.Autenticacion.csproj.CoreCompileInputs.cache
+C:\robocop2\MIDIS.Autenticacion\obj\Debug\MIDIS.Autenticacion.dll
+C:\robocop2\MIDIS.Autenticacion\obj\Debug\MIDIS.Autenticacion.pdb
+C:\robocop2\MIDIS.Autenticacion\obj\Debug\MIDIS.Autenticacion.csproj.AssemblyReference.cache

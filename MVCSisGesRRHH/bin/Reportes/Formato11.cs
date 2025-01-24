@@ -12,7 +12,7 @@ namespace MVCSisGesRRHH.Reportes
 {
     using System;
     using System.ComponentModel;
-    using CrystalDecisions.Shared;
+   using CrystalDecisions.Shared;
     using CrystalDecisions.ReportSource;
     using CrystalDecisions.CrystalReports.Engine;
     

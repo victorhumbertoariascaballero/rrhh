@@ -12,6 +12,7 @@ namespace MIDIS.ORI.Entidades
 		public int iCodJustificaciones { get; set; }
 		public int iCodEstadoProceso { get; set; }
         public bool bEstado { get; set; }
+        public string vComentario { get; set; }
         public DateTime dtAuditCreacion { get; set; }
         public string vAuditCreacion { get; set; }
         public DateTime dtAuditModificacion { get; set; }

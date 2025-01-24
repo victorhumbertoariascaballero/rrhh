@@ -50,6 +50,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,6 +68,11 @@
     <Compile Include="Base\BEPaginacion.cs" />
     <Compile Include="Base\BETreeView.cs" />
     <Compile Include="Core\ArchivosTXT_Response.cs" />
+    <Compile Include="Core\CompensacionesDetalleTrabajador_Registro.cs" />
+    <Compile Include="Core\CompensacionesDetalleTrabajador_Request.cs" />
+    <Compile Include="Core\CompensacionesTrabajador_Registro.cs" />
+    <Compile Include="Core\Compensaciones_Registro.cs" />
+    <Compile Include="Core\CompensacionesTrabajador_Request.cs" />
     <Compile Include="Core\ConceptoFijoVariable_Registro.cs" />
     <Compile Include="Core\ConceptoFijoVariable_Request.cs" />
     <Compile Include="Core\BasesPerfilPuestoObservacionRegistro.cs" />
@@ -74,7 +80,15 @@
     <Compile Include="Core\BasesPerfilPuestoRegistro.cs" />
     <Compile Include="Core\BasesPerfilPuesto_Request.cs" />
     <Compile Include="Core\Conceptos_Response.cs" />
+    <Compile Include="Core\EstadoProceso_Registro.cs" />
+    <Compile Include="Core\EstadoProceso_Request.cs" />
     <Compile Include="Core\JustificacionesArchivos_Registro.cs" />
+    <Compile Include="Core\JustificacionesTrabajador_Registro.cs" />
+    <Compile Include="Core\JustificacionesTrabajador_Request.cs" />
+    <Compile Include="Core\ReporteSobretiempo_Registro.cs" />
+    <Compile Include="Core\ReporteSobretiempo_Request.cs" />
+    <Compile Include="Core\ReportePlanilla_Registro.cs" />
+    <Compile Include="Core\ReportePlanilla_Request.cs" />
     <Compile Include="Core\TipoJustificacion_Request.cs" />
     <Compile Include="Core\TipoJustificacion_Registro.cs" />
     <Compile Include="Core\TipoGoce_Request.cs" />
@@ -87,6 +101,8 @@
     <Compile Include="Core\TurnoDiaSemana_Registro.cs" />
     <Compile Include="Core\TurnoDiaSemana_Request.cs" />
     <Compile Include="Core\Justificaciones_Request.cs" />
+    <Compile Include="Core\MotivoJustificacion_Registro.cs" />
+    <Compile Include="Core\MotivoJustificacion_Request.cs" />
     <Compile Include="Core\Turno_Request.cs" />
     <Compile Include="Core\Turno_Registro.cs" />
     <Compile Include="Core\TurnoTrabajador_Request.cs" />
@@ -243,6 +259,12 @@
     <Compile Include="Core\Ubigeo_Response.cs" />
     <Compile Include="Core\Empleado_Registro.cs" />
     <Compile Include="Core\UnidadOrganica_Registro.cs" />
+    <Compile Include="Core\VacacionesTrabajador_Registro.cs" />
+    <Compile Include="Core\ReporteHorizontal_Request.cs" />
+    <Compile Include="Core\VacacionesTrabajador_Request.cs" />
+    <Compile Include="Core\VacacionesPeriodo_Registro.cs" />
+    <Compile Include="Core\ReporteHorizontal_Registro.cs" />
+    <Compile Include="Core\Vacaciones_Registro.cs" />
     <Compile Include="Core\Verbo_Registro.cs" />
     <Compile Include="Core\DescuentoJudicial_Registro.cs" />
     <Compile Include="Core\DescuentoJudicial_Request.cs" />

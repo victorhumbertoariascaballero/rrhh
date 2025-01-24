@@ -21,12 +21,16 @@ namespace MVCSisGesRRHH.Controllers
     public class MarcacionesController : Controller
     {
         private readonly T_genm_Marcaciones_LN _marcaciones_Servicio = new T_genm_Marcaciones_LN();
+        private readonly T_genm_controlasistencia_LN _controlAsistencia_Servicio = new T_genm_controlasistencia_LN();
 
         [HttpGet]
         [Authorize]
         public ActionResult Index()
         {
-            return View();
+            ControlAsistenciaModel oModel = new ControlAsistenciaModel();
+            //var oUsuario = VariablesWeb.ConsultaInformacion.Persona;
+            oModel.Empleado = _controlAsistencia_Servicio.ObtenerParaEditar(new Empleado_Request() { IdEmpleado = Convert.ToInt32(VariablesWeb.ConsultaInformacion.Persona.iCodTrabajador) });
+            return View(oModel);
         }
         [HttpGet]
         [Authorize]
@@ -90,8 +94,10 @@ namespace MVCSisGesRRHH.Controllers
         [Authorize]
         public JsonResult GrabarMarcacion(Marcaciones_Registro request)
         {
-            request.iCodTrabajador = 38041; //Convert.ToInt32(VariablesWeb.ConsultaInformacion.Persona.iCodTrabajador);
-            request.iCodigoDependencia = 0;
+            var Empleado = _controlAsistencia_Servicio.ObtenerParaEditar(new Empleado_Request() { IdEmpleado = Convert.ToInt32(VariablesWeb.ConsultaInformacion.Persona.iCodTrabajador) });
+
+            request.iCodTrabajador = Convert.ToInt32(VariablesWeb.ConsultaInformacion.Persona.iCodTrabajador);
+            request.iCodigoDependencia = Empleado.IdDependencia;
             request.vAuditCreacion = VariablesWeb.ConsultaInformacion.iCodUsuario.ToString();
             request.vIpCliente = HttpContext.Request.UserHostAddress;
             request.bEstado = true;
@@ -99,6 +105,28 @@ namespace MVCSisGesRRHH.Controllers
 
 
             return Json(new { success = (response.iCodMarcaciones > 0) ? "True" : "False" });
+            //if (String.IsNullOrEmpty(respuesta))
+            //    return Json(new { success = "True" });
+            //else
+            //    return Json(new { success = "False", responseText = respuesta });
+        }
+
+        [HttpPost]
+        [Authorize]
+        public JsonResult SincronizarMarcaciones(Marcaciones_Registro request)
+        {
+            var Empleado = _controlAsistencia_Servicio.ObtenerParaEditar(new Empleado_Request() { IdEmpleado = Convert.ToInt32(VariablesWeb.ConsultaInformacion.Persona.iCodTrabajador) });
+
+            request.iCodTrabajador = Convert.ToInt32(VariablesWeb.ConsultaInformacion.Persona.iCodTrabajador);
+            request.iCodigoDependencia = Empleado.IdDependencia;
+            request.vAuditCreacion = VariablesWeb.ConsultaInformacion.iCodUsuario.ToString();
+            request.vIpCliente = HttpContext.Request.UserHostAddress;
+            request.vNumeroDocumento = Empleado.NroDocumento;
+            request.bEstado = true;
+            var response = _marcaciones_Servicio.Sincronizar(request);
+
+
+            return Json(new { success = (response) ? "True" : "False" });
             //if (String.IsNullOrEmpty(respuesta))
             //    return Json(new { success = "True" });
             //else

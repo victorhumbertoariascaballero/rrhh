@@ -229,11 +229,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BasesController.cs" />
+    <Compile Include="Controllers\CompensacionesController.cs" />
     <Compile Include="Controllers\ConceptoController.cs" />
     <Compile Include="Controllers\ConceptoFijoVariableController.cs" />
     <Compile Include="Controllers\CondicionController.cs" />
     <Compile Include="Controllers\ConvocatoriaServirController.cs" />
+    <Compile Include="Controllers\JustificacionesController.cs" />
     <Compile Include="Controllers\LegajoController.cs" />
+    <Compile Include="Controllers\ReportesCAController.cs" />
     <Compile Include="Controllers\TurnosController.cs" />
     <Compile Include="Controllers\MarcacionesController.cs" />
     <Compile Include="Controllers\PracticasController.cs" />
@@ -254,11 +257,13 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\BoletasController.cs" />
     <Compile Include="Controllers\PersonaController.cs" />
+    <Compile Include="Controllers\VacacionesController.cs" />
     <Compile Include="Filters\CustomFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\UtilHelper.cs" />
+    <Compile Include="Models\ControlAsistenciaModel.cs" />
     <Compile Include="Models\LoginSSO.cs" />
     <Compile Include="Models\mUsuarioOpciones.cs" />
     <Compile Include="Models\mUsuarioPerfil.cs" />
@@ -1272,9 +1277,15 @@
     <Content Include="Scripts\App\Intranet\AppAnonimo.js" />
     <Content Include="Scripts\App\Intranet\App.js" />
     <Content Include="Scripts\App\Intranet\BasesPerfilPuesto.js" />
+    <Content Include="Scripts\App\Intranet\RptSobretiempo.js" />
+    <Content Include="Scripts\App\Intranet\RptPlanilla.js" />
+    <Content Include="Scripts\App\Intranet\RptHorizontal.js" />
+    <Content Include="Scripts\App\Intranet\HorasCompensables.js" />
+    <Content Include="Scripts\App\Intranet\Compensaciones.js" />
     <Content Include="Scripts\App\Intranet\Concepto.js" />
     <Content Include="Scripts\App\Intranet\ConceptoFijoVariable.js" />
     <Content Include="Scripts\App\Intranet\ConvocatoriaServir.js" />
+    <Content Include="Scripts\App\Intranet\Justificaciones.js" />
     <Content Include="Scripts\App\Intranet\Legajo.js" />
     <Content Include="Scripts\App\Intranet\Turnos.js" />
     <Content Include="Scripts\App\Intranet\Marcaciones.js" />
@@ -1295,6 +1306,7 @@
     <Content Include="Scripts\App\Intranet\Nomina.js" />
     <Content Include="Scripts\App\Intranet\Boletas.js" />
     <Content Include="Scripts\App\Intranet\Usuario.js" />
+    <Content Include="Scripts\App\Intranet\Vacaciones.js" />
     <Content Include="Scripts\App\Publico\App.js" />
     <Content Include="Scripts\App\Publico\Login.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -6478,6 +6490,13 @@
     <Content Include="Views\Marcaciones\IndexAnterior.cshtml" />
     <Content Include="Views\Turnos\Index.cshtml" />
     <Content Include="Views\Turnos\IndexAnterior.cshtml" />
+    <Content Include="Views\Justificaciones\Index.cshtml" />
+    <Content Include="Views\Compensaciones\horas.cshtml" />
+    <Content Include="Views\Vacaciones\Index.cshtml" />
+    <Content Include="Views\Compensaciones\compensar.cshtml" />
+    <Content Include="Views\ReportesCA\horizontal.cshtml" />
+    <Content Include="Views\ReportesCA\planilla.cshtml" />
+    <Content Include="Views\ReportesCA\sobretiempo.cshtml" />
     <None Include="Web References\reniec.pe.gob.midis.app1\ReniecPersonaFoto_Servicio.wsdl" />
     <None Include="Web References\reniec.pe.gob.midis.app1\ReniecPersonaFoto_Servicio.xsd">
       <SubType>Designer</SubType>
@@ -6540,7 +6559,9 @@
     <Folder Include="temp\Planillas\" />
     <Folder Include="Views\ConceptoFijoVariable\" />
     <Folder Include="Views\DescuentoJudicial\" />
+    <Folder Include="Views\EstadoProceso\" />
     <Folder Include="Views\PlanillaDescuentosJudiciales\" />
+    <Folder Include="Views\TipoJustificacion\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

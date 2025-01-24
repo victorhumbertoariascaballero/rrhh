@@ -34,3 +34,27 @@ D:\victor arias\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExterno
 D:\victor arias\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CopyComplete
 D:\victor arias\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.dll
 D:\victor arias\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.pdb
+C:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.dll
+C:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.pdb
+C:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\log4net.dll
+C:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Entidades.dll
+C:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.dll
+C:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\DataAnnotationsExtensions.dll
+C:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.pdb
+C:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.AssemblyReference.cache
+C:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CoreCompileInputs.cache
+C:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CopyComplete
+C:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.dll
+C:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.pdb
+D:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.dll
+D:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.SEG.ServiciosExternos.pdb
+D:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\log4net.dll
+D:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Entidades.dll
+D:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.dll
+D:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\DataAnnotationsExtensions.dll
+D:\robocop2\MIDIS.SEG.ServiciosExternos\bin\Debug\MIDIS.Utiles.pdb
+D:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.AssemblyReference.cache
+D:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CoreCompileInputs.cache
+D:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.csproj.CopyComplete
+D:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.dll
+D:\robocop2\MIDIS.SEG.ServiciosExternos\obj\Debug\MIDIS.SEG.ServiciosExternos.pdb

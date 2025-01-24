@@ -12,5 +12,7 @@ namespace MIDIS.ORI.Entidades
         public int iCodTurno { get; set; }
         public int iCodDiaSemana { get; set; }
         public Grilla_Request Grilla { get; set; }
+
+        public int iCodTrabajador { get; set; }
     }
 }

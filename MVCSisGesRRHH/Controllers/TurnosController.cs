@@ -21,12 +21,16 @@ namespace MVCSisGesRRHH.Controllers
     public class TurnosController : Controller
     {
         private readonly T_genm_Turnos_LN _Servicio = new T_genm_Turnos_LN();
+        private readonly T_genm_controlasistencia_LN _controlAsistencia_Servicio = new T_genm_controlasistencia_LN();
 
         [HttpGet]
         [Authorize]
         public ActionResult Index()
         {
-            return View();
+            ControlAsistenciaModel oModel = new ControlAsistenciaModel();
+            //var oUsuario = VariablesWeb.ConsultaInformacion.Persona;
+            oModel.Empleado = _controlAsistencia_Servicio.ObtenerParaEditar(new Empleado_Request() { IdEmpleado = Convert.ToInt32(VariablesWeb.ConsultaInformacion.Persona.iCodTrabajador) });
+            return View(oModel);
         }
 
         [HttpPost]
@@ -83,8 +87,10 @@ namespace MVCSisGesRRHH.Controllers
         [Authorize]
         public JsonResult GrabarTurnoTrabajador(TurnoTrabajador_Registro request)
         {
+            //var Empleado = _controlAsistencia_Servicio.ObtenerParaEditar(new Empleado_Request() { IdEmpleado = Convert.ToInt32(VariablesWeb.ConsultaInformacion.Persona.iCodTrabajador) });
+
             //request.iCodTrabajador = 38041; //Convert.ToInt32(VariablesWeb.ConsultaInformacion.Persona.iCodTrabajador);
-            request.iCodigoDependencia = 0;
+            //request.iCodigoDependencia = ;
             request.vAuditCreacion = VariablesWeb.ConsultaInformacion.iCodUsuario.ToString();
             request.bVigente = true;
             request.bEstado = true;

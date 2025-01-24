@@ -24,3 +24,20 @@ D:\victor arias\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CoreCompileInputs.cac
 D:\victor arias\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CopyComplete
 D:\victor arias\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.dll
 D:\victor arias\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.pdb
+C:\robocop2\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.dll
+C:\robocop2\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.pdb
+C:\robocop2\MIDIS.Utiles\bin\Debug\DataAnnotationsExtensions.dll
+C:\robocop2\MIDIS.Utiles\bin\Debug\log4net.dll
+C:\robocop2\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CoreCompileInputs.cache
+C:\robocop2\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CopyComplete
+C:\robocop2\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.dll
+C:\robocop2\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.pdb
+D:\robocop2\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.dll
+D:\robocop2\MIDIS.Utiles\bin\Debug\MIDIS.Utiles.pdb
+D:\robocop2\MIDIS.Utiles\bin\Debug\DataAnnotationsExtensions.dll
+D:\robocop2\MIDIS.Utiles\bin\Debug\log4net.dll
+D:\robocop2\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.AssemblyReference.cache
+D:\robocop2\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CoreCompileInputs.cache
+D:\robocop2\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.csproj.CopyComplete
+D:\robocop2\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.dll
+D:\robocop2\MIDIS.Utiles\obj\Debug\MIDIS.Utiles.pdb

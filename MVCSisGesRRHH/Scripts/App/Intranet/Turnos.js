@@ -1,21 +1,13 @@
 (function ($) {
-    var PERFIL_JEFE_CTRL_ASISTENCIA = '182';
-    var PERFIL_EMPLE_CTRL_ASISTENCIA = '183';
-    var PERFIL_ADMIN_CTRL_ASISTENCIA = '184';
+    this.TurnosJS = function () {
+        this.PERFIL_JEFE_CTRL_ASISTENCIA = '';
+        this.PERFIL_EMPLE_CTRL_ASISTENCIA = '';
+        this.PERFIL_ADMIN_CTRL_ASISTENCIA = '';
+        this.Empleado = null;
+    };
 
-    this.TurnosJS = function () { };
     this.TurnosJS.prototype.inicializarMaestro = function () {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                function (position) {
-                    console.log(position);
-                },
-                function (error) {
-                    console.log(error);
-                });
-        } else {
-            alert("Geolocalización no es soportada por este navegador.");
-        }
+        
 
         /* BUSQUEDA */
         $("#ddlDependencia_busqueda").kendoDropDownList({
@@ -43,6 +35,11 @@
                         return $.toDictionary(data_param);
                     }
                 }
+            },
+            change: function () {
+                var val = this.value();
+                //acceder a empleados 
+                onChangeDependencia(val);
             }
         });
 
@@ -54,25 +51,37 @@
             filter: "contains",
             minLength: 3,
             dataSource: {
-                serverFiltering: true,
-                transport: {
-                    read: {
-                        url: controladorApp.obtenerRutaBase() + "Empleado/ListarEmpleadosMaestro",
-                        type: "GET",
-                        dataType: "json",
-                        cache: false
-                    },
-                    parameterMap: function ($options, $operation) {
-                        var data_param = {};
-                        if ($options.filter != undefined && $options.filter.filters.length > 0)
-                            data_param.Nombre = $options.filter.filters[0].value;
-
-                        //if (data_param.cod.length = 1) data_param.cod = '0' + data_param.cod;
-                        return $.toDictionary(data_param);
-                    }
-                }
+                serverFiltering: false,
+                data: []
             }
         });
+
+        var onChangeDependencia = function (val) {
+            var empleadosDdl = $("#ddlEmpleado_busqueda").data("kendoDropDownList");
+            var empleadosRegDdl = $("#dllEmpleado_registro").data("kendoDropDownList");
+
+            $.ajax({
+                url: controladorApp.obtenerRutaBase() + "Empleado/ListarEmpleadosMaestro",
+                data: { IdDependencia: val, Estado: 1 },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+
+                    empleadosDdl.setDataSource(new kendo.data.DataSource({
+                        data: data
+                    }));
+
+                    empleadosRegDdl.setDataSource(new kendo.data.DataSource({
+                        data: data
+                    }));
+                },
+                error: function () {
+                    alert("Error al cargar empleado.");
+                }
+            });
+        }
+
+        
 
         $("#ddlTurno_busqueda").kendoDropDownList({
             autoBind: false,
@@ -125,26 +134,18 @@
             filter: "contains",
             minLength: 3,
             dataSource: {
-                serverFiltering: true,
-                transport: {
-                    read: {
-                        url: controladorApp.obtenerRutaBase() + "Empleado/ListarEmpleadosMaestro",
-                        type: "GET",
-                        dataType: "json",
-                        cache: false
-                    },
-                    parameterMap: function ($options, $operation) {
-                        var data_param = {};
-                        if ($options.filter != undefined && $options.filter.filters.length > 0)
-                            data_param.Nombre = $options.filter.filters[0].value;
-
-                        //if (data_param.cod.length = 1) data_param.cod = '0' + data_param.cod;
-                        return $.toDictionary(data_param);
-                    }
-                }
+                serverFiltering: false,
+                data: []
             }
         });
 
+
+        if (this.Empleado != null) {
+            $("#ddlDependencia_busqueda").data("kendoDropDownList").value(this.Empleado.IdDependencia);
+            onChangeDependencia(this.Empleado.IdDependencia);
+            $("#ddlEmpleado_busqueda").data("kendoDropDownList").value(this.Empleado.IdEmpleado);
+            $("#dllEmpleado_registro").data("kendoDropDownList").value(this.Empleado.IdEmpleado);
+        }
 
         $('#divModal').kendoWindow({
             draggable: true,
@@ -169,6 +170,7 @@
 
 
     this.TurnosJS.prototype.inicializarGridMaestro = function () {
+        var _this = this;
         this.$dataSource = [];
         this.$dataSource = new kendo.data.DataSource({
             serverPaging: true,
@@ -213,7 +215,13 @@
                     return response.length; // TotalDeRegistros;
                 },
                 model: {
-                    id: "iCodTurnoTrabajador"
+                    id: "iCodTurnoTrabajador",
+                    fields: {
+                        vNombreTrabajador: { type: "string" },
+                        dtAuditCreacion: { type: "string", parse: _this.parseDate },
+                        vDependencia: { type: "string" },
+                        vTurno: { type: "string" }
+                    }
                 }
             }
         });
@@ -232,35 +240,45 @@
             sortable: false,
             pageable: false,
             groupable: true,
-
+            filterable: true,
             dataType: 'json',
             columns: [
                 {
                     field: "vNumeroDocumento",
                     title: "DNI",
                     attributes: { style: "text-align:center;" },
-                    width: "30px"
+                    width: "30px",
+                    filterable: { multi: true, search: true, ignoreCase: true }
                 },
                 {
                     field: "vNombreTrabajador",
                     title: "NOMBRE",
                     width: "200px",
+                    filterable: { multi: true, search: true, ignoreCase: true }
+                },
+                {
+                    field: "dtAuditCreacion",
+                    title: "FECHA REGISTRO",
+                    width: "200px",
+                    filterable: { multi: true, search: true, ignoreCase: true }
                 },
                 {
                     field: "vDependencia",
                     title: "DEPENDENCIA",
                     width: "100px",
+                    filterable: { multi: true, search: true, ignoreCase: true }
                 },
                 {
                     field: "vTurno",
                     title: "TURNO",
                     attributes: { style: "text-align:center;" },
                     width: "50px",
+                    filterable: { multi: true, search: true, ignoreCase: true }
                 }
             ],
             excelExport: function (e) {
-                var sheet = e.workbook.sheets[0];
-                var template = kendo.template(this.columns[4].template);
+                //var sheet = e.workbook.sheets[0];
+                //var template = kendo.template(this.columns[4].template);
             }
         }).data();
         //}
@@ -286,11 +304,13 @@
     }
 
     this.TurnosJS.prototype.grabar = function (e) {
+        var _this = this;
+        e.preventDefault();
         var data_param = new FormData();
         //data_param.append('iCodTurnoTrabajador', fechaServer.toISOString());
         data_param.append('iCodTurno', $("#ddlTurno_registro").data("kendoDropDownList").value());
         data_param.append('iCodTrabajador', $("#dllEmpleado_registro").data("kendoDropDownList").value());
-        data_param.append('iCodigoDependencia', 0);
+        data_param.append('iCodigoDependencia', $("#ddlDependencia_busqueda").data("kendoDropDownList").value());
 
         $.ajax({
             url: controladorApp.obtenerRutaBase() + 'Turnos/GrabarTurnoTrabajador',
@@ -300,11 +320,26 @@
             processData: false,
             data: data_param,
             success: function (res) {
+                _this.closeModalNuevo();
                 $('#divGrid').data("kendoGrid").dataSource.page(1);
             },
             error: function (res) {
                 //alert(res);
             }
         });
+    }
+
+    this.TurnosJS.prototype.parseDate = function (item) {
+        if (item && item != "/Date(-62135578800000)/") {
+            return kendo.toString(kendo.parseDate(item), 'dd/MM/yyyy');
+        }
+        return "";
+    }
+
+    this.TurnosJS.prototype.parseDateTime = function (item) {
+        if (item && item != "/Date(-62135578800000)/") {
+            return kendo.toString(kendo.parseDate(item), 'dd/MM/yyyy HH:mm');
+        }
+        return "";
     }
 }(jQuery));
